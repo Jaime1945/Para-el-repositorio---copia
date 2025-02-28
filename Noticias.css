@@ -1,0 +1,255 @@
+/* Importar fuente personalizada */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-image: url(Imagenes/perrito\ 1.webp);
+    background-color: #f5ecec; /*Tambien se le podria poner una imagen de fondo con el -Image*/
+}
+/*Header*/
+header { /*Color del fondo transparente del inicio*/
+    background-image: linear-gradient(rgba(237, 199, 241, 0.712),rgba(250, 218, 253, 0.712)), url(Imagenes/fondo\ 1.webp); /* imagen de fondo en el parentesis*/
+    background-position: center;
+    background-size: cover;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #53005a; /* cambia el color de El titulo de la cabezera*/
+    padding: 0 20px;
+}
+.navbar ul{
+    display: flex;
+    gap: 30px;
+}
+.navbar ul lia a{
+    font-size: 18px;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+.navbar ul li a:hover{
+    color: #2f3dbe;
+}
+.header-content h1{
+    font-size: 60px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.header-content p{ /*Contenido/informacion de la cabezera*/
+    font-size: 18px;
+    color: #00344e;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+/*Fin del Header*/
+.container { /*Cajas de donde se encuentra el texto*/
+    width: 80%;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff7a; /*Color de los recuadros con la información*/
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-top: 0;
+}
+
+/* Menú de navegación */
+.menu {
+    /*background-image: url(https://th.bing.com/th/id/R.a8d1e00763015ca4435e13e54142f0d2?rik=Sk98rRIYxJYgUg&riu=http%3a%2f%2fst.depositphotos.com%2f1007566%2f2705%2fv%2f950%2fdepositphotos_27059235-stock-illustration-dog-footprint.jpg&ehk=%2bpXcVXTIflkV4Mn5tW4hfbkxkqnLobq0ciJE%2fHkqfrg%3d&risl=&pid=ImgRaw&r=0);*/
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu .logo img {
+    height: 50px;
+    margin-right: 30px;
+}
+
+.menu .menu-toggle {
+    display: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.menu .menu-toggle i {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.menu .menu-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.menu .menu-links li {
+    position: relative;
+}
+
+.menu .menu-links a {
+    display: block;
+    color: #ffffff; /*Letras de los menus*/
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.menu .menu-links a:hover,
+.menu .menu-links a:focus {
+    background-color: #d21026;
+}
+
+.menu .menu-links .dropdown:hover > .submenu,
+.menu .menu-links .dropdown:focus-within > .submenu {
+    display: block;
+}
+
+/* Submenús */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #2c2c2c;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.submenu li {
+    margin: 0;
+    width: 100%;
+}
+
+.submenu a {
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: normal;
+}
+
+.submenu a:hover {
+    background-color: #ff6b6b;
+    color: #fff;
+}
+
+/* Barra de búsqueda */
+.menu .search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.menu .search-bar input {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    width: 150px;
+    transition: width 0.4s ease-in-out;
+}
+
+.menu .search-bar input:focus {
+    width: 250px;
+}
+
+.menu .search-bar button {
+    padding: 8px 10px;
+    border: none;
+    background-color: #ff6b6b;
+    color: white;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.menu .search-bar button:hover {
+    background-color: #e55b5b;
+}
+
+/* Resaltado */
+.highlight {
+    background-color: yellow;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-wrap: wrap;
+    }
+
+    .menu .logo {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .menu .menu-toggle {
+        display: block;
+    }
+
+    .menu .menu-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu.active .menu-links {
+        display: flex;
+    }
+
+    .menu .menu-links li {
+        width: 100%;
+    }
+
+    .menu .menu-links a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .submenu {
+        position: static;
+        background-color: #1b1b1b;
+        box-shadow: none;
+    }
+
+    .submenu a {
+        padding-left: 30px;
+    }
+
+    .menu .search-bar {
+        flex: 1 1 100%;
+        margin: 10px 0;
+        justify-content: center;
+    }
+}
+
+footer {
+    background-color: #00030070;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
