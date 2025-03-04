@@ -19,7 +19,7 @@ header { /*Color del fondo transparente del inicio*/
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #53005a; /* cambia el color de El titulo de la cabezera*/
+    color: #ffffff; /* cambia el color de El titulo de la cabezera*/
     padding: 0 20px;
 }
 .navbar ul{
