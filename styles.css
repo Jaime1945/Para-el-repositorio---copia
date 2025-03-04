@@ -4,8 +4,8 @@
 /* Estilos generales */
 body {
     margin: 0;
-    font-family: 'Ubuntu', sans-serif;
-    background-color: #FFF2F2;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #c8e9ad;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -14,7 +14,7 @@ body {
 }
 /*Header*/
 header { /*Color del fondo transparente del inicio*/
-    /*background-image: linear-gradient(rgba(139, 250, 172, 0.137),rgba(139, 250, 172, 0.137)), url(Imagenes/318270.webp); /* imagen de fondo en el parentesis*/
+    background-image: linear-gradient(rgba(139, 250, 172, 0.137),rgba(139, 250, 172, 0.137)), url(Imagenes/318270.webp); /* imagen de fondo en el parentesis*/
     background-position: center;
     background-size: cover;
     min-height: 60vh;
