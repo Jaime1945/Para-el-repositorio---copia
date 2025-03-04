@@ -14,7 +14,7 @@ body {
 }
 /*Header*/
 header { /*Color del fondo transparente del inicio*/
-    background-image: linear-gradient(rgba(139, 250, 172, 0.205),rgba(139, 250, 172, 0.137)), url(Imagenes/318270.webp); /* imagen de fondo en el parentesis*/
+    /*background-image: linear-gradient(rgba(139, 250, 172, 0.137),rgba(139, 250, 172, 0.137)), url(Imagenes/318270.webp); /* imagen de fondo en el parentesis*/
     background-position: center;
     background-size: cover;
     min-height: 60vh;
@@ -26,6 +26,24 @@ header { /*Color del fondo transparente del inicio*/
     color: #89AC46; /* cambia el color de El titulo de la cabezera*/
     padding: 0 20px;
 }
+header video {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 50%;
+    z-index: -1; /* Envía el video al fondo */
+    object-fit: cover;
+  }
+  
+  .contenido-header video {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté encima del video */
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
 .navbar ul{
     display: flex;
     gap: 30px;
@@ -248,6 +266,9 @@ h1 {
     }
 }
 
+/*vidio*/
+
+/*fin vidio*/
 footer {
     background-color: #FFF2F2;
     color: #89AC46;
