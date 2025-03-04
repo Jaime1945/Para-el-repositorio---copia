@@ -4,13 +4,13 @@
 /* Estilos generales */
 body {
     margin: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: #c8e9ad;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    background-color: #f5ecec; /*Tambien se le podria poner una imagen de fondo con el -Image*/
+    background-color: #f4f7cce0; /*Tambien se le podria poner una imagen de fondo con el -Image*/
 }
 /*Header*/
 header { /*Color del fondo transparente del inicio*/
