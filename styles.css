@@ -5,12 +5,14 @@
 body {
     margin: 0;
     font-family:'Arial', sans-serif;
-    background-color: #c8e9ad;
+    margin: 0; /* Elimina márgenes por defecto en el body */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #c3e6c5;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    background-color: #f4f7cce0; /*Tambien se le podria poner una imagen de fondo con el -Image*/
+    background-color: #F1E7F1; /*Tambien se le podria poner una imagen de fondo con el -Image*/
 }
 /*Header*/
 header { /*Color del fondo transparente del inicio*/
@@ -23,7 +25,7 @@ header { /*Color del fondo transparente del inicio*/
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #89AC46; /* cambia el color de El titulo de la cabezera*/
+    color: #000000; /* cambia el color de El titulo de la cabezera*/
     padding: 0 20px;
 }
 /*Video del fondo*/
@@ -41,7 +43,7 @@ header video {
   .contenido-header video {
     position: relative;
     z-index: 1; /* Asegura que el contenido esté encima del video */
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 20px;
 }
@@ -58,7 +60,7 @@ header video {
     transition: all 0.3s ease;
 }
 .navbar ul li a:hover{
-    color: #D3E671;
+    color: #D4C5E2;
 }
 .header-content h1{
     font-size: 60px;
@@ -89,34 +91,34 @@ h1 {
 /* Menú de navegación */
 .menu {
     /*background-image: url(https://th.bing.com/th/id/R.a8d1e00763015ca4435e13e54142f0d2?rik=Sk98rRIYxJYgUg&riu=http%3a%2f%2fst.depositphotos.com%2f1007566%2f2705%2fv%2f950%2fdepositphotos_27059235-stock-illustration-dog-footprint.jpg&ehk=%2bpXcVXTIflkV4Mn5tW4hfbkxkqnLobq0ciJE%2fHkqfrg%3d&risl=&pid=ImgRaw&r=0);*/
-    background-color: #A0D683;
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    flex-wrap: wrap;
+    background-color: #F1E7F1;/* Color del fondo del menú */
+    display: flex;/*Configuracion del fondo flexible*/
+    align-items: center;/*Alinea los elemntos verticalmente*/
+    padding: 10px 20px;/*Espaciado interno*/
+    flex-wrap: wrap;/* Permite que los elementos se ajusten */
     box-sizing: border-box;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position: sticky;/* Fija el menú al scroll */
+    top: 0;/* Posición en la parte superior */
+    z-index: 1000;/* Prioriza la visibilidad del menú */
 }
 
 .menu .logo img {
-    height: 50px;
-    margin-right: 30px;
+    height: 50px; /* Altura de la imagen del logo */
+    margin-right: 30px;/* Espaciado a la derecha */
 }
 
 .menu .menu-toggle {
-    display: none;
-    cursor: pointer;
-    margin-left: auto;
+    display: none; /* Oculta el toggle en pantallas grandes */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    margin-left: auto; /* Empuja el toggle hacia la derecha */
 }
 
 .menu .menu-toggle i {
-    font-size: 24px;
-    color: #D3EE98;
+    font-size: 24px; /* Tamaño del icono */
+    color: #D4C5E2; /* Color del icono */
 }
 
-.menu .menu-links {
+.menu .menu-links { 
     list-style: none;
     margin: 0;
     padding: 0;
@@ -140,7 +142,7 @@ h1 {
 
 .menu .menu-links a:hover,
 .menu .menu-links a:focus {
-    background-color: #D3E671;
+    background-color: #D29FDC;
 }
 
 .menu .menu-links .dropdown:hover > .submenu,
@@ -150,30 +152,30 @@ h1 {
 
 /* Submenús */
 .submenu {
-    display: none;
-    position: absolute;
-    background-color: #c9e996;
-    top: 100%;
-    left: 0;
-    min-width: 180px;
+    display: none;  /* Oculta los submenús por defecto */
+    position: absolute;/* Submenús aparecen fuera del flujo */
+    background-color: #D4C5E2;/*Fondo de los submenus*/
+    top: 100%;/* Aparece debajo del menú principal */
+    left: 0;/*Alineado a la izquierda*/
+    min-width: 180px;/* Ancho mínimo */
     box-sizing: border-box;
-    box-shadow: 0 4px 6px rgba(184, 157,157);
-    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(184, 157,157);/* Sombra sutil */
+    z-index: 1000; /* Prioriza visibilidad de submenús */
 }
 
 .submenu li {
-    margin: 0;
-    width: 100%;
+    margin: 0; 
+    width: 100%; /* Ancho completo de los elementos */
 }
 
 .submenu a {
-    padding: 10px 20px;
-    color: #fff;
-    font-weight: normal;
+    padding: 10px 20px; /* Espaciado interno */
+    color: #fff; /* Texto blanco */
+    font-weight: normal; /* Peso normal del texto */
 }
 
-.submenu a:hover {
-    background-color:  #C7DB9C;
+.submenu a:hover { /* Cambia el color del menu al pasar el ratón */
+    background-color:  #D3A9DE;
     color: #fff;
 }
 
@@ -200,7 +202,7 @@ h1 {
 .menu .search-bar button {
     padding: 8px 10px;
     border: none;
-    background-color:  #C7DB9C;
+    background-color:  #D3A9DE;
     color: white;
     border-radius: 0 20px 20px 0;
     cursor: pointer;
@@ -208,12 +210,12 @@ h1 {
 }
 
 .menu .search-bar button:hover {
-    background-color:  #C7DB9C;
+    background-color:  #D29FDC;
 }
 
 /* Resaltado */
 .highlight {
-    background-color: #C7DB9C;
+    background-color: #BFFFBC;
 }
 
 /* Responsividad */
@@ -270,7 +272,7 @@ h1 {
 
 footer {
     background-color: #FFF2F2;
-    color: #89AC46;
+    color: #D29FDC;
     text-align: center;
     padding: 10px 0;
     position: fixed;
@@ -283,8 +285,8 @@ footer {
     gap: 200px;
     justify-content: center;
     align-items: center;
-    height: 100vh; /*largo del fondo verde*/
-    background-color:#D3EE98;
+    height: 130vh; /*largo del fondo verde*/
+    background-color:#D8F3D7;
     font-family: 'Arial', sans-serif;
     margin: 0;
 
@@ -292,8 +294,8 @@ footer {
 
 /* Estilos de cada tarjeta */
 .tarjeta {
-    width: 250px; 
-    height: 400px;
+    width: 270px; 
+    height: 500px;
     background: white;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
