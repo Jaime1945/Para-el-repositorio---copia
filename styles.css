@@ -90,9 +90,10 @@ header video {
     width: 80%; /* Ancho del contenedor */
     margin: 20px auto; /* Centra el contenedor */
     padding: 30px; /* Espaciado interno */
-    background-color: #ffffffa1; /* Color de fondo con transparencia */
+    background-color: #ffffff83; /* Color de fondo con transparencia */
     box-sizing: border-box; /* Incluye padding y border en el tamaño total */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 20px; /* Bordes redondeados */
 }
 
 h1 {
