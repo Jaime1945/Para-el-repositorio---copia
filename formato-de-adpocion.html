@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugio Patitas Felices</title>
+    <link rel="icon" href="Imagenes/logo 2.jpg" type="image/x-icon">
+    <!-- Enlaces a fuentes y estilos -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap">
+    <!-- Enlace a Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Enlace a tu archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav class="menu">
+        <!--Contenedor del logo de la pagina-->
+        <div class="logo">
+            <img src="Imagenes/logo 2.png" alt="TechLogo">
+        </div>
+        <!-- Botón de menú para móviles -->
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <!-- Lista de enlaces del menú -->
+        <ul class="menu-links">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#">quiero ayudar! <i class="fas fa-angle-down"></i></a>
+                <!--Submenus en un menu principal-->
+                <ul class="submenu">
+                    <li><a href="como-puedo-adoptar.html">¿como puedo adoptar? </a></li>
+                    <li><a href="#">antes de adoptar!</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Servicios <i class="fas fa-angle-down"></i></a>
+                <ul class="submenu">
+                    <li><a href="#">Adopcion</a></li>
+                    <li><a href="#">Donaciones</a></li>
+                </ul>
+            </li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="#">Contactos</a></li>
+        </ul>
+        <!-- Barra de búsqueda en la esquina superior derecha -->
+        <div class="search-bar">
+            <!-- Campo de texto donde los usuarios pueden escribir términos para buscar -->
+            <input type="text" id="searchInput" placeholder="Buscar...">
+            <!-- Botón que inicia la búsqueda, incluye un ícono de lupa para mayor claridad -->
+            <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+    </nav>
+<!-- Sección de encabezado del sitio web -->
+<header>
+    <!-- Contenedor de contenido del encabezado con una clase para diseño responsivo -->
+    <div class="header-content container2">
+        <!--Titulo principal de la pagina-->
+        <h1>Formato de Adopcion</h1>
+        <p>
+            Aqui en este apartado unico podras descargar nuestro <strong>Formato de Adopcion</strong>
+            para poder adoptar una mascota solo dale click al boton de <strong>Descargar</strong>
+            para obtener el PDF de nuestro formato de Adopcion.
+        </p>
+
+        <!-- Botón con enlace para descargar el archivo PDF -->
+    <a href="Imagenes/Formato de Adopción.pdf" download="file:///C:/Users/cjaim/OneDrive/Documentos/Para%20el%20repositorio%20-%20copia/Imagenes/Formato%20de%20Adopci%C3%B3n.pdf">
+        <button>Descargar Archivo</button>
+    </a>
+
+    <div class="container" id="content"> <!--Mas informacion/contenido-->
+        <h1>Formato de Adopción</h1>
+        <p>
+            Tambien, aqui puedes observar el formato por tu propia cuenta:
+            <!-- Código para mostrar una imagen -->
+        <img src="Imagenes/Formato adop.png" alt="Descripción de la imagen" width="300">
+        </p>
+    </div>
+
+    <footer> <!--Derechos de "autor???"-->
+        <p><marquee>&copy; 2025 Casa Patitas Felices todos los derechos reservados!</marquee></p>
+    </footer>
