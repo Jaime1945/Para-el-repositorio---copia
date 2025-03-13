@@ -356,23 +356,3 @@ footer {
     font-size: 14px; /* Tamaño del texto */
     color: #000000; /* Color negro */
 }
-
-/* Estilos del botón */
-button {
-    background-color: #4CAF50; /* Color de fondo: verde */
-    color: white; /* Color del texto: blanco */
-    border: none; /* Sin borde */
-    padding: 10px 20px; /* Espaciado interno: arriba/abajo 10px, izquierda/derecha 20px */
-    text-align: center; /* Centrar el texto */
-    text-decoration: none; /* Sin subrayado */
-    display: inline-block; /* Asegura que sea un botón en línea */
-    font-size: 16px; /* Tamaño de la fuente */
-    margin: 10px; /* Margen alrededor del botón */
-    cursor: pointer; /* Cambia el cursor a "mano" al pasar sobre el botón */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: background-color 0.3s ease; /* Transición suave al cambiar el color */
-}
-
-button:hover {
-    background-color: #45a049; /* Cambia ligeramente el color al pasar el cursor */
-}
