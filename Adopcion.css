@@ -301,3 +301,58 @@ footer {
     bottom: 0; /* Lo mantiene pegado abajo */
     width: 100%; /* Ocupa todo el ancho de la pantalla */
 }
+/* Contenedor de tarjetas */
+.contenedor {
+    display: flex; /* Usa flexbox para organizar las tarjetas */
+    gap: 190px; /* Espaciado entre tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    align-items: center; /* Centra las tarjetas verticalmente */
+    height: 130vh; /* Altura del contenedor (más grande que la pantalla) */
+    background-color: #D8F3D7; /* Color de fondo verde */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente del texto */
+    margin: 0; /* Elimina márgenes externos */
+}
+
+/* Estilos de cada tarjeta */
+.tarjeta {
+    width: 290px;  /* Ancho de la tarjeta */
+    height: 510px; /* Altura de la tarjeta */
+    background: white; /* Fondo blanco */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    overflow: hidden; /* Oculta el contenido que sobresalga */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Efecto de transición */
+    text-align: center; /* Alineación centrada del texto */
+}
+
+/* Efecto hover en la tarjeta */
+.tarjeta:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer hover */
+}
+
+/* Imagen dentro de la tarjeta */
+.tarjeta img {
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    height: 60%; /* La imagen ocupa el 60% de la altura de la tarjeta */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
+/* Contenido dentro de la tarjeta */
+.tarjeta .contenido {
+    padding: 15px; /* Espaciado interno */
+}
+
+/* Título dentro de la tarjeta */
+.tarjeta h3 {
+    margin: 0; /* Elimina márgenes extra */
+    font-size: 18px; /* Tamaño del título */
+    color: #AE84B6; /* Color del texto */
+}
+
+/* Texto descriptivo dentro de la tarjeta */
+.tarjeta p {
+    margin: 10px 0 0; /* Espaciado superior */
+    font-size: 14px; /* Tamaño del texto */
+    color: #000000; /* Color negro */
+}
