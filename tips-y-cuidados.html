@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugio Patitas Felices</title>
+    <link rel="icon" href="Imagenes/logo 2.jpg" type="image/x-icon">
+    <!-- Enlaces a fuentes y estilos -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap">
+    <!-- Enlace a Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Enlace a tu archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+<!-- Estilos CSS internos -->
+<style>
+    /* ====== Estilos Generales ====== */
+    body {
+        font-family: Arial, sans-serif; /* Fuente predeterminada */
+        margin: 0; /* Elimina márgenes */
+        padding: 20px; /* Agrega espacio alrededor del contenido */
+        background-color: #f4f4f4; /* Fondo gris claro */
+    }
+
+    /* ====== Ocultar los inputs de radio ====== */
+    .tab {
+        display: none; /* Oculta los inputs de radio */
+    }
+
+    /* ====== Estilos para las etiquetas de los tabs (botones de selección) ====== */
+    .tab-label {
+        display: block; /* Hace que las etiquetas sean bloques clickeables */
+        padding: 10px; /* Espaciado interno */
+        margin: 5px; /* Margen entre los botones */
+        background-color: #007BFF; /* Color azul */
+        color: white; /* Texto en blanco */
+        cursor: pointer; /* Cambia el cursor a puntero al pasar el mouse */
+    }
+
+    /* ====== Cambio de color al pasar el cursor sobre los labels ====== */
+    .tab-label:hover {
+        background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+    }
+
+    /* ====== Estilos para el contenido de cada tab ====== */
+    .tab-content {
+        display: none; /* Se ocultan inicialmente los contenidos */
+        padding: 15px; /* Espaciado interno */
+        border: 1px solid #ddd; /* Borde gris */
+        background-color: white; /* Fondo blanco */
+    }
+
+    /* ====== Mostrar el contenido cuando el input de radio está seleccionado ====== */
+    .tab:checked + .tab-label + .tab-content {
+        display: block; /* Muestra el contenido asociado */
+    }
+</style>
+
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav class="menu">
+        <!--Contenedor del logo de la pagina-->
+        <div class="logo">
+            <img src="Imagenes/logo 2.png" alt="TechLogo">
+        </div>
+        <!-- Botón de menú para móviles -->
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <!-- Lista de enlaces del menú -->
+        <ul class="menu-links">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#">quiero ayudar! <i class="fas fa-angle-down"></i></a>
+                <!--Submenus en un menu principal-->
+                <ul class="submenu">
+                    <li><a href="como-puedo-adoptar.html">¿como puedo adoptar? </a></li>
+                    <li><a href="tips-y-cuidados.html">Tips y Cuidados</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Servicios <i class="fas fa-angle-down"></i></a>
+                <ul class="submenu">
+                    <li><a href="Adopcion.html">Adopcion</a></li>
+                    <li><a href="#">Donaciones</a></li>
+                </ul>
+            </li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="#">Contactos</a></li>
+        </ul>
+        <!-- Barra de búsqueda en la esquina superior derecha -->
+        <div class="search-bar">
+            <!-- Campo de texto donde los usuarios pueden escribir términos para buscar -->
+            <input type="text" id="searchInput" placeholder="Buscar...">
+            <!-- Botón que inicia la búsqueda, incluye un ícono de lupa para mayor claridad -->
+            <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+    </nav>
+<!-- Sección de encabezado del sitio web -->
+<header>
+    <!-- Contenedor de contenido del encabezado con una clase para diseño responsivo -->
+    <div class="header-content container2">
+        <!--Titulo principal de la pagina-->
+        <h1>Tips y Cuidados recomendados</h1>
+        <p>
+            Buscamos proteger la vida de perros y gatos en estado de maltrato y abandono. 
+            Les brindamos alimentos, medicamentos y albergue, con el fin de mejorar su calidad de vida y
+            <strong>conseguirles un hogar a los peluditos!</strong>
+        </p>
+        <!--video del header-->
+        <video autoplay loop muted playsinline>
+            <!-- Fuente del video en formato mp4 -->
+            <source src="Imagenes/Cachorros Husky Siberiano.mp4" type="video/mp4">
+            <!--Mensaje alternativo por si el navegador no lo soporta-->
+            Tu navegador no soporta videos HTML5.        
+        <!--fin video-->
+</header>
+<!--Fin de la info del encabezado-->
+<!-- Contenido/Informacion principal -->
+<div class="container" id="content">
+    <h1>Recomendaciones para tu mascota</h1>
+    <p>
+        Ahora te diremos lo que no puede faltar en tu hogar para recibir al nuevo integrante de tu familia como se merece:
+    </p>
+</div>
+
+<!--Pestañas Arcienega-->
+<!-- Primer Tab -->
+<input type="radio" name="tabs" class="tab" id="tab1" checked> <!-- Opción seleccionada por defecto -->
+<label class="tab-label" for="tab1">Contenido 1</label> <!-- Etiqueta asociada -->
+<div class="tab-content">
+    <p>Este es el contenido del primer tab.</p>
+</div>
+
+<!-- Segundo Tab -->
+<input type="radio" name="tabs" class="tab" id="tab2">
+<label class="tab-label" for="tab2">Contenido 2</label>
+<div class="tab-content">
+    <p>Este es el contenido del segundo tab.</p>
+</div>
+
+<!-- Tercer Tab -->
+<input type="radio" name="tabs" class="tab" id="tab3">
+<label class="tab-label" for="tab3">Contenido 3</label>
+<div class="tab-content">
+    <p>Este es el contenido del tercer tab.</p>
+</div></br></br>
+
+    <!-- Enlace a tu archivo JavaScript -->
+    <script src="script.js"></script>
+    <!--Fin del enlace con java-->
+    
+    <footer> <!--Derechos de "autor???"-->
+        <p><marquee>&copy; 2025 Casa Patitas Felices todos los derechos reservados!</marquee></p>
+    </footer>
+</body>
+</html>
