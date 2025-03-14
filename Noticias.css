@@ -10,7 +10,7 @@ body {
 }
 /*Header*/
 header { /*Color del fondo transparente del inicio*/
-    background-image: linear-gradient(rgba(237, 199, 241, 0.712),rgba(250, 218, 253, 0.712)), url(Imagenes/fondo\ 1.webp); /* imagen de fondo en el parentesis*/
+    background-image: linear-gradient(rgba(222, 172, 228, 0.712),rgba(250, 218, 253, 0.712)), url(Imagenes/fondo\ 1.webp); /* imagen de fondo en el parentesis*/
     background-position: center;
     background-size: cover;
     min-height: 60vh;
