@@ -322,7 +322,7 @@ footer {
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
     overflow: hidden; /* Oculta el contenido que sobresalga */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Efecto de transición */
-    text-align: center; /* Alineación centrada del texto */
+    text-align: center; /* Alineación centrada del texto*/
 }
 
 /* Efecto hover en la tarjeta */
