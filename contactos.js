@@ -1,4 +1,6 @@
+
 // Seleccionar la imagen con el id "mainImage"
+// Seleccionar la imagen
 const image = document.getElementById("mainImage");
 
 // Agregar un evento de clic a la imagen para cambiar la imagen cuando se haga clic
