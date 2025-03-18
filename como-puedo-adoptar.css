@@ -26,7 +26,7 @@ header {
     align-items: center; /* Centra el contenido horizontalmente */
     text-align: center; /* Alineación del texto */
     color: #000000; /* Color del título en el header */
-    padding: 0 20px; /* Espaciado interno */
+    padding: 0 20px; /* Espaciado interno */ 
 }
 
 /* Video de fondo en el header */
