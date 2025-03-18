@@ -243,13 +243,3 @@ h1 {
         justify-content: center;
     }
 }
-
-footer {
-    background-color: #00030070;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
