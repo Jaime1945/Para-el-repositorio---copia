@@ -1,15 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contactos al publico</title>
-    <h1>contactanos!!!</h1>
-    <p> te ofrecemos el apoyo de nuetros especialistas, contactatalos atravez de via online </p>
-    <p> vive esta maravillosa experiencia!!! </p>
+    <title>Refugio Patitas Felices</title>
 
+    <link rel="icon" href="Imagenes/logo 1.jpg" type="image/x-icon">
+
+    <!-- Enlaces a fuentes y estilos -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap">
+    <!-- Enlace a Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Enlace a tu archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <!-- Menú de navegación -->
+    <nav class="menu">
+        <!--Contenedor del logo de la pagina-->
+        <div class="logo">
+            <img src="Imagenes/logo 2.png" alt="TechLogo">
+        </div>
+        <!-- Botón de menú para móviles -->
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <!-- Lista de enlaces del menú -->
+        <ul class="menu-links">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#">quiero ayudar! <i class="fas fa-angle-down"></i></a>
+                <!--Submenus en un menu principal-->
+                <ul class="submenu">
+                    <li><a href="como-puedo-adoptar.html">¿como puedo adoptar? </a></li>
+                    <li><a href="#">antes de adoptar!</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Servicios <i class="fas fa-angle-down"></i></a>
+                <ul class="submenu">
+                    <li><a href="#">Adopcion</a></li>
+                    <li><a href="#">Donaciones</a></li>
+                </ul>
+            </li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="#">Contactos</a></li>
+        </ul>
+        <!-- Barra de búsqueda en la esquina superior derecha -->
+        <div class="search-bar">
+            <!-- Campo de texto donde los usuarios pueden escribir términos para buscar -->
+            <input type="text" id="searchInput" placeholder="Buscar...">
+            <!-- Botón que inicia la búsqueda, incluye un ícono de lupa para mayor claridad -->
+            <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+    </nav>
+<!-- Sección de encabezado del sitio web -->
+<header>
+    <!-- Contenedor de contenido del encabezado con una clase para diseño responsivo -->
+    <div class="header-content container2">
+        <!--Titulo principal de la pagina-->
+        <h1>¡CONTACTANOS!</h1>  <!-- Título principal de la sección de contacto -->
+
+        <!-- Párrafo de información general sobre el apoyo que se ofrece -->
+        <p>
+            Ofrecemos el apoyo de nuestros especialistas para causar un cambio
+            y proteger la salud y el cuidado personal de tus amigos peludos.
+            <strong>¡Concientízalos, hazlos sentir especiales!</strong>
+        </p>
+
+        <!-- Video que se reproducirá en la cabecera -->
+        <video autoplay loop muted playsinline>
+            <!-- Fuente del video en formato mp4 -->
+            <source src="Imagenes/Cachorros Husky Siberiano.mp4" type="video/mp4">
+            <!-- Mensaje alternativo en caso de que el navegador no soporte el video -->
+            Tu navegador no soporta videos HTML5.
+        </video>
+    </header>
+
+    <!-- Contenedor principal que agrupa el contenido de la página -->
+    <div class="container">
+
+        <!-- Primera sección de contacto (Instagram) -->
+        <section class="left-boxes">
+            <div class="text-box">
+                <!-- Título de la sección -->
+                <h2>VIVE ESTA MARAVILLOSA EXPERIENCIA</h2>
+
+                <!-- Subtítulo para la plataforma Instagram -->
+                <h3>INSTAGRAM</h3>
+                
+                <!-- Párrafo que describe el objetivo de la sección -->
+                <p>Entra y contacta las veterinarias cercanas:</p>
+
+                <!-- Lista de cuentas de veterinarias en Instagram -->
+                <ul class="lista">
+                    <p>veterinaria PolyVet</p>
+                    <p>clinicaveterinaria_zamora</p>
+                    <p>mar_vet.zamora</p>
+                    <p>gabymarveterinaria</p>
+                    <p>dra.mascota_veterinaria</p>
+                    <p>vet.hocicos</p>
+                    <p>farmaciaveterinariazamora</p>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Segunda sección de contacto (Facebook) -->
+        <section class="left-boxes">
+            <div class="text-box">
+                <!-- Título de la sección -->
+                <h1>FACEBOOK</h1>
+                
+                <!-- Descripción de lo que se comparte en esta plataforma -->
+                <p>Compartimos contigo todo lo necesario para el cuidado de tu amiguito peludo:</p>
+
+                <!-- Lista de páginas de veterinarias en Facebook -->
+                <ul class="lista">
+                    <p>buddys</p>
+                    <p>ottos vet</p>
+                    <p>Bonaventura</p>
+                    <p>veterinaria nava castillo</p>
+                    <p>clinica veterinaria MI mascota</p>
+                    <p>veterinaria el santuario</p>
+                    <p>veterinaria la selva</p>
+                    
+                </ul>
+
+            </div>
+        </section>
+
+        <!-- Tercera sección de contacto (Sitios web) -->
+        <section class="left-boxes">
+            <div class="text-box">
+                <!-- Título de la sección -->
+                <h2>SITIOS WEB</h2>
+
+                <!-- Descripción de la sección -->
+                <p>Comparte y participa informando a más personas sobre la necesidad de tus mascotas:</p>
+
+                <!-- Lista de sitios web relacionados con la veterinaria -->
+                <ul class="lista">
+                    <p>Veterinaria Pet's Care</p>
+                    <p>Clínica Veterinaria El Buen Perro</p>
+                    <p>PetCare Zamora</p>
+                    <p>Banfield Pet Hospital</p>
+                    <p>Kivet Veterinarios</p>
+                    <p>Clínica Veterinaria Médicos Veterinarios</p>
+                    <p>Farmacia Veterinaria Online</p>
+
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Pie de página con derechos reservados -->
+    <footer>
+        <!-- Mensaje de derechos reservados con animación de texto -->
+        <p>&copy; 2025 Casa Patitas Felices. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Enlace a tu archivo JavaScript externo -->
+    <script src="script.js"></script>
+
 </body>
 </html>
