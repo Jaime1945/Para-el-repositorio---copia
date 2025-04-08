@@ -294,10 +294,47 @@ h1 {
 
 footer {
     background-color: #fff2f200; /* Color de fondo del pie de página */
-    color: #AE84B6; /* Color del texto */
+    color: #ae84b600; /* Color del texto */
     text-align: center; /* Centra el texto */
     padding: 10px 0; /* Espaciado interno */
     position: fixed; /* Fija el footer en la parte inferior */
     bottom: 0; /* Lo mantiene pegado abajo */
     width: 100%; /* Ocupa todo el ancho de la pantalla */
 }
+
+
+
+/*Pestañas*/
+
+    /* ====== Ocultar los inputs de radio ====== */
+    .tab {
+        display: none; /* Oculta los inputs de radio */
+    }
+
+    /* ====== Estilos para las etiquetas de los tabs (botones de selección) ====== */
+    .tab-label {
+        display: block; /* Hace que las etiquetas sean bloques clickeables */
+        padding: 10px; /* Espaciado interno */
+        margin: 5px; /* Margen entre los botones */
+        background-color: #F1E7F1; /* Color azul */
+        color: white; /* Texto en blanco */
+        cursor: pointer; /* Cambia el cursor a puntero al pasar el mouse */
+    }
+
+    /* ====== Cambio de color al pasar el cursor sobre los labels ====== */
+    .tab-label:hover {
+        background-color: #dac4da; /* Azul más oscuro al pasar el mouse */
+    }
+
+    /* ====== Estilos para el contenido de cada tab ====== */
+    .tab-content {
+        display: none; /* Se ocultan inicialmente los contenidos */
+        padding: 15px; /* Espaciado interno */
+        border: 1px solid #ddd; /* Borde gris */
+        background-color: white; /* Fondo blanco */
+    }
+
+    /* ====== Mostrar el contenido cuando el input de radio está seleccionado ====== */
+    .tab:checked + .tab-label + .tab-content {
+        display: block; /* Muestra el contenido asociado */
+    }
