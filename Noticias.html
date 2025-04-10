@@ -1,89 +1,81 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refugio Patitas Felices</title>
-    <link rel="icon" href="Imagenes/logo 1.jpg" type="image/x-icon">
-    <!-- Enlaces a fuentes y estilos -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap">
-    <!-- Enlace a Font Awesome para íconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Enlace a tu archivo CSS -->
-    <link rel="stylesheet" href="Noticias.css">
-</head>
-<body>
-    <!-- Menú de navegación -->
-    <nav class="menu">
-        <div class="logo">
-            <img src="Imagenes/logo 1.jpg" alt="TechLogo">
-        </div>
-        <!-- Botón de menú para móviles -->
-        <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
-        <!-- Lista de enlaces del menú -->
-        <ul class="menu-links">
-            <li><a href="index.html" class="active">Inicio</a></li>
-            <li class="dropdown">
-                <a href="#">¡Quiero ayudar! <i class="fas fa-angle-down"></i></a>
-                <ul class="submenu">
-                    <li><a href="como-puedo-adoptar.html">¿Cómo puedo adoptar?</a></li>
-                    <li><a href="#">¡Antes de adoptar!</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">Servicios <i class="fas fa-angle-down"></i></a>
-                <ul class="submenu">
-                    <li><a href="#">Adopción</a></li>
-                    <li><a href="#">Donaciones</a></li>
-                </ul>
-            </li>
-            <li><a href="Noticias.html">Noticias</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-        <!-- Barra de búsqueda en la esquina superior derecha -->
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Buscar...">
-            <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
-        </div>
-    </nav>
 
-    <header>
-        <div class="header-content container">
-            <h1>Información</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati est veniam cum! Inventore temporibus, officiis 
-                voluptate voluptatibus nisi.
-            </p>
-        </div>
-    </header>
-
-    <!-- Sección de Tarjetas Informativas -->
-    <section class="info-cards">
-        <h2>Nuestra Misión</h2>
-        <div class="card-container">
-            <div class="card">
-                <h3>Adopción Responsable</h3>
-                <p>Fomentamos la adopción de mascotas con compromiso y responsabilidad.</p>
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Refugio Patitas Felices</title>
+                <link rel="icon" href="Imagenes/logo 2.jpg" type="image/x-icon">
+                <!-- Enlaces a fuentes y estilos -->
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap">
+                <!-- Enlace a Font Awesome para íconos -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+                <!-- Enlace a tu archivo CSS -->
+                <link rel="stylesheet" href="styles.css">
+            </head>
+            <body>
+            
+                <!-- Menú de navegación -->
+                <nav class="menu">
+                    <!--Contenedor del logo de la pagina-->
+                    <div class="logo">
+                        <img src="Imagenes/logo 2.png" alt="TechLogo">
+                    </div>
+                    <!-- Botón de menú para móviles -->
+                    <div class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <!-- Lista de enlaces del menú -->
+                    <ul class="menu-links">
+                        <li><a href="index.html" class="active">Inicio</a></li>
+                        <li class="dropdown">
+                            <a href="#">Guía y ayuda <i class="fas fa-angle-down"></i></a>
+                            <!--Submenus en un menu principal-->
+                            <ul class="submenu">
+                                <li><a href="como-puedo-adoptar.html">¿como puedo adoptar? </a></li>
+                                <li><a href="tips-y-cuidados.html">Tips y Cuidados</a></li>
+                            </ul>
+                            <!-- holis hice un cambio !!!-->
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Servicios <i class="fas fa-angle-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="Adopcion.html">Adopcion</a></li>
+                                <li><a href="#">Donaciones</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="noticias.html">Noticias</a></li>
+                        <li><a href="contactos.html">Contactos</a></li>
+                    </ul>
+                    <!-- Barra de búsqueda en la esquina superior derecha -->
+                    <div class="search-bar">
+                        <!-- Campo de texto donde los usuarios pueden escribir términos para buscar -->
+                        <input type="text" id="searchInput" placeholder="Buscar...">
+                        <!-- Botón que inicia la búsqueda, incluye un ícono de lupa para mayor claridad -->
+                        <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
+                    </div>
+          <meta charset="UTF-8" /> <!-- Define el conjunto de caracteres -->
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Adaptabilidad en móviles -->
+          <title>Noticias - Refugio de Animales</title> <!-- Título de la pestaña del navegador -->
+          <link rel="stylesheet" href="Noticias.css" /> <!-- Enlace al archivo CSS -->
+        </head>
+        <body>
+          <section class="news-section"> <!-- Sección principal de noticias -->
+            <h1>Últimas Noticias del Refugio 🐶🐱</h1> <!-- Título visible -->
+        
+            <!-- Contenedor de noticias, donde se insertan dinámicamente -->
+            <div class="news-container" id="newsContainer">
+              <!-- Las tarjetas de noticias aparecerán aquí -->
             </div>
-            <div class="card">
-                <h3>Donaciones</h3>
-                <p>Tu ayuda es clave para brindar refugio, alimento y cuidado médico.</p>
-            </div>
-            <div class="card">
-                <h3>Rescate Animal</h3>
-                <p>Rescatamos y rehabilitamos animales en situación de calle.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Enlace a tu archivo JavaScript -->
-    <script src="script.js"></script>
-
-    <footer> <!-- Derechos de autor -->
-        <p><marquee>&copy; 2025 Casa Patitas Felices. ¡Todos los derechos reservados!</marquee></p>
-    </footer>
-</body>
-</html>
+        
+            <!-- Botón para cargar más noticias -->
+            <button class="load-more" onclick="loadMoreNews()">Ver más noticias</button>
+          </section>
+        
+          <!-- Enlace al archivo JavaScript -->
+          <script src="Noticias.js"></script>
+        </body>
+        </html>
+        
+        
