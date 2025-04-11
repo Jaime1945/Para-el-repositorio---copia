@@ -292,18 +292,15 @@ h1 {
     }
 }
 
-<<<<<<< HEAD
 footer {
     background-color: #fff2f200; /* Color de fondo del pie de página */
     color: #18011d; /* Color del texto */
-=======
-
+}
 
 .Bot {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente del texto */
-    background-color: #ff0000; /* Color de fondo del pie de página */
+    background-color: #ade7f1; /* Color de fondo del pie de página */
     color: #ffffff; /* Color del texto */
->>>>>>> 0440afbbf717d671dd7e0f718aa1441906def63c
     text-align: center; /* Centra el texto */
     padding: 10px 0; /* Espaciado interno */
     position: fixed; /* Fija el footer en la parte inferior */
