@@ -301,13 +301,18 @@ footer {
     bottom: 0; /* Lo mantiene pegado abajo */
     width: 100%; /* Ocupa todo el ancho de la pantalla */
 }
+/*titulo de adoptados por arriba de las tarjetas*/
+.adoptados {
+    width: 80%;
+    margin: 20px auto; /* Centra el contenedor */
+}
 /* Contenedor de tarjetas */
 .contenedor {
     display: flex; /* Usa flexbox para organizar las tarjetas */
-    gap: 190px; /* Espaciado entre tarjetas */
+    gap: 100px; /* Espaciado entre tarjetas */
     justify-content: center; /* Centra las tarjetas horizontalmente */
     align-items: center; /* Centra las tarjetas verticalmente */
-    height: 130vh; /* Altura del contenedor (más grande que la pantalla) */
+    height: 80vh; /* Altura del contenedor (más grande que la pantalla) */
     background-color: #D8F3D7; /* Color de fondo verde */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente del texto */
     margin: 0; /* Elimina márgenes externos */
@@ -356,6 +361,7 @@ footer {
     font-size: 14px; /* Tamaño del texto */
     color: #000000; /* Color negro */
 }
+
 
 /*Perfiles de mascotas en adopcion*/
 .cards-container {
