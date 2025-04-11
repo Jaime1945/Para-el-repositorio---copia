@@ -302,7 +302,7 @@ h1 {
     position: fixed; /* Fija el footer en la parte inferior */
     bottom: 0; /* Lo mantiene pegado abajo */
     width: 50%; /* Ocupa todo el ancho de la pantalla */
-    align-items: center;
+
 } 
 
 /*Pestañas*/
