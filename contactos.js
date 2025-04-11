@@ -20,3 +20,5 @@ image.addEventListener("click", function() {
     // Cambiar la imagen actual estableciendo el atributo "src" con la siguiente imagen en el arreglo
     image.setAttribute("src", images[nextIndex]);
 });
+
+
