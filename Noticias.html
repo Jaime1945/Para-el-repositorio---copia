@@ -10,11 +10,13 @@
     <!-- Enlace a Font Awesome para íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Enlace a tu archivo CSS -->
-    <link rel="stylesheet" href="Noticias.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Menú de navegación -->
     <nav class="menu">
+        <!--Contenedor del logo de la pagina-->
         <div class="logo">
             <img src="Imagenes/logito-removebg-preview.png" alt="TechLogo">
         </div>
@@ -26,64 +28,32 @@
         <ul class="menu-links">
             <li><a href="index.html" class="active">Inicio</a></li>
             <li class="dropdown">
-                <a href="#">¡Quiero ayudar! <i class="fas fa-angle-down"></i></a>
+                <a href="#">Guía y ayuda <i class="fas fa-angle-down"></i></a>
+                <!--Submenus en un menu principal-->
                 <ul class="submenu">
-                    <li><a href="como-puedo-adoptar.html">¿Cómo puedo adoptar?</a></li>
-                    <li><a href="#">¡Antes de adoptar!</a></li>
+                    <li><a href="como-puedo-adoptar.html">¿como puedo adoptar? </a></li>
+                    <li><a href="tips-y-cuidados.html">Tips y Cuidados</a></li>
                 </ul>
+                <!-- holis hice un cambio !!!-->
             </li>
             <li class="dropdown">
                 <a href="#">Servicios <i class="fas fa-angle-down"></i></a>
                 <ul class="submenu">
-                    <li><a href="#">Adopción</a></li>
+                    <li><a href="Adopcion.html">Adopcion</a></li>
                     <li><a href="#">Donaciones</a></li>
                 </ul>
             </li>
-            <li><a href="Noticias.html">Noticias</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            
         </ul>
         <!-- Barra de búsqueda en la esquina superior derecha -->
         <div class="search-bar">
+            <!-- Campo de texto donde los usuarios pueden escribir términos para buscar -->
             <input type="text" id="searchInput" placeholder="Buscar...">
+            <!-- Botón que inicia la búsqueda, incluye un ícono de lupa para mayor claridad -->
             <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
         </div>
     </nav>
-
-    <header>
-        <div class="header-content container">
-            <h1>Información</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati est veniam cum! Inventore temporibus, officiis 
-                voluptate voluptatibus nisi.
-            </p>
-        </div>
-    </header>
-
-    <!-- Sección de Tarjetas Informativas -->
-    <section class="info-cards">
-        <h2>Nuestra Misión</h2>
-        <div class="card-container">
-            <div class="card">
-                <h3>Adopción Responsable</h3>
-                <p>Fomentamos la adopción de mascotas con compromiso y responsabilidad.</p>
-            </div>
-            <div class="card">
-                <h3>Donaciones</h3>
-                <p>Tu ayuda es clave para brindar refugio, alimento y cuidado médico.</p>
-            </div>
-            <div class="card">
-                <h3>Rescate Animal</h3>
-                <p>Rescatamos y rehabilitamos animales en situación de calle.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Enlace a tu archivo JavaScript -->
-    <script src="script.js"></script>
-
-    <footer> <!-- Derechos de autor -->
-        <p><marquee>&copy; 2025 Casa Patitas Felices. ¡Todos los derechos reservados!</marquee></p>
-    </footer>
-</body>
-</html>
+<!-- Sección de encabezado del sitio web -->
+<header>

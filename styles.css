@@ -4,7 +4,7 @@
 /* Estilos generales */
 body {
     margin: 0; /* Elimina márgenes por defecto en el body */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente del texto */
+    font-family:Roboto, sans-serif;/* Fuente del texto */
     background-color: #D8F3D7; /* Color de fondo */
     background-repeat: no-repeat; /* Evita que el fondo se repita */
     background-size: cover; /* Ajusta el fondo para cubrir toda la pantalla */
@@ -27,6 +27,8 @@ header {
     text-align: center; /* Alineación del texto */
     color: #000000; /* Color del título en el header */
     padding: 0 20px; /* Espaciado interno */
+
+    
 }
 
 /* Video de fondo en el header */
