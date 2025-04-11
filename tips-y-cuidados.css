@@ -343,3 +343,4 @@ footer {
     .tab:checked + .tab-label + .tab-content {
         display: block; /* Muestra el contenido asociado */
     }
+}
