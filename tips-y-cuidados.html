@@ -10,44 +10,12 @@
     <!-- Enlace a Font Awesome para íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Enlace a tu archivo CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tips-y-cuidados.css">
 
-<!-- Estilos CSS internos -->
-<style>
-    /* ====== Ocultar los inputs de radio ====== */
-    .tab {
-        display: none; /* Oculta los inputs de radio */
-    }
-
-    /* ====== Estilos para las etiquetas de los tabs (botones de selección) ====== */
-    .tab-label {
-        display: block; /* Hace que las etiquetas sean bloques clickeables */
-        padding: 10px; /* Espaciado interno */
-        margin: 5px; /* Margen entre los botones */
-        background-color: #F1E7F1; /* Color azul */
-        color: white; /* Texto en blanco */
-        cursor: pointer; /* Cambia el cursor a puntero al pasar el mouse */
-    }
-
-    /* ====== Cambio de color al pasar el cursor sobre los labels ====== */
-    .tab-label:hover {
-        background-color: #dac4da; /* Azul más oscuro al pasar el mouse */
-    }
-
-    /* ====== Estilos para el contenido de cada tab ====== */
-    .tab-content {
-        display: none; /* Se ocultan inicialmente los contenidos */
-        padding: 15px; /* Espaciado interno */
-        border: 1px solid #ddd; /* Borde gris */
-        background-color: white; /* Fondo blanco */
-    }
-
-    /* ====== Mostrar el contenido cuando el input de radio está seleccionado ====== */
-    .tab:checked + .tab-label + .tab-content {
-        display: block; /* Muestra el contenido asociado */
-    }
-</style>
-
+    <!--vinculacion con el Bot-->
+    <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/04/08/00/20250408004514-XCWJKZK6.js"></script>
+        
 </head>
 <body>
     <!-- Menú de navegación -->
@@ -116,7 +84,12 @@
         Ahora te diremos lo que no puede faltar en tu hogar para recibir al nuevo integrante de tu familia como se merece:
     </p>
 </div>
-
+<!--Boton para habilitar el Bot-->
+<div class="Bot" id="Habilitar_bot">
+<section>
+    <button onclick="Habilitar_bot();">Habilitar bot</button>
+</section>
+</div>
 <!--Pestañas Arcienega-->
 <!-- Primer Tab -->
 <input type="radio" name="tabs" class="tab" id="tab1" checked> <!-- Opción seleccionada por defecto -->
@@ -216,7 +189,7 @@
 </br></br></br>
 
     <!-- Enlace a tu archivo JavaScript -->
-    <script src="script.js"></script>
+    <script src="tips-y-cuidados.js"></script>
     <!--Fin del enlace con java-->
     
     <footer> <!--Derechos de "autor???"-->

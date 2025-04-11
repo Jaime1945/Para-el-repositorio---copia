@@ -27,6 +27,8 @@ header {
     text-align: center; /* Alineación del texto */
     color: #000000; /* Color del título en el header */
     padding: 0 20px; /* Espaciado interno */
+
+    
 }
 
 /* Video de fondo en el header */
@@ -125,7 +127,7 @@ h1 {
 }
 
 .menu .logo img {
-    height: 50px; /* Altura de la imagen del logo */
+    height: 64px; /* Altura de la imagen del logo */
     margin-right: 30px;/* Espaciado a la derecha */
 }
 
