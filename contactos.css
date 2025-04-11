@@ -1,9 +1,29 @@
+/* Video de fondo en el header */
+header video {
+    position: absolute; /* Posición absoluta para cubrir el header */
+    top: 15%; /* Ajusta la posición vertical */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Corrige la posición exacta */
+    min-width: 100%; /* Ocupa todo el ancho disponible */
+    min-height: 50%; /* Ocupa la mitad de la altura */
+    z-index: -1; /* Envía el video al fondo */
+    object-fit: cover; /* Ajusta el video sin deformarlo */
+}
+
+/* Contenido del header sobre el video */
+.contenido-header video {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté sobre el video */
+    color: rgb(255, 255, 255); /* Color del texto */
+    text-align: center; /* Centra el contenido */
+    padding: 20px; /* Espaciado interno */
+}
 /* Estilos generales */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 100vh; /* Usar el 100% de la altura visible */
     margin: 0;
     background-color: #f5f5f5;
 }
@@ -15,7 +35,7 @@ body {
     justify-content: space-between;
     width: 80%;
     max-width: 900px;
-    background: white;
+    background: white;   
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
