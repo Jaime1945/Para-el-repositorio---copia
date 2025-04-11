@@ -292,8 +292,7 @@ h1 {
     }
 }
 
-
-
+/*se supone que esto combia el boton que habilita el Bot*/
 .Bot {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente del texto */
     background-color: #ff0000; /* Color de fondo del pie de página */
@@ -302,7 +301,8 @@ h1 {
     padding: 10px 0; /* Espaciado interno */
     position: fixed; /* Fija el footer en la parte inferior */
     bottom: 0; /* Lo mantiene pegado abajo */
-    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    width: 50%; /* Ocupa todo el ancho de la pantalla */
+    align-items: center;
 } 
 
 /*Pestañas*/
@@ -317,7 +317,7 @@ h1 {
         display: block; /* Hace que las etiquetas sean bloques clickeables */
         padding: 10px; /* Espaciado interno */
         margin: 5px; /* Margen entre los botones */
-        background-color: #F1E7F1; /* Color azul */
+        background-color: #db7adb; /* Color azul */
         color: white; /* Texto en blanco */
         cursor: pointer; /* Cambia el cursor a puntero al pasar el mouse */
     }
