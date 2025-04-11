@@ -356,3 +356,35 @@ footer {
     font-size: 14px; /* Tamaño del texto */
     color: #000000; /* Color negro */
 }
+
+/*Perfiles de mascotas en adopcion*/
+.mascotas-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .mascota {
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    cursor: pointer;
+  }
+  
+  .mascota img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .perfil-detalle img {
+    width: 300px;
+    height: auto;
+    margin: 20px;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+  }
