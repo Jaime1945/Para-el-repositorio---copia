@@ -342,5 +342,4 @@ footer {
     /* ====== Mostrar el contenido cuando el input de radio está seleccionado ====== */
     .tab:checked + .tab-label + .tab-content {
         display: block; /* Muestra el contenido asociado */
-    };
-    
+    }
