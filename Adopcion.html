@@ -148,16 +148,55 @@
 
 <!--Mascota en adopcion perfiles-->
 <h1>Adopción de Mascotas</h1>
-  <div id="mascotas-lista" class="mascotas-lista">
-    <!-- Los perfiles de mascotas se generarán dinámicamente aquí -->
-  </div>
-  <div id="perfil-detalle" class="perfil-detalle" style="display: none;">
-    <button id="volver">Volver</button>
-    <h2 id="nombre-mascota"></h2>
-    <img id="foto-mascota" alt="Foto de la mascota">
-    <p id="informacion-mascota"></p>
-  </div>
+<div class="cards-container">
+    <!-- Tarjetas con diferentes perfiles -->
+    <div class="card">
+        <img src="imagenes/artemisa.jpeg" alt="Artemisa">
+        <h3>Artemisa</h3>
+        <p>Bombay | Joven | Hembra</p>
+        <button class="adopt-button" onclick="showProfile('Artemisa', 'artemisa.jpg', 'Bombay', 'Joven', 'Hembra', 'Andrea Rescatando Patitas', 'Ciudad de México, México', 'Muy alto', 'Alto', 'Medio', 'Muy alto')">ADOPTAR</button>
+    </div>
+    <div class="card">
+        <img src="imagenes/panchito.jpg" alt="Panchito">
+        <h3>Odin</h3>
+        <p>Pastor Alemán | Adulto | Macho</p>
+        <button class="adopt-button" onclick="showProfile('Odin', 'odin.jpg', 'Pastor Alemán', 'Adulto', 'Macho', 'Rescate Animal AC', 'Guadalajara, Jalisco', 'Alto', 'Muy alto', 'Muy alto', 'Medio')">ADOPTAR</button>
+    </div>
+    <div class="card">
+        <img src="imagenes/luna.jpeg" alt="Luna">
+        <h3>Luna</h3>
+        <p>Labrador | Cachorro | Hembra</p>
+        <button class="adopt-button" onclick="showProfile('Luna', 'luna.jpg', 'Labrador', 'Cachorro', 'Hembra', 'Patitas Felices', 'Monterrey, Nuevo León', 'Muy alto', 'Muy alto', 'Muy alto', 'Muy alto')">ADOPTAR</button>
+    </div>
+    <div class="card">
+        <img src="imagenes/palomo.jpg" alt="palomo">
+        <h3>Thor</h3>
+        <p>Husky Siberiano | Joven | Macho</p>
+        <button class="adopt-button" onclick="showProfile('Thor', 'thor.jpg', 'Husky Siberiano', 'Joven', 'Macho', 'Hogar Temporal Milagros', 'Puebla, Puebla', 'Medio', 'Alto', 'Muy alto', 'Muy alto')">ADOPTAR</button>
+    </div>
+</div>
 
+<div id="profile-modal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close" onclick="closeProfile()">&times;</span>
+        <div class="profile-details">
+            <img id="profile-image" src="" alt="">
+            <h1 id="profile-name"></h1>
+            <p id="profile-description"></p>
+            <p>Rescatado por <span id="rescuer"></span></p>
+            <p id="location"></p>
+            <div class="ratings">
+                <p>Amistoso con los niños: <span id="rating-children"></span></p>
+                <p>Amistoso con otras mascotas: <span id="rating-pets"></span></p>
+                <p>Cariñoso con la familia: <span id="rating-family"></span></p>
+                <p>Juguetón: <span id="rating-playful"></span></p>
+            </div>
+            <button class="adopt-button">¡Adoptar Ahora!</button>
+        </div>
+    </div>
+</div>
+
+<!--Agregar mas perfiles aqui arriva-->
     <!-- Enlace a tu archivo JavaScript -->
     <script src="Adopcion.js"></script>
     <!--Fin del enlace con java-->
