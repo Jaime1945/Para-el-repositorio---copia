@@ -1,81 +1,55 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const menu = document.querySelector('.menu');
-    const menuToggle = menu.querySelector('.menu-toggle');
-    const searchInput = document.getElementById('searchInput');
-    const searchButton = document.getElementById('searchButton');
-    const content = document.body; // Cambiado para buscar en todo el cuerpo del documento
-
-    // Mostrar/ocultar menú en dispositivos móviles
-    menuToggle.addEventListener('click', function () {
-        menu.classList.toggle('active');
-    });
-
-    // Función para resaltar texto dentro del contenido
-    function highlightText(text) {
-        // Eliminar resaltados previos
-        const highlightedElements = content.querySelectorAll('.highlight');
-        highlightedElements.forEach(function (element) {
-            const parent = element.parentNode;
-            parent.replaceChild(document.createTextNode(element.textContent), element);
-            parent.normalize();
-        });
-
-        if (text === '') {
-            return;
-        }
-
-        const regex = new RegExp(`(${text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-
-        const walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null, false);
-        const textNodes = [];
-
-        while (walker.nextNode()) {
-            textNodes.push(walker.currentNode);
-        }
-
-        textNodes.forEach(function (node) {
-            if (regex.test(node.nodeValue)) {
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = node.nodeValue.replace(regex, '<span class="highlight">$1</span>');
-                const fragment = document.createDocumentFragment();
-                Array.from(tempDiv.childNodes).forEach(function (child) {
-                    fragment.appendChild(child);
-                });
-                node.parentNode.replaceChild(fragment, node);
-            }
-        });
+// Lista de noticias predefinidas
+const newsData = [
+    {
+      title: "¡Max encontró una familia!", // Título de la noticia
+      date: "3 de abril de 2025", // Fecha
+      image: "https://via.placeholder.com/400x250?text=Max", // Imagen de muestra
+      text: "Después de varios meses en el refugio, Max fue adoptado por una familia increíble. ¡Estamos muy felices por él!" // Contenido
+    },
+    {
+      title: "Nueva jornada de vacunación gratuita",
+      date: "1 de abril de 2025",
+      image: "https://via.placeholder.com/400x250?text=Vacunación",
+      text: "Este sábado tendremos una jornada de vacunación gratuita. ¡Trae a tu peludo!"
     }
-
-    // Manejar la búsqueda
-    function handleSearch() {
-        const searchTerm = searchInput.value.trim();
-        highlightText(searchTerm);
-
-        // Desplazarse al primer resultado
-        const firstMatch = content.querySelector('.highlight');
-        if (firstMatch) {
-            firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-    }
-
-    // Eventos del buscador
-    searchButton.addEventListener('click', handleSearch);
-    searchInput.addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-            handleSearch();
-        }
+    // Puedes agregar más objetos con noticias aquí
+  ];
+  
+  // Índice que rastrea cuántas noticias ya se cargaron
+  let newsIndex = 0;
+  
+  // Referencia al contenedor donde se insertarán las noticias
+  const newsContainer = document.getElementById('newsContainer');
+  
+  // Función que carga más noticias en pantalla
+  function loadMoreNews() {
+    // Selecciona 2 noticias más para mostrar
+    const nextNews = newsData.slice(newsIndex, newsIndex + 2);
+  
+    // Recorre cada noticia
+    nextNews.forEach(news => {
+      const card = document.createElement('div'); // Crea un div para la tarjeta
+      card.className = 'news-card'; // Le asigna la clase de estilo
+      card.innerHTML = `
+        <img src="${news.image}" alt="${news.title}" class="news-image" />
+        <div class="news-content">
+          <h2 class="news-title">${news.title}</h2>
+          <p class="news-date">${news.date}</p>
+          <p class="news-text">${news.text}</p>
+        </div>
+      `;
+      newsContainer.appendChild(card); // Agrega la tarjeta al contenedor
     });
-});
-
-
-//Adaptador de pantalla
-function checkScreenSize() {
-    const content = document.getElementById('content');
-    
-}
-// Llama a la función cuando la página se carga
-window.onload = checkScreenSize;
-
-// Llama a la función cada vez que cambie el tamaño de la ventana
-window.onresize = checkScreenSize;
-//Fin de lo del adptador de pantalla
+  
+    // Actualiza el índice para saber cuántas se han cargado
+    newsIndex += 2;
+  
+    // Si ya no quedan más noticias, oculta el botón
+    if (newsIndex >= newsData.length) {
+      document.querySelector('.load-more').style.display = 'none';
+    }
+  }
+  
+  // Carga inicial de noticias al entrar en la página
+  loadMoreNews();
+  

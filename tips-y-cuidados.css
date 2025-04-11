@@ -90,7 +90,7 @@ header video {
     width: 80%; /* Ancho del contenedor */
     margin: 20px auto; /* Centra el contenedor */
     padding: 30px; /* Espaciado interno */
-    background-color: #ffffff83; /* Color de fondo con transparencia */
+    background-color: #e9e2e234; /* Color de fondo con transparencia */
     box-sizing: border-box; /* Incluye padding y border en el tamaño total */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
     border-radius: 20px; /* Bordes redondeados */
@@ -164,7 +164,7 @@ h1 {
 
 .menu .menu-links a:hover,
 .menu .menu-links a:focus {
-    background-color: #D29FDC; /* Color de fondo al pasar el mouse o enfocar */
+    background-color: #ffc2bb; /* Color de fondo al pasar el mouse o enfocar */
 }
 
 .menu .menu-links .dropdown:hover > .submenu,
@@ -192,12 +192,12 @@ h1 {
 
 .submenu a {
     padding: 10px 20px; /* Espaciado interno */
-    color: #fff; /* Texto blanco */
+    color: #ffffff; /* Texto blanco */
     font-weight: normal; /* Peso normal del texto */
 }
 
 .submenu a:hover { /* Cambia el color del menu al pasar el ratón */
-    background-color:  #D3A9DE;
+    background-color:  #ffc2bb;
     color: #fff;
 }
 
@@ -224,7 +224,7 @@ h1 {
 .menu .search-bar button {
     padding: 8px 10px; /* Espaciado interno */
     border: none; /* Sin borde */
-    background-color: #D3A9DE; /* Color de fondo */
+    background-color: #e4b0f1; /* Color de fondo */
     color: white; /* Color del texto */
     border-radius: 0 20px 20px 0; /* Bordes redondeados en los lados derechos */
     cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
@@ -232,7 +232,7 @@ h1 {
 }
 
 .menu .search-bar button:hover {
-    background-color: #D29FDC; /* Cambio de color al pasar el mouse */
+    background-color: #26052c; /* Cambio de color al pasar el mouse */
 }
 
 /* Resaltado */
@@ -290,12 +290,16 @@ h1 {
         margin: 10px 0; /* Margen arriba y abajo */
         justify-content: center; /* Centra la barra de búsqueda */
     }
+footer {
+    background-color: #fff2f200; /* Color de fondo del pie de página */
+    color: #18011d; /* Color del texto */
 }
+
 
 /*se supone que esto combia el boton que habilita el Bot*/
 .Bot {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente del texto */
-    background-color: #eeadda; /* Color de fondo del pie de página */
+    background-color: #ade7f1; /* Color de fondo del pie de página */
     color: #ffffff; /* Color del texto */
     text-align: center; /* Centra el texto */
     padding: 10px 0; /* Espaciado interno */
@@ -339,3 +343,4 @@ h1 {
     .tab:checked + .tab-label + .tab-content {
         display: block; /* Muestra el contenido asociado */
     }
+}
