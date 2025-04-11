@@ -290,13 +290,13 @@ h1 {
         margin: 10px 0; /* Margen arriba y abajo */
         justify-content: center; /* Centra la barra de búsqueda */
     }
-}
-
 footer {
     background-color: #fff2f200; /* Color de fondo del pie de página */
     color: #18011d; /* Color del texto */
 }
 
+
+/*se supone que esto combia el boton que habilita el Bot*/
 .Bot {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente del texto */
     background-color: #ade7f1; /* Color de fondo del pie de página */
@@ -305,7 +305,8 @@ footer {
     padding: 10px 0; /* Espaciado interno */
     position: fixed; /* Fija el footer en la parte inferior */
     bottom: 0; /* Lo mantiene pegado abajo */
-    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    width: 50%; /* Ocupa todo el ancho de la pantalla */
+
 } 
 
 /*Pestañas*/
@@ -320,7 +321,7 @@ footer {
         display: block; /* Hace que las etiquetas sean bloques clickeables */
         padding: 10px; /* Espaciado interno */
         margin: 5px; /* Margen entre los botones */
-        background-color: #F1E7F1; /* Color azul */
+        background-color: #db7adb; /* Color azul */
         color: white; /* Texto en blanco */
         cursor: pointer; /* Cambia el cursor a puntero al pasar el mouse */
     }
@@ -341,4 +342,5 @@ footer {
     /* ====== Mostrar el contenido cuando el input de radio está seleccionado ====== */
     .tab:checked + .tab-label + .tab-content {
         display: block; /* Muestra el contenido asociado */
-    }
+    };
+    
