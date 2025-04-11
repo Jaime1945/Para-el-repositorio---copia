@@ -125,7 +125,7 @@ h1 {
 }
 
 .menu .logo img {
-    height: 50px; /* Altura de la imagen del logo */
+    height: 64px; /* Altura de la imagen del logo */
     margin-right: 30px;/* Espaciado a la derecha */
 }
 
@@ -293,7 +293,7 @@ h1 {
 }
 
 footer {
-    background-color: #fff2f200; /* Color de fondo del pie de página */
+    background-color: #f4ebf8; /* Color de fondo del pie de página */
     color: #AE84B6; /* Color del texto */
     text-align: center; /* Centra el texto */
     padding: 10px 0; /* Espaciado interno */
