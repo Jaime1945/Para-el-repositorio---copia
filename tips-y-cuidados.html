@@ -92,91 +92,71 @@
 </section>
 </div>
 <!--Pestañas Arcienega-->
-<!-- Primer Tab -->
-<input type="radio" name="tabs" class="tab" id="tab1" checked> <!-- Opción seleccionada por defecto -->
-<label class="tab-label" for="tab1"><strong>Alimentación Adecuada</strong></label> <!-- Etiqueta asociada -->
-<div class="tab-content">
-    <p><strong>Dieta específica:</strong> Elige alimentos formulados específicamente para la especie, edad, tamaño y condición de salud de tu mascota (perros, gatos, conejos, etc.). Por ejemplo, los cachorros necesitan alimentos ricos en nutrientes para apoyar su desarrollo.</br>
-    </br>
-    <strong>Evitar comida humana peligrosa:</strong> Algunos alimentos comunes para los humanos pueden ser tóxicos para los animales, como el chocolate, la cebolla, el ajo, las uvas, pasas y cualquier alimento rico en grasas o azúcares.</br>
-    </br>
-    <strong>Horario regular:</strong> Establece horarios de alimentación y evita dejar comida disponible todo el tiempo, a menos que sea apropiado para la especie (como algunos gatos).</br>
-    </br>
-    Hidratación: Proporciona agua limpia y fresca constantemente; cámbiala al menos una vez al día.
-    </p>
-</div>
+ <!-- Contenedor de las pestañas -->
+ <ul id="tabs">
+    <li><a href="#tab1" class="active">Alimentación Adecuada</a></li> <!-- Pestaña activa por defecto -->
+    <li><a href="#tab2">Vacunación y Desparasitación</a></li>
+    <li><a href="#tab3">Higiene y Limpieza</a></li>
+    <li><a href="#tab4">Espacio Seguro y Cuidado del Entorno</a></li>
+    <li><a href="#tab5">Esterilización o Castración</a></li>
+    <li><a href="#tab6">Cariño y Tiempo de Calidad</a></li>
+</ul>
 
-<!-- Segundo Tab -->
-<input type="radio" name="tabs" class="tab" id="tab2">
-<label class="tab-label" for="tab2"><strong>Vacunación y Desparasitación</strong></label>
-<div class="tab-content">
-    <p>
-        La prevención es el mejor aliado para la salud de tu mascota:
-     </br>
-    <strong>Vacunas esenciales:</strong> Consulta con un veterinario sobre el calendario de vacunación adecuado. Algunas vacunas importantes incluyen:</br>
-     </br>
-     Perros: Parvovirus, moquillo, rabia y leptospirosis.</br>
-     </br>
-     Gatos: Panleucopenia, calicivirus, rabia y herpesvirus.</br>
-     </br>
-    <strong>Desparasitación:</strong> Aplica tratamientos antiparasitarios internos (lombrices) y externos (pulgas y garrapatas) de manera periódica, según las recomendaciones del veterinario.
-    </p>
-</div>
-
-<!-- Tercer Tab -->
-<input type="radio" name="tabs" class="tab" id="tab3">
-<label class="tab-label" for="tab3"><strong>Higiene y Limpieza</strong></label>
-<div class="tab-content">
-    <p>
-        La higiene es esencial para evitar problemas de salud:
-    </br>
-    <strong>Cepillado de pelaje:</strong> Esto ayuda a reducir la muda y prevenir nudos, especialmente en razas de pelo largo.</br>
-    </br>
-    <strong>Baños:</strong> Usa champús específicos para mascotas y báñalas solo cuando sea necesario (una vez al mes o según la raza).</br>
-    </br>
-    <strong>Corte de uñas:</strong> Mantén las uñas cortas para evitar molestias o lesiones al caminar.</br>
-    </br>
-    <strong>Orejas y dientes:</strong> Limpia sus orejas con productos recomendados por el veterinario y proporciona juguetes o productos dentales para mantener los dientes limpios.
-    </p>
-</div>
-
-<!-- Cuarto Tab -->
-<input type="radio" name="tabs" class="tab" id="tab4">
-<label class="tab-label" for="tab4"><strong>Espacio Seguro y Cuidado del Entorno</strong></label>
-<div class="tab-content">
-    <p>
-        <strong>Espacio personal:</strong> Crea un área tranquila y cómoda donde puedan descansar. Una cama suave o mantas funcionan bien.</br>
-</br>
-<strong>Hogar a prueba de mascotas:</strong> Asegúrate de que no haya cables sueltos, productos químicos accesibles u objetos pequeños que puedan ingerir accidentalmente.</br>
-</br>
-<strong>Temperatura adecuada:</strong> Protege a tus mascotas del frío extremo o del calor excesivo. Evita dejarlas en automóviles o al aire libre sin sombra.
-    </p>
-</div>
-
-<!-- Quinto Tab -->
-<input type="radio" name="tabs" class="tab" id="tab5">
-<label class="tab-label" for="tab5"><strong>Esterilización o Castración</strong></label>
-<div class="tab-content">
-    <p>
-        Este procedimiento no solo previene la sobrepoblación de animales, sino que también reduce riesgos de ciertas enfermedades como infecciones uterinas en hembras o cáncer testicular en machos.</br>
-        También puede ayudar a reducir comportamientos indeseados como el marcaje territorial o la agresividad.
-    </p>
-</div>
-
-<!-- Sexto Tab -->
-<input type="radio" name="tabs" class="tab" id="tab6">
-<label class="tab-label" for="tab6"><strong>Cariño y Tiempo de Calidad</strong></label>
-<div class="tab-content">
-    <p>
-        Las mascotas no solo necesitan alimento, ejercicio y atención médica; 
-        también anhelan y prosperan gracias a las conexiones emocionales con sus dueños. 
-        Brindarles cariño y dedicarles tiempo de calidad es esencial para su desarrollo, 
-        comportamiento y felicidad.</br>
+<!-- Contenedor de los contenidos de cada pestaña -->
+<div id="container">
+    <div class="content" id="tab1">
+        <h2>Alimentación Adecuada</h2>
+        <p><strong>Dieta específica:</strong> </br>
+            Elige alimentos formulados específicamente para la especie, edad, tamaño y condición de salud de tu mascota (perros, gatos, conejos, etc.). 
+            Por ejemplo, los cachorros necesitan alimentos ricos en nutrientes para apoyar su desarrollo.</br>
+        </p>
+    </div>
+    <div class="content" id="tab2">
+        <h2>Vacunas esenciales</h2>
+        <p></strong> Consulta con un veterinario sobre el calendario de vacunación adecuado. Algunas vacunas importantes incluyen:
         </br>
-        <strong>Interacción diaria:</strong> Dedica tiempo para jugar, acariciarlas o simplemente estar cerca de ellas.</br>
+        <strong>Perros:</strong> Parvovirus, moquillo, rabia y leptospirosis.</br>
         </br>
-        <strong>Lenguaje corporal:</strong> Aprende a interpretar señales como movimientos de la cola, posturas o vocalizaciones para entender sus emociones y necesidades.
-    </p>
+        <strong>Gatos:</strong> Panleucopenia, calicivirus, rabia y herpesvirus.</p>
+        <h2>Desparasitación</h2>
+        <p> Aplica tratamientos antiparasitarios internos (lombrices) y externos (pulgas y garrapatas) de manera periódica, según las recomendaciones del veterinario.</p>
+    </div>
+    <div class="content" id="tab3">
+        <h2>La higiene es esencial para evitar problemas de salud:</h2>
+        <p><strong>Cepillado de pelaje:</strong> Esto ayuda a reducir la muda y prevenir nudos, especialmente en razas de pelo largo.</br>
+        </br>
+        <strong>Baños:</strong> Usa champús específicos para mascotas y báñalas solo cuando sea necesario (una vez al mes o según la raza).</br>
+        </br>
+        <strong>Corte de uñas:</strong> Mantén las uñas cortas para evitar molestias o lesiones al caminar.</br>
+        </br>
+        <strong>Orejas y dientes:</strong> Limpia sus orejas con productos recomendados por el veterinario y proporciona juguetes o productos dentales para mantener los dientes limpios.</p>
+    </div>
+    <div class="content" id="tab4">
+        <h2>Espacio personal</h2>
+        <p>Crea un área tranquila y cómoda donde puedan descansar. Una cama suave o mantas funcionan bien.</br>
+        </br>
+        <strong>Hogar a prueba de mascotas:</strong> Asegúrate de que no haya cables sueltos, productos químicos accesibles u objetos pequeños que puedan ingerir accidentalmente.</br>
+        </br>
+        <strong>Temperatura adecuada:</strong> Protege a tus mascotas del frío extremo o del calor excesivo. Evita dejarlas en automóviles o al aire libre sin sombra.
+        </p>
+    </div>
+    <div class="content" id="tab5">
+        <h2>Toma en cuenta...</h2>
+        <p> Este procedimiento no solo previene la sobrepoblación de animales, sino que también reduce riesgos de ciertas enfermedades como infecciones uterinas en hembras o cáncer testicular en machos.</br>
+            También puede ayudar a reducir comportamientos indeseados como el marcaje territorial o la agresividad.</p>
+    </div>
+    <div class="content" id="tab6">
+        <h2>Amor</h2>
+        <p>Las mascotas no solo necesitan alimento, ejercicio y atención médica; 
+            también anhelan y prosperan gracias a las conexiones emocionales con sus dueños. 
+            Brindarles cariño y dedicarles tiempo de calidad es esencial para su desarrollo, 
+            comportamiento y felicidad.</br>
+            </br>
+            <strong>Interacción diaria:</strong> Dedica tiempo para jugar, acariciarlas o simplemente estar cerca de ellas.</br>
+            </br>
+            <strong>Lenguaje corporal:</strong> Aprende a interpretar señales como movimientos de la cola, posturas o vocalizaciones para entender sus emociones y necesidades.
+        </p>
+    </div>
 </div>
 
 <div class="container" id="content">

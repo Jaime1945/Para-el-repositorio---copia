@@ -46,3 +46,28 @@ document.addEventListener('DOMContentLoaded'), function () {
         });
     }
 }
+
+//perfiles de mascotas en adopcion
+function showProfile(name, image, breed, age, gender, rescuer, location, childrenRating, petsRating, familyRating, playfulRating) {
+  // Mostrar el modal con los datos dinámicos
+  const modal = document.getElementById("profile-modal");
+  modal.classList.remove("hidden");
+
+  // Actualizar los detalles del perfil
+  document.getElementById("profile-name").textContent = name;
+  document.getElementById("profile-image").src = image;
+  document.getElementById("profile-image").alt = name;
+  document.getElementById("profile-description").textContent = `${breed} | ${age} | ${gender}`;
+  document.getElementById("rescuer").textContent = rescuer;
+  document.getElementById("location").textContent = location;
+  document.getElementById("rating-children").textContent = childrenRating;
+  document.getElementById("rating-pets").textContent = petsRating;
+  document.getElementById("rating-family").textContent = familyRating;
+  document.getElementById("rating-playful").textContent = playfulRating;
+}
+
+function closeProfile() {
+  // Ocultar el modal
+  const modal = document.getElementById("profile-modal");
+  modal.classList.add("hidden");
+}

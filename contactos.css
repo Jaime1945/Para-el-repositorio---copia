@@ -21,45 +21,124 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Contenedor de los cuadros a la izquierda */
-.left-boxes {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+/* Resaltado */
+.highlight {
+    background-color: #BFFFBC; /* Fondo de resaltado */
 }
 
-/* Estilos de los cuadros de texto */
-.text-box {
-    background-color: #808080; /* Color gris */
-    color: black;
-    padding: 15px 20px;
-    border-radius: 10px;
-    width: 250px;
-    height: 60px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-wrap: wrap; /* Permite que los elementos se ajusten a nuevas líneas */
+    }
+
+    .menu .logo {
+        flex: 1 1 100%; /* Ocupa el ancho completo */
+        text-align: center; /* Centra el logo */
+        margin-bottom: 10px; /* Espaciado inferior */
+    }
+
+    .menu .menu-toggle {
+        display: block; /* Muestra el botón de menú */
+    }
+
+    .menu .menu-links {
+        display: none; /* Oculta los enlaces del menú */
+        flex-direction: column; /* Organiza los enlaces en columna */
+        width: 100%; /* Ocupa el ancho completo */
+    }
+
+    .menu.active .menu-links {
+        display: flex; /* Muestra el menú cuando está activo */
+    }
+
+    .menu .menu-links li {
+        width: 100%; /* Cada elemento del menú ocupa el ancho completo */
+    }
+
+    .menu .menu-links a {
+        padding: 10px; /* Espaciado interno */
+        text-align: center; /* Centra el texto */
+    }
+
+    .submenu {
+        position: static; /* Elimina la posición absoluta */
+        background-color: #1b1b1b; /* Color de fondo del submenú */
+        box-shadow: none; /* Sin sombra */
+    }
+
+    .submenu a {
+        padding-left: 30px; /* Agrega espacio a la izquierda */
+    }
+
+    .menu .search-bar {
+        flex: 1 1 100%; /* Ocupa todo el ancho disponible */
+        margin: 10px 0; /* Margen arriba y abajo */
+        justify-content: center; /* Centra la barra de búsqueda */
+    }
 }
 
-/* Contenedor de la imagen */
-.image-container {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
+footer {
+    background-color: #f4ebf8; /* Color de fondo del pie de página */
+    color: #AE84B6; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 10px 0; /* Espaciado interno */
+    position: fixed; /* Fija el footer en la parte inferior */
+    bottom: 0; /* Lo mantiene pegado abajo */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+}
+/* Contenedor de tarjetas */
+.contenedor {
+    display: flex; /* Usa flexbox para organizar las tarjetas */
+    gap: 190px; /* Espaciado entre tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    align-items: center; /* Centra las tarjetas verticalmente */
+    height: 130vh; /* Altura del contenedor (más grande que la pantalla) */
+    background-color: #D8F3D7; /* Color de fondo verde */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente del texto */
+    margin: 0; /* Elimina márgenes externos */
 }
 
-/* Imagen */
-.image-container img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+/* Estilos de cada tarjeta */
+.tarjeta {
+    width: 290px;  /* Ancho de la tarjeta */
+    height: 510px; /* Altura de la tarjeta */
+    background: white; /* Fondo blanco */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    overflow: hidden; /* Oculta el contenido que sobresalga */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Efecto de transición */
+    text-align: center; /* Alineación centrada del texto*/
 }
 
+/* Efecto hover en la tarjeta */
+.tarjeta:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer hover */
+}
 
+/* Imagen dentro de la tarjeta */
+.tarjeta img {
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    height: 60%; /* La imagen ocupa el 60% de la altura de la tarjeta */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
+/* Contenido dentro de la tarjeta */
+.tarjeta .contenido {
+    padding: 15px; /* Espaciado interno */
+}
+
+/* Título dentro de la tarjeta */
+.tarjeta h3 {
+    margin: 0; /* Elimina márgenes extra */
+    font-size: 18px; /* Tamaño del título */
+    color: #AE84B6; /* Color del texto */
+}
+
+/* Texto descriptivo dentro de la tarjeta */
+.tarjeta p {
+    margin: 10px 0 0; /* Espaciado superior */
+    font-size: 14px; /* Tamaño del texto */
+    color: #000000; /* Color negro */
+}

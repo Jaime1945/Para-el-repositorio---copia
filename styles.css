@@ -306,10 +306,10 @@ footer {
 /* Contenedor de tarjetas */
 .contenedor {
     display: flex; /* Usa flexbox para organizar las tarjetas */
-    gap: 190px; /* Espaciado entre tarjetas */
+    gap: 100px; /* Espaciado entre tarjetas */
     justify-content: center; /* Centra las tarjetas horizontalmente */
     align-items: center; /* Centra las tarjetas verticalmente */
-    height: 130vh; /* Altura del contenedor (más grande que la pantalla) */
+    height: 80vh; /* Altura del contenedor (más grande que la pantalla) */
     background-color: #D8F3D7; /* Color de fondo verde */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente del texto */
     margin: 0; /* Elimina márgenes externos */
@@ -327,6 +327,11 @@ footer {
     text-align: center; /* Alineación centrada del texto*/
 }
 
+/*titulo de adoptados por arriba de las tarjetas*/
+.adoptados {
+    width: 80%;
+    margin: 20px auto; /* Centra el contenedor */
+}
 /* Efecto hover en la tarjeta */
 .tarjeta:hover {
     transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */

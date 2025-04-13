@@ -153,3 +153,18 @@ function tryDecode(str) {
 
   return {};
 }
+
+//pestañas?
+ // Selecciona todos los enlaces dentro del contenedor de pestañas
+ const tabs = document.querySelectorAll('#tabs a');
+
+ // Agrega un evento de clic a cada pestaña
+ tabs.forEach(tab => {
+     tab.addEventListener('click', function() {
+         // Remueve la clase "active" de todas las pestañas
+         tabs.forEach(t => t.classList.remove('active'));
+
+         // Agrega la clase "active" solo a la pestaña a la que se hizo clic
+         this.classList.add('active');
+     });
+ });
