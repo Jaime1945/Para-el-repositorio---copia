@@ -164,7 +164,7 @@ h1 {
 
 .menu .menu-links a:hover,
 .menu .menu-links a:focus {
-    background-color: #f0c0ff; /* Color de fondo al pasar el mouse o enfocar */
+    background-color: #df90f7; /* Color de fondo al pasar el mouse o enfocar */
 }
 
 .menu .menu-links .dropdown:hover > .submenu,
@@ -197,7 +197,7 @@ h1 {
 }
 
 .submenu a:hover { /* Cambia el color del menu al pasar el ratón */
-    background-color:  #D3A9DE;
+    background-color:  #c86edf;
     color: #fff;
 }
 
