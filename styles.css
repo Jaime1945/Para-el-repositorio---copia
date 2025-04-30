@@ -4,7 +4,7 @@
 /* Estilos generales */
 body {
     margin: 0; /* Elimina márgenes por defecto en el body */
-    font-family:Roboto, sans-serif;/* Fuente del texto */
+    font-family:"Roboto", sans-serif;/* Fuente del texto */
     background-color: #D8F3D7; /* Color de fondo */
     background-repeat: no-repeat; /* Evita que el fondo se repita */
     background-size: cover; /* Ajusta el fondo para cubrir toda la pantalla */
@@ -18,6 +18,7 @@ header {
     /* Fondo con transparencia e imagen (comentado) */
     /* background-image: linear-gradient(rgba(139, 250, 172, 0.137), rgba(139, 250, 172, 0.137)), url(Imagenes/318270.webp); */
     background-position: center; /* Centra la imagen de fondo */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-size: cover; /* Ajusta la imagen para que cubra todo el área */
     min-height: 60vh; /* Altura mínima del header */
     display: flex; /* Usa flexbox para organizar el contenido */
@@ -27,6 +28,7 @@ header {
     text-align: center; /* Alineación del texto */
     color: #000000; /* Color del título en el header */
     padding: 0 20px; /* Espaciado interno */
+    background-color: rgba(255, 255, 255, 0.178); /* rojo con 30% de opacidad */
 
     
 }
@@ -41,6 +43,7 @@ header video {
     min-height: 50%; /* Ocupa la mitad de la altura */
     z-index: -1; /* Envía el video al fondo */
     object-fit: cover; /* Ajusta el video sin deformarlo */
+
 }
 
 /* Contenido del header sobre el video */
@@ -115,7 +118,7 @@ h1 {
 /* Menú de navegación */
 .menu {
     /*background-image: url(https://th.bing.com/th/id/R.a8d1e00763015ca4435e13e54142f0d2?rik=Sk98rRIYxJYgUg&riu=http%3a%2f%2fst.depositphotos.com%2f1007566%2f2705%2fv%2f950%2fdepositphotos_27059235-stock-illustration-dog-footprint.jpg&ehk=%2bpXcVXTIflkV4Mn5tW4hfbkxkqnLobq0ciJE%2fHkqfrg%3d&risl=&pid=ImgRaw&r=0);*/
-    background-color: #F1E7F1;/* Color del fondo del menú */
+    background-color: #eccff3;/* Color del fondo del menú */
     display: flex;/*Configuracion del fondo flexible*/
     align-items: center;/*Alinea los elemntos verticalmente*/
     padding: 10px 20px;/*Espaciado interno*/
