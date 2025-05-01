@@ -4,7 +4,7 @@
 /* Estilos generales */
 body {
     margin: 0; /* Elimina márgenes por defecto en el body */
-    font-family:Roboto, sans-serif;/* Fuente del texto */
+    font-family:"Roboto", sans-serif;/* Fuente del texto */
     background-color: #D8F3D7; /* Color de fondo */
     background-repeat: no-repeat; /* Evita que el fondo se repita */
     background-size: cover; /* Ajusta el fondo para cubrir toda la pantalla */
@@ -18,6 +18,7 @@ header {
     /* Fondo con transparencia e imagen (comentado) */
     /* background-image: linear-gradient(rgba(139, 250, 172, 0.137), rgba(139, 250, 172, 0.137)), url(Imagenes/318270.webp); */
     background-position: center; /* Centra la imagen de fondo */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-size: cover; /* Ajusta la imagen para que cubra todo el área */
     min-height: 60vh; /* Altura mínima del header */
     display: flex; /* Usa flexbox para organizar el contenido */
@@ -27,6 +28,7 @@ header {
     text-align: center; /* Alineación del texto */
     color: #000000; /* Color del título en el header */
     padding: 0 20px; /* Espaciado interno */
+    background-color: rgba(255, 255, 255, 0.178); /* rojo con 30% de opacidad */
 
     
 }
@@ -41,6 +43,7 @@ header video {
     min-height: 50%; /* Ocupa la mitad de la altura */
     z-index: -1; /* Envía el video al fondo */
     object-fit: cover; /* Ajusta el video sin deformarlo */
+
 }
 
 /* Contenido del header sobre el video */
@@ -92,7 +95,7 @@ header video {
     width: 80%; /* Ancho del contenedor */
     margin: 20px auto; /* Centra el contenedor */
     padding: 30px; /* Espaciado interno */
-    background-color: #ffffff83; /* Color de fondo con transparencia */
+    background-color: #ffffffc2; /* Color de fondo con transparencia */
     box-sizing: border-box; /* Incluye padding y border en el tamaño total */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
     border-radius: 20px; /* Bordes redondeados */
@@ -115,7 +118,7 @@ h1 {
 /* Menú de navegación */
 .menu {
     /*background-image: url(https://th.bing.com/th/id/R.a8d1e00763015ca4435e13e54142f0d2?rik=Sk98rRIYxJYgUg&riu=http%3a%2f%2fst.depositphotos.com%2f1007566%2f2705%2fv%2f950%2fdepositphotos_27059235-stock-illustration-dog-footprint.jpg&ehk=%2bpXcVXTIflkV4Mn5tW4hfbkxkqnLobq0ciJE%2fHkqfrg%3d&risl=&pid=ImgRaw&r=0);*/
-    background-color: #F1E7F1;/* Color del fondo del menú */
+    background-color: #eccff3;/* Color del fondo del menú */
     display: flex;/*Configuracion del fondo flexible*/
     align-items: center;/*Alinea los elemntos verticalmente*/
     padding: 10px 20px;/*Espaciado interno*/
@@ -166,7 +169,7 @@ h1 {
 
 .menu .menu-links a:hover,
 .menu .menu-links a:focus {
-    background-color: #D29FDC; /* Color de fondo al pasar el mouse o enfocar */
+    background-color: #e6aff1; /* Color de fondo al pasar el mouse o enfocar */
 }
 
 .menu .menu-links .dropdown:hover > .submenu,
@@ -178,7 +181,7 @@ h1 {
 .submenu {
     display: none;  /* Oculta los submenús por defecto */
     position: absolute;/* Submenús aparecen fuera del flujo */
-    background-color: #D4C5E2;/*Fondo de los submenus*/
+    background-color: #eed7f1;/*Fondo de los submenus*/
     top: 100%;/* Aparece debajo del menú principal */
     left: 0;/*Alineado a la izquierda*/
     min-width: 180px;/* Ancho mínimo */
@@ -199,7 +202,7 @@ h1 {
 }
 
 .submenu a:hover { /* Cambia el color del menu al pasar el ratón */
-    background-color:  #D3A9DE;
+    background-color:  #e1b2ec;
     color: #fff;
 }
 
@@ -226,7 +229,7 @@ h1 {
 .menu .search-bar button {
     padding: 8px 10px; /* Espaciado interno */
     border: none; /* Sin borde */
-    background-color: #D3A9DE; /* Color de fondo */
+    background-color: #c9f1f7; /* Color de fondo */
     color: white; /* Color del texto */
     border-radius: 0 20px 20px 0; /* Bordes redondeados en los lados derechos */
     cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
@@ -234,12 +237,12 @@ h1 {
 }
 
 .menu .search-bar button:hover {
-    background-color: #D29FDC; /* Cambio de color al pasar el mouse */
+    background-color: #94e0eb; /* Cambio de color al pasar el mouse */
 }
 
 /* Resaltado */
 .highlight {
-    background-color: #BFFFBC; /* Fondo de resaltado */
+    background-color: #bdf1f5; /* Fondo de resaltado */
 }
 
 /* Responsividad */
@@ -296,7 +299,7 @@ h1 {
 
 footer {
     background-color: #f4ebf8; /* Color de fondo del pie de página */
-    color: #AE84B6; /* Color del texto */
+    color: #000000; /* Color del texto */
     text-align: center; /* Centra el texto */
     padding: 10px 0; /* Espaciado interno */
     position: fixed; /* Fija el footer en la parte inferior */
