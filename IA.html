@@ -3,58 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refugio Patitas Felices</title>
-    <link rel="icon" href="Imagenes/logo 2.jpg" type="image/x-icon">
-    <!-- Enlaces a fuentes y estilos -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap">
-    <!-- Enlace a Font Awesome para íconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Enlace a tu archivo CSS -->
-    <link rel="stylesheet" href="IA.css">
-    
-    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-    <script src="https://files.bpcontent.cloud/2025/04/08/00/20250408004514-XCWJKZK6.js"></script>
+    <title>Imagen de Fondo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('imagen.jpg'); /* Reemplaza 'imagen.jpg' con la URL de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        .boton-cambio {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
 </head>
-
 <body>
-<h1>Demo chat</h1>
+    <h1>Bienvenido</h1>
+    <button class="boton-cambio" onclick="cambiarFondo()">Cambiar Fondo</button>
 
-<!--<div id="error"></div>--><!--solo es un estorbo, no son necesarias-->
-<!--<div id="success"></div>-->
-
-<section>
-    <h2>Configuration Change</h2>
-    <button onclick="Habilitar_bot();">Habilitar bot</button>
-</section>
-
-</br></br></br></br>
-<button onclick="open_chat();">Open Webchat</button>
-<button onclick="close_chat();">Close Webchat</button>
-<button onclick="toggle_chat();">Toggle Webchat</button>
-
-<!--<section>
-  <h2>Send message</h2>
-  <input id="message" value="Your message" />
-  <button onclick="send_message();">Send</button>
-</section>
-
-<section>
-  <h2>Send event</h2>
-  <button onclick="send_event();">Send</button>
-</section>-->
-
-
-
-<!--<section>
-  <h2>Events</h2>
-  <textarea id="events" disabled style="width: 400px; height: 300px;"></textarea>
-</section>-->
-
-<!-- Enlace a tu archivo JavaScript -->
-<script src="IA.js"></script>
-<!--Fin del enlace con java-->
-
-<footer> <!--Derechos de "autor???"-->
-    <p><marquee>&copy; 2025 Casa Patitas Felices todos los derechos reservados!</marquee></p>
-</footer>
+    <script>
+        function cambiarFondo() {
+            const imagenes = [
+                'imagen1.jpg',
+                'imagen2.jpg',
+                'imagen3.jpg'
+            ]; // Reemplaza con tus propias imágenes
+            const indice = Math.floor(Math.random() * imagenes.length);
+            document.body.style.backgroundImage = `url('${imagenes[indice]}')`;
+        }
+    </script>
 </body>
+</html>
