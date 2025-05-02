@@ -25,24 +25,26 @@
         </div>
         <!-- Lista de enlaces del menú -->
         <ul class="menu-links">
-            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="index.html" class="active" id="menuInicio">Inicio</a></li>
             <li class="dropdown">
-                <a href="#">Guia y ayuda <i class="fas fa-angle-down"></i></a>
+                <a href="#" id="menuGuia">Guía y ayuda <i class="fas fa-angle-down"></i></a>
                 <!--Submenus en un menu principal-->
                 <ul class="submenu">
-                    <li><a href="como-puedo-adoptar.html">¿como puedo adoptar? </a></li>
-                    <li><a href="tips-y-cuidados.html">Tips y Cuidados</a></li>
+                    <li><a href="como-puedo-adoptar.html" id="menuAdoptar">¿como puedo adoptar? </a></li>
+                    <li><a href="tips-y-cuidados.html" id="menuCuidados">Tips y Cuidados</a></li>
                 </ul>
+                <!-- holis hice un cambio !!!-->
             </li>
             <li class="dropdown">
-                <a href="#">Servicios <i class="fas fa-angle-down"></i></a>
+                <a href="#" id="menuServicios:">Servicios <i class="fas fa-angle-down"></i></a>
                 <ul class="submenu">
-                    <li><a href="Adopcion.html">Adopcion</a></li>
-                    <li><a href="#">Donaciones</a></li>
+                    <li><a href="Adopcion.html" id="menuAdopcion">Adopcion</a></li>
+            <li><a href="#" id="menuDonaciones">Donaciones</a></li>
                 </ul>
             </li>
-            <li><a href="noticias.html">Noticias</a></li>
-            <li><a href="#">Contactos</a></li>
+            <li><a href="noticias.html" id="menuNoticias">Noticias</a></li>
+            <li><a href="contactos.html" id="menuContactos">Contactos</a></li>
+            
         </ul>
         <!-- Barra de búsqueda en la esquina superior derecha -->
         <div class="search-bar">
@@ -52,75 +54,56 @@
             <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
         </div>
     </nav>
+<!--Botones para traducir Español/Ingles-->
+    <button onclick="translatePage('en')">Traducir a Inglés</button>
+    <button onclick="translatePage('es')">Traducir a Español</button>
+
 <!-- Sección de encabezado del sitio web -->
 <header>
     <!-- Contenedor de contenido del encabezado con una clase para diseño responsivo -->
     <div class="header-content container2">
         <!--Titulo principal de la pagina-->
-        <h1>¿como puedo adoptar?</h1>
-        <p>
-            Adoptar un animal es una decisión maravillosa! Adoptar en lugar de comprar tiene muchos beneficios, tanto para el animal como para ti, ya que les das una segunda oportunidad a seres que necesitan un hogar. A continuacion te dejo información general sobre cómo adoptar un peludito!</strong>
+        <h1 id="title">¿como puedo adoptar?</h1>
+        <p id="content">
+            Adoptar un animal es una decisión maravillosa! Adoptar en lugar de comprar tiene muchos beneficios, tanto para el animal como para ti, ya que les das una segunda oportunidad a seres que necesitan un hogar. A continuacion te dejo información general sobre cómo adoptar un peludito!
         </p>
-        <!--video del header-->
-        <!--<video autoplay loop muted playsinline>
-            <!-- Fuente del video en formato mp4 -->
-            <!--<source src="Imagenes/Cachorros Husky Siberiano.mp4" type="video/mp4">
-            <!--Mensaje alternativo por si el navegador no lo soporta-->
-            <!--Tu navegador no soporta videos HTML5.        
-        <!--fin video-->
-    
+
     </header>
 <!--Fin de la info del encabezado-->
 
 <!--Inicion de la informacion-->
     <!-- Contenido/Informacion principal -->
-    <div class="container" id="content">
-        <h1>Beneficios de Adoptar🐾</h1>
-        <p>
-            <strong>Salvas una vida:</strong> Al adoptar, le das un hogar a un animal que lo necesita.</br>
-        </br>
-            <strong>Reduces animales en situación de calle:</strong> Ayudas a combatir el abandono.</br>
-        </br>
-         <strong>Apoyo a refugios:</strong> Libera espacio en los refugios para que puedan ayudar a más animales.</br>
-        </br>    
-         <strong>Companía inigualable:</strong> Los animales adoptados suelen ser increíblemente agradecidos.</br>
-        </p>
+    <!-- Beneficios de adoptar -->
+    <div class="container">
+        <h1 id="title1">Beneficios de Adoptar🐾</h1>
+        <p id="beneficio1"><strong>Salvas una vida:</strong> Al adoptar, le das un hogar a un animal que lo necesita.</p>
+        <p id="beneficio2"><strong>Reduces animales en situación de calle:</strong> Ayudas a combatir el abandono.</p>
+        <p id="beneficio3"><strong>Apoyo a refugios:</strong> Libera espacio en los refugios para que puedan ayudar a más animales.</p>
+        <p id="beneficio4"><strong>Compañía inigualable:</strong> Los animales adoptados suelen ser increíblemente agradecidos.</p>
     </div>
-</br>
-<div class="container" id="content">
-    <h1>¿Como Adoptar?</h1>
-    <p>
-     <strong>Explora las opciones:</strong> Revisa las mascotas disponibles en refugios y asociaciones.</br>
-    </br>
-     <strong>Llena el formulario:</strong> Completa una solicitud para evaluar la compatibilidad.</br>
-    </br>
-     <strong>Conoce a la mascota:</strong>  Programa una visita para interactuar con ella.</br>
-    </br>    
-     <strong>Proceso de adopción responsable:</strong> Firma un compromiso para garantizar el bienestar de la mascota.</br>
-    </br>
-     <strong>Preparativos para la llegada:</strong> Cómo adecuar tu hogar para una nueva mascota.</br>
-    </br>
-     <strong>Responsabilidades:</strong> Alimentos, ejercicio, vacunas y esterilización.</br>
-    </br>
-     <strong>Adiestramiento básico:</strong> Consejos para una convivencia armónica.</br>
-    </p>
-</div>
-</br>
-<div class="container" id="content">
-    <h1>Para terminar</h1>
-    <p>
-        Adoptar es un acto de amor y empatía que trasciende las palabras. 
-        Los animales no solo enriquecen nuestras vidas con compañía, lealtad y alegría, sino que también nos enseñan lecciones profundas sobre la pureza del amor y la conexión con la naturaleza. 
-        Cuando adoptas, no solo estás dando un hogar a un ser que lo necesita, sino que también estás salvando una vida y dando sentido a la tuya de una forma única.</br>
-        Los animales, sean perros, gatos u otras especies, poseen un valor intrínseco que va más allá de su utilidad para los humanos. 
-        Ellos sienten, expresan afecto y, de maneras distintas, entienden el mundo a través de sus experiencias. 
-        Es nuestra responsabilidad respetar su derecho a vivir dignamente, brindarles protección y tratarlos con bondad.</br>
-        <strong>Ahora que ya tienes esta informacion puedes ir a apartado de "Servicios" en la seccion de "Adoptar" para poder ver las opciones de Adopcion.</strong>
-    </p>
-</div>
 
+    <!-- Cómo adoptar -->
+    <div class="container">
+        <h1 id="title2">¿Cómo Adoptar?</h1>
+        <p id="adoptar1"><strong>Explora las opciones:</strong> Revisa las mascotas disponibles en refugios y asociaciones.</p>
+        <p id="adoptar2"><strong>Llena el formulario:</strong> Completa una solicitud para evaluar la compatibilidad.</p>
+        <p id="adoptar3"><strong>Conoce a la mascota:</strong> Programa una visita para interactuar con ella.</p>
+        <p id="adoptar4"><strong>Proceso de adopción responsable:</strong> Firma un compromiso para garantizar el bienestar de la mascota.</p>
+        <p id="adoptar5"><strong>Preparativos para la llegada:</strong> Cómo adecuar tu hogar para una nueva mascota.</p>
+        <p id="adoptar6"><strong>Responsabilidades:</strong> Alimentos, ejercicio, vacunas y esterilización.</p>
+        <p id="adoptar7"><strong>Adiestramiento básico:</strong> Consejos para una convivencia armónica.</p>
+    </div>
+
+    <!-- Reflexión final -->
+    <div class="container">
+        <h1 id="title3">Para terminar</h1>
+        <p id="final1">Adoptar es un acto de amor y empatía que trasciende las palabras. Los animales no solo enriquecen nuestras vidas con compañía, lealtad y alegría, sino que también nos enseñan lecciones profundas sobre la pureza del amor y la conexión con la naturaleza.</p>
+        <p id="final2">Cuando adoptas, no solo estás dando un hogar a un ser que lo necesita, sino que también estás salvando una vida y dando sentido a la tuya de una forma única. Los animales, sean perros, gatos u otras especies, poseen un valor intrínseco que va más allá de su utilidad para los humanos.</p>
+        <p id="final3">Ellos sienten, expresan afecto y, de maneras distintas, entienden el mundo a través de sus experiencias. Es nuestra responsabilidad respetar su derecho a vivir dignamente, brindarles protección y tratarlos con bondad.</p>
+        <p id="final4"><strong>Ahora que ya tienes esta información puedes ir al apartado de "Servicios" en la sección de "Adoptar" para poder ver las opciones de adopción.</strong></p>
+    </div>
     <!-- Enlace a tu archivo JavaScript -->
-    <script src="script.js"></script>
+    <script src="como-puedo-adoptar.js"></script>
     <!--Fin del enlace con java-->
     
     <footer> <!--Derechos de "autor???"-->

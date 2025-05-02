@@ -51,6 +51,22 @@ header video {
     padding: 20px; /* Espaciado interno */
 }
 
+/*Botton traductor*/
+button {
+    background-color: #b700ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #b700ff;
+}
+
 /* Navegación */
 .navbar ul {
     display: flex; /* Usa flexbox para organizar los elementos del menú */

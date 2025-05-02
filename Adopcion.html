@@ -25,24 +25,25 @@
         </div>
         <!-- Lista de enlaces del menú -->
         <ul class="menu-links">
-            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="index.html" class="active" id="menuInicio">Inicio</a></li>
             <li class="dropdown">
-                <a href="#">Guia y ayuda <i class="fas fa-angle-down"></i></a>
+                <a href="#" id="menuGuia">Guía y ayuda <i class="fas fa-angle-down"></i></a>
                 <!--Submenus en un menu principal-->
                 <ul class="submenu">
-                    <li><a href="como-puedo-adoptar.html">¿como puedo adoptar? </a></li>
-                    <li><a href="tips-y-cuidados.html">Tips y cuidados</a></li>
+                    <li><a href="como-puedo-adoptar.html" id="menuAdoptar">¿como puedo adoptar? </a></li>
+                    <li><a href="tips-y-cuidados.html" id="menuCuidados">Tips y Cuidados</a></li>
                 </ul>
+                <!-- holis hice un cambio !!!-->
             </li>
             <li class="dropdown">
-                <a href="#">Servicios <i class="fas fa-angle-down"></i></a>
+                <a href="#" id="menuServicios:">Servicios <i class="fas fa-angle-down"></i></a>
                 <ul class="submenu">
-                    <li><a href="Adopcion.html">Adopcion</a></li>
-                    <li><a href="#">Donaciones</a></li>
+                    <li><a href="Adopcion.html" id="menuAdopcion">Adopcion</a></li>
+            <li><a href="#" id="menuDonaciones">Donaciones</a></li>
                 </ul>
             </li>
-            <li><a href="noticias.html">Noticias</a></li>
-            <li><a href="#">Contactos</a></li>
+            <li><a href="noticias.html" id="menuNoticias">Noticias</a></li>
+            <li><a href="contactos.html" id="menuContactos">Contactos</a></li>
         </ul>
         <!-- Barra de búsqueda en la esquina superior derecha -->
         <div class="search-bar">
@@ -52,122 +53,114 @@
             <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
         </div>
     </nav>
+    <button onclick="translatePage('es')">Español</button>
+    <button onclick="translatePage('en')">English</button>
 <!-- Sección de encabezado del sitio web -->
 <header>
     <!-- Contenedor de contenido del encabezado con una clase para diseño responsivo -->
     <div class="header-content container2">
         <!--Titulo principal de la pagina-->
-        <h1>Refugio Casa Patitas Felices</h1>
-        <p>
+        <h1 id="title_inicial">Casa Patitas Felices</h1>
+        <p id="content_inicial">
             Buscamos proteger la vida de perros y gatos en estado de maltrato y abandono. 
             Les brindamos alimentos, medicamentos y albergue, con el fin de mejorar su calidad de vida y
             <strong>conseguirles un hogar a los peluditos!</strong>
         </p>
-
-        
-        <!--video del header-->
-        <!--<video autoplay loop muted playsinline>
-            <!-- Fuente del video en formato mp4 -->
-            <!--<source src="Imagenes/Cachorros Husky Siberiano.mp4" type="video/mp4">
-            <!--Mensaje alternativo por si el navegador no lo soporta-->
-            <!--Tu navegador no soporta videos HTML5.        
-        <!--fin video-->
 </header>
 <!--Fin de la info del encabezado-->
 
 <!--Inicion de la informacion-->
     <!-- Contenido/Informacion principal -->
     <div class="container" id="content">
-        <h1>Unas Palabras de nuestro Equipo</h1>
-        <p>
+        <h1 id="title">Unas Palabras de nuestro Equipo</h1>
+        <p id="intro">
             Cada vez que alguien opta por adoptar en lugar de comprar, contribuye a reducir el abandono y los problemas de sobrepoblación, enviando un poderoso mensaje de compasión y solidaridad. 
             Adoptar es reconocer que todas las vidas tienen valor y que nuestras acciones pueden marcar la diferencia.
             </br>
             Como dijo Anatole France: "Hasta que no hayas amado a un animal, una parte de tu alma estará dormida." Y qué despertar tan maravilloso es cuidar y ser amado por ellos.
         </p>
-    </div>
         
-    <div class="container" id="content"> <!--Mas informacion/contenido-->
-        <h1>Formato de Adopcion</h1>
-        <p>Requisitos para adoptantes
-            Nos encantaría poder entregar un peludito a cada persona que desee adoptar, pero la gran responsabilidad que sentimos con nuestros ángeles nos obliga a tener unos requisitos mínimos que nos permitan tener cierta seguridad en que los hogares donde llegarán serán los definitivos.
-        </br>
-            💛 La persona responsable del peludito.</br>
-            💛 Este o esta pequeñita será miembro de la familia alrededor de 15 años.</br>
-            💛 Diligencia el Pre-formulario de Adopción.</br>
-            💛 Los datos ingresados serán verificados por funcionarios de la Fundación (esta verificación tarda 3 días hábiles).</br>
-            💛 Si tu solicitud y todo está en orden, nos contactaremos contigo para coordinar el día en que el peludito que escogiste llegue a tu casa.</br>
-            💛 Es importante tener el tiempo y el espacio para que tú y ellos estén muy bien.</br>
-            💛 Es importante contar con estabilidad económica, desde el primer momento que llegue a tus manos será una gran responsabilidad y requerirá de muchos cuidados y mimos para vivir feliz. Recuerda, todos han sido rescatados.</br>
-            
-            🚫 Si vives en una zona de sobrepoblación canina o felina, te pedimos adoptes tú mismo a uno de la calle, se tú el salvador de ese peludito, así juntos podremos salvar más vidas!!</br>
-            
-            ⚠️ Se deben cumplir los compromisos y obligaciones que figuran en el Contrato de Adopción.</br>
-            ⚠️Seguimos en constante seguimiento y comunicación para saber cómo va todo. Ellos siempre serán nuestros hijitos.</br>
-           </br>
-        </p>
-    </div>
-</br>
+        <div class="container" id="content"> <!--Más información-->
+            <h1 id="title2">Formato de Adopción</h1>
+            <p id="text1">Nos encantaría poder entregar un peludito a cada persona que desee adoptar, pero la gran responsabilidad que sentimos con nuestros ángeles nos obliga a tener unos requisitos mínimos para garantizar hogares definitivos.</p>
+            <ul>
+                <li id="req1">💛 La persona responsable del peludito.</li>
+                <li id="req2">💛 Este o esta pequeñita será miembro de la familia alrededor de 15 años.</li>
+                <li id="req3">💛 Diligencia el Pre-formulario de Adopción.</li>
+                <li id="req4">💛 Los datos ingresados serán verificados por funcionarios de la Fundación (esta verificación tarda 3 días hábiles).</li>
+                <li id="req5">💛 Si tu solicitud y todo está en orden, nos contactaremos contigo para coordinar el día en que el peludito llegue a tu casa.</li>
+                <li id="req6">💛 Es importante tener el tiempo y el espacio para que tú y ellos estén muy bien.</li>
+                <li id="req7">💛 Es importante contar con estabilidad económica para garantizar sus cuidados.</li>
+            </ul>
+            <p id="warning1">🚫 Si vives en una zona de sobrepoblación canina o felina, te pedimos adoptes a uno de la calle.</p>
+            <p id="warning2">⚠️ Se deben cumplir los compromisos y obligaciones del Contrato de Adopción.</p>
+            <p id="warning3">⚠️ Seguimos en constante seguimiento para saber cómo va todo. Ellos siempre serán nuestros hijitos.</p>
+        </div>
 
 <!--Mascota en adopcion perfiles-->
-<h1>Adopción de Mascotas</h1>
+    <!-- Tarjetas con diferentes perfiles -->
+    <h1 id="title3">Adopción de Mascotas</h1>
 <div class="cards-container">
     <!-- Tarjetas con diferentes perfiles -->
     <div class="card">
         <img src="imagenes/artemisa.jpeg" alt="Artemisa">
-        <h3>Artemisa</h3>
-        <p>Bombay | Joven | Hembra</p>
-        <button class="adopt-button" onclick="showProfile('Artemisa', 'artemisa.jpg', 'Bombay', 'Joven', 'Hembra', 'Andrea Rescatando Patitas', 'Ciudad de México, México', 'Muy alto', 'Alto', 'Medio', 'Muy alto')">ADOPTAR</button>
+        <h3 id="pet1_name">Artemisa</h3>
+        <p id="pet1_info">Bombay | Joven | Hembra</p>
+        <button class="adopt-button">ADOPTAR</button>
     </div>
     <div class="card">
         <img src="imagenes/panchito.jpg" alt="Panchito">
-        <h3>Panchito</h3>
-        <p>Pastor Alemán | Adulto | Macho</p>
-        <button class="adopt-button" onclick="showProfile('Odin', 'odin.jpg', 'Pastor Alemán', 'Adulto', 'Macho', 'Rescate Animal AC', 'Guadalajara, Jalisco', 'Alto', 'Muy alto', 'Muy alto', 'Medio')">ADOPTAR</button>
+        <h3 id="pet2_name">Panchito</h3>
+        <p id="pet2_info">Pastor Alemán | Adulto | Macho</p>
+        <button class="adopt-button">ADOPTAR</button>
     </div>
     <div class="card">
         <img src="imagenes/luna.jpeg" alt="Luna">
-        <h3>Luna</h3>
-        <p>Labrador | Cachorro | Hembra</p>
-        <button class="adopt-button" onclick="showProfile('Luna', 'luna.jpg', 'Labrador', 'Cachorro', 'Hembra', 'Patitas Felices', 'Monterrey, Nuevo León', 'Muy alto', 'Muy alto', 'Muy alto', 'Muy alto')">ADOPTAR</button>
+        <h3 id="pet3_name">Luna</h3>
+        <p id="pet3_info">Labrador | Cachorro | Hembra</p>
+        <button class="adopt-button">ADOPTAR</button>
     </div>
     <div class="card">
-        <img src="imagenes/palomo.jpg" alt="palomo">
-        <h3>Palomo</h3>
-        <p>Husky Siberiano | Joven | Macho</p>
-        <button class="adopt-button" onclick="showProfile('Thor', 'thor.jpg', 'Husky Siberiano', 'Joven', 'Macho', 'Hogar Temporal Milagros', 'Puebla, Puebla', 'Medio', 'Alto', 'Muy alto', 'Muy alto')">ADOPTAR</button>
+        <img src="imagenes/palomo.jpg" alt="Palomo">
+        <h3 id="pet4_name">Palomo</h3>
+        <p id="pet4_info">Husky Siberiano | Joven | Macho</p>
+        <button class="adopt-button">ADOPTAR</button>
     </div>
     <div class="card">
-        <img src="imagenes/muñeco9.jpg" alt="palomo">
-        <h3>Jose Roberto</h3>
-        <p>Husky Siberiano | Joven | Macho</p>
-        <button class="adopt-button" onclick="showProfile('Thor', 'thor.jpg', 'Husky Siberiano', 'Joven', 'Macho', 'Hogar Temporal Milagros', 'Puebla, Puebla', 'Medio', 'Alto', 'Muy alto', 'Muy alto')">ADOPTAR</button>
+        <img src="imagenes/muñeco9.jpg" alt="Jose Roberto">
+        <h3 id="pet5_name">Jose Roberto</h3>
+        <p id="pet5_info">Husky Siberiano | Joven | Macho</p>
+        <button class="adopt-button">ADOPTAR</button>
     </div>
     <div class="card">
-        <img src="imagenes/Gata-Core-dar-un-gato-en-adopcion.webp" alt="palomo">
-        <h3>Andres Manuel</h3>
-        <p>Husky Siberiano | Joven | Macho</p>
-        <button class="adopt-button" onclick="showProfile('Thor', 'thor.jpg', 'Husky Siberiano', 'Joven', 'Macho', 'Hogar Temporal Milagros', 'Puebla, Puebla', 'Medio', 'Alto', 'Muy alto', 'Muy alto')">ADOPTAR</button>
+        <img src="imagenes/Gata-Core-dar-un-gato-en-adopcion.webp" alt="Andres Manuel">
+        <h3 id="pet6_name">Andres Manuel</h3>
+        <p id="pet6_info">Husky Siberiano | Joven | Macho</p>
+        <button class="adopt-button">ADOPTAR</button>
     </div>
 </div>
 
 
+
+<!-- Ventana Modal del perfil de adopción -->
 <div id="profile-modal" class="modal hidden">
     <div class="modal-content">
         <span class="close" onclick="closeProfile()">&times;</span>
         <div class="profile-details">
             <img id="profile-image" src="" alt="">
-            <h1 id="profile-name"></h1>
-            <p id="profile-description"></p>
-            <p>Rescatado por <span id="rescuer"></span></p>
+            <h1 id="profile_name"></h1>
+            <p id="profile_breed"></p>
+            <p id="profile_age"></p>
+            <p id="profile_gender"></p>
+            <p id="rescuer_label">Rescatado por <span id="rescuer"></span></p>
             <p id="location"></p>
             <div class="ratings">
-                <p>Amistoso con los niños: <span id="rating-children"></span></p>
-                <p>Amistoso con otras mascotas: <span id="rating-pets"></span></p>
-                <p>Cariñoso con la familia: <span id="rating-family"></span></p>
-                <p>Juguetón: <span id="rating-playful"></span></p>
+                <p id="rating_children_label">Amistoso con los niños: <span id="rating-children"></span></p>
+                <p id="rating_pets-label">Amistoso con otras mascotas: <span id="rating-pets"></span></p>
+                <p id="rating_family_label">Cariñoso con la familia: <span id="rating-family"></span></p>
+                <p id="rating_playful_label">Juguetón: <span id="rating-playful"></span></p>
             </div>
-            <button class="adopt-button">¡Adoptar Ahora!</button>
+            <button class="adopt-button" id="adopt_now">¡Adoptar Ahora!</button>
         </div>
     </div>
 </div>
@@ -181,8 +174,8 @@
     <div class="tarjeta">
         <img src="Imagenes/muñeco9.jpg" alt="Imagen de ejemplo">
         <div class="contenido">
-            <h3>Muñeco</h3>
-            <p> muñeco es un perrito noble y amoroso que solo quiere dar y recibir cariño.
+            <h3 id="mascota1">Muñeco</h3>
+            <p id="desc1"> muñeco es un perrito noble y amoroso que solo quiere dar y recibir cariño.
                  Es tranquilo, le encanta dormir acurrucado y siempre está listo para una buena sesión de caricias.
                   Se lleva bien con otros perritos y con niños, haciendo de él el compañero ideal para cualquier familia </p>
         </div>
@@ -192,8 +185,8 @@
     <div class="tarjeta">
         <img src="Imagenes/Gata-Core-dar-un-gato-en-adopcion.webp" alt="imagen de ejemplo">
         <div class="contenido">
-            <h3>copito</h3>
-            <p>copito es un gatito lleno de energía y curiosidad.
+            <h3 id="mascota2">copito</h3>
+            <p id="desc2">copito es un gatito lleno de energía y curiosidad.
                  Con sus patitas inquietas y su colita siempre moviéndose, está listo para explorar el mundo a tu lado.
                   Le encanta jugar, correr y descubrir cosas nuevas, pero también disfruta de los abrazos y las siestas después de un día lleno de diversión</p>
         </div>
@@ -203,8 +196,8 @@
     <div class="tarjeta">
         <img src="Imagenes/perros-en-adopcion-cdmx.jpg" alt="Imagen de ejemplo">
         <div class="contenido">
-            <h3>Luna</h3>
-            <p>Luna es una cachorrita llena de energía y amor.
+            <h3 id="mascota3">Luna</h3>
+            <p id="desc3">Luna es una cachorrita llena de energía y amor.
                  Con esos ojitos brillantes llenos de curiosidad,
                   está lista para encontrar su hogar definitivo.
                    Le encanta correr, jugar con pelotas y acurrucarse después de un día de aventuras.

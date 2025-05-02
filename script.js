@@ -162,4 +162,3 @@ function translatePage(lang) {
     // Traducir el placeholder de la barra de búsqueda
     document.getElementById("searchInput").setAttribute("placeholder", translations[lang].searchInput);
   }
-  

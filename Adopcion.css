@@ -32,8 +32,6 @@ header {
 }
 
 /* Video de fondo en el header */
-
-
 header video {
     position: absolute; /* Posición absoluta para cubrir el header */
     top: 15%; /* Ajusta la posición vertical */
@@ -53,6 +51,23 @@ header video {
     text-align: center; /* Centra el contenido */
     padding: 20px; /* Espaciado interno */
 }
+
+/*Botton traductor*/
+button {
+    background-color: #b700ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #b700ff;
+}
+/*Fin del botton traductor*/
 
 /* Navegación */
 .navbar ul {
