@@ -1,49 +1,56 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imagen de Fondo</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url('imagen.jpg'); /* Reemplaza 'imagen.jpg' con la URL de tu imagen */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 24px;
-        }
-
-        .boton-cambio {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-    </style>
+    <title>Casa Patitas Felices</title>
+    <link rel="stylesheet" href="IA.css">
 </head>
 <body>
-    <h1>Bienvenido</h1>
-    <button class="boton-cambio" onclick="cambiarFondo()">Cambiar Fondo</button>
 
-    <script>
-        function cambiarFondo() {
-            const imagenes = [
-                'imagen1.jpg',
-                'imagen2.jpg',
-                'imagen3.jpg'
-            ]; // Reemplaza con tus propias imágenes
-            const indice = Math.floor(Math.random() * imagenes.length);
-            document.body.style.backgroundImage = `url('${imagenes[indice]}')`;
-        }
-    </script>
+    <button onclick="translatePage('en')">Traducir a Inglés</button>
+    <button onclick="translatePage('es')">Traducir a Español</button>
+
+    <div class="container">
+        <h1 id="title1">¡Bienvenid@S a Casa Patitas Felices! 🐾</h1>
+        <p id="content1">En Casa Patitas Felices nos apasiona brindar el mejor cuidado y amor a todas las mascotas. 
+            Nuestra misión es crear un hogar donde cada patita encuentre felicidad y bienestar. 
+            Aquí, los dueños de mascotas y amantes de los animales pueden descubrir todo lo necesario para cuidar, consentir y disfrutar de sus fieles compañeros.
+        </p>
+        <p id="content2">
+            Únete a nuestra comunidad en línea y comparte fotos, videos y experiencias de tus adorables mascotas. 
+            En Casa Patitas Felices, cada pata tiene una historia, y cada historia merece ser contada.
+        </p>
+        <p id="content3">
+            ¡Gracias por ser parte de nuestra familia! 🐕🐱🐾
+        </p>
+    </div>
+
+    <div class="container">
+        <h1 id="title2">Nuestro Propósito</h1>
+        <p id="content4">
+            Hemos cambiado su mundo y ellos el nuestro. 
+            Muchos han sido felizmente adoptados, otros nos han enseñado a no darnos por vencidos y son ejemplo de perseverancia y gratitud.
+            Algunos ya no nos acompañan, pero nos queda la sensación de haberles permitido conocer la bondad humana. 
+            Y están los que habitan el refugio y que siguen esperando una oportunidad para tener una familia y llenar sus hogares de alegría y amor.
+            Puede que no salvemos millones de animales de la calle que existen, pero ayudaremos a los que estén a nuestro alcance, a los que el universo nos coloque en el camino.
+        </p>
+    </div>
+
+    <div class="container">
+        <h1 id="title3">¿Cómo ayudar?</h1>
+        <p id="content5">
+            Si no puedes adoptar, ¡aún puedes marcar la diferencia! Existen varias maneras en las que puedes colaborar con nuestra misión:
+        </p>
+        <ul>
+            <li id="content6"><strong>Donaciones Monetarias:</strong> Ayudan a cubrir los gastos de alimentación, atención médica y refugio.</li>
+            <li id="content7"><strong>Donaciones en Especie:</strong> Como alimento, mantas, medicamentos y juguetes.</li>
+            <li id="content8"><strong>Voluntariado:</strong> Desde ayudar con la limpieza hasta socializar a los animales, siempre hay algo que puedes hacer.</li>
+            <li id="content9"><strong>Apadrinamiento:</strong> Si no puedes adoptar, puedes apadrinar a un animal para cubrir sus necesidades básicas hasta que encuentre un hogar.</li>
+        </ul>
+    </div>
+
+    <script src="IA.js"></script>
 </body>
 </html>
