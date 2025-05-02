@@ -31,24 +31,25 @@
         </div>
         <!-- Lista de enlaces del menú -->
         <ul class="menu-links">
-            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="index.html" class="active" id="menuInicio">Inicio</a></li>
             <li class="dropdown">
-                <a href="#">Guia y ayuda <i class="fas fa-angle-down"></i></a>
+                <a href="#" id="menuGuia">Guía y ayuda <i class="fas fa-angle-down"></i></a>
                 <!--Submenus en un menu principal-->
                 <ul class="submenu">
-                    <li><a href="como-puedo-adoptar.html">¿como puedo adoptar? </a></li>
-                    <li><a href="tips-y-cuidados.html">Tips y Cuidados</a></li>
+                    <li><a href="como-puedo-adoptar.html" id="menuAdoptar">¿como puedo adoptar? </a></li>
+                    <li><a href="tips-y-cuidados.html" id="menuCuidados">Tips y Cuidados</a></li>
                 </ul>
+                <!-- holis hice un cambio !!!-->
             </li>
             <li class="dropdown">
-                <a href="#">Servicios <i class="fas fa-angle-down"></i></a>
+                <a href="#" id="menuServicios:">Servicios <i class="fas fa-angle-down"></i></a>
                 <ul class="submenu">
-                    <li><a href="Adopcion.html">Adopcion</a></li>
-                    <li><a href="#">Donaciones</a></li>
+                    <li><a href="Adopcion.html" id="menuAdopcion">Adopcion</a></li>
+            <li><a href="#" id="menuDonaciones">Donaciones</a></li>
                 </ul>
             </li>
-            <li><a href="noticias.html">Noticias</a></li>
-            <li><a href="#">Contactos</a></li>
+            <li><a href="noticias.html" id="menuNoticias">Noticias</a></li>
+            <li><a href="contactos.html" id="menuContactos">Contactos</a></li>
         </ul>
         <!-- Barra de búsqueda en la esquina superior derecha -->
         <div class="search-bar">
@@ -58,30 +59,27 @@
             <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
         </div>
     </nav>
+
+    <button onclick="translatePage('es')">Español</button>
+    <button onclick="translatePage('en')">English</button>
 <!-- Sección de encabezado del sitio web -->
 <header>
     <!-- Contenedor de contenido del encabezado con una clase para diseño responsivo -->
     <div class="header-content container2">
         <!--Titulo principal de la pagina-->
-        <h1>Tips y Cuidados recomendados</h1>
-        <p>
+        <h1 id="intro">Tips y Cuidados recomendados</h1>
+        <p id="texto_intro">
             Si adoptaste una mascota rescatada, ten en cuenta que podría necesitar más paciencia para construir confianza. 
             Dedica tiempo para entender sus miedos y reacciones, y evita forzar el contacto físico hasta que se sientan cómodos. 
             Con amor constante, estos animales suelen transformarse en compañeros increíblemente leales.
         </p>
-        <!--video del header-->
-        <!--<video autoplay loop muted playsinline>
-            <!-- Fuente del video en formato mp4 -->
-            <!--<source src="Imagenes/Cachorros Husky Siberiano.mp4" type="video/mp4">
-            <!--Mensaje alternativo por si el navegador no lo soporta-->
-            <!--Tu navegador no soporta videos HTML5.        
-        <!--fin video-->
+        
 </header>
 <!--Fin de la info del encabezado-->
 <!-- Contenido/Informacion principal -->
-<div class="container" id="content">
-    <h1>Recomendaciones para tu mascota</h1>
-    <p>
+<div class="container">
+    <h1 id="comienzo">Recomendaciones para tu mascota</h1>
+    <p id="texto_comienzo">
         Ahora te diremos lo que no puede faltar en tu hogar para recibir al nuevo integrante de tu familia como se merece:
     </p>
 </div>
@@ -91,77 +89,58 @@
     <button onclick="Habilitar_bot();">Habilitar bot</button>
 </section>
 </div>
-<!--Pestañas Arcienega-->
- <!-- Contenedor de las pestañas -->
- <ul id="tabs">
-    <li><a href="#tab1" class="active">Alimentación Adecuada</a></li> <!-- Pestaña activa por defecto -->
-    <li><a href="#tab2">Vacunación y Desparasitación</a></li>
-    <li><a href="#tab3">Higiene y Limpieza</a></li>
-    <li><a href="#tab4">Espacio Seguro y Cuidado del Entorno</a></li>
-    <li><a href="#tab5">Esterilización o Castración</a></li>
-    <li><a href="#tab6">Cariño y Tiempo de Calidad</a></li>
+<!--Pestañas-->
+<ul id="tabs">
+    <li><a href="#tab1" class="active" id="tab1_title">Alimentación Adecuada</a></li>
+    <li><a href="#tab2" id="tab2_title">Vacunación y Desparasitación</a></li>
+    <li><a href="#tab3" id="tab3_title">Higiene y Limpieza</a></li>
+    <li><a href="#tab4" id="tab4_title">Espacio Seguro y Cuidado del Entorno</a></li>
+    <li><a href="#tab5" id="tab5_title">Esterilización o Castración</a></li>
+    <li><a href="#tab6" id="tab6_title">Cariño y Tiempo de Calidad</a></li>
 </ul>
 
-<!-- Contenedor de los contenidos de cada pestaña -->
+<!-- Contenido extendido -->
 <div id="container">
     <div class="content" id="tab1">
-        <h2>Alimentación Adecuada</h2>
-        <p><strong>Dieta específica:</strong> </br>
-            Elige alimentos formulados específicamente para la especie, edad, tamaño y condición de salud de tu mascota (perros, gatos, conejos, etc.). 
-            Por ejemplo, los cachorros necesitan alimentos ricos en nutrientes para apoyar su desarrollo.</br>
-        </p>
+        <h2 id="title1">Alimentación Adecuada</h2>
+        <p id="text1"><strong>Dieta específica:</strong> 
+            Cada mascota tiene necesidades nutricionales distintas. Consulta con un veterinario para elegir la mejor dieta según la edad, raza y condición de salud de tu mascota.</p>
+        <p id="text2"><strong>Frecuencia y porciones:</strong> La alimentación debe adecuarse al nivel de actividad. No todas las mascotas requieren la misma cantidad de comida.</p>
+        <p id="text3"><strong>Hidratación:</strong> Mantén siempre agua fresca y limpia disponible para evitar problemas de salud.</p>
     </div>
     <div class="content" id="tab2">
-        <h2>Vacunas esenciales</h2>
-        <p></strong> Consulta con un veterinario sobre el calendario de vacunación adecuado. Algunas vacunas importantes incluyen:
-        </br>
-        <strong>Perros:</strong> Parvovirus, moquillo, rabia y leptospirosis.</br>
-        </br>
-        <strong>Gatos:</strong> Panleucopenia, calicivirus, rabia y herpesvirus.</p>
-        <h2>Desparasitación</h2>
-        <p> Aplica tratamientos antiparasitarios internos (lombrices) y externos (pulgas y garrapatas) de manera periódica, según las recomendaciones del veterinario.</p>
+        <h2 id="title2">Vacunación y Desparasitación</h2>
+        <p id="text4"><strong>Importancia de las vacunas:</strong> Protegen contra enfermedades mortales y ayudan a controlar brotes.</p>
+        <p id="text5"><strong>Calendario de vacunación:</strong> Vacuna a tu mascota siguiendo las indicaciones veterinarias. Un esquema adecuado garantiza una vida saludable.</p>
+        <p id="text6"><strong>Desparasitación interna y externa:</strong> Los parásitos pueden afectar órganos internos y piel. Usa tratamientos específicos recomendados por especialistas.</p>
     </div>
     <div class="content" id="tab3">
-        <h2>La higiene es esencial para evitar problemas de salud:</h2>
-        <p><strong>Cepillado de pelaje:</strong> Esto ayuda a reducir la muda y prevenir nudos, especialmente en razas de pelo largo.</br>
-        </br>
-        <strong>Baños:</strong> Usa champús específicos para mascotas y báñalas solo cuando sea necesario (una vez al mes o según la raza).</br>
-        </br>
-        <strong>Corte de uñas:</strong> Mantén las uñas cortas para evitar molestias o lesiones al caminar.</br>
-        </br>
-        <strong>Orejas y dientes:</strong> Limpia sus orejas con productos recomendados por el veterinario y proporciona juguetes o productos dentales para mantener los dientes limpios.</p>
+        <h2 id="title3">Higiene y Limpieza</h2>
+        <p id="text7"><strong>Cuidado del pelaje:</strong> Cepilla regularmente para evitar nudos, reducir el pelo muerto y mejorar la circulación sanguínea.</p>
+        <p id="text8"><strong>Baños adecuados:</strong> No bañes demasiado seguido a tu mascota para evitar problemas en la piel.</p>
+        <p id="text9"><strong>Higiene oral:</strong> La salud dental es esencial. Utiliza productos adecuados para el cuidado de los dientes.</p>
     </div>
     <div class="content" id="tab4">
-        <h2>Espacio personal</h2>
-        <p>Crea un área tranquila y cómoda donde puedan descansar. Una cama suave o mantas funcionan bien.</br>
-        </br>
-        <strong>Hogar a prueba de mascotas:</strong> Asegúrate de que no haya cables sueltos, productos químicos accesibles u objetos pequeños que puedan ingerir accidentalmente.</br>
-        </br>
-        <strong>Temperatura adecuada:</strong> Protege a tus mascotas del frío extremo o del calor excesivo. Evita dejarlas en automóviles o al aire libre sin sombra.
-        </p>
+        <h2 id="title4">Espacio Seguro y Cuidado del Entorno</h2>
+        <p id="text10"><strong>Zona de descanso:</strong> Proporciona un espacio cómodo donde tu mascota pueda relajarse y sentirse segura.</p>
+        <p id="text11"><strong>Evita objetos peligrosos:</strong> Retira productos tóxicos o pequeños objetos que podrían ser ingeridos accidentalmente.</p>
+        <p id="text12"><strong>Seguridad en paseos:</strong> Usa correas y placas de identificación en lugares públicos.</p>
     </div>
     <div class="content" id="tab5">
-        <h2>Toma en cuenta...</h2>
-        <p> Este procedimiento no solo previene la sobrepoblación de animales, sino que también reduce riesgos de ciertas enfermedades como infecciones uterinas en hembras o cáncer testicular en machos.</br>
-            También puede ayudar a reducir comportamientos indeseados como el marcaje territorial o la agresividad.</p>
+        <h2 id="title5">Esterilización o Castración</h2>
+        <p id="text13"><strong>Beneficios para la salud:</strong> Reduce riesgos de enfermedades reproductivas.</p>
+        <p id="text14"><strong>Control de población:</strong> Evita la reproducción no planificada, reduciendo el abandono.</p>
     </div>
     <div class="content" id="tab6">
-        <h2>Amor</h2>
-        <p>Las mascotas no solo necesitan alimento, ejercicio y atención médica; 
-            también anhelan y prosperan gracias a las conexiones emocionales con sus dueños. 
-            Brindarles cariño y dedicarles tiempo de calidad es esencial para su desarrollo, 
-            comportamiento y felicidad.</br>
-            </br>
-            <strong>Interacción diaria:</strong> Dedica tiempo para jugar, acariciarlas o simplemente estar cerca de ellas.</br>
-            </br>
-            <strong>Lenguaje corporal:</strong> Aprende a interpretar señales como movimientos de la cola, posturas o vocalizaciones para entender sus emociones y necesidades.
-        </p>
+        <h2 id="title6">Cariño y Tiempo de Calidad</h2>
+        <p id="text15"><strong>Vínculo emocional:</strong> La interacción diaria fortalece la relación entre dueño y mascota.</p>
+        <p id="text16"><strong>Actividades recreativas:</strong> Dedica tiempo para juegos y ejercicio, esenciales para su bienestar.</p>
     </div>
 </div>
 
-<div class="container" id="content">
-    <h1>Unas ultimas palabras</h1>
-    <p>
+<div class="container">
+    <h1 id="final1">Unas ultimas palabras</h1>
+    <p id="texto_final">
         El cariño y la atención no solo benefician a las mascotas, sino también a los humanos. 
         Estudios han demostrado que interactuar con animales puede reducir el estrés, mejorar el estado de ánimo y fomentar un mayor sentido de propósito. 
         Por eso, cuidar el bienestar emocional de tu mascota no es solo un acto de bondad, ¡es también una experiencia que te enriquecerá a ti como persona!

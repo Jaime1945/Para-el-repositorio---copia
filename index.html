@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <!-- Menú de navegación -->
     <nav class="menu">
         <!--Contenedor del logo de la pagina-->
@@ -26,26 +25,25 @@
         </div>
         <!-- Lista de enlaces del menú -->
         <ul class="menu-links">
-            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="index.html" class="active" id="menuInicio">Inicio</a></li>
             <li class="dropdown">
-                <a href="#">Guía y ayuda <i class="fas fa-angle-down"></i></a>
+                <a href="#" id="menuGuia">Guía y ayuda <i class="fas fa-angle-down"></i></a>
                 <!--Submenus en un menu principal-->
                 <ul class="submenu">
-                    <li><a href="como-puedo-adoptar.html">¿como puedo adoptar? </a></li>
-                    <li><a href="tips-y-cuidados.html">Tips y Cuidados</a></li>
+                    <li><a href="como-puedo-adoptar.html" id="menuAdoptar">¿como puedo adoptar? </a></li>
+                    <li><a href="tips-y-cuidados.html" id="menuCuidados">Tips y Cuidados</a></li>
                 </ul>
                 <!-- holis hice un cambio !!!-->
             </li>
             <li class="dropdown">
-                <a href="#">Servicios <i class="fas fa-angle-down"></i></a>
+                <a href="#" id="menuServicios:">Servicios <i class="fas fa-angle-down"></i></a>
                 <ul class="submenu">
-                    <li><a href="Adopcion.html">Adopcion</a></li>
-                    <li><a href="#">Donaciones</a></li>
+                    <li><a href="Adopcion.html" id="menuAdopcion">Adopcion</a></li>
+            <li><a href="#" id="menuDonaciones">Donaciones</a></li>
                 </ul>
             </li>
-            <li><a href="noticias.html">Noticias</a></li>
-            <li><a href="contactos.html">Contactos</a></li>
-            
+            <li><a href="noticias.html" id="menuNoticias">Noticias</a></li>
+            <li><a href="contactos.html" id="menuContactos">Contactos</a></li>
         </ul>
         <!-- Barra de búsqueda en la esquina superior derecha -->
         <div class="search-bar">
@@ -55,13 +53,18 @@
             <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
         </div>
     </nav>
+    <!--Botones para traducir Español/Ingles-->
+    <button onclick="translatePage('en')" id="Ingles">Traducir a Inglés</button>
+    <button onclick="translatePage('es')" id="Español">Traducir a Español</button>
+
+    <!--Fin de los botones agregar mas si es que queremos agremas idiomas-->
 <!-- Sección de encabezado del sitio web -->
 <header>
     <!-- Contenedor de contenido del encabezado con una clase para diseño responsivo -->
     <div class="header-content container2">
         <!--Titulo principal de la pagina-->
-        <h1>Casa Patitas Felices</h1>
-        <p>
+        <h1 id="title">Casa Patitas Felices</h1>
+        <p id="content">
             Buscamos proteger la vida de perros y gatos en estado de maltrato y abandono. 
             Les brindamos alimentos, medicamentos y albergue, con el fin de mejorar su calidad de vida y
             <strong>conseguirles un hogar a los peluditos!</strong>
@@ -78,24 +81,24 @@
 
 <!--Inicion de la informacion-->
     <!-- Contenido/Informacion principal -->
-    <div class="container" id="content">
-        <h1>¡Bienvenid@S a Casa Patitas Felices! 🐾</h1>
-        <p>En Casa Patitas Felices nos apasiona brindar el mejor cuidado y amor a todas las mascotas. 
+    <div class="container">
+        <h1 id="title1">¡Bienvenid@S a Casa Patitas Felices! 🐾</h1>
+        <p id="content1">En Casa Patitas Felices nos apasiona brindar el mejor cuidado y amor a todas las mascotas. 
             Nuestra misión es crear un hogar donde cada patita encuentre felicidad y bienestar. 
             Aquí, los dueños de mascotas y amantes de los animales pueden descubrir todo lo necesario para cuidar, consentir y disfrutar de sus fieles compañeros.
         </p>
-        <p>
+        <p id="content2">
             Únete a nuestra comunidad en línea y comparte fotos, videos y experiencias de tus adorables mascotas. 
             En Casa Patitas Felices, cada pata tiene una historia, y cada historia merece ser contada.
         </p>
-        <p>
+        <p id="content3">
             ¡Gracias por ser parte de nuestra familia! 🐕🐱🐾
         </p>
     </div>
-</br>
-    <div class="container" id="content"> <!--Mas informacion/contenido-->
-        <h1>Nuestro Proposito</h1>
-        <p>
+
+    <div class="container">
+        <h1 id="title2">Nuestro Propósito</h1>
+        <p id="content4">
             Hemos cambiado su mundo y ellos el nuestro. 
             Muchos han sido felizmente adoptados, otros nos han enseñado a no darnos por vencidos y son ejemplo de perseverancia y gratitud.
             Algunos ya no nos acompañan, pero nos queda la sensación de haberles permitido conocer la bondad humana. 
@@ -103,25 +106,22 @@
             Puede que no salvemos millones de animales de la calle que existen, pero ayudaremos a los que estén a nuestro alcance, a los que el universo nos coloque en el camino.
         </p>
     </div>
-</br>
-    <div class="container" id="content"> <!--Mas informacion/contenido-->
-        <h1>¿Como ayudar?</h1>
-        <p>
-            Si no puedes adoptar, ¡aún puedes marcar la diferencia! Existen varias maneras en las que puedes colaborar con nuestra misión:
 
-            <strong>Donaciones Monetarias:</strong> Ayudan a cubrir los gastos de alimentación, atención médica y refugio.
-            
-         <strong>Donaciones en Especie:</strong> Como alimento, mantas, medicamentos y juguetes.
-            
-            Voluntariado: Desde ayudar con la limpieza hasta socializar a los animales, siempre hay algo que puedes hacer.
-            
-            Apadrinamiento: Si no puedes adoptar, puedes apadrinar a un animal para cubrir sus necesidades básicas hasta que encuentre un hogar.
+    <div class="container">
+        <h1 id="title3">¿Cómo ayudar?</h1>
+        <p id="content5">
+            Si no puedes adoptar, ¡aún puedes marcar la diferencia! Existen varias maneras en las que puedes colaborar con nuestra misión:
         </p>
+        <ul>
+            <li id="content6"><strong>Donaciones Monetarias:</strong> Ayudan a cubrir los gastos de alimentación, atención médica y refugio.</li>
+            <li id="content7"><strong>Donaciones en Especie:</strong> Como alimento, mantas, medicamentos y juguetes.</li>
+            <li id="content8"><strong>Voluntariado:</strong> Desde ayudar con la limpieza hasta socializar a los animales, siempre hay algo que puedes hacer.</li>
+            <li id="content9"><strong>Apadrinamiento:</strong> Si no puedes adoptar, puedes apadrinar a un animal para cubrir sus necesidades básicas hasta que encuentre un hogar.</li>
+        </ul>
     </div>
-</br>
 <!-- hola este es un cometario-->
 <div class="adoptados" id="adoptadostitulo">
-<h2>Mascotas adoptadas!!!</h2>
+<h2 id="title4">Mascotas adoptadas!!!</h2>
 </div>
 <!--Fin Informacion-->
 <div class="contenedor">
@@ -129,8 +129,8 @@
     <div class="tarjeta">
         <img src="Imagenes/muñeco9.jpg" alt="Imagen de ejemplo">
         <div class="contenido">
-            <h3>Muñeco</h3>
-            <p> muñeco es un perrito noble y amoroso que solo quiere dar y recibir cariño.
+            <h3 id="mascota1">Muñeco</h3>
+            <p id="desc1"> muñeco es un perrito noble y amoroso que solo quiere dar y recibir cariño.
                  Es tranquilo, le encanta dormir acurrucado y siempre está listo para una buena sesión de caricias.
                   Se lleva bien con otros perritos y con niños, haciendo de él el compañero ideal para cualquier familia </p>
         </div>
@@ -140,8 +140,8 @@
     <div class="tarjeta">
         <img src="Imagenes/Gata-Core-dar-un-gato-en-adopcion.webp" alt="imagen de ejemplo">
         <div class="contenido">
-            <h3>copito</h3>
-            <p>copito es un gatito lleno de energía y curiosidad.
+            <h3 id="mascota2">copito</h3>
+            <p id="desc2">copito es un gatito lleno de energía y curiosidad.
                  Con sus patitas inquietas y su colita siempre moviéndose, está listo para explorar el mundo a tu lado.
                   Le encanta jugar, correr y descubrir cosas nuevas, pero también disfruta de los abrazos y las siestas después de un día lleno de diversión</p>
         </div>
@@ -151,8 +151,8 @@
     <div class="tarjeta">
         <img src="Imagenes/perros-en-adopcion-cdmx.jpg" alt="Imagen de ejemplo">
         <div class="contenido">
-            <h3>Luna</h3>
-            <p>Luna es una cachorrita llena de energía y amor.
+            <h3 id="mascota3">Luna</h3>
+            <p id="desc3">Luna es una cachorrita llena de energía y amor.
                  Con esos ojitos brillantes llenos de curiosidad,
                   está lista para encontrar su hogar definitivo.
                    Le encanta correr, jugar con pelotas y acurrucarse después de un día de aventuras.
