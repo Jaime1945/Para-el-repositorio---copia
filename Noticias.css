@@ -10,13 +10,15 @@ body {
     background-size: cover; /* Ajusta el fondo para cubrir toda la pantalla */
     background-attachment: fixed; /* Fija el fondo para que no se desplace */
     background-position: center; /* Centra el fondo */
-    /* También se podría agregar una imagen de fondo con background-image*/
-  
-  }
-  header { 
+    /* También se podría agregar una imagen de fondo con background-image */
+}
+
+/* Header */
+header { 
     /* Fondo con transparencia e imagen (comentado) */
     /* background-image: linear-gradient(rgba(139, 250, 172, 0.137), rgba(139, 250, 172, 0.137)), url(Imagenes/318270.webp); */
     background-position: center; /* Centra la imagen de fondo */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-size: cover; /* Ajusta la imagen para que cubra todo el área */
     min-height: 60vh; /* Altura mínima del header */
     display: flex; /* Usa flexbox para organizar el contenido */
@@ -26,90 +28,219 @@ body {
     text-align: center; /* Alineación del texto */
     color: #000000; /* Color del título en el header */
     padding: 0 20px; /* Espaciado interno */
+    background-color: rgba(255, 255, 255, 0.178); /* rojo con 30% de opacidad */
+
+    
 }
-  /* Sección de noticias */
-  .news-section {
-    max-width: 1000px; /* Ancho máximo del contenido */
-    margin: auto; /* Centrado horizontal */
-    padding: 2rem; /* Espaciado interno */
-    text-align: center; /* Centrar texto */
-  }
-  
-  /* Título de la sección */
-  .news-section h1 {
-    color: #2d3436; /* Gris oscuro */
-    margin-bottom: 2rem;
-  }
-  
-  /* Contenedor que agrupa todas las tarjetas */
-  .news-container {
-    display: grid; /* Diseño de grilla */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adaptativo */
-    gap: 1.5rem; /* Espacio entre tarjetas */
-  }
-  
-  /* Tarjeta individual de noticia */
-  .news-card {
-    background: #ffffff; /* Fondo blanco */
-    border-radius: 15px; /* Bordes redondeados */
-    overflow: hidden; /* Oculta lo que se desborde */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra */
-    transition: transform 0.2s ease; /* Animación suave */
-  }
-  
-  /* Efecto al pasar el mouse */
-  .news-card:hover {
-    transform: translateY(-5px); /* Levanta la tarjeta */
-  }
-  
-  /* Imagen de la noticia */
-  .news-image {
-    width: 100%; /* Ocupa todo el ancho */
-    height: 180px; /* Altura fija */
-    object-fit: cover; /* Recorta para llenar el espacio */
-  }
-  
-  /* Contenido de texto dentro de la tarjeta */
-  .news-content {
-    padding: 1rem;
-    text-align: left; /* Alineación del texto a la izquierda */
-  }
-  
-  /* Título de la noticia */
-  .news-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #0984e3; /* Azul */
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Fecha de publicación */
-  .news-date {
-    font-size: 0.9rem;
-    color: #636e72; /* Gris suave */
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Texto de resumen de la noticia */
-  .news-text {
-    font-size: 1rem;
-    color: #2d3436; /* Gris oscuro */
-  }
-  
-  /* Botón "Ver más" */
-  .load-more {
-    margin-top: 2rem;
-    padding: 0.8rem 2rem;
-    background-color: #74b9ff; /* Azul claro */
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.2s ease;
-  }
-  
-  /* Efecto hover del botón */
-  .load-more:hover {
-    background-color: #0984e3; /* Azul más intenso */
-  }
+
+/* Video de fondo en el header */
+header video {
+    position: absolute; /* Posición absoluta para cubrir el header */
+    top: 15%; /* Ajusta la posición vertical */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Corrige la posición exacta */
+    min-width: 100%; /* Ocupa todo el ancho disponible */
+    min-height: 50%; /* Ocupa la mitad de la altura */
+    z-index: -1; /* Envía el video al fondo */
+    object-fit: cover; /* Ajusta el video sin deformarlo */
+
+}
+
+/* Contenido del header sobre el video */
+.contenido-header video {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté sobre el video */
+    color: rgb(255, 255, 255); /* Color del texto */
+    text-align: center; /* Centra el contenido */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Navegación */
+.navbar ul {
+    display: flex; /* Usa flexbox para organizar los elementos del menú */
+    gap: 30px; /* Espaciado entre elementos */
+}
+
+/* Error en el selector corregido */
+.navbar ul li a {
+    font-size: 18px; /* Tamaño del texto del menú */
+    color: #000000; /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+    padding: 10px; /* Espaciado interno */
+    transition: all 0.3s ease; /* Efecto suave en el hover */
+}
+
+/* Cambio de color al pasar el mouse */
+.navbar ul li a:hover {
+    color: #D4C5E2; /* Cambio de color al hacer hover */
+}
+
+/* Estilos del contenido del header */
+.header-content h1 {
+    font-size: 60px; /* Tamaño del título */
+    line-height: 1.2; /* Espaciado entre líneas */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.header-content p { /* Información del header */
+    font-size: 18px; /* Tamaño del texto */
+    color: #000; /* Color del texto */
+    margin-bottom: 30px; /* Espaciado inferior */
+    max-width: 800px; /* Ancho máximo del texto */
+    margin: 0 auto; /* Centra el texto horizontalmente */
+}
+
+/* Contenedor de cajas con información */
+.container { 
+    width: 80%; /* Ancho del contenedor */
+    margin: 20px auto; /* Centra el contenedor */
+    padding: 30px; /* Espaciado interno */
+    background-color: #ffffffc2; /* Color de fondo con transparencia */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 20px; /* Bordes redondeados */
+}
+
+.container2 { /*Contenedor del header*/
+    width: 80%; /* Ancho del contenedor */
+    margin: 20px auto; /* Centra el contenedor */
+    padding: 30px; /* Espaciado interno */
+    background-color: #ff000000; /* Color de fondo con transparencia */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 20px; /* Bordes redondeados */
+}
+
+h1 {
+    margin-top: 0;
+}
+
+/* Menú de navegación */
+.menu {
+    /*background-image: url(https://th.bing.com/th/id/R.a8d1e00763015ca4435e13e54142f0d2?rik=Sk98rRIYxJYgUg&riu=http%3a%2f%2fst.depositphotos.com%2f1007566%2f2705%2fv%2f950%2fdepositphotos_27059235-stock-illustration-dog-footprint.jpg&ehk=%2bpXcVXTIflkV4Mn5tW4hfbkxkqnLobq0ciJE%2fHkqfrg%3d&risl=&pid=ImgRaw&r=0);*/
+    background-color: #eccff3;/* Color del fondo del menú */
+    display: flex;/*Configuracion del fondo flexible*/
+    align-items: center;/*Alinea los elemntos verticalmente*/
+    padding: 10px 20px;/*Espaciado interno*/
+    flex-wrap: wrap;/* Permite que los elementos se ajusten */
+    box-sizing: border-box;
+    position: sticky;/* Fija el menú al scroll */
+    top: 0;/* Posición en la parte superior */
+    z-index: 1000;/* Prioriza la visibilidad del menú */
+}
+
+.menu .logo img {
+    height: 64px; /* Altura de la imagen del logo */
+    margin-right: 30px;/* Espaciado a la derecha */
+}
+
+.menu .menu-toggle {
+    display: none; /* Oculta el toggle en pantallas grandes */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    margin-left: auto; /* Empuja el toggle hacia la derecha */
+}
+
+.menu .menu-toggle i {
+    font-size: 24px; /* Tamaño del icono */
+    color: #D4C5E2; /* Color del icono */
+}
+
+.menu .menu-links { 
+    list-style: none; /* Quita los estilos de lista */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina relleno */
+    display: flex; /* Usa flexbox para distribuir elementos */
+    align-items: center; /* Alinea elementos verticalmente */
+    flex-grow: 1; /* Permite que los enlaces crezcan dentro del menú */
+}
+
+.menu .menu-links li {
+    position: relative; /* Necesario para posicionar submenús */
+}
+
+.menu .menu-links a {
+    display: block; /* Convierte los enlaces en bloques clickeables */
+    color: #000000; /* Color del texto de los menús */
+    padding: 14px 20px; /* Espaciado interno */
+    text-decoration: none; /* Quita el subrayado */
+    transition: background-color 0.3s; /* Suaviza el cambio de color de fondo */
+    font-weight: 500; /* Grosor del texto */
+}
+
+.menu .menu-links a:hover,
+.menu .menu-links a:focus {
+    background-color: #e6aff1; /* Color de fondo al pasar el mouse o enfocar */
+}
+
+.menu .menu-links .dropdown:hover > .submenu,
+.menu .menu-links .dropdown:focus-within > .submenu {
+    display: block; /* Muestra el submenú al pasar el mouse o al enfocarlo */
+}
+
+/* Submenús */
+.submenu {
+    display: none;  /* Oculta los submenús por defecto */
+    position: absolute;/* Submenús aparecen fuera del flujo */
+    background-color: #eed7f1;/*Fondo de los submenus*/
+    top: 100%;/* Aparece debajo del menú principal */
+    left: 0;/*Alineado a la izquierda*/
+    min-width: 180px;/* Ancho mínimo */
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(184, 157,157);/* Sombra sutil */
+    z-index: 1000; /* Prioriza visibilidad de submenús */
+}
+
+.submenu li {
+    margin: 0; 
+    width: 100%; /* Ancho completo de los elementos */
+}
+
+.submenu a {
+    padding: 10px 20px; /* Espaciado interno */
+    color: #fff; /* Texto blanco */
+    font-weight: normal; /* Peso normal del texto */
+}
+
+.submenu a:hover { /* Cambia el color del menu al pasar el ratón */
+    background-color:  #e1b2ec;
+    color: #fff;
+}
+
+/* Barra de búsqueda */
+.menu .search-bar {
+    display: flex; /* Usa flexbox para alinear elementos */
+    align-items: center; /* Alinea elementos verticalmente */
+    margin-left: auto; /* Mueve la barra de búsqueda a la derecha */
+}
+
+.menu .search-bar input {
+    padding: 8px 10px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 20px 0 0 20px; /* Bordes redondeados en los lados izquierdos */
+    outline: none; /* Elimina el borde azul al hacer clic */
+    width: 150px; /* Ancho inicial */
+    transition: width 0.4s ease-in-out; /* Efecto de expansión */
+}
+
+.menu .search-bar input:focus {
+    width: 250px; /* Expande el campo de búsqueda al enfocarlo */
+}
+
+.menu .search-bar button {
+    padding: 8px 10px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    background-color: #c9f1f7; /* Color de fondo */
+    color: white; /* Color del texto */
+    border-radius: 0 20px 20px 0; /* Bordes redondeados en los lados derechos */
+    cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
+    outline: none; /* Elimina el borde azul al hacer clic */
+}
+
+.menu .search-bar button:hover {
+    background-color: #94e0eb; /* Cambio de color al pasar el mouse */
+}
+
+/* Resaltado */
+.highlight {
+    background-color: #bdf1f5; /* Fondo de resaltado */
+}
