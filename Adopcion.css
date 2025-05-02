@@ -11,10 +11,12 @@ body {
     background-attachment: fixed; /* Fija el fondo para que no se desplace */
     background-position: center; /* Centra el fondo */
     /* También se podría agregar una imagen de fondo con background-image */
+    
 }
 
 /* Header */
 header { 
+    background-image: url('Imagenes/fondo\ 1.webp');/*Aqui se coloca la imagen de fondo*/
     /* Fondo con transparencia e imagen (comentado) */
     /* background-image: linear-gradient(rgba(139, 250, 172, 0.137), rgba(139, 250, 172, 0.137)), url(Imagenes/318270.webp); */
     background-position: center; /* Centra la imagen de fondo */
@@ -30,6 +32,8 @@ header {
 }
 
 /* Video de fondo en el header */
+
+
 header video {
     position: absolute; /* Posición absoluta para cubrir el header */
     top: 15%; /* Ajusta la posición vertical */
