@@ -67,19 +67,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
-//Adaptador de pantalla
-function checkScreenSize() {
-    const content = document.getElementById('content');
-    
-}
-// Llama a la función cuando la página se carga
-window.onload = checkScreenSize;
-
-// Llama a la función cada vez que cambie el tamaño de la ventana
-window.onresize = checkScreenSize;
-//Fin de lo del adptador de pantalla
-
 //Traductor ingles/español
 function translatePage(lang) {
     const translations = {
@@ -133,3 +120,37 @@ function translatePage(lang) {
         document.getElementById(id).innerText = translations[lang][id];
     });
 }
+
+//Adaptador de pantalla
+function ajustarContenido() {
+    let anchoPantalla = window.innerWidth;
+
+    if (anchoPantalla <= 1024) { // Para tablets y móviles
+        document.body.style.fontSize = anchoPantalla <= 600 ? "12px" : "14px";
+
+        document.querySelectorAll("img, video").forEach(el => {
+            el.style.width = "100%";
+            el.style.height = "auto";
+        });
+
+        document.querySelectorAll("button").forEach(btn => {
+            btn.style.padding = anchoPantalla <= 600 ? "6px 12px" : "8px 15px";
+            btn.style.fontSize = anchoPantalla <= 600 ? "12px" : "14px";
+        });
+
+        document.querySelectorAll("p, h1, h2, h3").forEach(texto => {
+            texto.style.maxWidth = "90%";
+            texto.style.margin = "auto";
+            texto.style.textAlign = "center";
+        });
+    } else {
+        document.body.style.fontSize = "16px"; // Mantener tamaño estándar en pantallas grandes
+    }
+}
+
+// Ejecutar en carga y cuando cambie tamaño
+window.onload = ajustarContenido;
+window.onresize = ajustarContenido;
+
+
+//Fin de lo del adptador de pantalla
