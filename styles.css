@@ -5,6 +5,7 @@
 body {
     margin: 0; /* Elimina márgenes por defecto en el body */
     font-family:"Roboto", sans-serif;/* Fuente del texto */
+    /*font-size: 32px;*/
     background-color: #D8F3D7; /* Color de fondo */
     background-repeat: no-repeat; /* Evita que el fondo se repita */
     background-size: cover; /* Ajusta el fondo para cubrir toda la pantalla */
@@ -100,7 +101,7 @@ button:hover {
 }
 
 .header-content p { /* Información del header */
-    font-size: 18px; /* Tamaño del texto */
+    font-size: 25px; /* Tamaño del texto */
     color: #000; /* Color del texto */
     margin-bottom: 30px; /* Espaciado inferior */
     max-width: 800px; /* Ancho máximo del texto */
@@ -382,4 +383,23 @@ footer {
     margin: 10px 0 0; /* Espaciado superior */
     font-size: 14px; /* Tamaño del texto */
     color: #000000; /* Color negro */
+}
+
+.menu-links2 {
+    background-color: #b700ff;
+    color:#fff;
+    list-style: none; /* Quita los estilos de lista */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina relleno */
+    display: flex; /* Usa flexbox para distribuir elementos */
+    align-items: center; /* Alinea elementos verticalmente */
+    flex-grow: 1; /* Permite que los enlaces crezcan dentro del menú */
+    align-items: center;/*Alinea los elemntos verticalmente*/
+    padding: 10px 20px;/*Espaciado interno*/
+    flex-wrap: wrap;/* Permite que los elementos se ajusten */
+    box-sizing: border-box;
+    position: sticky;/* Fija el menú al scroll */
+    top: 0;/* Posición en la parte superior */
+    text-decoration: none; /* Elimina el subrayado */
+    /*z-index: 1000;/* Prioriza la visibilidad del menú */
 }
