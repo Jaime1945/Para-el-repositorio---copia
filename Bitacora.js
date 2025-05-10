@@ -97,6 +97,4 @@ function ajustarContenido() {
 // Ejecutar en carga y cuando cambie tamaño
 window.onload = ajustarContenido;
 window.onresize = ajustarContenido;
-
-
 //Fin de lo del adptador de pantalla

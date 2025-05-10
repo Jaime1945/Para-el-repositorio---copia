@@ -383,3 +383,25 @@ footer {
     font-size: 14px; /* Tamaño del texto */
     color: #000000; /* Color negro */
 }
+
+/*tabla de informacion*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #b700ff;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
