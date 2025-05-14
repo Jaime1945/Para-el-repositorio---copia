@@ -319,7 +319,7 @@ footer {
     color: #000000; /* Color del texto */
     text-align: center; /* Centra el texto */
     padding: 10px 0; /* Espaciado interno */
-    position: fixed; /* Fija el footer en la parte inferior */
+    position: relative; /* Fija el footer en la parte inferior */
     bottom: 0; /* Lo mantiene pegado abajo */
     width: 100%; /* Ocupa todo el ancho de la pantalla */
 }
