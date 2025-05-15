@@ -4,7 +4,7 @@
 /* Estilos generales */
 body {
     margin: 0; /* Elimina márgenes por defecto en el body */
-    font-family: "Roboto", sans-serif; /* Fuente del texto */
+    font-family:"Roboto", sans-serif;/* Fuente del texto */
     background-color: #D8F3D7; /* Color de fondo */
     background-repeat: no-repeat; /* Evita que el fondo se repita */
     background-size: cover; /* Ajusta el fondo para cubrir toda la pantalla */
@@ -15,11 +15,10 @@ body {
 
 /* Header */
 header { 
-    background-image: url('Imagenes/perro\ 1.jpg');/*Aqui se coloca la imagen de fondo*/
-    position: relative;
     /* Fondo con transparencia e imagen (comentado) */
     /* background-image: linear-gradient(rgba(139, 250, 172, 0.137), rgba(139, 250, 172, 0.137)), url(Imagenes/318270.webp); */
     background-position: center; /* Centra la imagen de fondo */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-size: cover; /* Ajusta la imagen para que cubra todo el área */
     min-height: 60vh; /* Altura mínima del header */
     display: flex; /* Usa flexbox para organizar el contenido */
@@ -27,8 +26,11 @@ header {
     justify-content: center; /* Centra el contenido verticalmente */
     align-items: center; /* Centra el contenido horizontalmente */
     text-align: center; /* Alineación del texto */
-    color: #ffffff; /* Color del título en el header */
+    color: #000000; /* Color del título en el header */
     padding: 0 20px; /* Espaciado interno */
+    background-color: rgba(255, 255, 255, 0.178); /* rojo con 30% de opacidad */
+
+    
 }
 
 /* Video de fondo en el header */
@@ -41,6 +43,7 @@ header video {
     min-height: 50%; /* Ocupa la mitad de la altura */
     z-index: -1; /* Envía el video al fondo */
     object-fit: cover; /* Ajusta el video sin deformarlo */
+
 }
 
 /* Contenido del header sobre el video */
@@ -52,19 +55,22 @@ header video {
     padding: 20px; /* Espaciado interno */
 }
 
-/*Boton de habilitacion del bot*/
-button { 
-    background-color: #b700ff; 
-    color: white; 
-    border: none; 
-    padding: 10px 20px; 
-    font-size: 16px; 
-    cursor: pointer; 
-    border-radius: 5px; 
-    margin: 5px; 
-    position: relative;
-    z-index: 10; /* Asegura que los botones estén sobre la imagen */
+/*Botton traductor*/
+button {
+    background-color: #b700ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
 }
+
+button:hover {
+    background-color: #b700ff;
+}
+/*Fin dl botton traductor*/
 
 /* Navegación */
 .navbar ul {
@@ -106,7 +112,7 @@ button {
     width: 80%; /* Ancho del contenedor */
     margin: 20px auto; /* Centra el contenedor */
     padding: 30px; /* Espaciado interno */
-    background-color: #e9e2e234; /* Color de fondo con transparencia */
+    background-color: #ffffffc2; /* Color de fondo con transparencia */
     box-sizing: border-box; /* Incluye padding y border en el tamaño total */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
     border-radius: 20px; /* Bordes redondeados */
@@ -141,7 +147,7 @@ h1 {
 }
 
 .menu .logo img {
-    height: 50px; /* Altura de la imagen del logo */
+    height: 64px; /* Altura de la imagen del logo */
     margin-right: 30px;/* Espaciado a la derecha */
 }
 
@@ -180,7 +186,7 @@ h1 {
 
 .menu .menu-links a:hover,
 .menu .menu-links a:focus {
-    background-color: #df90f7; /* Color de fondo al pasar el mouse o enfocar */
+    background-color: #e6aff1; /* Color de fondo al pasar el mouse o enfocar */
 }
 
 .menu .menu-links .dropdown:hover > .submenu,
@@ -192,7 +198,7 @@ h1 {
 .submenu {
     display: none;  /* Oculta los submenús por defecto */
     position: absolute;/* Submenús aparecen fuera del flujo */
-    background-color: #D4C5E2;/*Fondo de los submenus*/
+    background-color: #eed7f1;/*Fondo de los submenus*/
     top: 100%;/* Aparece debajo del menú principal */
     left: 0;/*Alineado a la izquierda*/
     min-width: 180px;/* Ancho mínimo */
@@ -208,12 +214,12 @@ h1 {
 
 .submenu a {
     padding: 10px 20px; /* Espaciado interno */
-    color: #ffffff; /* Texto blanco */
+    color: #fff; /* Texto blanco */
     font-weight: normal; /* Peso normal del texto */
 }
 
 .submenu a:hover { /* Cambia el color del menu al pasar el ratón */
-    background-color:  #c86edf;
+    background-color:  #e1b2ec;
     color: #fff;
 }
 
@@ -238,9 +244,9 @@ h1 {
 }
 
 .menu .search-bar button {
-    padding: 7px 10px; /* Espaciado interno */
+    padding: 8px 10px; /* Espaciado interno */
     border: none; /* Sin borde */
-    background-color: #e4b0f1; /* Color de fondo */
+    background-color: #c9f1f7; /* Color de fondo */
     color: white; /* Color del texto */
     border-radius: 0 20px 20px 0; /* Bordes redondeados en los lados derechos */
     cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
@@ -248,12 +254,12 @@ h1 {
 }
 
 .menu .search-bar button:hover {
-    background-color: #26052c; /* Cambio de color al pasar el mouse */
+    background-color: #94e0eb; /* Cambio de color al pasar el mouse */
 }
 
 /* Resaltado */
 .highlight {
-    background-color: #BFFFBC; /* Fondo de resaltado */
+    background-color: #bdf1f5; /* Fondo de resaltado */
 }
 
 /* Responsividad */
@@ -306,82 +312,96 @@ h1 {
         margin: 10px 0; /* Margen arriba y abajo */
         justify-content: center; /* Centra la barra de búsqueda */
     }
+}
+
 footer {
-    background-color: #fff2f200; /* Color de fondo del pie de página */
-    color: #18011d; /* Color del texto */
-}
-
-}
-
-
-/*se supone que esto combia el boton que habilita el Bot*/
-.Bot {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente del texto */
-    background-color: #ade7f1; /* Color de fondo del pie de página */
-    color: #ffffff; /* Color del texto */
+    background-color: #f4ebf8; /* Color de fondo del pie de página */
+    color: #000000; /* Color del texto */
     text-align: center; /* Centra el texto */
     padding: 10px 0; /* Espaciado interno */
-    position: fixed; /* Fija el footer en la parte inferior */
+    position: relative; /* Fija el footer en la parte inferior */
     bottom: 0; /* Lo mantiene pegado abajo */
     width: 100%; /* Ocupa todo el ancho de la pantalla */
+}
+/* Contenedor de tarjetas */
+.contenedor {
+    display: flex; /* Usa flexbox para organizar las tarjetas */
+    gap: 100px; /* Espaciado entre tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    align-items: center; /* Centra las tarjetas verticalmente */
+    height: 80vh; /* Altura del contenedor (más grande que la pantalla) */
+    background-color: #D8F3D7; /* Color de fondo verde */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente del texto */
+    margin: 0; /* Elimina márgenes externos */
+}
 
-} 
+/* Estilos de cada tarjeta */
+.tarjeta {
+    width: 290px;  /* Ancho de la tarjeta */
+    height: 510px; /* Altura de la tarjeta */
+    background: white; /* Fondo blanco */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    overflow: hidden; /* Oculta el contenido que sobresalga */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Efecto de transición */
+    text-align: center; /* Alineación centrada del texto*/
+}
 
-/*Pestañas*/
-/* Contenedor de las pestañas */
-#tabs {
-    list-style: none; /* Elimina los estilos de lista predeterminados */
-    padding: 5; /* Elimina el padding predeterminado */
-    display: flex; /* Usa flexbox para alinear las pestañas en una fila */
-    justify-content: flex-start; /* Alinea las pestañas al inicio de la fila */
-    background-color: #f1f1f1; /* Color de fondo de la barra de pestañas */
-    margin: 0; /* Elimina el margen exterior */
+/*titulo de adoptados por arriba de las tarjetas*/
+.adoptados {
     width: 80%;
     margin: 20px auto; /* Centra el contenedor */
-  }
-  
-  /* Elementos de la lista dentro de las pestañas */
-  #tabs li {
-    margin: 0; /* Elimina el margen exterior */
-  }
-  
-  /* Estilos de los enlaces dentro de las pestañas */
-  #tabs li a {
-    display: block; /* Convierte los enlaces en bloques clickeables */
-    padding: 20px 15px; /* Espaciado interno para un mejor diseño */
-    text-decoration: none; /* Elimina el subrayado del texto */
-    color: #000; /* Color del texto negro */
-    background-color: #e2e2e2; /* Color de fondo gris */
-    border-radius: 5px 5px 0 0; /* Bordes redondeados en la parte superior */
-    margin-right: 5px; /* Espaciado entre pestañas */
-    
-  }
-  
-  /* Cambio de color al pasar el cursor o enfocar */
-  #tabs li a:hover, 
-  #tabs li a:focus {
-    background-color: #d1d1d1; /* Color de fondo más oscuro al pasar el cursor */
-  }
-  
-  /* ====== Estilos para el contenedor de contenido ====== */
-  
-  #container {
-    border: 1px solid #d1d1d1; /* Borde gris alrededor del contenedor */
-    border-top: none; /* Elimina el borde superior para integrarse con las pestañas */
-    padding:20px; /* Espaciado interno para el contenido */
-    background-color: #fff; /* Fondo blanco para el contenido */
-    width: 80%;
-    margin: 20px auto; /* Centra el contenedor */
-  }
-  
-  /* ====== Estilos para el contenido de cada pestaña ====== */
-  
-  /* Oculta todas las secciones de contenido por defecto */
-  .content {
-    display: none;
-  }
-  
-  /* Muestra solo el contenido de la pestaña seleccionada (usando anclajes `#id`) */
-  .content:target {
-    display: block;
-  }
+}
+/* Efecto hover en la tarjeta */
+.tarjeta:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer hover */
+}
+
+/* Imagen dentro de la tarjeta */
+.tarjeta img {
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    height: 60%; /* La imagen ocupa el 60% de la altura de la tarjeta */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
+/* Contenido dentro de la tarjeta */
+.tarjeta .contenido {
+    padding: 15px; /* Espaciado interno */
+}
+
+/* Título dentro de la tarjeta */
+.tarjeta h3 {
+    margin: 0; /* Elimina márgenes extra */
+    font-size: 18px; /* Tamaño del título */
+    color: #AE84B6; /* Color del texto */
+}
+
+/* Texto descriptivo dentro de la tarjeta */
+.tarjeta p {
+    margin: 10px 0 0; /* Espaciado superior */
+    font-size: 14px; /* Tamaño del texto */
+    color: #000000; /* Color negro */
+}
+
+/*tabla de informacion*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #b700ff;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}

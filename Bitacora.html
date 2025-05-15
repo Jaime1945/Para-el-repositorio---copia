@@ -10,7 +10,7 @@
     <!-- Enlace a Font Awesome para íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Enlace a tu archivo CSS -->
-    <link rel="stylesheet" href="como-puedo-adoptar.css">
+    <link rel="stylesheet" href="Bitacora.css">
 </head>
 <body>
     <!-- Menú de navegación -->
@@ -44,7 +44,7 @@
             </li>
             <li><a href="noticias.html" id="menuNoticias">Noticias</a></li>
             <li><a href="contactos.html" id="menuContactos">Contactos</a></li>
-            
+
             <li class="dropdown">
                 <a href="#" id="menuExtras">Extras <i class="fas fa-angle-down"></i></a>
                 <ul class="submenu">
@@ -60,61 +60,93 @@
             <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
         </div>
     </nav>
-<!--Botones para traducir Español/Ingles-->
-    <button onclick="translatePage('en')">Traducir a Inglés</button>
-    <button onclick="translatePage('es')">Traducir a Español</button>
+    <!--Botones para traducir Español/Ingles-->
+    <button onclick="translatePage('en')" id="Ingles">Inglés</button>
+    <button onclick="translatePage('es')" id="Español">Español</button>
 
+    <!--Fin de los botones agregar mas si es que queremos agremas idiomas-->
 <!-- Sección de encabezado del sitio web -->
 <header>
     <!-- Contenedor de contenido del encabezado con una clase para diseño responsivo -->
     <div class="header-content container2">
         <!--Titulo principal de la pagina-->
-        <h1 id="title">¿como puedo adoptar?</h1>
+        <h1 id="title">Casa Patitas Felices</h1>
         <p id="content">
-            Adoptar un animal es una decisión maravillosa! Adoptar en lugar de comprar tiene muchos beneficios, tanto para el animal como para ti, ya que les das una segunda oportunidad a seres que necesitan un hogar. A continuacion te dejo información general sobre cómo adoptar un peludito!
+            Buscamos proteger la vida de perros y gatos en estado de maltrato y abandono. 
+            Les brindamos alimentos, medicamentos y albergue, con el fin de mejorar su calidad de vida y
+            <strong>conseguirles un hogar a los peluditos!</strong>
         </p>
-
-    </header>
+        <!--video del header-->
+        <video autoplay loop muted playsinline>
+            <!-- Fuente del video en formato mp4 -->
+            <source src="Imagenes/Cachorros Husky Siberiano.mp4" type="video/mp4">
+            <!--Mensaje alternativo por si el navegador no lo soporta-->
+            Tu navegador no soporta videos HTML5.        
+        <!--fin video-->
+</header>
 <!--Fin de la info del encabezado-->
 
 <!--Inicion de la informacion-->
+       <div class="container">    
+       <table id="tabla">
+        <thead>
+            <tr>
+                <th data-es="Cambios" data-en="Changes">Cambios</th>
+                <th data-es="Mes y Año" data-en="Month & Year">Mes y Año</th>
+                <th data-es="Versión" data-en="Versio">Versión</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td contenteditable="true">Se creo la pagina "Casa patitas felices"</td>
+                <td contenteditable="true">Febrero 2025</td>
+                <td contenteditable="true">1.0.0</td>
+            </tr>
+            <tr>
+                <td contenteditable="true">Se agregaron la barra de menu y menus despegables</td>
+                <td contenteditable="true">Febrero 2025</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td contenteditable="true"></td>
+                <td contenteditable="true">Febrero 2025</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
     <!-- Contenido/Informacion principal -->
-    <!-- Beneficios de adoptar -->
-    <div class="container">
-        <h1 id="title1">Beneficios de Adoptar🐾</h1>
-        <p id="beneficio1"><strong>Salvas una vida:</strong> Al adoptar, le das un hogar a un animal que lo necesita.</p>
-        <p id="beneficio2"><strong>Reduces animales en situación de calle:</strong> Ayudas a combatir el abandono.</p>
-        <p id="beneficio3"><strong>Apoyo a refugios:</strong> Libera espacio en los refugios para que puedan ayudar a más animales.</p>
-        <p id="beneficio4"><strong>Compañía inigualable:</strong> Los animales adoptados suelen ser increíblemente agradecidos.</p>
-    </div>
-
-    <!-- Cómo adoptar -->
-    <div class="container">
-        <h1 id="title2">¿Cómo Adoptar?</h1>
-        <p id="adoptar1"><strong>Explora las opciones:</strong> Revisa las mascotas disponibles en refugios y asociaciones.</p>
-        <p id="adoptar2"><strong>Llena el formulario:</strong> Completa una solicitud para evaluar la compatibilidad.</p>
-        <p id="adoptar3"><strong>Conoce a la mascota:</strong> Programa una visita para interactuar con ella.</p>
-        <p id="adoptar4"><strong>Proceso de adopción responsable:</strong> Firma un compromiso para garantizar el bienestar de la mascota.</p>
-        <p id="adoptar5"><strong>Preparativos para la llegada:</strong> Cómo adecuar tu hogar para una nueva mascota.</p>
-        <p id="adoptar6"><strong>Responsabilidades:</strong> Alimentos, ejercicio, vacunas y esterilización.</p>
-        <p id="adoptar7"><strong>Adiestramiento básico:</strong> Consejos para una convivencia armónica.</p>
-    </div>
-
-    <!-- Reflexión final -->
-    <div class="container">
-        <h1 id="title3">Para terminar</h1>
-        <p id="final1">Adoptar es un acto de amor y empatía que trasciende las palabras. Los animales no solo enriquecen nuestras vidas con compañía, lealtad y alegría, sino que también nos enseñan lecciones profundas sobre la pureza del amor y la conexión con la naturaleza.</p>
-        <p id="final2">Cuando adoptas, no solo estás dando un hogar a un ser que lo necesita, sino que también estás salvando una vida y dando sentido a la tuya de una forma única. Los animales, sean perros, gatos u otras especies, poseen un valor intrínseco que va más allá de su utilidad para los humanos.</p>
-        <p id="final3">Ellos sienten, expresan afecto y, de maneras distintas, entienden el mundo a través de sus experiencias. Es nuestra responsabilidad respetar su derecho a vivir dignamente, brindarles protección y tratarlos con bondad.</p>
-        <p id="final4"><strong>Ahora que ya tienes esta información puedes ir al apartado de "Servicios" en la sección de "Adoptar" para poder ver las opciones de adopción.</strong></p>
-    </div>
     <!-- Enlace a tu archivo JavaScript -->
-    <script src="como-puedo-adoptar.js"></script>
+    <script src="Bitacora.js"></script>
     <!--Fin del enlace con java-->
-    
+</br></br></br></br></br>
     <footer> <!--Derechos de "autor???"-->
         <p><marquee>&copy; 2025 Casa Patitas Felices todos los derechos reservados!</marquee></p>
     </footer>
-
 </body>
 </html>
