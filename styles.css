@@ -29,7 +29,7 @@ header {
     text-align: center; /* Alineación del texto */
     color: #000000; /* Color del título en el header */
     padding: 0 20px; /* Espaciado interno */
-    background-color: rgba(255, 255, 255, 0.178); /* rojo con 30% de opacidad */
+    background-color: rgba(255, 255, 255, 0); /* rojo con 30% de opacidad */
 
     
 }
@@ -62,7 +62,7 @@ header video {
 
 /*Botton traductor*/
 button {
-    background-color: #b700ff;
+    background-color: #94e0eb;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -73,7 +73,7 @@ button {
 }
 
 button:hover {
-    background-color: #b700ff;
+    background-color: #8fe8ee;
 }
 /*Fin dl botton traductor*/
 
