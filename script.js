@@ -103,7 +103,10 @@ window.onresize = ajustarContenido;
 //Fin de lo del adptador de pantalla
 
 //Traductor de la pagina
-function translatePage(lang) {
+function toggleLanguage() {
+    let button = document.getElementById("translateButton");
+    let currentLang = document.documentElement.lang || "es";
+//function translatePage(lang) {
     const translations = {
         en: {
             title: "Happy Paws House",
@@ -177,10 +180,25 @@ function translatePage(lang) {
         }
     };
   
-    Object.keys(translations[lang]).forEach(id => {
-        document.getElementById(id).innerText = translations[lang][id];
-    });
+    //Object.keys(translations[lang]).forEach(id => {
+      //  document.getElementById(id).innerText = translations[lang][id];
+    //});
 
     // Traducir el placeholder de la barra de búsqueda
-    document.getElementById("searchInput").setAttribute("placeholder", translations[lang].searchInput);
-  }
+    //document.getElementById("searchInput").setAttribute("placeholder", translations[lang].searchInput);
+ let newLang = currentLang === "es" ? "en" : "es";
+    document.documentElement.lang = newLang;
+    
+    // Actualizar el texto del botón sin afectar otros elementos
+    button.textContent = translations[newLang].buttonText;
+
+    // Recorrer todos los elementos con "data-key" y actualizar el texto
+    document.querySelectorAll("[id]").forEach(element => {
+        let key = element.getAttribute("id");
+        if (translations[newLang][key]) {
+            element.textContent = translations[newLang][key];
+        }
+    });
+}
+
+//prueba de contenido

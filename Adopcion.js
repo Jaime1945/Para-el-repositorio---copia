@@ -73,7 +73,10 @@ function closeProfile() {
 }
 
 //traductor ingles/español
-function translatePage(lang) {
+function toggleLanguage() {
+    let button = document.getElementById("translateButton");
+    let currentLang = document.documentElement.lang || "es";
+//function translatePage(lang) {
     const translations = {
         en: {
             title_inicial: "Happy Paws House",
@@ -193,13 +196,27 @@ function translatePage(lang) {
         }
     };
 
-    Object.keys(translations[lang]).forEach(id => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.innerHTML = translations[lang][id];
+    //Object.keys(translations[lang]).forEach(id => {
+        //const element = document.getElementById(id);
+        //if (element) {
+         //   element.innerHTML = translations[lang][id];
+        //}
+    //});
+    let newLang = currentLang === "es" ? "en" : "es";
+    document.documentElement.lang = newLang;
+    
+    // Actualizar el texto del botón sin afectar otros elementos
+    button.textContent = translations[newLang].buttonText;
+
+    // Recorrer todos los elementos con "data-key" y actualizar el texto
+    document.querySelectorAll("[id]").forEach(element => {
+        let key = element.getAttribute("id");
+        if (translations[newLang][key]) {
+            element.textContent = translations[newLang][key];
         }
     });
 }
+
 
 //Adaptador de pantalla
 function ajustarContenido() {
