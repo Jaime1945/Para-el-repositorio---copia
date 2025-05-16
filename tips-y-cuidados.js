@@ -170,8 +170,59 @@ function tryDecode(str) {
  });
 
  //traductor ingles/español
- function translatePage(lang) {
+ function toggleLanguage() {
+    let button = document.getElementById("translateButton");
+    let currentLang = document.documentElement.lang || "es";
+ //function translatePage(lang) {
   const translations = {
+      es: {
+         intro: "Tips y Cuidados recomendados",
+         texto_intro: "Si adoptaste una mascota rescatada, ten en cuenta que podría necesitar más paciencia para construir confianza. Dedica tiempo para entender sus miedos y reacciones, y evita forzar el contacto físico hasta que se sientan cómodos. Con amor constante, estos animales suelen transformarse en compañeros increíblemente leales.",
+         comienzo: "Recomendaciones para tu mascota",
+         texto_comienzo: "Ahora te diremos lo que no puede faltar en tu hogar para recibir al nuevo integrante de tu familia como se merece:",
+         final1: "Unas ultimas palabras",
+         texto_final: " El cariño y la atención no solo benefician a las mascotas, sino también a los humanos. Estudios han demostrado que interactuar con animales puede reducir el estrés, mejorar el estado de ánimo y fomentar un mayor sentido de propósito. Por eso, cuidar el bienestar emocional de tu mascota no es solo un acto de bondad, ¡es también una experiencia que te enriquecerá a ti como persona!",
+          tab1_title: "Alimentación Adecuada",
+          tab2_title: "Vacunación y Desparasitación",
+          tab3_title: "Higiene y Limpieza",
+          tab4_title: "Espacio Seguro y Cuidado del Entorno",
+          tab5_title: "Esterilización o Castración",
+          tab6_title: "Cariño y Tiempo de Calidad",
+          title1: "Alimentación Adecuada",
+          text1: "Cada mascota tiene necesidades nutricionales distintas. Consulta con un veterinario para elegir la mejor dieta según la edad, raza y condición de salud de tu mascota.",
+          text2: "La alimentación debe adecuarse al nivel de actividad. No todas las mascotas requieren la misma cantidad de comida.",
+          text3: "Hidratación: Mantén siempre agua fresca y limpia disponible para evitar problemas de salud.",
+          title2: "Vacunación y Desparasitación",
+          text4: "Las vacunas son esenciales para prevenir enfermedades mortales y brotes.",
+          text5: "Vacuna a tu mascota siguiendo las indicaciones veterinarias.",
+          text6: "Los parásitos internos y externos pueden afectar órganos y piel. Usa tratamientos recomendados por especialistas.",
+          title3: "Higiene y Limpieza",
+          text7: "Cepilla regularmente para evitar nudos, reducir el pelo muerto y mejorar la circulación sanguínea.",
+          text8: "No bañes demasiado seguido a tu mascota para evitar problemas en la piel.",
+          text9: "La salud dental es esencial. Utiliza productos adecuados para el cuidado de los dientes.",
+          title4: "Espacio Seguro y Cuidado del Entorno",
+          text10: "Proporciona un espacio cómodo donde tu mascota pueda relajarse y sentirse segura.",
+          text11: "Retira productos tóxicos o pequeños objetos que podrían ser ingeridos accidentalmente.",
+          text12: "Usa correas y placas de identificación en lugares públicos para garantizar su seguridad.",
+          title5: "Esterilización o Castración",
+          text13: "Beneficios para la salud: Reduce riesgos de enfermedades reproductivas.",
+          text14: "Control de población: Evita la reproducción no planificada, reduciendo el abandono.",
+          title6: "Cariño y Tiempo de Calidad",
+          text15: "La interacción diaria fortalece la relación entre dueño y mascota.",
+          text16: "Dedica tiempo para juegos y ejercicio, esenciales para su bienestar.",
+          menuInicio: "Inicio",
+          menuGuia: "Guía y ayuda",
+          menuAdoptar: "¿Cómo puedo adoptar?",
+          menuCuidados: "Tips y Cuidados",
+          menuServicios: "Servicios",
+          menuAdopcion: "Adopción",
+          menuDonaciones: "Donaciones",
+          menuNoticias: "Noticias",
+          menuContactos: "Contactos",
+          searchInput: "Buscar...",
+          Ingles: "Traducir a Inglés",
+          Español:"Traducir a Español",
+      },
       en: {
          intro: "Recommended Tips and Care",
          texto_intro: "If you adopted a rescued pet, keep in mind that it may need more patience to build trust. Take time to understand their fears and reactions, and avoid forcing physical contact until they feel comfortable. With constant love, these animals often transform into incredibly loyal companions.",
@@ -220,60 +271,27 @@ function tryDecode(str) {
           Ingles: "Translate to English",
           Español:"Translate to Spanish",
       },
-      es: {
-         intro: "Tips y Cuidados recomendados",
-         texto_intro: "Si adoptaste una mascota rescatada, ten en cuenta que podría necesitar más paciencia para construir confianza. Dedica tiempo para entender sus miedos y reacciones, y evita forzar el contacto físico hasta que se sientan cómodos. Con amor constante, estos animales suelen transformarse en compañeros increíblemente leales.",
-         comienzo: "Recomendaciones para tu mascota",
-         texto_comienzo: "Ahora te diremos lo que no puede faltar en tu hogar para recibir al nuevo integrante de tu familia como se merece:",
-         final1: "Unas ultimas palabras",
-         texto_final: " El cariño y la atención no solo benefician a las mascotas, sino también a los humanos. Estudios han demostrado que interactuar con animales puede reducir el estrés, mejorar el estado de ánimo y fomentar un mayor sentido de propósito. Por eso, cuidar el bienestar emocional de tu mascota no es solo un acto de bondad, ¡es también una experiencia que te enriquecerá a ti como persona!",
-          tab1_title: "Alimentación Adecuada",
-          tab2_title: "Vacunación y Desparasitación",
-          tab3_title: "Higiene y Limpieza",
-          tab4_title: "Espacio Seguro y Cuidado del Entorno",
-          tab5_title: "Esterilización o Castración",
-          tab6_title: "Cariño y Tiempo de Calidad",
-          title1: "Alimentación Adecuada",
-          text1: "Cada mascota tiene necesidades nutricionales distintas. Consulta con un veterinario para elegir la mejor dieta según la edad, raza y condición de salud de tu mascota.",
-          text2: "La alimentación debe adecuarse al nivel de actividad. No todas las mascotas requieren la misma cantidad de comida.",
-          text3: "Hidratación: Mantén siempre agua fresca y limpia disponible para evitar problemas de salud.",
-          title2: "Vacunación y Desparasitación",
-          text4: "Las vacunas son esenciales para prevenir enfermedades mortales y brotes.",
-          text5: "Vacuna a tu mascota siguiendo las indicaciones veterinarias.",
-          text6: "Los parásitos internos y externos pueden afectar órganos y piel. Usa tratamientos recomendados por especialistas.",
-          title3: "Higiene y Limpieza",
-          text7: "Cepilla regularmente para evitar nudos, reducir el pelo muerto y mejorar la circulación sanguínea.",
-          text8: "No bañes demasiado seguido a tu mascota para evitar problemas en la piel.",
-          text9: "La salud dental es esencial. Utiliza productos adecuados para el cuidado de los dientes.",
-          title4: "Espacio Seguro y Cuidado del Entorno",
-          text10: "Proporciona un espacio cómodo donde tu mascota pueda relajarse y sentirse segura.",
-          text11: "Retira productos tóxicos o pequeños objetos que podrían ser ingeridos accidentalmente.",
-          text12: "Usa correas y placas de identificación en lugares públicos para garantizar su seguridad.",
-          title5: "Esterilización o Castración",
-          text13: "Beneficios para la salud: Reduce riesgos de enfermedades reproductivas.",
-          text14: "Control de población: Evita la reproducción no planificada, reduciendo el abandono.",
-          title6: "Cariño y Tiempo de Calidad",
-          text15: "La interacción diaria fortalece la relación entre dueño y mascota.",
-          text16: "Dedica tiempo para juegos y ejercicio, esenciales para su bienestar.",
-          menuInicio: "Inicio",
-          menuGuia: "Guía y ayuda",
-          menuAdoptar: "¿Cómo puedo adoptar?",
-          menuCuidados: "Tips y Cuidados",
-          menuServicios: "Servicios",
-          menuAdopcion: "Adopción",
-          menuDonaciones: "Donaciones",
-          menuNoticias: "Noticias",
-          menuContactos: "Contactos",
-          searchInput: "Buscar...",
-          Ingles: "Traducir a Inglés",
-          Español:"Traducir a Español",
-      }
   };
 
-  Object.keys(translations[lang]).forEach(id => {
-      const element = document.getElementById(id);
-      if (element) {
-          element.innerText = translations[lang][id];
-      }
-  });
+  //Object.keys(translations[lang]).forEach(id => {
+    //  const element = document.getElementById(id);
+      //if (element) {
+        //  element.innerText = translations[lang][id];
+      //}
+  //});
+//}
+
+ let newLang = currentLang === "es" ? "en" : "es";
+    document.documentElement.lang = newLang;
+    
+    // Actualizar el texto del botón sin afectar otros elementos
+    button.textContent = translations[newLang].buttonText;
+
+    // Recorrer todos los elementos con "data-key" y actualizar el texto
+    document.querySelectorAll("[id]").forEach(element => {
+        let key = element.getAttribute("id");
+        if (translations[newLang][key]) {
+            element.textContent = translations[newLang][key];
+        }
+    });
 }
