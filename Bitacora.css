@@ -33,31 +33,9 @@ header {
     
 }
 
-/* Video de fondo en el header */
-header video {
-    position: absolute; /* Posición absoluta para cubrir el header */
-    top: 15%; /* Ajusta la posición vertical */
-    left: 50%; /* Centra horizontalmente */
-    transform: translate(-50%, -50%); /* Corrige la posición exacta */
-    min-width: 100%; /* Ocupa todo el ancho disponible */
-    min-height: 50%; /* Ocupa la mitad de la altura */
-    z-index: -1; /* Envía el video al fondo */
-    object-fit: cover; /* Ajusta el video sin deformarlo */
-
-}
-
-/* Contenido del header sobre el video */
-.contenido-header video {
-    position: relative;
-    z-index: 1; /* Asegura que el contenido esté sobre el video */
-    color: rgb(255, 255, 255); /* Color del texto */
-    text-align: center; /* Centra el contenido */
-    padding: 20px; /* Espaciado interno */
-}
-
 /*Botton traductor*/
 button {
-    background-color: #b700ff;
+    background-color: #f7b27b;;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -400,7 +378,7 @@ th, td {
 }
 
 th {
-    background-color: #b700ff;
+    background-color: #f7c39a;;
     color: white;
 }
 
