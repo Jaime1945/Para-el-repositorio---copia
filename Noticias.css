@@ -33,27 +33,6 @@ header {
     
 }
 
-/* Video de fondo en el header */
-header video {
-    position: absolute; /* Posición absoluta para cubrir el header */
-    top: 15%; /* Ajusta la posición vertical */
-    left: 50%; /* Centra horizontalmente */
-    transform: translate(-50%, -50%); /* Corrige la posición exacta */
-    min-width: 100%; /* Ocupa todo el ancho disponible */
-    min-height: 50%; /* Ocupa la mitad de la altura */
-    z-index: -1; /* Envía el video al fondo */
-    object-fit: cover; /* Ajusta el video sin deformarlo */
-
-}
-
-/* Contenido del header sobre el video */
-.contenido-header video {
-    position: relative;
-    z-index: 1; /* Asegura que el contenido esté sobre el video */
-    color: rgb(255, 255, 255); /* Color del texto */
-    text-align: center; /* Centra el contenido */
-    padding: 20px; /* Espaciado interno */
-}
 
 /* Navegación */
 .navbar ul {
@@ -75,41 +54,6 @@ header video {
     color: #D4C5E2; /* Cambio de color al hacer hover */
 }
 
-/* Estilos del contenido del header */
-.header-content h1 {
-    font-size: 60px; /* Tamaño del título */
-    line-height: 1.2; /* Espaciado entre líneas */
-    margin-bottom: 20px; /* Espaciado inferior */
-}
-
-.header-content p { /* Información del header */
-    font-size: 18px; /* Tamaño del texto */
-    color: #000; /* Color del texto */
-    margin-bottom: 30px; /* Espaciado inferior */
-    max-width: 800px; /* Ancho máximo del texto */
-    margin: 0 auto; /* Centra el texto horizontalmente */
-}
-
-/* Contenedor de cajas con información */
-.container { 
-    width: 80%; /* Ancho del contenedor */
-    margin: 20px auto; /* Centra el contenedor */
-    padding: 30px; /* Espaciado interno */
-    background-color: #ffffffc2; /* Color de fondo con transparencia */
-    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    border-radius: 20px; /* Bordes redondeados */
-}
-
-.container2 { /*Contenedor del header*/
-    width: 80%; /* Ancho del contenedor */
-    margin: 20px auto; /* Centra el contenedor */
-    padding: 30px; /* Espaciado interno */
-    background-color: #ff000000; /* Color de fondo con transparencia */
-    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    border-radius: 20px; /* Bordes redondeados */
-}
 
 h1 {
     margin-top: 0;
@@ -243,4 +187,15 @@ h1 {
 /* Resaltado */
 .highlight {
     background-color: #bdf1f5; /* Fondo de resaltado */
+}
+
+.card-list .card-item .card.link{
+    width: 400px;
+    display: block;
+    background: #e6aff1;
+    padding: 18px;
+    border-radius: 12px;
+}
+.card-list .card.link .card-image{
+    width: 100%;
 }
