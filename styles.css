@@ -407,3 +407,12 @@ footer {
     text-decoration: none; /* Elimina el subrayado */
     /*z-index: 1000;/* Prioriza la visibilidad del menú */
 }
+.menu-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* espacio entre ícono y texto */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+

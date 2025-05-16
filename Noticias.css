@@ -11,6 +11,7 @@ body {
     background-attachment: fixed; /* Fija el fondo para que no se desplace */
     background-position: center; /* Centra el fondo */
     /* También se podría agregar una imagen de fondo con background-image */
+        
 }
 
 /* Header */
@@ -198,4 +199,129 @@ h1 {
 }
 .card-list .card.link .card-image{
     width: 100%;
+}
+/* Footer */
+footer {
+    background-color: #f4ebf8; /* Color de fondo del pie de página */
+    color: #000000;            /* Color del texto */
+    text-align: center;        /* Centra el texto */
+    padding: 10px 0;           /* Espaciado interno */
+    width: 100%;               /* Ocupa todo el ancho */
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1000px;     /* Limita el ancho para controlar el diseño */
+    margin: 0 auto;         /* Centra horizontalmente */
+    padding: 20px;
+    background-color: #D8F3D7;
+}
+
+/* Estilos de cada tarjeta */
+.tarjeta {
+    width: 290px;
+    height: 450px;
+    background:white;
+    border-radius: 20px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Efecto hover en la tarjeta */
+.tarjeta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen dentro de la tarjeta */
+.tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contenido dentro de la tarjeta */
+.tarjeta .contenido {
+    padding: 15px;
+}
+
+/* Título dentro de la tarjeta */
+.tarjeta h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #AE84B6;
+}
+
+/* Texto descriptivo */
+.tarjeta p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #000000;
+}
+
+/* Contenedor del título 'Adoptados' */
+.adoptados {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.mensaje-bienvenida {
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;/* Fuente del texto */
+    background-color: #faac46;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* Animación de texto tipo marquee (opcional) */
+.scroll-text {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: scroll-left 12s linear infinite;
+    display: block;
+    font-weight: bold;
+}
+
+@keyframes scroll-left {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Responsividad para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjeta {
+        width: 90%;      /* Se adapta al ancho del móvil */
+        height: auto;    /* Permite crecer si hay más texto */
+    }
+}
+.menu-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* espacio entre ícono y texto */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
