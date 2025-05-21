@@ -97,7 +97,7 @@ button:hover {
 }
 
 .header-content p { /* Información del header */
-    font-size: 18px; /* Tamaño del texto */
+    font-size: 25px; /* Tamaño del texto */
     color: #000; /* Color del texto */
     margin-bottom: 30px; /* Espaciado inferior */
     max-width: 800px; /* Ancho máximo del texto */
@@ -113,6 +113,7 @@ button:hover {
     box-sizing: border-box; /* Incluye padding y border en el tamaño total */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
     border-radius: 20px; /* Bordes redondeados */
+    font-size: 18px;
 }
 
 .container2 { /*Contenedor del header*/
@@ -312,7 +313,7 @@ h1 {
 }
 
 footer {
-    background-color: #f4ebf8; /* Color de fondo del pie de página */
+    background-color: #f4ebf8; /* Color de fondo del  pie de página */
     color: #AE84B6; /* Color del texto */
     text-align: center; /* Centra el texto */
     padding: 10px 0; /* Espaciado interno */
