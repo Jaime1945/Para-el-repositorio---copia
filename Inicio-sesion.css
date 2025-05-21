@@ -2,7 +2,7 @@
 margin: 0;
  padding: 0; 
  box-sizing: border-box; 
- font-family: "Open Sans", sans-serif;
+ font-family: "Roboto", sans-serif;
 }
 body {
 display: flex;
@@ -10,19 +10,19 @@ align-items: center;
 justify-content: center;
 min-height: 100vh; width: 100%;
 padding: 0 10px;
-background: Linear-gradient(135deg, #ff9a9e 0%,#fad0c4 100%);
+background: Linear-gradient(135deg, #b9c5e5 0%,#256e6e 100%);
 }
 body::before {  
 content:"";
 position: absolute;
 width: 100%; 
 height: 100%;
-background: url(imagenes/gato\ explosivo.png)#000;
+background: url(Imagenes/perro-en-el-pasto_6000x4000_xtrafondos.com.jpg)#d6fff5;
 background-position:center;
 background-size:cover; 
 z-index:-1;
 }
-.wrapper { 
+.wrapper {
 width:400px;
 border-radius: 15px;
  padding: 40px;
@@ -43,13 +43,14 @@ form {
 }
 h2 { 
 font-size: 2.2rem; 
-margin-bottom: 25px;
- color: #ffffff;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+margin-bottom: 20px;
+ color: #ffff;
   letter-spacing: 1px;
 }
 .input-field {
 position: relative;
-border-bottom: 2px solid rgba(255, 255, 255, 0.3); 
+border-bottom: 2px solid rgba(255, 255, 255, 0.61); 
 margin: 20px 0;
 }
 .input-field label {
