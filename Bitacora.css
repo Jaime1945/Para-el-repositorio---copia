@@ -35,7 +35,7 @@ header {
 
 /*Botton traductor*/
 button {
-    background-color: #f7b27b;;
+    background-color: #1d1c1b;;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -46,7 +46,7 @@ button {
 }
 
 button:hover {
-    background-color: #b700ff;
+    background-color: #000000;
 }
 /*Fin dl botton traductor*/
 
