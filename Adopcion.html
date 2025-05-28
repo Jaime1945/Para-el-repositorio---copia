@@ -52,7 +52,7 @@
                     <li><a href="comunidad.html" id="menuComunidad">Comunidad</a></li>
                 </ul>
                 <li>
-                    <button id="translateButton" onclick="toggleLanguage()"><i class="fa fa-language" aria-hidden="true"></i></button>
+                    <button id="translateButton" onclick="toggleLanguage()" class="traductor-button"><i class="fa fa-language" aria-hidden="true"></i></button>
                 </li>
         </ul>
         <!-- Barra de búsqueda en la esquina superior derecha -->
@@ -111,74 +111,58 @@
 
 <!--Mascota en adopcion perfiles-->
     <!-- Tarjetas con diferentes perfiles -->
+    <div class="adoptados" id="adoptadostitulo">
     <h1 id="title3">Adopción de Mascotas</h1>
+    </div>
 <div class="cards-container">
     <!-- Tarjetas con diferentes perfiles -->
     <div class="card">
         <img src="imagenes/artemisa.jpeg" alt="Artemisa">
         <h3 id="pet1_name">Artemisa</h3>
         <p id="pet1_info">Bombay | Joven | Hembra</p>
-        <button class="adopt-button">ADOPTAR</button>
+        <button class="adopt-button"  onclick="showProfile()">ADOPTAR</button>
     </div>
     <div class="card">
         <img src="imagenes/panchito.jpg" alt="Panchito">
         <h3 id="pet2_name">Panchito</h3>
         <p id="pet2_info">Pastor Alemán | Adulto | Macho</p>
-        <button class="adopt-button">ADOPTAR</button>
+        <button class="adopt-button"  onclick="showProfile()">ADOPTAR</button>
     </div>
     <div class="card">
         <img src="imagenes/luna.jpeg" alt="Luna">
         <h3 id="pet3_name">Luna</h3>
         <p id="pet3_info">Labrador | Cachorro | Hembra</p>
-        <button class="adopt-button">ADOPTAR</button>
+        <button class="adopt-button"  onclick="showProfile()">ADOPTAR</button>
     </div>
     <div class="card">
         <img src="imagenes/palomo.jpg" alt="Palomo">
         <h3 id="pet4_name">Palomo</h3>
         <p id="pet4_info">Husky Siberiano | Joven | Macho</p>
-        <button class="adopt-button">ADOPTAR</button>
+        <button class="adopt-button"  onclick="showProfile()">ADOPTAR</button>
     </div>
     <div class="card">
         <img src="imagenes/muñeco9.jpg" alt="Jose Roberto">
         <h3 id="pet5_name">Jose Roberto</h3>
         <p id="pet5_info">Husky Siberiano | Joven | Macho</p>
-        <button class="adopt-button">ADOPTAR</button>
+        <button class="adopt-button"  onclick="showProfile()">ADOPTAR</button>
     </div>
     <div class="card">
         <img src="imagenes/Gata-Core-dar-un-gato-en-adopcion.webp" alt="Andres Manuel">
         <h3 id="pet6_name">Andres Manuel</h3>
         <p id="pet6_info">Husky Siberiano | Joven | Macho</p>
-        <button class="adopt-button">ADOPTAR</button>
+        <button class="adopt-button"  onclick="showProfile()">ADOPTAR</button>
 </div>
 
 
-
+<!--Aqui se agregara cada informacion de perfil modal de cada mascota-->
 <!-- Ventana Modal del perfil de adopción -->
-<div id="profile-modal" class="modal hidden">
-    <div class="modal-content">
-        <span class="close" onclick="closeProfile()">&times;</span>
-        <div class="profile-details">
-            <img id="profile-image" src="" alt="">
-            <h1 id="profile_name"></h1>
-            <p id="profile_breed"></p>
-            <p id="profile_age"></p>
-            <p id="profile_gender"></p>
-            <p id="rescuer_label">Rescatado por <span id="rescuer"></span></p>
-            <p id="location"></p>
-            <div class="ratings">
-                <p id="rating_children_label">Amistoso con los niños: <span id="rating-children"></span></p>
-                <p id="rating_pets-label">Amistoso con otras mascotas: <span id="rating-pets"></span></p>
-                <p id="rating_family_label">Cariñoso con la familia: <span id="rating-family"></span></p>
-                <p id="rating_playful_label">Juguetón: <span id="rating-playful"></span></p>
-            </div>
-            <button class="adopt-button" id="adopt_now">¡Adoptar Ahora!</button>
-        </div>
-    </div>
-</div>
+
+
+<!--Fin de los perfiles modales de mascotas-->
 </br>
-<!-- hola este es un cometario-->
+
 <div class="adoptados" id="adoptadostitulo">
-<h2>Mascotas adoptadas!!!</h2>
+<h1>Mascotas adoptadas!!!</h1>
 </div>
 <div class="contenedor">
     <!-- Tarjeta 1 -->

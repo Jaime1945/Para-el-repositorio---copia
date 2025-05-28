@@ -53,6 +53,22 @@ header video {
 }
 
 /*Botton traductor*/
+.traductor-button {
+    background-color: #b10ad3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+.traductor-button:hover {
+    background-color: #d690e4;
+}
+/*Fin del botton traductor*/
+
+/*Botones en general*/
 button {
     background-color: #f7b27b;
     color: white;
@@ -63,11 +79,10 @@ button {
     border-radius: 5px;
     margin: 5px;
 }
-
 button:hover {
     background-color: #b700ff;
 }
-/*Fin del botton traductor*/
+/**/
 
 /* Navegación */
 .navbar ul {
@@ -462,4 +477,3 @@ footer {
     cursor: pointer;
     color: #333;
   }
-  
