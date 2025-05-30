@@ -47,30 +47,6 @@ document.addEventListener('DOMContentLoaded'), function () {
     }
 }
 
-//perfiles de mascotas en adopcion
-function showProfile(name, image, breed, age, gender, rescuer, location, childrenRating, petsRating, familyRating, playfulRating) {
-  // Mostrar el modal con los datos dinámicos
-  const modal = document.getElementById("profile-modal");
-  modal.classList.remove("hidden");
-
-  // Actualizar los detalles del perfil
-  document.getElementById("profile-name").textContent = name;
-  document.getElementById("profile-image").src = image;
-  document.getElementById("profile-image").alt = name;
-  document.getElementById("profile-description").textContent = `${breed} | ${age} | ${gender}`;
-  document.getElementById("rescuer").textContent = rescuer;
-  document.getElementById("location").textContent = location;
-  document.getElementById("rating-children").textContent = childrenRating;
-  document.getElementById("rating-pets").textContent = petsRating;
-  document.getElementById("rating-family").textContent = familyRating;
-  document.getElementById("rating-playful").textContent = playfulRating;
-}
-
-function closeProfile() {
-  // Ocultar el modal
-  const modal = document.getElementById("profile-modal");
-  modal.classList.add("hidden");
-}
 
 //traductor ingles/español
 function toggleLanguage() {
@@ -162,7 +138,7 @@ function toggleLanguage() {
             pet3_info: "Labrador | Cachorro | Hembra",
             pet4_name: "Palomo",
             pet4_info: "Husky Siberiano | Joven | Macho",
-            pet5_name: "Jose Roberto",
+            pet5_name: "Muñeco",
             pet5_info: "Husky Siberiano | Joven | Macho",
             pet6_name: "Andres Manuel",
             pet6_info: "Husky Siberiano | Joven | Macho",
@@ -251,3 +227,28 @@ window.onresize = ajustarContenido;
 
 
 //Fin de lo del adptador de pantalla
+
+//Funcion de los perfiles de mascotas/pantallas modales
+function showModal(modalId) {
+    document.getElementById(modalId).style.display = "flex";
+}
+
+function hideModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
+
+// Abrir modales de cada mascota
+document.getElementById("open-artemisa-modal").addEventListener("click",function () {
+    showModal("modal-artemisa");
+});
+
+document.getElementById("open-atenea-modal").addEventListener("click", function () {
+    showModal("modal-atenea");
+});
+
+
+//Funcion para cerrar las pantallas modales
+function cerrarModales() {
+    document.querySelectorAll('.modal').forEach(modal => modal.style.display = 'none');
+}
+//

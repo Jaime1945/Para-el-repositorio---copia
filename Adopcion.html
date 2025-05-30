@@ -117,47 +117,133 @@
 <div class="cards-container">
     <!-- Tarjetas con diferentes perfiles -->
     <div class="card">
-        <img src="imagenes/artemisa.jpeg" alt="Artemisa">
+        <img src="Gatos/artemisa.jpeg" alt="Artemisa">
         <h3 id="pet1_name">Artemisa</h3>
         <p id="pet1_info">Bombay | Joven | Hembra</p>
-        <button class="adopt-button"  onclick="showProfile()">ADOPTAR</button>
+        <button id="open-artemisa-modal">Adoptar</button>
     </div>
     <div class="card">
-        <img src="imagenes/panchito.jpg" alt="Panchito">
+        <img src="Perros/panchito.jpg" alt="Panchito">
         <h3 id="pet2_name">Panchito</h3>
         <p id="pet2_info">Pastor Alemán | Adulto | Macho</p>
-        <button class="adopt-button"  onclick="showProfile()">ADOPTAR</button>
+        <button id="open-panchito-modal">Adoptar</button>
     </div>
     <div class="card">
-        <img src="imagenes/luna.jpeg" alt="Luna">
+        <img src="Perros/luna.jpeg" alt="Luna">
         <h3 id="pet3_name">Luna</h3>
         <p id="pet3_info">Labrador | Cachorro | Hembra</p>
-        <button class="adopt-button"  onclick="showProfile()">ADOPTAR</button>
+        <button id="open-luna-modal">Adoptar</button>
     </div>
     <div class="card">
-        <img src="imagenes/palomo.jpg" alt="Palomo">
+        <img src="Perros/palomo.jpg" alt="Palomo">
         <h3 id="pet4_name">Palomo</h3>
         <p id="pet4_info">Husky Siberiano | Joven | Macho</p>
-        <button class="adopt-button"  onclick="showProfile()">ADOPTAR</button>
+        <button id="open-palomo-modal">Adoptar</button>
     </div>
     <div class="card">
-        <img src="imagenes/muñeco9.jpg" alt="Jose Roberto">
-        <h3 id="pet5_name">Jose Roberto</h3>
+        <img src="Perros/Muñeco.jpeg" alt="Muñeco">
+        <h3 id="pet5_name">Muñeco</h3>
         <p id="pet5_info">Husky Siberiano | Joven | Macho</p>
-        <button class="adopt-button"  onclick="showProfile()">ADOPTAR</button>
+        <button id="open-muñeco-modal">Adoptar</button>
     </div>
     <div class="card">
-        <img src="imagenes/Gata-Core-dar-un-gato-en-adopcion.webp" alt="Andres Manuel">
-        <h3 id="pet6_name">Andres Manuel</h3>
+        <img src="Gatos/vaquita.jpg" alt="Vaquita">
+        <h3 id="pet6_name">Vaquita</h3>
         <p id="pet6_info">Husky Siberiano | Joven | Macho</p>
-        <button class="adopt-button"  onclick="showProfile()">ADOPTAR</button>
-</div>
-
-
+        <button id="open-vaquita-modal">Adoptar</button>
+    </div>
+    <div class="card">
+        <img src="Gatos/Atenea.jpg" alt="Atenea">
+        <h3>Atenea</h3>
+        <p id="pet7_info">Husky Siberiano | Joven | Macho</p>
+        <button id="open-atenea-modal">Adoptar</button>
+    </div>
+    <div class="card">
+        <img src="Perros/hans.jpeg" alt="Hans">
+        <h3>Hans</h3>
+        <p id="pet7_info">Husky Siberiano | Joven | Macho</p>
+        <button id="open-Hans-modal">Adoptar</button>
+    </div>
+    <div class="card">
+        <img src="Perros/copito.jpg" alt="Copito">
+        <h3>Copito</h3>
+        <p id="pet7_info">Husky Siberiano | Joven | Macho</p>
+        <button id="open-copito-modal">Adoptar</button>
+    </div>
+    <div class="card">
+        <img src="Gatos/mikis.jpg" alt="mikis">
+        <h3>mikis</h3>
+        <p id="pet7_info">Husky Siberiano | Joven | Macho</p>
+        <button id="open-mikis-modal">Adoptar</button>
+    </div>
+    <div class="card">
+        <img src="Gatos/milly.jpeg" alt="milly">
+        <h3>milly</h3>
+        <p id="pet7_info">Husky Siberiano | Joven | Macho</p>
+        <button id="open-milly-modal">Adoptar</button>
+    </div>
+    <div class="card">
+        <img src="Gatos/michi.jpeg" alt="michi">
+        <h3>michi</h3>
+        <p id="pet7_info">Husky Siberiano | Joven | Macho</p>
+        <button id="open-michi-modal">Adoptar</button>
+    </div>
+    
 <!--Aqui se agregara cada informacion de perfil modal de cada mascota-->
 <!-- Ventana Modal del perfil de adopción -->
+<!--Modal Artemisa-->
+<div class="modal" id="modal-artemisa">
+        <div class="modal-content">
+            <button onclick="cerrarModales()" class="close-button">&times;</button>
+            <img src="Gatos/artemisa.jpeg" alt="artemisa" class="profile-img">
+            <div class="modal-info">
+                <h1>Atenea</h1>
+                <p id="raza-artemisa">American Shorthair | Joven | Hembra | Gris y blanco</p>
+                <div class="ratings">
+                    <p id="Amistad-niños">Amistoso con los niños</p>
+                    <div class="rating-bar"><div class="rating" style="width: 80%;"></div></div>
+                    <p id="Amistad-masco">Amistoso con otras mascotas</p>
+                    <div class="rating-bar"><div class="rating" style="width: 20%;"></div></div>
+                    <p id="Cariño-familia">Cariñoso con la familia</p>
+                    <div class="rating-bar"><div class="rating" style="width: 50%;"></div></div>
+                    <p id="Jugueton">Juguetón</p>
+                    <div class="rating-bar"><div class="rating" style="width: 100%;"></div></div>
+                </div>
+                <div class="history">
+                    <h2 id="title-historia">Historia</h2>
+                    <p id="artemisa-historia">Artemisa fue rescatada de las calles después de perder a sus bebés. Es una gatita amorosa y valiente que confía en los humanos y busca un hogar lleno de amor.</p>
+                </div>
+                <button>ADOPTAR</button>
+            </div>
+        </div>
+    </div>
 
-
+<!-- Modal Atenea -->
+    <div class="modal" id="modal-atenea">
+        <div class="modal-content">
+            <button onclick="cerrarModales()" class="close-button">&times;</button>
+            <img src="Gatos/Atenea.jpg" alt="Atenea" class="profile-img">
+            <div class="modal-info">
+                <h1>Atenea</h1>
+                <p id="raza-atenea">American Shorthair | Joven | Hembra | Gris y blanco</p>
+                <div class="ratings">
+                    <p id="Amistad-niños">Amistoso con los niños</p>
+                    <div class="rating-bar"><div class="rating" style="width: 20%;"></div></div>
+                    <p id="Amistad-masco">Amistoso con otras mascotas</p>
+                    <div class="rating-bar"><div class="rating" style="width: 60%;"></div></div>
+                    <p id="Cariño-familia">Cariñoso con la familia</p>
+                    <div class="rating-bar"><div class="rating" style="width: 80%;"></div></div>
+                    <p id="Jugueton">Juguetón</p>
+                    <div class="rating-bar"><div class="rating" style="width: 80%;"></div></div>
+                </div>
+                <div class="history">
+                    <h2 id="title-historia">Historia</h2>
+                    <p id="Atenea-historia">Atenea fue rescatada de las calles después de perder a sus bebés. Es una gatita amorosa y valiente que confía en los humanos y busca un hogar lleno de amor.</p>
+                </div>
+                <button>ADOPTAR</button>
+            </div>
+        </div>
+    </div>
 <!--Fin de los perfiles modales de mascotas-->
 </br>
 
@@ -203,6 +289,7 @@
     </div>
 </div>
 <!--Agregar mas perfiles aqui arriva-->
+
     <!-- Enlace a tu archivo JavaScript -->
     <script src="Adopcion.js"></script>
     <!--Fin del enlace con java-->
