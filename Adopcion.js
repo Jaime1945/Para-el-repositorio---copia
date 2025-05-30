@@ -1,3 +1,75 @@
+//Funcion de los perfiles de mascotas/pantallas modales
+function showModal(modalId) {
+    document.getElementById(modalId).style.display = "flex";
+}
+
+function hideModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
+
+// Abrir modales de cada mascota
+document.getElementById("open-artemisa-modal").addEventListener("click",function () {
+    showModal("modal-artemisa");
+});
+
+document.getElementById("open-luna-modal").addEventListener("click",function () {
+    showModal("modal-luna");
+});
+
+document.getElementById("open-panchito-modal").addEventListener("click",function () {
+    showModal("modal-panchito");
+});
+
+document.getElementById("open-palomo-modal").addEventListener("click",function () {
+    showModal("modal-palomo");
+});
+
+document.getElementById("open-muñeco-modal").addEventListener("click",function () {
+    showModal("modal-muñeco");
+});
+
+document.getElementById("open-vaquita-modal").addEventListener("click",function () {
+    showModal("modal-vaquita");
+});
+
+document.getElementById("open-atenea-modal").addEventListener("click",function () {
+    showModal("modal-atenea");
+});
+
+document.getElementById("open-Hans-modal").addEventListener("click",function () {
+    showModal("modal-Hans");
+});
+
+document.getElementById("open-copito-modal").addEventListener("click",function () {
+    showModal("modal-copito");
+});
+
+document.getElementById("open-mikis-modal").addEventListener("click",function () {
+    showModal("modal-mikis");
+});
+
+document.getElementById("open-milly-modal").addEventListener("click",function () {
+    showModal("modal-milly");
+});
+
+document.getElementById("open-michi-modal").addEventListener("click",function () {
+    showModal("modal-michi");
+});
+
+
+//Funcion para cerrar las pantallas modales
+function cerrarModales() {
+    document.querySelectorAll('.modal').forEach(modal => modal.style.display = 'none');
+}
+//
+
+
+
+//Funcion para cerrar las pantallas modales
+function cerrarModales() {
+    document.querySelectorAll('.modal').forEach(modal => modal.style.display = 'none');
+}
+
 document.addEventListener('DOMContentLoaded'), function () {
     const menu = document.querySelector('.menu');
     const menuToggle = menu.querySelector('.menu-toggle');
@@ -48,11 +120,12 @@ document.addEventListener('DOMContentLoaded'), function () {
 }
 
 
+
+
 //traductor ingles/español
 function toggleLanguage() {
     let button = document.getElementById("translateButton");
     let currentLang = document.documentElement.lang || "es";
-//function translatePage(lang) {
     const translations = {
         en: {
             title_inicial: "Happy Paws House",
@@ -109,8 +182,8 @@ function toggleLanguage() {
             menuNoticias: "News",
             menuContactos: "Contacts",
             searchInput: "Search...",
-            Ingles: "Translate to English",
-            Español:"Translate to Spanish",
+            titulo_mascoadoptadas:"Adopted pets!!!",
+            Adop_button:"ADOPT",
         },
         es: {
             title_inicial: "Casa Patitas Felices",
@@ -167,17 +240,11 @@ function toggleLanguage() {
             menuNoticias: "Noticias",
             menuContactos: "Contactos",
             searchInput: "Buscar...",
-            Ingles: "Traducir a Inglés",
-            Español:"Traducir a Español",
+            titulo_mascoadoptadas:"Mascotas adoptadas!!!",
+            Adop_button:"ADOPTAR",
         }
     };
-
-    //Object.keys(translations[lang]).forEach(id => {
-        //const element = document.getElementById(id);
-        //if (element) {
-         //   element.innerHTML = translations[lang][id];
-        //}
-    //});
+    
     let newLang = currentLang === "es" ? "en" : "es";
     document.documentElement.lang = newLang;
     
@@ -227,28 +294,3 @@ window.onresize = ajustarContenido;
 
 
 //Fin de lo del adptador de pantalla
-
-//Funcion de los perfiles de mascotas/pantallas modales
-function showModal(modalId) {
-    document.getElementById(modalId).style.display = "flex";
-}
-
-function hideModal(modalId) {
-    document.getElementById(modalId).style.display = "none";
-}
-
-// Abrir modales de cada mascota
-document.getElementById("open-artemisa-modal").addEventListener("click",function () {
-    showModal("modal-artemisa");
-});
-
-document.getElementById("open-atenea-modal").addEventListener("click", function () {
-    showModal("modal-atenea");
-});
-
-
-//Funcion para cerrar las pantallas modales
-function cerrarModales() {
-    document.querySelectorAll('.modal').forEach(modal => modal.style.display = 'none');
-}
-//

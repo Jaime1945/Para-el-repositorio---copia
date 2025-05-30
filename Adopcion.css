@@ -70,7 +70,7 @@ header video {
 
 /*Botones en general*/
 button {
-    background-color: #f7b27b;
+    background-color: #b700ff;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -80,7 +80,7 @@ button {
     margin: 5px;
 }
 button:hover {
-    background-color: #b700ff;
+    background-color: #7f0dac;
 }
 /**/
 
@@ -514,30 +514,4 @@ footer {
 .ratings .rating {
     background-color: #913f86;
     height: 100%;
-}
-
-
-/* 
-    Estilos para el botón "Ir arriba" (#toTop)
-    Este botón está fijo en la esquina inferior derecha, inicialmente oculto y con estilo visible al mostrarse 
-*/
-#toTop {
-    position: fixed;                 /* Fija el botón en pantalla aunque se haga scroll */
-    bottom: 20px;                   /* Separación desde el borde inferior de la ventana */
-    right: 20px;                    /* Separación desde el borde derecho de la ventana */
-    display: none;                  /* Oculto inicialmente, se muestra al hacer scroll */
-    background-color: #c93ec2;         /* Fondo oscuro para visibilidad */
-    color: white;                   /* Texto blanco para contraste */
-    border: none;                   /* Sin borde */
-    padding: 10px 15px;             /* Espacio interno para tamaño adecuado */
-    font-size: 20px;                /* Tamaño de fuente suficientemente grande para ser visible */
-    border-radius: 20px;             /* Bordes redondeados para diseño moderno */
-    cursor: pointer;                /* Cambia el cursor al pasar sobre el botón */
-    z-index: 1000;                  /* Asegura que el botón esté sobre otros elementos */
-    transition: background-color 0.3s ease;  /* Suaviza el cambio de color al hacer hover */
-}
-
-/* Cambio de color de fondo al pasar el cursor sobre el botón "Ir arriba" */
-#toTop:hover {
-    background-color: #555;         /* Fondo más claro para feedback visual */
 }
