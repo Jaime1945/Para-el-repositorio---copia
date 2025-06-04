@@ -62,7 +62,7 @@ header video {
 
 /*Botton traductor*/
 button {
-    background-color: #f7b27b;
+    background-color: #e676d3;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -73,7 +73,7 @@ button {
 }
 
 button:hover {
-    background-color: #8fe8ee;
+    background-color: #971d83;
 }
 /*Fin dl botton traductor*/
 
@@ -252,7 +252,7 @@ h1 {
 .menu .search-bar button {
     padding: 8px 10px; /* Espaciado interno */
     border: none; /* Sin borde */
-    background-color: #c9f1f7; /* Color de fondo */
+    background-color: #D3A9DE; /* Color de fondo */
     color: white; /* Color del texto */
     border-radius: 0 20px 20px 0; /* Bordes redondeados en los lados derechos */
     cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
@@ -260,7 +260,7 @@ h1 {
 }
 
 .menu .search-bar button:hover {
-    background-color: #94e0eb; /* Cambio de color al pasar el mouse */
+    background-color: #D29FDC; /* Cambio de color al pasar el mouse */
 }
 
 /* Resaltado */
