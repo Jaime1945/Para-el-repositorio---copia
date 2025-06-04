@@ -140,8 +140,7 @@ function toggleLanguage() {
             menuNoticias: "News",
             menuContactos: "Contacts",
             searchInput: "Search...",
-            Ingles: "Translate to English",
-            Español:"Translate to Spanish",
+            translateButton:"",
         },
         es: {
             title: "Casa Patitas Felices",
@@ -175,8 +174,7 @@ function toggleLanguage() {
             menuNoticias: "Noticias",
             menuContactos: "Contactos",
             searchInput: "Buscar...",
-            Ingles: "Traducir a Inglés",
-            Español:"Traducir a Español",
+            translateButton:"",
         }
     };
   
