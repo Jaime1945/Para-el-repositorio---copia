@@ -317,11 +317,13 @@ footer {
         height: auto;    /* Permite crecer si hay más texto */
     }
 }
-.menu-links a {
+.menu-links a i:first-of-type {
     display: flex;
     align-items: center;
-    gap: 8px; /* espacio entre ícono y texto */
+    margin-right:  8px; /* espacio entre ícono y texto */
     text-decoration: none;
-    color: white;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
     font-weight: bold;
 }
+
