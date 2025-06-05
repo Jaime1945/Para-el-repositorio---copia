@@ -3,89 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Extenso de Adopción de Mascota</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Formulario de Adopción</title>
+    <link rel="stylesheet" href="Formulario.css">
 </head>
 <body>
     <div class="container">
-        <h1>Solicitud de Adopción de Mascota</h1>
-        <form id="adoptionForm">
-            <fieldset>
-                <legend>Información Personal</legend>
-                <label for="name">Nombre Completo:</label>
-                <input type="text" id="name" required>
+        <h2>Formulario de Adopción</h2>
+        <img id="petImage" src="Imagenes/fondo 1.webp" alt="Mascota" class="pet-image">
+        <form>
+            <label for="petSelect">Selecciona una mascota:</label>
+            <select id="petSelect" onchange="updatePetImage()">
+                <option value="Imagenes/fondo 1.webp">-- Selecciona la mascota--</option>
+                <option value="Gatos/artemisa.jpeg">Artemisa</option>
+                <option value="Perros/panchito.jpg">Panchito</option>
+                <option value="Perros/luna.jpeg">Luna</option>
+            </select>
 
-                <label for="age">Edad:</label>
-                <input type="number" id="age" required>
+            <label for="name">Nombre Completo:</label>
+            <input type="text" id="name" required>
 
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" required>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" required>
 
-                <label for="phone">Teléfono:</label>
-                <input type="tel" id="phone" required>
+            <label for="phoneNumber">Número Telefónico:</label>
+            <input type="text" id="phoneNumber" required>
 
-                <label for="address">Dirección Completa:</label>
-                <input type="text" id="address" required>
+            <label for="street">Calle:</label>
+            <input type="text" id="street" required>
 
-                <label for="occupation">Ocupación:</label>
-                <input type="text" id="occupation" required>
-            </fieldset>
+            <label for="neighborhood">Colonia:</label>
+            <input type="text" id="neighborhood" required>
 
-            <fieldset>
-                <legend>Detalles de la Mascota</legend>
-                <label for="petType">Tipo de Mascota:</label>
-                <select id="petType" required>
-                    <option value="">Seleccione una opción</option>
-                    <option value="perro">Perro</option>
-                    <option value="gato">Gato</option>
-                    <option value="otros">Otros</option>
-                </select>
+            <label for="postalCode">Código Postal:</label>
+            <input type="text" id="postalCode" required>
 
-                <label for="petName">Nombre de la Mascota:</label>
-                <input type="text" id="petName">
+            <label for="employment">¿Cuál es su situación laboral actualmente?</label>
+            <input type="text" id="employment" required>
 
-                <label for="breed">Raza (si aplica):</label>
-                <input type="text" id="breed">
+            <label for="incomeSources">Fuentes de ingreso:</label>
+            <input type="text" id="incomeSources" required>
 
-                <label for="petAge">Edad aproximada:</label>
-                <input type="number" id="petAge">
-            </fieldset>
+            <label for="experience">Cuéntenos acerca de su experiencia con mascotas:</label>
+            <textarea id="experience" required></textarea>
 
-            <fieldset>
-                <legend>Condiciones del Hogar</legend>
-                <label for="homeType">Tipo de Vivienda:</label>
-                <select id="homeType" required>
-                    <option value="casa">Casa</option>
-                    <option value="departamento">Departamento</option>
-                    <option value="otros">Otros</option>
-                </select>
+            <label for="hasPets">¿Actualmente tiene mascotas?</label>
+            <select id="hasPets">
+                <option value="no">No</option>
+                <option value="yes">Sí</option>
+            </select>
 
-                <label for="space">¿Cuenta con espacio suficiente para la mascota?</label>
-                <input type="checkbox" id="space" required>
+            <label for="petBreeds">Raza de las mascotas (en caso de tener):</label>
+            <select id="hasPets">
+                <option value="no">Perro</option>
+                <option value="no">Gato</option>
+                <option value="yes">No, no tengo mascotas</option>
+            </select>
 
-                <label for="pastPets">¿Ha tenido mascotas antes?</label>
-                <input type="checkbox" id="pastPets">
-            </fieldset>
+            <label for="reason">Por favor, describa a sus mascotas actuales, su temperamento y capacidad para socializar con otros perros.
+            <textarea id="reason" required></textarea>
 
-            <fieldset>
-                <legend>Compromiso con la Adopción</legend>
-                <label for="availability">¿Cuántas horas al día puede dedicar a la mascota?</label>
-                <input type="number" id="availability" required>
+            <label for="homeType">Tipo de vivienda:</label>
+            <select id="homeType">
+                <option value="casa">Casa</option>
+                <option value="departamento">Departamento</option>
+                <option value="otro">Otro</option>
+            </select>
 
-                <label for="reason">¿Por qué desea adoptar una mascota?</label>
-                <textarea id="reason" rows="4" required></textarea>
+            <label for="homeOwnership">¿Es propietario o renta?</label>
+            <select id="homeOwnership">
+                <option value="propietario">Propietario</option>
+                <option value="renta">Renta</option>
+            </select>
 
-                <label>
-                    <input type="checkbox" id="agree" required>
-                    Acepto cumplir con las condiciones de adopción.
-                </label>
-            </fieldset>
+            <label for="numPeople">Número de personas en el hogar:</label>
+            <select id="numPeople">
+                <option value="si">1</option>
+                <option value="no">2</option>
+                <option value="si">3</option>
+                <option value="no">4</option>
+                <option value="si">5</option>
+                <option value="no">más de 5</option>
+            </select>
+            
+            <label for="dailyRoutine">Describe tu rutina diaria y cómo planeas integrarla con tu mascota:</label>
+            <textarea id="dailyRoutine" required></textarea>
+
+            <label for="activityLevel">¿Qué nivel de actividad tendrá la mascota en tu hogar?</label>
+            <select id="activityLevel">
+                <option value="bajo">Bajo</option>
+                <option value="moderado">Moderado</option>
+                <option value="alto">Alto</option>
+            </select>
+
+            <label for="reason">¿Por qué deseas adoptar?</label>
+            <textarea id="reason" required></textarea>
 
             <button type="submit">Enviar Solicitud</button>
         </form>
-        <p id="message"></p>
     </div>
-
-    <script src="script.js"></script>
+    <script src="Formulario.js"></script>
 </body>
 </html>
