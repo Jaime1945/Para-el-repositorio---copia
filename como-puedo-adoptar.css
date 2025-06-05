@@ -308,6 +308,16 @@ h1 {
         margin: 10px 0; /* Margen arriba y abajo */
         justify-content: center; /* Centra la barra de búsqueda */
     }
+
+.menu-links a i:first-of-type  {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 8px; /*espacio entre ícono y texto */
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
 }
 
 footer {
