@@ -1,22 +1,28 @@
 body {
     font-family: Arial, sans-serif;
+    color: aliceblue;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f8f8f8;
+    background: url('Imagenes/perro-en-el-pasto_6000x4000_xtrafondos.com.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 .container {
-    background: white;
+    background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     max-width: 500px;
-    width: 100%;
+    width: 90%;
     text-align: center;
+}
+
+h2 {
+    color: white;
 }
 
 .pet-image {
@@ -34,10 +40,11 @@ form {
 
 input, select, textarea, button {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 5px;
     font-size: 16px;
-    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
 }
 
 button {
