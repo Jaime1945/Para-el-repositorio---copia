@@ -53,8 +53,8 @@ header video {
 }
 
 /*Botton traductor*/
-button {
-    background-color: #f7b27b;
+.traductor-button {
+    background-color: #b10ad3;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -63,11 +63,26 @@ button {
     border-radius: 5px;
     margin: 5px;
 }
-
-button:hover {
-    background-color: #b700ff;
+.traductor-button:hover {
+    background-color: #d690e4;
 }
 /*Fin del botton traductor*/
+
+/*Botones en general*/
+button {
+    background-color: #b700ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+button:hover {
+    background-color: #7f0dac;
+}
+/**/
 
 /* Navegación */
 .navbar ul {
@@ -313,7 +328,7 @@ h1 {
 }
 
 footer {
-    background-color: #f4ebf8; /* Color de fondo del  pie de página */
+    background-color: #f4ebf800; /* Color de fondo del  pie de página */
     color: #AE84B6; /* Color del texto */
     text-align: center; /* Centra el texto */
     padding: 10px 0; /* Espaciado interno */
@@ -428,38 +443,75 @@ footer {
     background-color: darkorange;
   }
   
-  .modal {
+
+/*Perfiles modales de mascotas*/
+.modal {
+    display: none;
     position: fixed;
-    top: 0;
+    z-index: 1;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
+    background-color: rgba(0, 0, 0, 0.185);/*Cambio del color de fondo del perfil modal*/
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: row; /* Organizar elementos en una fila */
     background-color: #fff;
-    border-radius: 10px;
     padding: 20px;
-    width: 400px;
-    text-align: center;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 900px;
     position: relative;
-  }
-  
-  .modal-content .close {
+    gap: 20px; /* Espaciado entre perfiles */
+    justify-content: center;
+    align-items: center;
+}
+
+.pet-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+.modal-info {
+    width: 100%;
+}
+
+.close-button {
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 20px;
     cursor: pointer;
-    color: #333;
-  }
-  
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+.ratings .rating-bar {
+    background-color: #ddd;
+    width: 100%;
+    height: 10px;
+    margin-bottom: 5px;
+}
+
+.ratings .rating {
+    background-color: #913f86;
+    height: 100%;
+}

@@ -54,7 +54,7 @@ header video {
 
 /*Boton de habilitacion del bot*/
 button { 
-    background-color: #f7b27b; 
+    background-color: #e06cf0; 
     color: white; 
     border: none; 
     padding: 10px 20px; 
@@ -65,6 +65,10 @@ button {
     position: relative;
     z-index: 10; /* Asegura que los botones estén sobre la imagen */
 }
+button:hover {
+    background-color: #7f0dac;
+}
+/**/
 
 /* Navegación */
 .navbar ul {

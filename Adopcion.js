@@ -1,14 +1,17 @@
-document.addEventListener('DOMContentLoaded'), function () {
+//Nuevo codigo de el buscador
+document.addEventListener('DOMContentLoaded', function () {
     const menu = document.querySelector('.menu');
-    const menuToggle = menu.querySelector('.menu-toggle');
+    const menuToggle = menu?.querySelector('.menu-toggle');
     const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
-    const content = document.body; // Cambiado para buscar en todo el cuerpo del documento
+    const content = document.body;
 
     // Mostrar/ocultar menú en dispositivos móviles
-    menuToggle.addEventListener('click', function () {
-        menu.classList.toggle('active');
-    });
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function () {
+            menu.classList.toggle('active');
+        });
+    }
 
     // Función para resaltar texto dentro del contenido
     function highlightText(text) {
@@ -45,38 +48,94 @@ document.addEventListener('DOMContentLoaded'), function () {
             }
         });
     }
+
+    // Asegurar que los elementos de búsqueda existen antes de agregar el evento
+    if (searchButton && searchInput) {
+        searchButton.addEventListener('click', function () {
+            highlightText(searchInput.value);
+        });
+    }
+});
+
+//
+
+//Funcion de los perfiles de mascotas/pantallas modales
+function showModal(modalId) {
+    document.getElementById(modalId).style.display = "flex";
 }
 
-//perfiles de mascotas en adopcion
-function showProfile(name, image, breed, age, gender, rescuer, location, childrenRating, petsRating, familyRating, playfulRating) {
-  // Mostrar el modal con los datos dinámicos
-  const modal = document.getElementById("profile-modal");
-  modal.classList.remove("hidden");
-
-  // Actualizar los detalles del perfil
-  document.getElementById("profile-name").textContent = name;
-  document.getElementById("profile-image").src = image;
-  document.getElementById("profile-image").alt = name;
-  document.getElementById("profile-description").textContent = `${breed} | ${age} | ${gender}`;
-  document.getElementById("rescuer").textContent = rescuer;
-  document.getElementById("location").textContent = location;
-  document.getElementById("rating-children").textContent = childrenRating;
-  document.getElementById("rating-pets").textContent = petsRating;
-  document.getElementById("rating-family").textContent = familyRating;
-  document.getElementById("rating-playful").textContent = playfulRating;
+function hideModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
 }
 
-function closeProfile() {
-  // Ocultar el modal
-  const modal = document.getElementById("profile-modal");
-  modal.classList.add("hidden");
+// Abrir modales de cada mascota
+document.getElementById("open-artemisa-modal").addEventListener("click",function () {
+    showModal("modal-artemisa");
+});
+
+document.getElementById("open-luna-modal").addEventListener("click",function () {
+    showModal("modal-luna");
+});
+
+document.getElementById("open-panchito-modal").addEventListener("click",function () {
+    showModal("modal-panchito");
+});
+
+document.getElementById("open-palomo-modal").addEventListener("click",function () {
+    showModal("modal-palomo");
+});
+
+document.getElementById("open-muñeco-modal").addEventListener("click",function () {
+    showModal("modal-muñeco");
+});
+
+document.getElementById("open-vaquita-modal").addEventListener("click",function () {
+    showModal("modal-vaquita");
+});
+
+document.getElementById("open-atenea-modal").addEventListener("click",function () {
+    showModal("modal-atenea");
+});
+
+document.getElementById("open-Hans-modal").addEventListener("click",function () {
+    showModal("modal-Hans");
+});
+
+document.getElementById("open-copito-modal").addEventListener("click",function () {
+    showModal("modal-copito");
+});
+
+document.getElementById("open-mikis-modal").addEventListener("click",function () {
+    showModal("modal-mikis");
+});
+
+document.getElementById("open-milly-modal").addEventListener("click",function () {
+    showModal("modal-milly");
+});
+
+document.getElementById("open-michi-modal").addEventListener("click",function () {
+    showModal("modal-michi");
+});
+
+
+//Funcion para cerrar las pantallas modales
+function cerrarModales() {
+    document.querySelectorAll('.modal').forEach(modal => modal.style.display = 'none');
 }
+//
+
+
+
+//Funcion para cerrar las pantallas modales
+function cerrarModales() {
+    document.querySelectorAll('.modal').forEach(modal => modal.style.display = 'none');
+}
+
 
 //traductor ingles/español
 function toggleLanguage() {
     let button = document.getElementById("translateButton");
     let currentLang = document.documentElement.lang || "es";
-//function translatePage(lang) {
     const translations = {
         en: {
             title_inicial: "Happy Paws House",
@@ -133,8 +192,8 @@ function toggleLanguage() {
             menuNoticias: "News",
             menuContactos: "Contacts",
             searchInput: "Search...",
-            Ingles: "Translate to English",
-            Español:"Translate to Spanish",
+            titulo_mascoadoptadas:"Adopted pets!!!",
+            Adop_button:"ADOPT",
         },
         es: {
             title_inicial: "Casa Patitas Felices",
@@ -153,6 +212,7 @@ function toggleLanguage() {
             warning1: "🚫 Si vives en una zona de sobrepoblación canina o felina, te pedimos adoptes a uno de la calle.",
             warning2: "⚠️ Se deben cumplir los compromisos y obligaciones del Contrato de Adopción.",
             warning3: "⚠️ Seguimos en constante seguimiento para saber cómo va todo. Ellos siempre serán nuestros hijitos.",
+            //Mascotas
             title3: "Adopción de Mascotas",
             pet1_name: "Artemisa",
             pet1_info: "Bombay | Joven | Hembra",
@@ -162,7 +222,7 @@ function toggleLanguage() {
             pet3_info: "Labrador | Cachorro | Hembra",
             pet4_name: "Palomo",
             pet4_info: "Husky Siberiano | Joven | Macho",
-            pet5_name: "Jose Roberto",
+            pet5_name: "Muñeco",
             pet5_info: "Husky Siberiano | Joven | Macho",
             pet6_name: "Andres Manuel",
             pet6_info: "Husky Siberiano | Joven | Macho",
@@ -173,6 +233,7 @@ function toggleLanguage() {
             rating_pets_label: "Amistoso con otras mascotas:",
             rating_family_label: "Cariñoso con la familia:",
             rating_playful_label: "Juguetón:",
+            //Tarjetas de "Adoptados"
             adopt_now: "¡Adoptar Ahora!",
             title4: "Mascotas adoptadas!!!",
             mascota1: "Muñeco",
@@ -191,17 +252,11 @@ function toggleLanguage() {
             menuNoticias: "Noticias",
             menuContactos: "Contactos",
             searchInput: "Buscar...",
-            Ingles: "Traducir a Inglés",
-            Español:"Traducir a Español",
+            titulo_mascoadoptadas:"Mascotas adoptadas!!!",
+            Adop_button:"ADOPTAR",
         }
     };
-
-    //Object.keys(translations[lang]).forEach(id => {
-        //const element = document.getElementById(id);
-        //if (element) {
-         //   element.innerHTML = translations[lang][id];
-        //}
-    //});
+    
     let newLang = currentLang === "es" ? "en" : "es";
     document.documentElement.lang = newLang;
     
@@ -216,38 +271,3 @@ function toggleLanguage() {
         }
     });
 }
-
-
-//Adaptador de pantalla
-function ajustarContenido() {
-    let anchoPantalla = window.innerWidth;
-
-    if (anchoPantalla <= 1024) { // Para tablets y móviles
-        document.body.style.fontSize = anchoPantalla <= 600 ? "12px" : "14px";
-
-        document.querySelectorAll("img, video").forEach(el => {
-            el.style.width = "100%";
-            el.style.height = "auto";
-        });
-
-        document.querySelectorAll("button").forEach(btn => {
-            btn.style.padding = anchoPantalla <= 600 ? "6px 12px" : "8px 15px";
-            btn.style.fontSize = anchoPantalla <= 600 ? "12px" : "14px";
-        });
-
-        document.querySelectorAll("p, h1, h2, h3").forEach(texto => {
-            texto.style.maxWidth = "90%";
-            texto.style.margin = "auto";
-            texto.style.textAlign = "center";
-        });
-    } else {
-        document.body.style.fontSize = "16px"; // Mantener tamaño estándar en pantallas grandes
-    }
-}
-
-// Ejecutar en carga y cuando cambie tamaño
-window.onload = ajustarContenido;
-window.onresize = ajustarContenido;
-
-
-//Fin de lo del adptador de pantalla
