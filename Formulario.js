@@ -1,15 +1,20 @@
-document.getElementById("adoptionForm").addEventListener("submit", function(event) {
+ddocument.getElementById("adoptionForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let phone = document.getElementById("phone").value.trim();
-    let petType = document.getElementById("petType").value;
-    let experience = document.getElementById("experience").value.trim();
+    let fields = ["name", "age", "email", "phone", "address", "occupation", "petType", "homeType", "availability", "reason"];
+    let valid = true;
+
+    fields.forEach(field => {
+        let value = document.getElementById(field).value.trim();
+        if (!value) {
+            valid = false;
+        }
+    });
+
     let agree = document.getElementById("agree").checked;
 
-    if (!name || !email || !phone || !petType || !experience || !agree) {
-        document.getElementById("message").textContent = "Por favor, complete todos los campos.";
+    if (!valid || !agree) {
+        document.getElementById("message").textContent = "Por favor, complete todos los campos correctamente.";
         document.getElementById("message").style.color = "red";
         return;
     }
@@ -17,5 +22,5 @@ document.getElementById("adoptionForm").addEventListener("submit", function(even
     document.getElementById("message").textContent = "¡Solicitud enviada con éxito!";
     document.getElementById("message").style.color = "green";
 
-    // Aquí podrías enviar los datos a un servidor
+    // Simulación de envío de datos a un servidor
 });
