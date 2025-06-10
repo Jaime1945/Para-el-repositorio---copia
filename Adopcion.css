@@ -54,7 +54,7 @@ header video {
 
 /*Botton traductor*/
 .traductor-button {
-    background-color: #b10ad3;
+    background-color: #bdecf5;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -64,13 +64,13 @@ header video {
     margin: 5px;
 }
 .traductor-button:hover {
-    background-color: #d690e4;
+    background-color: #cbfde4;
 }
 /*Fin del botton traductor*/
 
 /*Botones en general*/
 button {
-    background-color: #b700ff;
+    background-color: #dea9f3;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -80,7 +80,7 @@ button {
     margin: 5px;
 }
 button:hover {
-    background-color: #7f0dac;
+    background-color: #cce6e7;
 }
 /**/
 

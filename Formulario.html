@@ -4,51 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Adopción de Mascota</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Formulario.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Solicitud de Adopción de Mascota</h1>
-        <form id="adoptionForm">
-            <fieldset>
-                <legend>Información Personal</legend>
-                <label for="name">Nombre Completo:</label>
-                <input type="text" id="name" required>
-                
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" required>
-                
-                <label for="phone">Teléfono:</label>
-                <input type="tel" id="phone" required>
-            </fieldset>
 
-            <fieldset>
-                <legend>Detalles de la Mascota</legend>
-                <label for="petType">Tipo de Mascota:</label>
-                <select id="petType" required>
-                    <option value="">Seleccione una opción</option>
-                    <option value="perro">Perro</option>
-                    <option value="gato">Gato</option>
-                    <option value="otros">Otros</option>
-                </select>
-                
-                <label for="experience">Experiencia con Mascotas:</label>
-                <textarea id="experience" rows="4" required></textarea>
-            </fieldset>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Adopción</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <main class="container">
+    <form id="formulario-adopcion">
+      <h2>Formulario de Adopción</h2>
 
-            <fieldset>
-                <legend>Condiciones de Adopción</legend>
-                <label>
-                    <input type="checkbox" id="agree" required>
-                    Acepto cumplir con las condiciones de adopción.
-                </label>
-            </fieldset>
+      <label for="animales-previos">2. ¿Has tenido animales anteriormente? *</label>
+      <textarea id="animales-previos" name="animales-previos" required></textarea>
 
-            <button type="submit">Enviar Solicitud</button>
-        </form>
-        <p id="message"></p>
-    </div>
+      <label for="animales-actuales">3. ¿Tienes animales con los que tenga que convivir el adoptado? *</label>
+      <textarea id="animales-actuales" name="animales-actuales" required></textarea>
 
-    <script src="script.js"></script>
+      <label for="alimentacion">4. ¿Qué tipo de alimentación tienes pensado darle? *</label>
+      <textarea id="alimentacion" name="alimentacion" required></textarea>
+
+      <label for="gastos">5. ¿Sabes qué gastos puede ocasionar un animal? *</label>
+      <textarea id="gastos" name="gastos" required></textarea>
+
+      <label for="vida">6. ¿Estás dispuesto a atender todas sus necesidades durante 15 años? *</label>
+      <textarea id="vida" name="vida" required></textarea>
+
+      <label for="esterilizacion">7. ¿Qué piensas sobre la esterilización? *</label>
+      <textarea id="esterilizacion" name="esterilizacion" required></textarea>
+
+      <label for="vivienda">8. ¿Qué lugar de la vivienda estará destinado al animal? *</label>
+      <textarea id="vivienda" name="vivienda" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
 </body>
 </html>
