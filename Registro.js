@@ -30,7 +30,7 @@
 const EMAILJS_CONFIG = {
   PUBLIC_KEY: "TjclmlLpMHJ-6kwmh",    // Clave pública de EmailJS
   SERVICE_ID: "service_z9qbl2q",      // ID del servicio de email configurado
-  TEMPLATE_ID: "template_22j7zyi"     // ID de la plantilla de emai
+  TEMPLATE_ID: "template_pt8blov"     // ID de la plantilla de emai
 };
 
 /**
