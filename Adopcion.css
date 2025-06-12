@@ -5,7 +5,7 @@
 body {
     margin: 0; /* Elimina márgenes por defecto en el body */
     font-family:"Roboto", sans-serif;/* Fuente del texto */
-    background-color: #D8F3D7; /* Color de fondo */
+    background-color: #edfffe; /* Color de fondo */
     background-repeat: no-repeat; /* Evita que el fondo se repita */
     background-size: cover; /* Ajusta el fondo para cubrir toda la pantalla */
     background-attachment: fixed; /* Fija el fondo para que no se desplace */
@@ -54,7 +54,7 @@ header video {
 
 /*Botton traductor*/
 .traductor-button {
-    background-color: #bdecf5;
+    background-color:  #f7b27b;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -64,13 +64,13 @@ header video {
     margin: 5px;
 }
 .traductor-button:hover {
-    background-color: #cbfde4;
+    background-color:  #ffc16f;
 }
 /*Fin del botton traductor*/
 
 /*Botones en general*/
 button {
-    background-color: #dea9f3;
+    background-color: #dd9ff5;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -80,7 +80,7 @@ button {
     margin: 5px;
 }
 button:hover {
-    background-color: #cce6e7;
+    background-color:  #c8a7ee;
 }
 /**/
 
@@ -339,7 +339,14 @@ footer {
 /*titulo de adoptados por arriba de las tarjetas*/
 .adoptados {
     width: 80%;
-    margin: 20px auto; /* Centra el contenedor */
+    margin: 40px auto; /* Centra el contenedor */
+     text-align: center;
+     font-family: "Roboto", sans-serif;;
+  font-size: 1.5em;
+  color: #000000;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 /* Contenedor de tarjetas */
 .contenedor {
@@ -348,7 +355,7 @@ footer {
     justify-content: center; /* Centra las tarjetas horizontalmente */
     align-items: center; /* Centra las tarjetas verticalmente */
     height: 80vh; /* Altura del contenedor (más grande que la pantalla) */
-    background-color: #D8F3D7; /* Color de fondo verde */
+    background-color: #7eb0d1; /* Color de fondo verde */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente del texto */
     margin: 0; /* Elimina márgenes externos */
 }
@@ -512,6 +519,6 @@ footer {
 }
 
 .ratings .rating {
-    background-color: #913f86;
+    background-color:  #7898aa;
     height: 100%;
 }

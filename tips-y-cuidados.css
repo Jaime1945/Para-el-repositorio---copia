@@ -5,7 +5,7 @@
 body {
     margin: 0; /* Elimina márgenes por defecto en el body */
     font-family: "Roboto", sans-serif; /* Fuente del texto */
-    background-color: #D8F3D7; /* Color de fondo */
+    background-color: #edfffe; /* Color de fondo */
     background-repeat: no-repeat; /* Evita que el fondo se repita */
     background-size: cover; /* Ajusta el fondo para cubrir toda la pantalla */
     background-attachment: fixed; /* Fija el fondo para que no se desplace */
@@ -54,7 +54,7 @@ header video {
 
 /*Boton de habilitacion del bot*/
 button { 
-    background-color: #e06cf0; 
+    background-color: #f7b27b; 
     color: white; 
     border: none; 
     padding: 10px 20px; 
@@ -66,7 +66,7 @@ button {
     z-index: 10; /* Asegura que los botones estén sobre la imagen */
 }
 button:hover {
-    background-color: #7f0dac;
+    background-color: #ffc16f;
 }
 /**/
 
