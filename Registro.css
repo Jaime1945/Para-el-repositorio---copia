@@ -28,6 +28,8 @@ body {
   justify-content: center;            /* Centrado horizontal */
   align-items: flex-start;            /* Alineación vertical al inicio */
   min-height: 100vh;                  /* Altura mínima completa de viewport */
+  background: url('Imagenes/perro-en-el-pasto_6000x4000_xtrafondos.com.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 /* =============================================================================
@@ -35,12 +37,12 @@ body {
 ============================================================================= */
 
 .container {
-  background: #fff;                   /* Fondo blanco para el formulario */
+  background: rgba(0, 0, 0, 0.6);   /* Fondo blanco para el formulario */
   padding: 32px 36px;                 /* Espaciado interno generoso */
   border-radius: 12px;                /* Bordes redondeados modernos */
   box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra sutil para profundidad */
   max-width: 480px;                   /* Ancho máximo para legibilidad */
-  width: 100%;                        /* Ancho completo hasta el máximo */
+  width: 100%;                        /* Ancho completo hasta el máximo */ 
 }
 
 /* =============================================================================
