@@ -6,12 +6,13 @@ body {
     margin: 0; /* Elimina márgenes por defecto en el body */
     font-family:"Roboto", sans-serif;/* Fuente del texto */
     /*font-size: 32px;*/
-    background-color: #D8F3D7; /* Color de fondo */
+    background-color: #edfffe; /* Color de fondo */
     background-repeat: no-repeat; /* Evita que el fondo se repita */
     background-size: cover; /* Ajusta el fondo para cubrir toda la pantalla */
     background-attachment: fixed; /* Fija el fondo para que no se desplace */
     background-position: center; /* Centra el fondo */
     /* También se podría agregar una imagen de fondo con background-image */
+
 }
 
 /* Header */
@@ -62,7 +63,7 @@ header video {
 
 /*Botton traductor*/
 button {
-    background-color: #e676d3;
+    background-color:  #f7b27b;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -73,7 +74,7 @@ button {
 }
 
 button:hover {
-    background-color: #971d83;
+    background-color:  #ffc16f;
 }
 /*Fin dl botton traductor*/
 
@@ -329,6 +330,25 @@ footer {
     bottom: 0; /* Lo mantiene pegado abajo */
     width: 100%; /* Ocupa todo el ancho de la pantalla */
 }
+.redes-sociales {
+  position: absolute;
+  right: 20px; /* separa del borde derecho */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 15px;
+}
+
+.redes-sociales a {
+  color:  #f7b27b;;
+  font-size: 30px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.redes-sociales a:hover {
+  color: #ffc16f;
+}
 /* Contenedor de tarjetas */
 .contenedor {
     display: flex; /* Usa flexbox para organizar las tarjetas */
@@ -391,7 +411,7 @@ footer {
 }
 
 .menu-links2 {
-    background-color: #b700ff;
+    background-color: #d582f7;
     color:#fff;
     list-style: none; /* Quita los estilos de lista */
     margin: 0; /* Elimina márgenes */
