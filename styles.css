@@ -407,6 +407,21 @@ footer {
     font-size: 14px; /* Tamaño del texto */
     color: #000000; /* Color negro */
 }
+/* Media queries para adaptabilidad */
+@media (max-width: 600px) {
+  .tarjeta {
+    max-width: 90%; /* Más ancho en pantallas pequeñas */
+    border-radius: 15px;
+  }
+
+  .tarjeta h3 {
+    font-size: 16px;
+  }
+
+  .tarjeta p {
+    font-size: 12px;
+  }
+}
 
 .menu-links2 {
     background-color: #d582f7;
