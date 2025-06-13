@@ -35,7 +35,7 @@ header {
 
 /*Botton traductor*/
 button {
-    background-color: #f7b27b;
+    background-color: #FFBC9A;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -302,13 +302,13 @@ footer {
     bottom: 0; /* Lo mantiene pegado abajo */
     width: 100%; /* Ocupa todo el ancho de la pantalla */
 }
-redes-sociales {
+.redes-sociales {
   position: absolute;
   right: 20px; /* separa del borde derecho */
   top: 50%;
   transform: translateY(-50%);
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
 .redes-sociales a {
@@ -397,7 +397,7 @@ th, td {
 }
 
 th {
-    background-color: #d869d8;;
+    background-color: #d9b1fa;;
     color: white;
 }
 

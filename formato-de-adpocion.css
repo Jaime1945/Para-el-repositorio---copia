@@ -301,6 +301,25 @@ footer {
     bottom: 0; /* Lo mantiene pegado abajo */
     width: 100%; /* Ocupa todo el ancho de la pantalla */
 }
+.redes-sociales {
+  position: absolute;
+  right: 20px; /* separa del borde derecho */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 15px;
+}
+
+.redes-sociales a {
+  color:  #f7b27b;;
+  font-size: 30px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.redes-sociales a:hover {
+  color: #ffc16f;
+}
 /* Contenedor de tarjetas */
 .contenedor {
     display: flex; /* Usa flexbox para organizar las tarjetas */
