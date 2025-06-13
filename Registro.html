@@ -4,7 +4,8 @@
   <!-- CONFIGURACIÓN BÁSICA DEL DOCUMENTO -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Formulario Profesional con Validación de Email</title>
+  <link rel="icon" href="Imagenes/logito-removebg-preview.png" type="image/x-icon">
+  <title>Crear cuenta</title>
   
   <!-- FUENTES EXTERNAS GOOGLE FONTS -->
   <!-- Lato: Fuente principal para el cuerpo del texto -->
@@ -31,7 +32,7 @@
     <!-- DESCRIPCIÓN CON CARACTERÍSTICAS NUEVAS -->
     <!-- Informa al usuario sobre las validaciones implementadas -->
     <p style="text-align: center; color: #fffdfd; margin-bottom: 30px; font-size: 0.9rem;">
-      ✨ <strong>Nuevo:</strong> Validación automática de correos y medidor de fortaleza de contraseña
+      ✨ <strong>Nota:</strong> La informacion que se proporcionara esta protegida y privada.
     </p>
 
     <!-- FORMULARIO PRINCIPAL -->
@@ -180,7 +181,7 @@
           type="text"
           id="age"
           name="user_age"
-          placeholder="Ejemplo: 35"
+          placeholder="Coloca tu edad"
           required
           maxlength="3"
         />
@@ -210,7 +211,7 @@
         <textarea
           id="comments"
           name="user_comments"
-          placeholder="Escribe aquí tus comentarios"
+          placeholder="Escribe aquí tus comentarios de la pagina o algun error"
           rows="5"
           maxlength="2000"
         ></textarea>
@@ -226,18 +227,6 @@
       <!-- Se deshabilita durante el envío para evitar envíos múltiples -->
       <button type="submit" id="submitBtn">Enviar información</button>
     </form>
-
-    <!-- INFORMACIÓN SOBRE CARACTERÍSTICAS DE SEGURIDAD -->
-    <!-- Caja informativa que explica las validaciones implementadas -->
-    <div style="background: #e3f2fd; border: 1px solid #2196F3; padding: 12px; border-radius: 8px; margin-top: 20px; font-size: 0.85rem; color: #1565C0;">
-      <strong>🔍 Características de seguridad:</strong>
-      <ul style="margin: 8px 0; padding-left: 20px;">
-        <li>Verificación completa del email</li>
-        <li>Medidor de fortaleza de contraseña</li>
-        <li>Validación en tiempo real</li>
-        <li>Detección de contraseñas comunes</li>
-      </ul>
-    </div>
 
     <!-- MENSAJES DE ESTADO DEL FORMULARIO -->
     

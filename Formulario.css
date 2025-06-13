@@ -16,7 +16,7 @@ body {
   display: flex;                      /* Flexbox para centrado */
   justify-content: center;            /* Centrado horizontal */
   align-items: flex-start;            /* Alineación vertical al inicio */
-  background: url('Imagenes/mujer con perro.jpg') no-repeat center center fixed; /*fondo con imagen*/
+  background: url('Imagenes/perro-en-la-nieve_3840x2564_xtrafondos.com.jpg') no-repeat center center fixed; /*fondo con imagen*/
   background-size: cover;
   min-height: 100vh;                  /* Altura mínima completa de viewport */
 }
@@ -414,7 +414,16 @@ form {
     gap: 10px;
 }
 
-input, select {
+select {
+  padding: 10px;
+    border: rgba (255, 255, 255, 0.2);
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 0);
+}
+
+input {
     padding: 10px;
     border: rgba (255, 255, 255, 0.2);
     border-radius: 5px;
