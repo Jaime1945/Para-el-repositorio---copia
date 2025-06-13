@@ -1,14 +1,24 @@
+/* =============================================================================
+   1. RESET Y CONFIGURACIÓN BASE
+============================================================================= */
+
+/* Reset universal para consistencia entre navegadores */
+* {
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+/* Configuración del body principal */
 body {
-    font-family: Arial, sans-serif;
-    color: aliceblue;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: url('Imagenes/perro-en-el-pasto_6000x4000_xtrafondos.com.jpg') no-repeat center center fixed;
-    background-size: cover;
+  font-family: 'Lato', sans-serif;    /* Fuente principal Google Fonts */
+  background: #f0f2f5;                /* Color de fondo gris claro */
+  margin: 0;                          /* Eliminar márgenes por defecto */
+  padding: 40px 20px;                 /* Espaciado interno */
+  display: flex;                      /* Flexbox para centrado */
+  justify-content: center;            /* Centrado horizontal */
+  align-items: flex-start;            /* Alineación vertical al inicio */
+  background: url('Imagenes/mujer con perro.jpg') no-repeat center center fixed; /*fondo con imagen*/
+  background-size: cover;
+  min-height: 100vh;                  /* Altura mínima completa de viewport */
 }
 
 /* =============================================================================
@@ -16,54 +26,401 @@ body {
 ============================================================================= */
 
 .container {
-    background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    max-width: 500px;
-    width: 90%;
-    text-align: center;
+  background: #fff;                   /* Fondo blanco para el formulario */
+  background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+  padding: 32px 36px;                 /* Espaciado interno generoso */
+  border-radius: 12px;                /* Bordes redondeados modernos */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra sutil para profundidad */
+  max-width: 480px;                   /* Ancho máximo para legibilidad */
+  width: 100%;                        /* Ancho completo hasta el máximo */
 }
 
-h2 {
-    color: white;
+/* =============================================================================
+   3. TIPOGRAFÍA Y TÍTULOS
+============================================================================= */
+
+/* Título principal del formulario */
+h1 {
+  font-family: 'Roboto', sans-serif;  /* Fuente secundaria para títulos */
+  font-weight: 700;                   /* Peso bold para destacar */
+  color: #ece7e7;                        /* Color oscuro para contraste */
+  margin-bottom: 24px;                /* Espaciado inferior */
+  text-align: center;                 /* Centrado horizontal */
 }
+
+/* =============================================================================
+   4. ESTRUCTURA DEL FORMULARIO
+============================================================================= */
+
+/* Contenedor principal del formulario */
+form {
+  display: flex;                      /* Flexbox para layout vertical */
+  flex-direction: column;             /* Dirección vertical */
+  gap: 20px;                          /* Espaciado uniforme entre campos */
+}
+
+/* =============================================================================
+   5. ETIQUETAS (LABELS)
+============================================================================= */
+
+/* Estilos base para todas las etiquetas */
+label {
+  font-weight: 700;                   /* Peso bold para destacar */
+  margin-bottom: 6px;                 /* Espaciado inferior */
+  display: inline-block;              /* Permite márgenes verticales */
+  color: #fcfcfc;                        /* Color gris oscuro */
+}
+
+/* Asterisco rojo para campos obligatorios */
+label.required::after {
+  content: " *";                      /* Contenido del asterisco */
+  color: #d93025;                     /* Color rojo para destacar */
+}
+
+/* =============================================================================
+   6. INPUTS Y CONTROLES DE FORMULARIO
+============================================================================= */
+
+/* Estilos base para todos los inputs principales */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+textarea {
+  width: 100%;                        /* Ancho completo del contenedor */
+  padding: 12px 14px;                 /* Espaciado interno cómodo */
+  border: 2px solid #ccc;             /* Borde gris claro */
+  border-radius: 10px;                /* Bordes redondeados */
+  font-size: 1rem;                    /* Tamaño de fuente legible */
+  font-family: 'Roboto', sans-serif;  /* Fuente consistente */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+/* Transformación a mayúsculas solo para campos de texto */
+input[type="text"] {
+  text-transform: uppercase;          /* Solo nombre y edad en mayúsculas */
+}
+
+/* Evitar transformación en otros campos */
+input[type="email"],
+input[type="password"],
+input[type="date"],
+textarea {
+  text-transform: none !important;    /* Mantener texto original */
+}
+
+/* Estados de foco para todos los inputs */
+input:focus,
+textarea:focus {
+  border-color: #3a86ff;              /* Borde azul al enfocar */
+  box-shadow: 0 0 8px rgba(58,134,255,0.4); /* Sombra azul difusa */
+  outline: none;                      /* Eliminar outline por defecto */
+}
+
+/* =============================================================================
+   7. ESTADOS DE VALIDACIÓN DE EMAIL
+============================================================================= */
+
+/* Email siendo validado con API externa */
+input.validating {
+  border-color: #ff9800 !important;   /* Borde naranja durante validación */
+  box-shadow: 0 0 8px rgba(255, 152, 0, 0.4) !important; /* Sombra naranja */
+  /* Patrón animado de rayas para indicar proceso */
+  background-image: linear-gradient(45deg, transparent 35%, rgba(255, 152, 0, 0.1) 50%, transparent 65%);
+  background-size: 20px 20px;
+  animation: loading-stripes 1s linear infinite; /* Animación de carga */
+}
+
+/* Animación de rayas deslizantes para estado de validación */
+@keyframes loading-stripes {
+  0% { background-position: 0 0; }
+  100% { background-position: 20px 0; }
+}
+
+/* Email válido confirmado */
+input.valid {
+  border-color: #4CAF50 !important;   /* Borde verde para éxito */
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.4) !important; /* Sombra verde */
+  background-color: rgba(76, 175, 80, 0.05); /* Fondo verde muy sutil */
+}
+
+/* Email inválido o con errores */
+input.invalid {
+  border-color: #d93025 !important;   /* Borde rojo para error */
+  box-shadow: 0 0 8px rgba(217, 48, 37, 0.4) !important; /* Sombra roja */
+  background-color: rgba(217, 48, 37, 0.05); /* Fondo rojo muy sutil */
+}
+
+/* =============================================================================
+   8. INDICADOR DE FORTALEZA DE CONTRASEÑA
+============================================================================= */
+
+/* Contenedor del campo de contraseña */
+.password-field {
+  position: relative;                 /* Para posicionamiento de elementos hijos */
+}
+
+/* Contenedor principal del indicador de fortaleza */
+.password-strength {
+  margin-top: 10px;                   /* Espaciado superior */
+  opacity: 0;                         /* Invisible por defecto */
+  transform: translateY(-10px);       /* Desplazado hacia arriba */
+  transition: all 0.3s ease;         /* Transición suave para aparecer */
+}
+
+/* Estado visible del indicador */
+.password-strength.show {
+  opacity: 1;                         /* Completamente visible */
+  transform: translateY(0);           /* Posición normal */
+}
+
+/* Etiqueta del indicador */
+.password-strength-label {
+  font-size: 0.85rem;                 /* Tamaño pequeño */
+  color: #666;                        /* Color gris */
+  margin-bottom: 6px;                 /* Espaciado inferior */
+  display: block;                     /* Ocupar línea completa */
+}
+
+/* Contenedor de la barra de progreso */
+.password-strength-bar-container {
+  height: 8px;                        /* Altura de la barra */
+  background: #e9ecef;                /* Fondo gris claro */
+  border-radius: 4px;                 /* Bordes redondeados */
+  overflow: hidden;                   /* Ocultar desbordamientos */
+  position: relative;                 /* Para posicionamiento de la barra */
+}
+
+/* Barra de progreso que indica la fortaleza */
+.password-strength-bar {
+  height: 100%;                       /* Altura completa del contenedor */
+  width: 0%;                          /* Ancho inicial 0% */
+  transition: all 0.4s ease;         /* Transición suave al cambiar */
+  border-radius: 4px;                 /* Bordes redondeados */
+  position: relative;                 /* Para efectos especiales */
+}
+
+/* =============================================================================
+   9. ESTADOS DE FORTALEZA DE CONTRASEÑA
+============================================================================= */
+
+/* Contraseña débil - Rojo */
+.strength-weak {
+  background: linear-gradient(90deg, #dc3545, #e74c3c); /* Gradiente rojo */
+  width: 33.33%;                      /* 1/3 de la barra */
+}
+
+/* Contraseña regular - Amarillo */
+.strength-medium {
+  background: linear-gradient(90deg, #ffc107, #f39c12); /* Gradiente amarillo */
+  width: 66.66%;                      /* 2/3 de la barra */
+}
+
+/* Contraseña fuerte - Verde */
+.strength-strong {
+  background: linear-gradient(90deg, #28a745, #20c997); /* Gradiente verde */
+  width: 100%;                        /* Barra completa */
+}
+
+/* Contraseña excelente - Azul con efectos especiales */
+.strength-very-strong {
+  background: linear-gradient(90deg, #007bff, #17a2b8); /* Gradiente azul */
+  width: 100%;                        /* Barra completa */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3); /* Sombra azul */
+}
+
+/* =============================================================================
+   10. TEXTO DESCRIPTIVO DE FORTALEZA
+============================================================================= */
+
+/* Contenedor del texto descriptivo */
+.password-strength-text {
+  font-size: 0.8rem;                  /* Tamaño pequeño */
+  font-weight: 600;                   /* Peso semi-bold */
+  margin-top: 6px;                    /* Espaciado superior */
+  transition: color 0.3s ease;       /* Transición suave de color */
+}
+
+/* Colores del texto según el nivel de fortaleza */
+.text-weak {
+  color: #dc3545;                     /* Rojo para débil */
+}
+
+.text-medium {
+  color: #ffc107;                     /* Amarillo para regular */
+}
+
+.text-strong {
+  color: #28a745;                     /* Verde para fuerte */
+}
+
+.text-very-strong {
+  color: #007bff;                     /* Azul para excelente */
+}
+
+/* =============================================================================
+   11. ANIMACIÓN ESPECIAL PARA CONTRASEÑA EXCELENTE
+============================================================================= */
+
+/* Animación de pulso brillante para contraseñas excelentes */
+.strength-very-strong {
+  animation: pulse-glow 2s infinite;  /* Animación infinita cada 2 segundos */
+}
+
+/* Definición de la animación de pulso */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Sombra suave */
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6); /* Sombra intensa */
+  }
+}
+
+/* =============================================================================
+   12. TEXTAREA Y CONTROLES ESPECIALES
+============================================================================= */
+
+/* Área de texto para comentarios */
+textarea {
+  resize: vertical;                   /* Solo redimensionable verticalmente */
+  min-height: 100px;                  /* Altura mínima */
+}
+
+/* =============================================================================
+   13. CONTROLES DE CONTRASEÑA (MOSTRAR/OCULTAR)
+============================================================================= */
+
+/* Contenedor para input de contraseña con botón */
+.input-password {
+  position: relative;                 /* Para posicionar botón absolutamente */
+}
+
+/* Input de contraseña con espacio para el botón */
+.input-password input {
+  padding-right: 42px;                /* Espacio a la derecha para el botón */
+  text-transform: none !important;    /* No transformar texto de contraseña */
+}
+
+/* Botón para mostrar/ocultar contraseña */
+.input-password button {
+  position: absolute;                 /* Posicionamiento absoluto */
+  right: 10px;                        /* 10px desde el borde derecho */
+  top: 50%;                           /* Centrado verticalmente */
+  transform: translateY(-50%);        /* Ajuste fino del centrado */
+  background: transparent;            /* Fondo transparente */
+  border: none;                       /* Sin borde */
+  cursor: pointer;                    /* Cursor de mano */
+  font-size: 18px;                    /* Tamaño del emoji */
+  color: #666;                        /* Color gris */
+  user-select: none;                  /* No seleccionable */
+  transition: color 0.3s ease;       /* Transición suave de color */
+  padding: 4px;                       /* Área clickeable */
+}
+
+/* Estado hover del botón de contraseña */
+.input-password button:hover {
+  color: #3a86ff;                     /* Color azul al pasar el mouse */
+}
+
+/* =============================================================================
+   14. BOTÓN DE ENVÍO
+============================================================================= */
+
+/* Botón principal de envío del formulario */
+button[type="submit"] {
+  background: #d83aff;                /* Fondo azul principal */
+  color: #fff;                        /* Texto blanco */
+  border: none;                       /* Sin borde */
+  border-radius: 10px;                /* Bordes redondeados */
+  padding: 14px 20px;                 /* Espaciado interno generoso */
+  font-size: 1.1rem;                  /* Tamaño de fuente destacado */
+  font-weight: 700;                   /* Peso bold */
+  font-family: 'Roboto', sans-serif;  /* Fuente consistente */
+  cursor: pointer;                    /* Cursor de mano */
+  transition: all 0.3s ease;         /* Transiciones suaves */
+}
+
+/* Estado hover del botón (solo si no está deshabilitado) */
+button[type="submit"]:hover:not(:disabled) {
+  background: #ab26cc;                /* Azul más oscuro */
+  transform: translateY(-1px);        /* Ligero movimiento hacia arriba */
+}
+
+/* Estado deshabilitado del botón */
+button[type="submit"]:disabled {
+  background: #ccc;                   /* Fondo gris */
+  cursor: not-allowed;                /* Cursor de prohibido */
+  transform: none;                    /* Sin movimiento */
+}
+
+/* =============================================================================
+   15. MENSAJES DE ERROR
+============================================================================= */
+
+/* Contenedor base para mensajes de error */
+.error-message {
+  color: #d93025;                     /* Color rojo para errores */
+  font-size: 0.875rem;                /* Tamaño más pequeño */
+  margin-top: 4px;                    /* Espaciado superior mínimo */
+  display: none;                      /* Oculto por defecto */
+  min-height: 20px;                   /* Altura mínima para consistencia */
+  line-height: 1.4;                   /* Interlineado cómodo */
+}
+
+/* Botones dentro de mensajes de error (para sugerencias) */
+.error-message button {
+  background: #ff9800;                /* Fondo naranja */
+  color: white;                       /* Texto blanco */
+  border: none;                       /* Sin borde */
+  padding: 2px 6px;                   /* Espaciado mínimo */
+  border-radius: 3px;                 /* Bordes ligeramente redondeados */
+  margin-left: 5px;                   /* Espaciado izquierdo */
+  cursor: pointer;                    /* Cursor de mano */
+  font-size: 0.8rem;                  /* Tamaño pequeño */
+  transition: background 0.3s ease;  /* Transición suave */
+}
+
+/* Estado hover de botones en errores */
+.error-message button:hover {
+  background: #f57c00;                /* Naranja más oscuro */
+}
+
+/* Mensaje de error global del formulario */
+.error-message-global {
+  background: #f8d7da;                /* Fondo rojo claro */
+  color: #721c24;                     /* Texto rojo oscuro */
+  border: 1px solid #f5c6cb;          /* Borde rojo claro */
+  padding: 14px 20px;                 /* Espaciado interno */
+  border-radius: 10px;                /* Bordes redondeados */
+  margin-top: 20px;                   /* Espaciado superior */
+  display: none;                      /* Oculto por defecto */
+}
+
 
 .pet-image {
+    position: center;
     width: 150px;
     height: 150px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
+    border-radius: 10px;
     margin-bottom: 10px;
+    border-color: #000000;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
-label {
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-input, select, textarea, button {
+input, select {
     padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: rgba (255, 255, 255, 0.2);
     border-radius: 5px;
     font-size: 16px;
     background: rgba(255, 255, 255, 0.2);
-    color: white;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
+    color: rgb(255, 255, 255);
 }
 
 /* Responsividad */
