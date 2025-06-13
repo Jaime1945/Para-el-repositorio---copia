@@ -1,106 +1,474 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Adopción</title>
-    <link rel="stylesheet" href="Formulario.css">
+  <!-- CONFIGURACIÓN BÁSICA DEL DOCUMENTO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="Imagenes/logito-removebg-preview.png" type="image/x-icon">
+  <title>Forumlario de Adopcion</title>
+  
+  <!-- FUENTES EXTERNAS GOOGLE FONTS -->
+  <!-- Lato: Fuente principal para el cuerpo del texto -->
+  <!-- Roboto: Fuente secundaria para títulos y botones -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  
+  <!-- SDK DE EMAILJS PARA ENVÍO DE EMAILS -->
+  <!-- Biblioteca externa que permite enviar emails desde el frontend -->
+  <!-- Versión 3 es la más estable y compatible -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+  <!-- ARCHIVO CSS EXTERNO -->
+  <!-- Contiene todos los estilos del formulario -->
+  <link rel="stylesheet" href="Formulario.css" />
 </head>
 <body>
-    <div class="container">
-        <h2>Formulario de Adopción</h2>
-        <img id="petImage" src="Imagenes/fondo 1.webp" alt="Mascota" class="pet-image">
+  <!-- CONTENEDOR PRINCIPAL DEL FORMULARIO -->
+  <!-- Se centra en la página y contiene todo el contenido -->
+  <div class="container">
+    
+    <!-- TÍTULO PRINCIPAL -->
+    <h1>Formulario de Adopcion</h1>
+    
+    <!-- DESCRIPCIÓN CON CARACTERÍSTICAS NUEVAS -->
+    <!-- Informa al usuario sobre las validaciones implementadas -->
+    <p style="text-align: center; color: #666; margin-bottom: 30px; font-size: 0.9rem;">
+      ✨ <strong>Nota:</strong> La informacion sera enviada a nuestro personal para que sea revisada.
+    </p>
+
+    <!-- FORMULARIO PRINCIPAL -->
+    <!-- novalidate: Desactiva la validación nativa del navegador para usar validación personalizada -->
+    <form id="professionalForm" novalidate>
+
+    
+        <img id="petImage" src="Imagenes/gatito fondooooo.jpg" alt="Mascota" class="pet-image">
         <form>
-            <label for="petSelect">Selecciona una mascota:</label>
-            <select id="petSelect" onchange="updatePetImage()">
-                <option value="Imagenes/fondo 1.webp">-- Selecciona la mascota--</option>
-                <option value="Gatos/artemisa.jpeg">Artemisa</option>
-                <option value="Perros/panchito.jpg">Panchito</option>
-                <option value="Perros/luna.jpeg">Luna</option>
+            <label for="petSelect">Selecciona la mascota que desea adoptar:</label>
+            <select id="petSelect" name="Foto_mascota" onchange="updatePetImage()">
+                <option value="Imagenes/gatito fondooooo.jpg">-- Selecciona la mascota--</option>
+                <option value="Gatos/artemisa.jpeg" name="Artemisa">Artemisa</option>
+                <option value="Perros/panchito.jpg" name="panchito">Panchito</option>
+                <option value="Perros/luna.jpeg" name="Luna">Luna</option>
+                <option value="Gatos/Atenea.jpg" name="Atenea">Atenea</option>
+                <option value="Gatos/bicho.jpeg" name="bicho">Bicho</option>
+                <option value="Perros/copito.jpg" name="copito">Copito</option>
+                <option value="Gatos/michi.jpeg" name="Michi">Michi</option>
+                <option value="Perros/hans.jpeg" name="hans">Hans</option>
+                <option value="Perros/kira.jpg" name="Kira">Kira</option>
+                <option value="Gatos/mikis.jpg" name="Mikis">Mikis</option>
+                <option value="Gatos/milly.jpeg" name="Milly">Milly</option>
+                <option value="Gatos/pilly.jpeg" name="Pilly">Pilly</option>
+                <option value="Gatos/vaquita.jpg" name="Vaquita">Vaquita</option>
+                <option value="Perros/marcelo.jpg" name="Marcelo">Marcelo</option>
+                <option value="Perros/Muñeco.jpeg" name="Muñeco">Muñeco</option>
+                <option value="Perros/palomo.jpg" name="Palomo">Palomo</option>
             </select>
+        
+       
+      <!-- CAMPO: NOMBRE COMPLETO -->
+      <div>
+        <!-- Label con clase 'required' que añade asterisco rojo automáticamente -->
+        <label for="name" class="required">Nombre completo</label>
+        
+        <!-- Input de texto que se convierte automáticamente a mayúsculas -->
+        <!-- Solo permite letras, no números (validado por JavaScript) -->
+        <input
+          type="text"
+          id="name"
+          name="user_name"
+          placeholder="Escribe tu nombre completo"
+          required
+        />
+        
+        <!-- Contenedor para mensajes de error específicos de este campo -->
+        <!-- aria-live="polite": Anuncia cambios a lectores de pantalla -->
+        <div class="error-message" id="error-name" aria-live="polite"></div>
+      </div>
 
-            <label for="name">Nombre Completo:</label>
-            <input type="text" id="name" required>
+      <!-- CAMPO: CORREO ELECTRÓNICO -->
+      <!-- Contenedor especial con clase para validación de email -->
+      <div class="email-field-container">
+        <label for="email" class="required">Correo electrónico</label>
+        
+        <!-- Input de email con autocompletado habilitado -->
+        <!-- La validación se hace en tiempo real con API externa -->
+        <input
+          type="email"
+          id="email"
+          name="user_email"
+          placeholder="ejemplo@dominio.com"
+          required
+          autocomplete="email"
+        />
+        
+        <!-- Contenedor para mensajes de validación de email -->
+        <div class="error-message" id="error-email" aria-live="polite"></div>
+        
+        <!-- Información adicional sobre la validación -->
+        <div style="font-size: 0.8rem; color: #666; margin-top: 4px;">
+          📧 Verificaremos automáticamente que tu email sea válido
+        </div>
+      </div>
 
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" required>
+      <!-- CAMPO: CONFIRMAR CORREO ELECTRÓNICO -->
+      <div>
+        <label for="emailConfirm" class="required">Confirmar correo electrónico</label>
+        
+        <!-- Input para confirmar el email -->
+        <!-- Se valida que coincida exactamente con el email principal -->
+        <input
+          type="email"
+          id="emailConfirm"
+          name="user_email_confirm"
+          placeholder="Repite tu correo electrónico"
+          required
+          autocomplete="email"
+        />
+        
+        <div class="error-message" id="error-emailConfirm" aria-live="polite"></div>
+      </div>
 
-            <label for="phoneNumber">Número Telefónico:</label>
-            <input type="text" id="phoneNumber" required>
+      <!-- CAMPO: CONTRASEÑA CON INDICADOR DE FORTALEZA -->
+      <!-- Contenedor especial con clase 'password-field' para el indicador -->
+      <div class="password-field">
+        <label for="password" class="required">Contraseña</label>
+        
+        <!-- Contenedor para input de contraseña y botón de mostrar/ocultar -->
+        <div class="input-password">
+          <!-- Input de contraseña con autocompletado para nueva contraseña -->
+          <input
+            type="password"
+            id="password"
+            name="user_password"
+            placeholder="Ingresa tu contraseña"
+            required
+            autocomplete="new-password"
+          />
+          
+          <!-- Botón para mostrar/ocultar contraseña -->
+          <!-- aria-label: Descripción para lectores de pantalla -->
+          <button type="button" id="togglePassword" aria-label="Mostrar/ocultar contraseña">👁️</button>
+        </div>
+        
+        <!-- INDICADOR DE FORTALEZA DE CONTRASEÑA -->
+        <!-- Se muestra automáticamente cuando el usuario empieza a escribir -->
+        <!-- display: none: Oculto por defecto, se muestra via JavaScript -->
+        <div class="password-strength" id="passwordStrength" style="display: none;">
+          
+          <!-- Etiqueta del indicador -->
+          <span class="password-strength-label">Fortaleza de la contraseña:</span>
+          
+          <!-- Contenedor de la barra de progreso -->
+          <div class="password-strength-bar-container">
+            <!-- Barra que cambia de color y tamaño según la fortaleza -->
+            <!-- Colores: Rojo (débil) → Amarillo (regular) → Verde (fuerte) → Azul (excelente) -->
+            <div class="password-strength-bar" id="strengthBar"></div>
+          </div>
+          
+          <!-- Texto descriptivo que cambia según la fortaleza -->
+          <!-- Incluye emojis para mayor claridad visual -->
+          <div class="password-strength-text" id="strengthText">Escribe tu contraseña</div>
+        </div>
+        
+        <!-- Contenedor para errores de validación de contraseña -->
+        <div class="error-message" id="error-password" aria-live="polite"></div>
+      </div>
 
-            <label for="street">Calle:</label>
-            <input type="text" id="street" required>
+      <!-- CAMPO: CONFIRMAR CONTRASEÑA -->
+      <div>
+        <label for="passwordConfirm" class="required">Confirmar contraseña</label>
+        
+        <!-- Segundo input de contraseña para confirmación -->
+        <div class="input-password">
+          <input
+            type="password"
+            id="passwordConfirm"
+            name="user_password_confirm"
+            placeholder="Repite tu contraseña"
+            required
+            autocomplete="new-password"
+          />
+          
+          <!-- Botón independiente para mostrar/ocultar la confirmación -->
+          <button type="button" id="togglePasswordConfirm" aria-label="Mostrar/ocultar contraseña">👁️</button>
+        </div>
+        
+        <div class="error-message" id="error-passwordConfirm" aria-live="polite"></div>
+      </div>
 
-            <label for="neighborhood">Colonia:</label>
-            <input type="text" id="neighborhood" required>
+      <!-- CAMPO: EDAD -->
+      <div>
+        <label for="age" class="required">Edad</label>
+        
+        <!-- Input de texto que solo acepta números -->
+        <!-- maxlength="3": Máximo 3 dígitos (hasta 999 años) -->
+        <!-- Se convierte automáticamente a mayúsculas -->
+        <input
+          type="text"
+          id="age"
+          name="user_age"
+          placeholder="Coloca tu Edad"
+          required
+          maxlength="3"
+        />
+        
+        <div class="error-message" id="error-age" aria-live="polite"></div>
+      </div>
 
-            <label for="postalCode">Código Postal:</label>
-            <input type="text" id="postalCode" required>
+      <!-- CAMPO: FECHA DE NACIMIENTO -->
+      <div>
+        <label for="birthdate" class="required">Fecha de nacimiento</label>
+        
+        <!-- Input de fecha nativo del navegador -->
+        <!-- Se establece automáticamente la fecha máxima (hoy) via JavaScript -->
+        <input type="date" id="birthdate" name="user_birthdate" required />
+        
+        <div class="error-message" id="error-birthdate" aria-live="polite"></div>
+      </div>
+      
+        <!--Campo: Numero de telefono-->
+        <div>
+            <label for="phoneNumber" class="required">Número Telefónico:</label>
+            <input 
+             type="text"
+             id="phoneNumber" 
+             name="Numero_telefono"
+             placeholder="Ingresa tu numero de telefono"
+             required
+             maxlength="10"
+             />
+        </div>
 
-            <label for="employment">¿Cuál es su situación laboral actualmente?</label>
-            <input type="text" id="employment" required>
+      <!--CAMPO: Laboral-->
+      <div>
+        <label for="employment">¿Cuál es su situación laboral actualmente?</label>
+          <input 
+          type="text" 
+          name="situacion_laboral"
+          id="employment" 
+          placeholder="Cuentanos tu como te va en el trabajo"
+          required>
+      </div>
 
-            <label for="incomeSources">Fuentes de ingreso:</label>
-            <input type="text" id="incomeSources" required>
+      <!--CAMPO: Fuentes de ingreso-->
+      <div>
+        <label for="incomeSources">Fuentes de ingreso:</label>
+          <input 
+          type="text" 
+          id="incomeSources"
+          name="ingresos"
+          placeholder="Coloque sus fuentes de ingreso" 
+          required>
+      </div>
 
-            <label for="experience">Cuéntenos acerca de su experiencia con mascotas:</label>
-            <textarea id="experience" required></textarea>
-
-            <label for="hasPets">¿Actualmente tiene mascotas?</label>
-            <select id="hasPets">
-                <option value="no">No</option>
-                <option value="yes">Sí</option>
+      <!--CAMPO: Cubrir gastos-->
+      <div>
+        <label for="petGastos">¿Estás dispuesto a cubrir los gastos de alimentación, salud y cuidado de la mascota?:</label>
+            <select id="hasPets" name="gastos_mascotas">
+               <option value="Si, estoy preparado para asumir los gastos">Si, estoy preparado para asumir los gastos</option>
+                <option value="No estoy seguro si puedo asumir los gastos">No estoy seguro si puedo asumir los gastos</option>
+                <option value="No, no puedo asumir los gastos">No, no puedo asumir los gastos</option>
+                <option value="Dependera de los gastos especificos">Dependera de los gastos especificos</option>
             </select>
+      </div>
 
-            <label for="petBreeds">Raza de las mascotas (en caso de tener):</label>
-            <select id="hasPets">
-                <option value="no">Perro</option>
-                <option value="no">Gato</option>
-                <option value="yes">No, no tengo mascotas</option>
+      <!--CAMPO: tipo de vivienda-->
+      <div>
+        <label for="homeType">¿Que tipo de hogar es en el que estas?:</label>
+            <select id="homeType" name="Tipo_vivienda">
+                <option value="Vivo en una casa">Vivo en una casa</option>
+                <option value="Vivo en un departamento">Vivo en un departamento</option>
+                <option value="Otro">Otro</option>
             </select>
+      </div>
 
-            <label for="reason">Por favor, describa a sus mascotas actuales, su temperamento y capacidad para socializar con otros perros.
-            <textarea id="reason" required></textarea>
-            
-            <label for="homeType">Tipo de vivienda:</label>
-            <select id="homeType">
-                <option value="casa">Casa</option>
-                <option value="departamento">Departamento</option>
-                <option value="otro">Otro</option>
+      <!--CAMPO: Vivienda propia?-->
+      <div>
+        <label for="homeOwnership">¿Es propietario de esa casa o renta?</label>
+            <select id="homeOwnership" name="vivienda_propia?">
+                <option value="Propietario">Soy propietario de mi hogar</option>
+                <option value="Renta">Pago renta de mi hogar</option>
             </select>
+      </div>
 
-            <label for="homeOwnership">¿Es propietario o renta?</label>
-            <select id="homeOwnership">
-                <option value="propietario">Propietario</option>
-                <option value="renta">Renta</option>
-            </select>
-
-            <label for="numPeople">Número de personas en el hogar:</label>
-            <select id="numPeople">
-                <option value="1">1</option>
+      <!--CAMPO: Cantidad de personas que viven con usted-->
+      <div>
+        <label for="numPeople">Número de personas que viven con usted:</label>
+            <select id="numPeople" name="total_personas">
+                <option value="Vivo yo solo">Vivo yo solo</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-                <option value="mas">más de 5</option>
+                <option value="más de 5">más de 5</option>
             </select>
-            
-            <label for="dailyRoutine">Describe tu rutina diaria y cómo planeas integrarla con tu mascota:</label>
-            <textarea id="dailyRoutine" required></textarea>
+      </div>
 
-            <label for="activityLevel">¿Qué nivel de actividad tendrá la mascota en tu hogar?</label>
-            <select id="activityLevel">
-                <option value="bajo">Bajo</option>
-                <option value="moderado">Moderado</option>
-                <option value="alto">Alto</option>
+      <!--CAMPO: Experiencia con mascotas-->
+      <div>
+      <label for="reason">Por favor, Cuentenos su experiencia con mascotas</label>
+        <textarea 
+        id="reason"
+        name="experiencia_con_mascotas" 
+        placeholder="Coloca tu Experiencia con mascotas tuyas o de otras personas"
+        required></textarea>
+      </div>
+
+      <!--CAMPO: mascotas? tiene?-->
+      <div>
+      <label for="hasPets">¿Actualmente tiene mascotas?</label>
+            <select id="hasPets" name="mascotas?">
+                <option value="No, no cuento con ninguna mascota en mi hogar">No, no cuento con ninguna mascota en mi hogar</option>
+                <option value="Sí, si cuento con mascotas en mi hogar">Sí, si cuento con mascotas en mi hogar</option>
             </select>
+      </div>
 
-            <label for="reason">¿Por qué deseas adoptar?</label>
-            <textarea id="reason" required></textarea>
+      <!--CAMPO: raza de mascotas-->
+      <div>
+        <label for="petBreeds">Raza de las mascotas (en caso de tener):</label>
+            <select id="hasPets" name="mascotas_tengo">
+               <option value="No, no tengo">No, no tengo mascotas</option>
+                <option value="Perro">Perro</option>
+                <option value="Gato">Gato</option>
+                <option value="Otro">Otro</option>
+            </select>
+      </div>
 
-            <button type="submit">Enviar Solicitud</button>
-        </form>
+      <!--CAMPO: Actitud de la/las otras mascotas-->
+      <div>
+          <label for="reason">Por favor, describa a sus mascotas actuales (si es que tiene), su temperamento y capacidad para socializar con otros perros.</label>
+            <textarea 
+            id="reason" 
+            name="temperamento"
+            placeholder="Coloque el temperamento de sus otras mascotas (en caso de tener)"
+            required></textarea>
+      </div>
+
+      <!--CAMPO: Tiempo con la mascota-->
+      <div>
+        <label for="petBreeds">¿Cuánto tiempo puedes dedicar diariamente al cuidado y atención de la mascota?</label>
+            <select id="TimePets" name="tiempo">
+               <option value="Menos de 1 hora">Menos de 1 hora</option>
+                <option value="Entre 1 y 3 horas">Entre 1 y 3 horas</option>
+                <option value="Más de 3 horas">Más de 3 horas</option>
+                <option value="No estoy seguro">No estoy seguro</option>
+            </select>
+      </div>
+
+      <!--CAMPO: Rutina diaria-->
+      <div>
+        <label for="dailyRoutine">Describe tu rutina diaria y cómo planeas integrar a tu mascota en ella:</label>
+            <textarea 
+            id="dailyRoutine"
+            name="Rutina" 
+            required></textarea>
+      </div>
+
+      <!--CAMPO: nivel de actividad con la mascota-->
+      <div>
+        <label for="activityLevel">¿Qué nivel de actividad tendrá con su mascota en el hogar?</label>
+            <select id="activityLevel" name="Nivel_actividad">
+                <option value="Bajo">Bajo</option>
+                <option value="Moderado">Moderado</option>
+                <option value="Alto">Alto</option>
+            </select>
+      </div>
+
+      <!--CAMPO: Paseos-->
+      <div>
+        <label for="activityPaseo">¿Cada cuanto sacara a pasear a su mascota?</label>
+            <select id="activityPaseo" name="paseo">
+                <option value="Ni una vez">Ni una vez</option>
+                <option value="1 vez a la semana">1 vez a la semana</option>
+                <option value="3 veces a la semana">3 veces a la semana</option>
+                <option value="5 veces a la semana">5 veces a la semana</option>
+            </select>
+      </div>
+
+      <!--CAMPO: ¿Tiene espacio adecuado?-->
+      <div>
+        <label for="petBreeds">¿Tienes un espacio adecuado para la mascota que deseas adoptar?:</label>
+            <select id="hasPets" name="espacio">
+               <option value="No, no tengo">Si, tengo espacio adecuado</option>
+                <option value="No, pero planeo adoptarlo">No, pero planeo adoptarlo</option>
+                <option value="No tengo el espacio adecuado">No tengo el espacio adecuado</option>
+                <option value="No estoy seguro">No estoy seguro</option>
+            </select>
+      </div>
+
+      <!-- CAMPO: ¿Porque deseas adoptar? -->
+      <div>
+        <!-- Label sin clase 'required' porque es opcional -->
+        <label for="comments">¿Porque deseas adoptar?</label>
+        
+        <!-- Textarea con límite de caracteres -->
+        <!-- rows="5": Altura inicial del textarea -->
+        <!-- maxlength="2000": Límite máximo de caracteres -->
+        <textarea
+          id="comments"
+          name="user_comments"
+          placeholder="Escribe aquí tus razones para adoptar"
+          rows="5"
+          maxlength="2000"
+        ></textarea>
+        
+        <!-- Contador de caracteres en tiempo real -->
+        <!-- Se actualiza via JavaScript conforme el usuario escribe -->
+        <div class="char-counter" id="commentsCounter">0 / 2000 caracteres</div>
+        
+        <div class="error-message" id="error-comments" aria-live="polite"></div>
+      </div>
+
+      <!-- BOTÓN DE ENVÍO -->
+      <!-- Se deshabilita durante el envío para evitar envíos múltiples -->
+      <button type="submit" id="submitBtn">Enviar información</button>
+    </form>
+
+    <!-- INFORMACIÓN SOBRE CARACTERÍSTICAS DE SEGURIDAD -->
+    <!-- Caja informativa que explica las validaciones implementadas -->
+    <div style="background: #e3f2fd; border: 1px solid #2196F3; padding: 12px; border-radius: 8px; margin-top: 20px; font-size: 0.85rem; color: #1565C0;">
+      <strong>🔍 Características de seguridad:</strong>
+      <ul style="margin: 8px 0; padding-left: 20px;">
+        <li>Verificación completa del email</li>
+        <li>Medidor de fortaleza de contraseña</li>
+        <li>Validación en tiempo real</li>
+        <li>Detección de contraseñas comunes</li>
+      </ul>
     </div>
-    <script src="Formulario.js"></script>
+
+    <!-- MENSAJES DE ESTADO DEL FORMULARIO -->
+    
+    <!-- MENSAJE DE ÉXITO -->
+    <!-- Se muestra cuando el formulario se envía correctamente -->
+    <!-- display:none: Oculto por defecto, se muestra via JavaScript -->
+    <div class="success-message" id="successMessage" style="display:none;">
+      ¡Formulario enviado con éxito! Te contactaremos pronto.
+      <br><br>
+      
+
+      
+      <!-- Enlace a la página de agradecimiento -->
+      <a href="Adopcion.html" style="color: #155724; text-decoration: underline; font-weight: bold;">
+        Ver página de agradecimiento completa →
+      </a>
+      <br><br>
+      
+
+    <!-- MENSAJE DE ENVÍO EN PROGRESO -->
+    <!-- Se muestra mientras se está enviando el email -->
+    <div class="sending-message" id="sendingMessage" style="display:none;">
+      Enviando... Por favor espera.
+    </div>
+
+    <!-- MENSAJE DE ERROR GLOBAL -->
+    <!-- Se muestra si hay un error en el envío del formulario -->
+    <div class="error-message-global" id="errorMessage" style="display:none;">
+      Error al enviar el formulario. Por favor, inténtalo de nuevo.
+    </div>
+  </div>
+
+  <!-- ARCHIVO JAVASCRIPT EXTERNO -->
+  <!-- Contiene toda la lógica de validación, indicadores y envío -->
+  <!-- Se carga al final para asegurar que el DOM esté listo -->
+  <script src="Formulario.js"></script>
 </body>
 </html>
