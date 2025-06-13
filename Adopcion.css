@@ -14,22 +14,41 @@ body {
     
 }
 
-/* Header */
-header { 
-    background-image: url('Imagenes/gato\ 4.jpg');/*Aqui se coloca la imagen de fondo*/
-    /* Fondo con transparencia e imagen (comentado) */
-    /* background-image: linear-gradient(rgba(139, 250, 172, 0.137), rgba(139, 250, 172, 0.137)), url(Imagenes/318270.webp); */
-    background-position: center; /* Centra la imagen de fondo */
-    background-size: cover; /* Ajusta la imagen para que cubra todo el área */
-    min-height: 60vh; /* Altura mínima del header */
-    display: flex; /* Usa flexbox para organizar el contenido */
-    flex-direction: column; /* Acomoda los elementos en columna */
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
-    text-align: center; /* Alineación del texto */
-    color: #000000; /* Color del título en el header */
-    padding: 0 20px; /* Espaciado interno */
+header {
+    position: relative; /* Necesario para posicionar correctamente el overlay */
+    background-image: url('Imagenes/gato\ 4.jpg'); /* Imagen de fondo */
+    background-position: center; /* Centra la imagen en el header */
+    background-size: cover; /* La imagen cubre todo el header */
+    min-height: 60vh; /* Altura mínima del encabezado */
+    display: flex; /* Activa flexbox para alinear el contenido */
+    flex-direction: column; /* Acomoda los elementos uno debajo del otro */
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Centra el texto */
+    color: #ffffff; /* Texto blanco para mejor contraste */
+    padding: 0 20px; /* Espaciado lateral */
+    z-index: 0; /* Asegura que el contenido esté sobre el fondo */
+    overflow: hidden; /* Evita que el overlay se desborde */
 }
+
+/* ::before crea una capa oscura encima de la imagen para mejorar la legibilidad del texto */
+header::before {
+    content: ""; /* Requerido para generar el pseudo-elemento */
+    position: absolute; /* Posiciona el overlay cubriendo todo el header */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Capa negra semitransparente (oscurece la imagen) */
+    z-index: 1; /* Coloca el overlay por debajo del texto */
+}
+
+/* Asegura que el contenido del header esté por encima del overlay */
+header * {
+    position: relative; /* Permite al texto quedar por encima del overlay */
+    z-index: 2;
+}
+
 
 /* Video de fondo en el header */
 header video {
@@ -54,7 +73,7 @@ header video {
 
 /*Botton traductor*/
 .traductor-button {
-    background-color:  #f7b27b;
+    background-color:  #FFBC9A;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -70,7 +89,7 @@ header video {
 
 /*Botones en general*/
 button {
-    background-color: #dd9ff5;
+    background-color: #e5bdf5;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -113,7 +132,7 @@ button:hover {
 
 .header-content p { /* Información del header */
     font-size: 25px; /* Tamaño del texto */
-    color: #000; /* Color del texto */
+    color: #ffffff; /* Color del texto */
     margin-bottom: 30px; /* Espaciado inferior */
     max-width: 800px; /* Ancho máximo del texto */
     margin: 0 auto; /* Centra el texto horizontalmente */
@@ -336,189 +355,222 @@ footer {
     bottom: 0; /* Lo mantiene pegado abajo */
     width: 100%; /* Ocupa todo el ancho de la pantalla */
 }
-/*titulo de adoptados por arriba de las tarjetas*/
-.adoptados {
-    width: 80%;
-    margin: 40px auto; /* Centra el contenedor */
-     text-align: center;
-     font-family: "Roboto", sans-serif;;
-  font-size: 1.5em;
-  color: #000000;
-  font-family: 'Segoe UI', 'Arial', sans-serif;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-}
-/* Contenedor de tarjetas */
-.contenedor {
-    display: flex; /* Usa flexbox para organizar las tarjetas */
-    gap: 100px; /* Espaciado entre tarjetas */
-    justify-content: center; /* Centra las tarjetas horizontalmente */
-    align-items: center; /* Centra las tarjetas verticalmente */
-    height: 80vh; /* Altura del contenedor (más grande que la pantalla) */
-    background-color: #7eb0d1; /* Color de fondo verde */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente del texto */
-    margin: 0; /* Elimina márgenes externos */
+.redes-sociales {
+  position: absolute;
+  right: 20px; /* separa del borde derecho */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 15px;
 }
 
-/* Estilos de cada tarjeta */
+/* ------------------- ESTILOS DE REDES SOCIALES ------------------- */
+.redes-sociales a {
+  color:  #f7b27b; /* Color inicial del ícono/enlace */
+  font-size: 30px; /* Tamaño del ícono/enlace */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  transition: color 0.3s; /* Transición suave al cambiar de color */
+}
+
+.redes-sociales a:hover {
+  color: #ffc16f; /* Color cuando se pasa el cursor sobre el ícono */
+}
+
+/* ------------------- TÍTULO DE "ADOPTADOS" ------------------- */
+.adoptados {
+  width: 80%; /* Ancho del contenedor del título */
+  margin: 40px auto; /* Margen superior e inferior + centrado horizontal */
+  text-align: center; /* Centra el texto */
+  font-family: "Roboto", sans-serif; /* Fuente principal */
+  font-size: 1.5em; /* Tamaño del texto */
+  color: #000000; /* Color del texto */
+  font-family: 'Segoe UI', 'Arial', sans-serif; /* Fuente alternativa */
+  margin-bottom: 20px; /* Espacio inferior */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Sombra suave al texto */
+}
+
+/* ------------------- CONTENEDOR DE TARJETAS ------------------- */
+.contenedor {
+  display: flex; /* Activa flexbox para distribución */
+  gap: 100px; /* Espacio entre las tarjetas */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  align-items: center; /* Centra las tarjetas verticalmente */
+  height: 80vh; /* Altura del contenedor (80% del alto de la ventana) */
+  background-color: #7eb0d1; /* Fondo azul claro */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente */
+  margin: 0; /* Elimina márgenes externos */
+}
+
+/* ------------------- TARJETA INDIVIDUAL ------------------- */
 .tarjeta {
-    width: 290px;  /* Ancho de la tarjeta */
-    height: 510px; /* Altura de la tarjeta */
-    background: white; /* Fondo blanco */
-    border-radius: 20px; /* Bordes redondeados */
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    overflow: hidden; /* Oculta el contenido que sobresalga */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Efecto de transición */
-    text-align: center; /* Alineación centrada del texto */
+  width: 290px; /* Ancho fijo de la tarjeta */
+  height: 510px; /* Altura fija */
+  background: white; /* Fondo blanco */
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  overflow: hidden; /* Oculta cualquier desbordamiento */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
+  text-align: center; /* Centra el contenido de texto */
 }
 
 /* Efecto hover en la tarjeta */
 .tarjeta:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer hover */
+  transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+/* Imagen en la parte superior de la tarjeta */
+.tarjeta img {
+  width: 100%; /* La imagen cubre todo el ancho */
+  height: 60%; /* La imagen ocupa el 60% de la tarjeta */
+  object-fit: cover; /* Ajuste de imagen sin deformar */
+}
+
+/* Contenido textual de la tarjeta */
+.tarjeta .contenido {
+  padding: 15px; /* Espaciado interior */
+}
+
+/* Título (nombre de la mascota) */
+.tarjeta h3 {
+  margin: 0; /* Sin margen */
+  font-size: 18px; /* Tamaño del título */
+  color: #AE84B6; /* Color morado suave */
+}
+
+/* Descripción de la mascota */
+.tarjeta p {
+  margin: 10px 0 0; /* Margen superior y cero lateral/inferior */
+  font-size: 14px; /* Tamaño del texto */
+  color: #000000; /* Texto en color negro */
+}
+
+/* ------------------- CARDS DE MASCOTAS EN ADOPCIÓN ------------------- */
+.cards-container {
+  display: flex; /* Flexbox para distribuir las tarjetas */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  gap: 20px; /* Espacio entre tarjetas */
+  flex-wrap: wrap; /* Permite que las tarjetas se acomoden en varias filas */
+}
+
+/* Tarjeta individual */
+.card {
+  background-color: #fff; /* Fondo blanco */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centrado del contenido */
+  width: 300px; /* Ancho fijo */
 }
 
 /* Imagen dentro de la tarjeta */
-.tarjeta img {
-    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
-    height: 60%; /* La imagen ocupa el 60% de la altura de la tarjeta */
-    object-fit: cover; /* Ajusta la imagen sin deformarla */
+.card img {
+  width: 100%; /* Imagen ocupa todo el ancho */
+  border-radius: 10px; /* Bordes redondeados */
 }
 
-/* Contenido dentro de la tarjeta */
-.tarjeta .contenido {
-    padding: 15px; /* Espaciado interno */
+/* Título dentro de la card */
+.card h3 {
+  margin: 10px 0; /* Margen vertical */
+  color: #333; /* Gris oscuro */
 }
 
-/* Título dentro de la tarjeta */
-.tarjeta h3 {
-    margin: 0; /* Elimina márgenes extra */
-    font-size: 18px; /* Tamaño del título */
-    color: #AE84B6; /* Color del texto */
+/* Descripción */
+.card p {
+  color: #555; /* Gris medio */
 }
 
-/* Texto descriptivo dentro de la tarjeta */
-.tarjeta p {
-    margin: 10px 0 0; /* Espaciado superior */
-    font-size: 14px; /* Tamaño del texto */
-    color: #000000; /* Color negro */
+/* Botón de adopción */
+.adopt-button {
+  background-color: orange; /* Fondo naranja */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
 }
 
-
-/*Perfiles de mascotas en adopcion*/
-.cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    width: 300px;
-  }
-  
-  .card img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .card h3 {
-    margin: 10px 0;
-    color: #333;
-  }
-  
-  .card p {
-    color: #555;
-  }
-  
-  .adopt-button {
-    background-color: orange;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .adopt-button:hover {
-    background-color: darkorange;
-  }
-  
-
-/*Perfiles modales de mascotas*/
+/* Efecto hover del botón */
+.adopt-button:hover {
+  background-color: darkorange; /* Cambia a naranja oscuro */
+}
+/* ------------------- MODAL (VENTANA EMERGENTE) ------------------- */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Se posiciona fijo en la pantalla */
+    z-index: 1; /* Aparece por encima de otros elementos */
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.185);/*Cambio del color de fondo del perfil modal*/
-    justify-content: center;
-    align-items: center;
+    width: 100%; /* Cubre todo el ancho de la ventana */
+    height: 100%; /* Cubre todo el alto de la ventana */
+    background-color: rgba(0, 0, 0, 0.185); /* Fondo semi-transparente oscuro */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
 }
 
+/* Contenedor interno del modal */
 .modal-content {
-    display: flex;
-    flex-direction: row; /* Organizar elementos en una fila */
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 900px;
-    position: relative;
-    gap: 20px; /* Espaciado entre perfiles */
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Flexbox para organizar el contenido */
+    flex-direction: row; /* Elementos en línea (horizontal) */
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 90%; /* Ancho relativo al contenedor */
+    max-width: 900px; /* Ancho máximo */
+    position: relative; /* Para posicionar el botón de cierre */
+    gap: 20px; /* Espacio entre los elementos hijos */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra verticalmente */
 }
 
+/* Información de la mascota (parte izquierda del modal) */
 .pet-info {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    text-align: center;
+    flex-direction: column; /* Organización vertical */
+    align-items: center; /* Centra el contenido */
+    width: 50%; /* Mitad del ancho del modal */
+    text-align: center; /* Centra el texto */
 }
 
+/* Imagen del perfil de la mascota */
 .profile-img {
-    width: 100%;
-    max-width: 250px;
-    border-radius: 10px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 250px; /* Ancho máximo de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
+/* Información adicional (parte derecha del modal) */
 .modal-info {
-    width: 100%;
+    width: 100%; /* Ocupa todo el espacio disponible */
 }
 
+/* Botón para cerrar el modal */
 .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
+    position: absolute; /* Posición absoluta dentro del modal */
+    top: 10px; /* A 10px del borde superior */
+    right: 10px; /* A 10px del borde derecho */
+    font-size: 20px; /* Tamaño del ícono o texto */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
 }
 
+/* Repetido: estilo de imagen del perfil */
 .profile-img {
     width: 100%;
     max-width: 250px;
     border-radius: 10px;
 }
 
+/* Contenedor de las barras de calificación */
 .ratings .rating-bar {
-    background-color: #ddd;
-    width: 100%;
-    height: 10px;
-    margin-bottom: 5px;
+    background-color: #ddd; /* Fondo gris claro */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 10px; /* Altura de la barra */
+    margin-bottom: 5px; /* Espaciado inferior entre barras */
 }
 
+/* Relleno de la barra de calificación */
 .ratings .rating {
-    background-color:  #7898aa;
-    height: 100%;
+    background-color:  #b0d3e7; /* Azul claro */
+    height: 100%; /* Ocupa toda la altura de la barra */
 }

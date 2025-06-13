@@ -13,22 +13,41 @@ body {
     /* También se podría agregar una imagen de fondo con background-image */
 }
 
-/* Header */
-header { 
-    background-image: url('Imagenes/gatito\ fondooooo.jpg');/*Aqui se coloca la imagen de fondo*/
-    /* Fondo con transparencia e imagen (comentado) */
-    /* background-image: linear-gradient(rgba(139, 250, 172, 0.137), rgba(139, 250, 172, 0.137)), url(Imagenes/318270.webp); */
-    background-position: center; /* Centra la imagen de fondo */
-    background-size: cover; /* Ajusta la imagen para que cubra todo el área */
-    min-height: 60vh; /* Altura mínima del header */
-    display: flex; /* Usa flexbox para organizar el contenido */
-    flex-direction: column; /* Acomoda los elementos en columna */
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
-    text-align: center; /* Alineación del texto */
-    color: #ffffff; /* Color del título en el header */
-    padding: 0 20px; /* Espaciado interno */ 
+header {
+    position: relative; /* Necesario para posicionar correctamente el overlay */
+    background-image: url('Imagenes/gatito fondooooo.jpg'); /* Imagen de fondo */
+    background-position: center; /* Centra la imagen en el header */
+    background-size: cover; /* La imagen cubre todo el header */
+    min-height: 60vh; /* Altura mínima del encabezado */
+    display: flex; /* Activa flexbox para alinear el contenido */
+    flex-direction: column; /* Acomoda los elementos uno debajo del otro */
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Centra el texto */
+    color: #ffffff; /* Texto blanco para mejor contraste */
+    padding: 0 20px; /* Espaciado lateral */
+    z-index: 0; /* Asegura que el contenido esté sobre el fondo */
+    overflow: hidden; /* Evita que el overlay se desborde */
 }
+
+/* ::before crea una capa oscura encima de la imagen para mejorar la legibilidad del texto */
+header::before {
+    content: ""; /* Requerido para generar el pseudo-elemento */
+    position: absolute; /* Posiciona el overlay cubriendo todo el header */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Capa negra semitransparente (oscurece la imagen) */
+    z-index: 1; /* Coloca el overlay por debajo del texto */
+}
+
+/* Asegura que el contenido del header esté por encima del overlay */
+header * {
+    position: relative; /* Permite al texto quedar por encima del overlay */
+    z-index: 2;
+}
+
 
 /* Video de fondo en el header */
 header video {
@@ -53,7 +72,7 @@ header video {
 
 /*Botton traductor*/
 button {
-    background-color: #f7b27b;
+    background-color: #FFBC9A;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -96,7 +115,7 @@ button:hover {
 
 .header-content p { /* Información del header */
     font-size: 25px; /* Tamaño del texto */
-    color: #000; /* Color del texto */
+    color: #fffefe; /* Color del texto */
     margin-bottom: 30px; /* Espaciado inferior */
     max-width: 800px; /* Ancho máximo del texto */
     margin: 0 auto; /* Centra el texto horizontalmente */
@@ -328,4 +347,23 @@ footer {
     position: relative; /* Fija el footer en la parte inferior */
     bottom: 0; /* Lo mantiene pegado abajo */
     width: 100%; /* Ocupa todo el ancho de la pantalla */
+}
+.redes-sociales {
+  position: absolute;
+  right: 20px; /* separa del borde derecho */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 15px;
+}
+
+.redes-sociales a {
+  color:  #f7b27b;;
+  font-size: 30px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.redes-sociales a:hover {
+  color: #ffc16f;
 }

@@ -181,141 +181,168 @@ h1 {
     outline: none; /* Elimina el borde azul al hacer clic */
 }
 
+/* Efecto hover para el botón dentro del buscador en el menú */
 .menu .search-bar button:hover {
     background-color: #94e0eb; /* Cambio de color al pasar el mouse */
 }
 
-/* Resaltado */
+/* Clase para resaltar elementos */
 .highlight {
     background-color: #bdf1f5; /* Fondo de resaltado */
 }
 
-.card-list .card-item .card.link{
-    width: 400px;
-    display: block;
-    background: #e6aff1;
-    padding: 18px;
-    border-radius: 12px;
+/* Estilo para tarjetas dentro de la lista de cards que tienen clase "link" */
+.card-list .card-item .card.link {
+    width: 400px;           /* Ancho fijo */
+    display: block;         /* Mostrar como bloque */
+    background: #e6aff1;    /* Fondo lila */
+    padding: 18px;          /* Espacio interno */
+    border-radius: 12px;    /* Bordes redondeados */
 }
-.card-list .card.link .card-image{
-    width: 100%;
+
+/* Imagen dentro de la tarjeta con clase "card.link" */
+.card-list .card.link .card-image {
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
 }
-/* Footer */
+
+/* Estilos para el pie de página */
 footer {
-    background-color: #f4ebf8; /* Color de fondo del pie de página */
+    background-color: #f4ebf8; /* Color de fondo */
     color: #000000;            /* Color del texto */
-    text-align: center;        /* Centra el texto */
-    padding: 10px 0;           /* Espaciado interno */
-    width: 100%;               /* Ocupa todo el ancho */
+    text-align: center;        /* Centrado horizontal del texto */
+    padding: 10px 0;           /* Espaciado arriba y abajo */
+    width: 100%;               /* Ocupa todo el ancho disponible */
 }
 
+/* Contenedor de iconos de redes sociales */
+.redes-sociales {
+  position: absolute;        /* Posición absoluta respecto al contenedor padre */
+  right: 20px;               /* Separación del borde derecho */
+  top: 50%;                  /* Centrado vertical */
+  transform: translateY(-50%); /* Ajuste para centrar verticalmente */
+  display: flex;             /* Usar flexbox para distribuir iconos */
+  gap: 15px;                 /* Espacio entre iconos */
+}
+
+/* Estilos para cada enlace dentro de redes sociales */
+.redes-sociales a {
+  color:  #f7b27b;           /* Color inicial */
+  font-size: 30px;           /* Tamaño grande para iconos */
+  text-decoration: none;     /* Sin subrayado */
+  transition: color 0.3s;    /* Transición suave al cambiar color */
+}
+
+/* Efecto hover para enlaces de redes sociales */
+.redes-sociales a:hover {
+  color: #ffc16f;            /* Cambio de color al pasar el mouse */
+}
+
+/* Contenedor principal de tarjetas */
 .contenedor {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 40px;
-    max-width: 1000px;     /* Limita el ancho para controlar el diseño */
-    margin: 0 auto;         /* Centra horizontalmente */
-    padding: 20px;
-    background-color: #D8F3D7;
+    display: flex;             /* Flexbox para layout */
+    justify-content: center;   /* Centra horizontalmente */
+    align-items: flex-start;   /* Alinea arriba verticalmente */
+    flex-wrap: wrap;           /* Permite que las tarjetas se muevan a la siguiente línea */
+    gap: 40px;                 /* Espacio entre tarjetas */
+    max-width: 1000px;         /* Ancho máximo del contenedor */
+    margin: 0 auto;            /* Centra horizontalmente con margen automático */
+    padding: 20px;             /* Espaciado interno */
+    background-color: #D8F3D7; /* Fondo verde claro */
 }
 
-/* Estilos de cada tarjeta */
+/* Estilos de cada tarjeta individual */
 .tarjeta {
-    width: 290px;
-    height: 450px;
-    background:white;
-    border-radius: 20px;
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    text-align: center;
+    width: 290px;                             /* Ancho fijo */
+    height: 450px;                            /* Altura fija */
+    background: white;                        /* Fondo blanco */
+    border-radius: 20px;                      /* Bordes redondeados */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    overflow: hidden;                         /* Oculta contenido que sobresalga */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones para hover */
+    text-align: center;                       /* Centra texto */
 }
 
-/* Efecto hover en la tarjeta */
+/* Efecto hover para la tarjeta */
 .tarjeta:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);                   /* Aumenta tamaño ligeramente */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
 }
 
 /* Imagen dentro de la tarjeta */
 .tarjeta img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%;      /* Imagen ocupa todo el ancho */
+    height: 100%;     /* Imagen ocupa toda la altura */
+    object-fit: cover; /* Ajusta la imagen sin deformar */
 }
 
-/* Contenido dentro de la tarjeta */
+/* Contenido interno de la tarjeta */
 .tarjeta .contenido {
-    padding: 15px;
+    padding: 15px; /* Espacio interno */
 }
 
 /* Título dentro de la tarjeta */
 .tarjeta h3 {
-    margin: 0;
-    font-size: 18px;
-    color: #AE84B6;
+    margin: 0;            /* Sin margen extra */
+    font-size: 18px;      /* Tamaño de fuente */
+    color: #AE84B6;       /* Color lila */
 }
 
-/* Texto descriptivo */
+/* Texto descriptivo dentro de la tarjeta */
 .tarjeta p {
-    margin: 10px 0 0;
-    font-size: 14px;
-    color: #000000;
+    margin: 10px 0 0; /* Margen superior de 10px, 0 en laterales e inferior */
+    font-size: 14px;   /* Tamaño de fuente */
+    color: #000000;    /* Color negro */
 }
 
-/* Contenedor del título 'Adoptados' */
+/* Contenedor para el título "Adoptados" */
 .adoptados {
-    width: 80%;
-    margin: 20px auto;
+    width: 80%;           /* Ancho relativo */
+    margin: 20px auto;    /* Márgenes arriba/abajo 20px, centrar horizontal */
 }
 
+/* Mensaje de bienvenida */
 .mensaje-bienvenida {
-     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;/* Fuente del texto */
-    background-color: #f7b27b;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente */
+    background-color: #f7b27b; /* Fondo naranja claro */
+    color: white;              /* Texto blanco */
+    text-align: center;        /* Centrado de texto */
+    padding: 15px;             /* Espaciado interno */
+    font-size: 18px;           /* Tamaño de fuente */
+    font-weight: bold;         /* Negrita */
+    margin-top: 20px;          /* Margen superior */
+    margin-bottom: 20px;       /* Margen inferior */
+    border-radius: 10px;       /* Bordes redondeados */
+    width: 90%;                /* Ancho relativo */
+    max-width: 1000px;         /* Ancho máximo */
+    margin-left: auto;         /* Centrado horizontal */
+    margin-right: auto;        /* Centrado horizontal */
 }
 
-
-
-/* Animación de texto tipo marquee (opcional) */
+/* Animación de texto desplazándose tipo marquee (opcional) */
 .scroll-text {
-    overflow: hidden;
-    white-space: nowrap;
-    box-sizing: border-box;
-    animation: scroll-left 12s linear infinite;
-    display: block;
-    font-weight: bold;
+    overflow: hidden;         /* Oculta contenido que desborda */
+    white-space: nowrap;      /* Texto en una sola línea */
+    box-sizing: border-box;   /* Incluye padding y border en tamaño total */
+    animation: scroll-left 12s linear infinite; /* Animación continua */
+    display: block;           /* Mostrar como bloque */
+    font-weight: bold;        /* Texto en negrita */
 }
 
+/* Definición de la animación para el texto desplazándose hacia la izquierda */
 @keyframes scroll-left {
-    0%   { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0%   { transform: translateX(100%); }   /* Empieza fuera a la derecha */
+    100% { transform: translateX(-100%); }  /* Termina fuera a la izquierda */
 }
 
-/* Responsividad para pantallas pequeñas */
+/* Estilos responsivos para pantallas pequeñas (máx 768px) */
 @media screen and (max-width: 768px) {
     .contenedor {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column;   /* Apila las tarjetas verticalmente */
+        align-items: center;      /* Centra horizontalmente */
     }
 
     .tarjeta {
-        width: 90%;      /* Se adapta al ancho del móvil */
-        height: auto;    /* Permite crecer si hay más texto */
+        width: 90%;     /* Ancho casi completo del móvil */
+        height: auto;   /* Altura automática para contenido variable */
     }
 }
-
-

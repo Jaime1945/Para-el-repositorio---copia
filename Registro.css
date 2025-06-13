@@ -37,10 +37,10 @@ body {
 ============================================================================= */
 
 .container {
-  background: rgba(0, 0, 0, 0.6);   /* Fondo blanco para el formulario */
+  background: rgba(0, 0, 0, 0.267);   /* Fondo blanco para el formulario */
   padding: 32px 36px;                 /* Espaciado interno generoso */
   border-radius: 12px;                /* Bordes redondeados modernos */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra sutil para profundidad */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.336); /* Sombra sutil para profundidad */
   max-width: 480px;                   /* Ancho máximo para legibilidad */
   width: 100%;                        /* Ancho completo hasta el máximo */ 
 }
@@ -53,7 +53,7 @@ body {
 h1 {
   font-family: 'Roboto', sans-serif;  /* Fuente secundaria para títulos */
   font-weight: 700;                   /* Peso bold para destacar */
-  color: #222;                        /* Color oscuro para contraste */
+  color: #ffffff;                        /* Color oscuro para contraste */
   margin-bottom: 24px;                /* Espaciado inferior */
   text-align: center;                 /* Centrado horizontal */
 }
@@ -78,13 +78,13 @@ label {
   font-weight: 700;                   /* Peso bold para destacar */
   margin-bottom: 6px;                 /* Espaciado inferior */
   display: inline-block;              /* Permite márgenes verticales */
-  color: #444;                        /* Color gris oscuro */
+  color: #ffffff;                        /* Color gris oscuro */
 }
 
 /* Asterisco rojo para campos obligatorios */
 label.required::after {
   content: " *";                      /* Contenido del asterisco */
-  color: #d93025;                     /* Color rojo para destacar */
+  color: #720f07;                     /* Color rojo para destacar */
 }
 
 /* =============================================================================
@@ -99,7 +99,7 @@ input[type="date"],
 textarea {
   width: 100%;                        /* Ancho completo del contenedor */
   padding: 12px 14px;                 /* Espaciado interno cómodo */
-  border: 2px solid #ccc;             /* Borde gris claro */
+  border: 2px solid #575252;             /* Borde gris claro */
   border-radius: 10px;                /* Bordes redondeados */
   font-size: 1rem;                    /* Tamaño de fuente legible */
   font-family: 'Roboto', sans-serif;  /* Fuente consistente */
@@ -122,7 +122,7 @@ textarea {
 /* Estados de foco para todos los inputs */
 input:focus,
 textarea:focus {
-  border-color: #3a86ff;              /* Borde azul al enfocar */
+  border-color: #a7c7f1;              /* Borde azul al enfocar */
   box-shadow: 0 0 8px rgba(58,134,255,0.4); /* Sombra azul difusa */
   outline: none;                      /* Eliminar outline por defecto */
 }
@@ -187,7 +187,7 @@ input.invalid {
 /* Etiqueta del indicador */
 .password-strength-label {
   font-size: 0.85rem;                 /* Tamaño pequeño */
-  color: #666;                        /* Color gris */
+  color: #ffffff;                        /* Color gris */
   margin-bottom: 6px;                 /* Espaciado inferior */
   display: block;                     /* Ocupar línea completa */
 }
@@ -253,7 +253,7 @@ input.invalid {
 
 /* Colores del texto según el nivel de fortaleza */
 .text-weak {
-  color: #dc3545;                     /* Rojo para débil */
+  color: #7e1d26;                     /* Rojo para débil */
 }
 
 .text-medium {
@@ -280,7 +280,7 @@ input.invalid {
 /* Definición de la animación de pulso */
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Sombra suave */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.363); /* Sombra suave */
   }
   50% {
     box-shadow: 0 0 15px rgba(0, 123, 255, 0.6); /* Sombra intensa */
@@ -370,7 +370,7 @@ button[type="submit"]:disabled {
 
 /* Contenedor base para mensajes de error */
 .error-message {
-  color: #d93025;                     /* Color rojo para errores */
+  color: #971c14;                     /* Color rojo para errores */
   font-size: 0.875rem;                /* Tamaño más pequeño */
   margin-top: 4px;                    /* Espaciado superior mínimo */
   display: none;                      /* Oculto por defecto */
