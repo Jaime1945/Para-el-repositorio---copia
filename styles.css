@@ -304,7 +304,7 @@ h1 {
 
     .submenu {
         position: static; /* Elimina la posición absoluta */
-        background-color: #1b1b1b; /* Color de fondo del submenú */
+        background-color: #ec88dc; /* Color de fondo del submenú */
         box-shadow: none; /* Sin sombra */
     }
 
@@ -406,6 +406,21 @@ footer {
     margin: 10px 0 0; /* Espaciado superior */
     font-size: 14px; /* Tamaño del texto */
     color: #000000; /* Color negro */
+}
+/* Media queries para adaptabilidad */
+@media (max-width: 600px) {
+  .tarjeta {
+    max-width: 90%; /* Más ancho en pantallas pequeñas */
+    border-radius: 15px;
+  }
+
+  .tarjeta h3 {
+    font-size: 16px;
+  }
+
+  .tarjeta p {
+    font-size: 12px;
+  }
 }
 
 .menu-links2 {
