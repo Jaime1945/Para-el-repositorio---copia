@@ -31,7 +31,7 @@ body {
   padding: 32px 36px;                 /* Espaciado interno generoso */
   border-radius: 12px;                /* Bordes redondeados modernos */
   box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra sutil para profundidad */
-  max-width: 480px;                   /* Ancho máximo para legibilidad */
+  max-width: 750px;                   /* Ancho máximo para legibilidad */
   width: 100%;                        /* Ancho completo hasta el máximo */
 }
 
@@ -419,8 +419,8 @@ select {
     border: rgba (255, 255, 255, 0.2);
     border-radius: 5px;
     font-size: 16px;
-    background: rgba(255, 255, 255, 0.2);
-    color: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.623);
+    color: rgb(255, 255, 255);
 }
 
 input {
@@ -429,7 +429,7 @@ input {
     border-radius: 5px;
     font-size: 16px;
     background: rgba(255, 255, 255, 0.2);
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 /* Responsividad */
