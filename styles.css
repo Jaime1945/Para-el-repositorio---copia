@@ -330,7 +330,7 @@ footer {
 }
 .redes-sociales {
   position: absolute;
-  right: 20px; /* separa del borde derecho */
+  left: 20px; /* Ahora están a la izquierda */
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -338,7 +338,7 @@ footer {
 }
 
 .redes-sociales a {
-  color:  #f7b27b;;
+  color: #f7b27b;
   font-size: 30px;
   text-decoration: none;
   transition: color 0.3s;
@@ -347,6 +347,7 @@ footer {
 .redes-sociales a:hover {
   color: #ffc16f;
 }
+
 /* Contenedor de tarjetas */
 .contenedor {
     display: flex; /* Usa flexbox para organizar las tarjetas */
@@ -450,46 +451,24 @@ footer {
     color: rgb(0, 0, 0);
     font-weight: bold;
 }
-
+/* Estilo para el botón "Volver arriba" */
 #toTop {
-    position: fixed;                 /* Fija el botón en pantalla aunque se haga scroll */
-    bottom: 20px;                   /* Separación desde el borde inferior de la ventana */
-    right: 20px;                    /* Separación desde el borde derecho de la ventana */
-    display: none;                  /* Oculto inicialmente, se muestra al hacer scroll */
-    background-color: #333;         /* Fondo oscuro para visibilidad */
-    color: white;                   /* Texto blanco para contraste */
-    border: none;                   /* Sin borde */
-    padding: 10px 15px;             /* Espacio interno para tamaño adecuado */
-    font-size: 20px;                /* Tamaño de fuente suficientemente grande para ser visible */
-    border-radius: 5px;             /* Bordes redondeados para diseño moderno */
-    cursor: pointer;                /* Cambia el cursor al pasar sobre el botón */
-    z-index: 1000;                  /* Asegura que el botón esté sobre otros elementos */
-    transition: background-color 0.3s ease;  /* Suaviza el cambio de color al hacer hover */
+  position: fixed;              /* El botón se mantiene fijo en la pantalla al hacer scroll */
+  bottom: 35px;                 /* Separado 35px desde la parte inferior de la pantalla */
+  right: 30px;                  /* Separado 30px desde el borde derecho */
+  background-color: #FFBC9A;    /* Color de fondo naranja claro */
+  border: none;                 /* Sin borde */
+  border-radius: 50%;           /* Forma circular */
+  padding: 14px;                /* Espaciado interno para agrandar el área del botón */
+  cursor: pointer;              /* Muestra la mano al pasar el cursor */
+  font-size: 22px;              /* Tamaño del ícono o texto dentro del botón */
+  color: black;                 /* Color del contenido (ícono o texto) */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para dar efecto flotante */
+  z-index: 1000;                /* Asegura que esté encima de otros elementos */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color al hacer hover */
 }
 
-/* Cambio de color de fondo al pasar el cursor sobre el botón "Ir arriba" */
+/* Estilo al pasar el cursor por encima del botón */
 #toTop:hover {
-    background-color: #555;         /* Fondo más claro para feedback visual */
-}
-
-/* 
-    Estilos para el botón "Más..." (#loadMore)
-    Botón centrado con estilo llamativo para invitar a cargar más contenido 
-*/
-#loadMore {
-    display: block;                 /* Ocupa todo el ancho disponible (centrado con margin auto) */
-    margin: 30px auto 0;            /* Margen arriba para separación, auto horizontal para centrar */
-    padding: 10px 20px;             /* Espacio interno amplio para comodidad */
-    font-size: 16px;                /* Tamaño de texto estándar legible */
-    cursor: pointer;                /* Cursor puntero para indicar clicable */
-    border: none;                   /* Sin borde */
-    background-color: #007BFF;     /* Fondo azul llamativo (color estándar bootstrap primary) */
-    color: white;                   /* Texto blanco para contraste */
-    border-radius: 4px;             /* Bordes ligeramente redondeados */
-    transition: background-color 0.3s ease;  /* Transición suave para hover */
-}
-
-/* Cambio de color de fondo al pasar el cursor sobre el botón "Más..." */
-#loadMore:hover {
-    background-color: #0056b3;     /* Azul más oscuro para indicar interacción */
+  background-color: #f8b28e;    /* Color de fondo un poco más oscuro al hacer hover */
 }

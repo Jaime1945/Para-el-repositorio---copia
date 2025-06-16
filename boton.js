@@ -24,7 +24,6 @@ window.addEventListener("scroll", () => {
 
         toTopBtn.style.display = "block";
         // ...se cambia el estilo del botón para mostrarlo (display:block).
-
     } else {
         // Si el scroll está en 100px o menos...
 
