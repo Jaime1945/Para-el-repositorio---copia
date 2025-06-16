@@ -210,3 +210,13 @@ function toggleLanguage() {
         }
     });
 }
+
+
+const barras = modal.querySelectorAll(".rating");
+  barras.forEach(barra => {
+    const porcentaje = barra.style.width; // almacena el valor real
+    barra.style.width = "0"; // reinicia
+    setTimeout(() => {
+      barra.style.width = porcentaje; // aplica con transición
+    }, 100);
+  });
