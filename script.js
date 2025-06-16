@@ -1,5 +1,3 @@
-
-
 //Traductor de la pagina
 function toggleLanguage() {
     let button = document.getElementById("translateButton");
