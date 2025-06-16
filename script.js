@@ -36,7 +36,6 @@ function toggleLanguage() {
             menuNoticias: "News",
             menuContactos: "Contacts",
             searchInput: "Search...",
-            translateButton:"",
         },
         es: {
             title: "Casa Patitas Felices",
@@ -70,7 +69,6 @@ function toggleLanguage() {
             menuNoticias: "Noticias",
             menuContactos: "Contactos",
             searchInput: "Buscar...",
-            translateButton:"",
         }
     };
   
