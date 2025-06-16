@@ -213,6 +213,26 @@ footer {
     padding: 10px 0;           /* Espaciado arriba y abajo */
     width: 100%;               /* Ocupa todo el ancho disponible */
 }
+.redes-sociales {
+  position: absolute;
+  left: 20px; /* Ahora están a la izquierda */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 15px;
+}
+
+.redes-sociales a {
+  color: #f7b27b;
+  font-size: 30px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.redes-sociales a:hover {
+  color: #ffc16f;
+}
+
 
 /* Contenedor de iconos de redes sociales */
 .redes-sociales {

@@ -409,3 +409,24 @@ footer {
   .content:target {
     display: block;
   }
+  /* Estilo para el botón "Volver arriba" */
+#toTop {
+  position: fixed;              /* El botón se mantiene fijo en la pantalla al hacer scroll */
+  bottom: 35px;                 /* Separado 35px desde la parte inferior de la pantalla */
+  right: 30px;                  /* Separado 30px desde el borde derecho */
+  background-color: #FFBC9A;    /* Color de fondo naranja claro */
+  border: none;                 /* Sin borde */
+  border-radius: 50%;           /* Forma circular */
+  padding: 14px;                /* Espaciado interno para agrandar el área del botón */
+  cursor: pointer;              /* Muestra la mano al pasar el cursor */
+  font-size: 22px;              /* Tamaño del ícono o texto dentro del botón */
+  color: black;                 /* Color del contenido (ícono o texto) */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para dar efecto flotante */
+  z-index: 1000;                /* Asegura que esté encima de otros elementos */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color al hacer hover */
+}
+
+/* Estilo al pasar el cursor por encima del botón */
+#toTop:hover {
+  background-color: #f8b28e;    /* Color de fondo un poco más oscuro al hacer hover */
+}
