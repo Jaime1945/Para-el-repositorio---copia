@@ -120,7 +120,7 @@ h1 {
     padding: 10px 20px;/*Espaciado interno*/
     flex-wrap: wrap;/* Permite que los elementos se ajusten */
     box-sizing: border-box;
-    position: sticky;/* Fija el menú al scroll */
+    position: relative;/* Fija el menú al scroll */
     top: 0;/* Posición en la parte superior */
     z-index: 2000;/* Prioriza la visibilidad del menú */
 }
