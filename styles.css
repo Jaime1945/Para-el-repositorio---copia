@@ -222,6 +222,7 @@ h1 {
     box-sizing: border-box;
     box-shadow: 0 4px 6px rgba(184, 157,157);/* Sombra sutil */
     z-index: 1000; /* Prioriza visibilidad de submenús */
+    list-style: none; /* Quita los estilos de lista */
 }
 
 .submenu li {
