@@ -58,7 +58,7 @@ header video {
 /*segundo header*/
 .menu2 {
     /*background-image: url(https://th.bing.com/th/id/R.a8d1e00763015ca4435e13e54142f0d2?rik=Sk98rRIYxJYgUg&riu=http%3a%2f%2fst.depositphotos.com%2f1007566%2f2705%2fv%2f950%2fdepositphotos_27059235-stock-illustration-dog-footprint.jpg&ehk=%2bpXcVXTIflkV4Mn5tW4hfbkxkqnLobq0ciJE%2fHkqfrg%3d&risl=&pid=ImgRaw&r=0);*/
-    background-color: #aa91b1;/* Color del fondo del menú */
+    background-color: #df8bf7;/* Color del fondo del menú */
     display: flex;/*Configuracion del fondo flexible*/
     align-items: center;/*Alinea los elemntos verticalmente*/
     padding: 10px 20px;/*Espaciado interno*/
@@ -77,7 +77,7 @@ button {
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 17px;
     cursor: pointer;
     border-radius: 5px;
     margin: 5px;
@@ -87,6 +87,21 @@ button:hover {
     background-color:  #f8b28e;
 }
 /*Fin dl botton traductor*/
+/*Boton para iniciar sesion*/
+.InicioSesionButton {
+    background-color:  #eca240;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin: 5px;
+}
+.InicioSesionButton:hover {
+    background-color:  #e04747;
+}
+/**/
 
 /* Navegación */
 .navbar ul {
