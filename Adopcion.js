@@ -1,5 +1,5 @@
 //Funcion de los perfiles de mascotas/pantallas modales
-function showModal(modalId) {
+/*function showModal(modalId) {
     document.getElementById(modalId).style.display = "flex";
 }
 
@@ -56,17 +56,38 @@ document.getElementById("open-michi-modal").addEventListener("click",function ()
     showModal("modal-michi");
 });
 
-
 //Funcion para cerrar las pantallas modales
-function cerrarModales() {
+/*function cerrarModales() {
     document.querySelectorAll('.modal').forEach(modal => modal.style.display = 'none');
-}
-//
+}*/
 
-//Funcion para cerrar las pantallas modales
-function cerrarModales() {
-    document.querySelectorAll('.modal').forEach(modal => modal.style.display = 'none');
-}
+//funcion animacion
+// Abrir modal y animar barras
+    document.querySelectorAll(".open-modal").forEach(boton => {
+      boton.addEventListener("click", () => {
+        const modalId = boton.getAttribute("data-modal");
+        const modal = document.getElementById(modalId);
+        modal.style.display = "flex";
+
+        // Reiniciar y animar barras
+        modal.querySelectorAll(".rating").forEach(bar => {
+          const value = bar.getAttribute("data-value") || "0";
+          bar.style.width = "0%";
+          void bar.offsetWidth;
+          bar.style.width = value + "%";
+        });
+      });
+    });
+
+    // Cerrar todos los modales
+    function cerrarModales() {
+      document.querySelectorAll(".modal").forEach(modal => {
+        modal.style.display = "none";
+        modal.querySelectorAll(".rating").forEach(bar => {
+          bar.style.width = "0%";
+        });
+      });
+    }
 
 
 //traductor ingles/español

@@ -106,81 +106,81 @@
 <div class="cards-container">
     <!-- Tarjetas con diferentes perfiles -->
     <div class="card">
-        <img src="Gatos/artemisa.jpeg" alt="Artemisa">
-        <h3 id="pet1_name">Artemisa</h3>
-        <p id="pet1_info">Bombay | Joven | Hembra</p>
-        <button id="open-artemisa-modal" id="Adop_button">ADOPTAR</button>
+      <img src="Gatos/artemisa.jpeg" alt="Artemisa">
+      <h3 id="pet1_name">Artemisa</h3>
+      <p id="pet1_info">Bombay | Joven | Hembra</p>
+      <button class="open-modal" data-modal="modal-artemisa">ADOPTAR</button>
     </div>
     <div class="card">
         <img src="Perros/panchito.jpg" alt="Panchito">
         <h3 id="pet2_name">Panchito</h3>
         <p id="pet2_info">Pastor Alemán | Adulto | Macho</p>
-        <button id="open-panchito-modal" id="Adop_button">ADOPTAR</button>
+        <button class="open-modal" data-modal="modal-panchito">ADOPTAR</button>
     </div>
     <div class="card">
         <img src="Perros/luna.jpeg" alt="Luna">
         <h3 id="pet3_name">Luna</h3>
         <p id="pet3_info">Labrador | Cachorro | Hembra</p>
-        <button id="open-luna-modal" id="Adop_button">ADOPTAR</button>
+        <button class="open-modal" data-modal="modal-luna">ADOPTAR</button>
     </div>
     <div class="card">
         <img src="Perros/palomo.jpg" alt="Palomo">
         <h3 id="pet4_name">Palomo</h3>
         <p id="pet4_info">Husky Siberiano | Joven | Macho</p>
-        <button id="open-palomo-modal" id="Adop_button">ADOPTAR</button>
+        <button class="open-modal" data-modal="modal-palomo">ADOPTAR</button>
     </div>
     <div class="card">
         <img src="Perros/Muñeco.jpeg" alt="Muñeco">
         <h3 id="pet5_name">Muñeco</h3>
         <p id="pet5_info">Husky Siberiano | Joven | Macho</p>
-        <button id="open-muñeco-modal" id="Adop_button">ADOPTAR</button>
+        <button class="open-modal" data-modal="modal-muñeco">ADOPTAR</button>
     </div>
     <div class="card">
         <img src="Gatos/vaquita.jpg" alt="Vaquita">
         <h3 id="pet6_name">Vaquita</h3>
         <p id="pet6_info">Husky Siberiano | Joven | Macho</p>
-        <button id="open-vaquita-modal" id="Adop_button">ADOPTAR</button>
+        <button class="open-modal" data-modal="modal-vaquita">ADOPTAR</button>
     </div>
     <div class="card">
         <img src="Gatos/Atenea.jpg" alt="Atenea">
         <h3>Atenea</h3>
         <p id="pet7_info">Husky Siberiano | Joven | Macho</p>
-        <button id="open-atenea-modal" id="Adop_button">ADOPTAR</button>
+        <button class="open-modal" data-modal="modal-atenea">ADOPTAR</button>
     </div>
     <div class="card">
         <img src="Perros/hans.jpeg" alt="Hans">
         <h3>Hans</h3>
         <p id="pet7_info">Husky Siberiano | Joven | Macho</p>
-        <button id="open-Hans-modal" id="Adop_button">ADOPTAR</button>
+        <button class="open-modal" data-modal="modal-Hans">ADOPTAR</button>
     </div>
     <div class="card">
         <img src="Perros/copito.jpg" alt="Copito">
         <h3>Copito</h3>
         <p id="pet7_info">Husky Siberiano | Joven | Macho</p>
-        <button id="open-copito-modal" id="Adop_button">ADOPTAR</button>
+        <button class="open-modal" data-modal="modal-copito">ADOPTAR</button>
     </div>
     <div class="card">
         <img src="Gatos/mikis.jpg" alt="mikis">
         <h3>mikis</h3>
         <p id="pet7_info">Husky Siberiano | Joven | Macho</p>
-        <button id="open-mikis-modal" id="Adop_button">ADOPTAR</button>
+        <button class="open-modal" data-modal="modal-mikis">ADOPTAR</button>
     </div>
     <div class="card">
         <img src="Gatos/milly.jpeg" alt="milly">
         <h3>milly</h3>
         <p id="pet7_info">Husky Siberiano | Joven | Macho</p>
-        <button id="open-milly-modal" id="Adop_button">ADOPTAR</button>
+        <button class="open-modal" data-modal="modal-milly">ADOPTAR</button>
     </div>
     <div class="card">
         <img src="Gatos/michi.jpeg" alt="michi">
         <h3>michi</h3>
         <p id="pet7_info">Husky Siberiano | Joven | Macho</p>
-        <button id="open-michi-modal" id="Adop_button">ADOPTAR</button>
+        <button class="open-modal" data-modal="modal-michi">ADOPTAR</button>
     </div>
     
 <!--Aqui se agregara cada informacion de perfil modal de cada mascota-->
 <!-- Ventana Modal del perfil de adopción -->
- 
+
 <!--Modal Artemisa-->
 <div class="modal" id="modal-artemisa">
         <div class="modal-content">
@@ -191,13 +191,13 @@
                 <p id="raza_artemisa">American Shorthair | Joven | Hembra | Gris y blanco</p>
                 <div class="ratings">
                     <p id="Amistad_niños">Amistoso con los niños</p>
-                    <div class="rating-bar"><div class="rating" style="width: 80%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="80"></div></div>
                     <p id="Amistad_masco">Amistoso con otras mascotas</p>
-                    <div class="rating-bar"><div class="rating" style="width: 20%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="20"></div></div>
                     <p id="Cariño_familia">Cariñoso con la familia</p>
-                    <div class="rating-bar"><div class="rating" style="width: 50%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="60"></div></div>
                     <p id="Jugueton">Juguetón</p>
-                    <div class="rating-bar"><div class="rating" style="width: 100%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="100"></div></div>
                 </div>
                 <div class="history">
                     <h2 id="title-historia">Historia</h2>
@@ -217,13 +217,13 @@
                 <p id="raza_panchito">Raza unica | Joven | Macho | Negro</p>
                 <div class="ratings">
                     <p id="Amistad_niños">Amistoso con los niños</p>
-                    <div class="rating-bar"><div class="rating" style="width: 50%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="50"></div></div>
                     <p id="Amistad_masco">Amistoso con otras mascotas</p>
-                    <div class="rating-bar"><div class="rating" style="width: 40%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="40"></div></div>
                     <p id="Cariño_familia">Cariñoso con la familia</p>
-                    <div class="rating-bar"><div class="rating" style="width: 75%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="75"></div></div>
                     <p id="Jugueton">Juguetón</p>
-                    <div class="rating-bar"><div class="rating" style="width: 50%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="50"></div></div>
                 </div>
                 <div class="history">
                     <h2 id="title-historia">Historia</h2>
@@ -244,13 +244,13 @@
                 <p id="raza_luna">Raza unica | Cachorro | Hembra | Negro y Blanco</p>
                 <div class="ratings">
                     <p id="Amistad_niños">Amistoso con los niños</p>
-                    <div class="rating-bar"><div class="rating" style="width: 100%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="100"></div></div>
                     <p id="Amistad_masco">Amistoso con otras mascotas</p>
-                    <div class="rating-bar"><div class="rating" style="width: 20%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="20"></div></div>
                     <p id="Cariño_familia">Cariñoso con la familia</p>
-                    <div class="rating-bar"><div class="rating" style="width: 90%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="90"></div></div>
                     <p id="Jugueton">Juguetón</p>
-                    <div class="rating-bar"><div class="rating" style="width: 100%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="100"></div></div>
                 </div>
                 <div class="history">
                     <h2 id="title-historia">Historia</h2>
@@ -271,13 +271,13 @@
                 <p id="raza_palomo">Raza unica | Joven | Macho | Beige y blanco</p>
                 <div class="ratings">
                     <p id="Amistad_niños">Amistoso con los niños</p>
-                    <div class="rating-bar"><div class="rating" style="width: 50%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="70"></div></div>
                     <p id="Amistad_masco">Amistoso con otras mascotas</p>
-                    <div class="rating-bar"><div class="rating" style="width: 40%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="40"></div></div>
                     <p id="Cariño_familia">Cariñoso con la familia</p>
-                    <div class="rating-bar"><div class="rating" style="width: 75%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="75"></div></div>
                     <p id="Jugueton">Juguetón</p>
-                    <div class="rating-bar"><div class="rating" style="width: 50%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="90"></div></div>
                 </div>
                 <div class="history">
                     <h2 id="title-historia">Historia</h2>
@@ -298,13 +298,13 @@
                 <p id="raza_muñeco">Raza unica | Adulto | Macho | Beige, blanco y Negro</p>
                 <div class="ratings">
                     <p id="Amistad_niños">Amistoso con los niños</p>
-                    <div class="rating-bar"><div class="rating" style="width: 40%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="40"></div></div>
                     <p id="Amistad_masco">Amistoso con otras mascotas</p>
-                    <div class="rating-bar"><div class="rating" style="width: 45%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="45"></div></div>
                     <p id="Cariño_familia">Cariñoso con la familia</p>
-                    <div class="rating-bar"><div class="rating" style="width: 95%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="95"></div></div>
                     <p id="Jugueton">Juguetón</p>
-                    <div class="rating-bar"><div class="rating" style="width: 60%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="60"></div></div>
                 </div>
                 <div class="history">
                     <h2 id="title-historia">Historia</h2>
@@ -325,13 +325,13 @@
                 <p id="raza_vaquita">Raza unica | Adulto | Hembra | blanco y Negro</p>
                 <div class="ratings">
                     <p id="Amistad_niños">Amistoso con los niños</p>
-                    <div class="rating-bar"><div class="rating" style="width: 60%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="60"></div></div>
                     <p id="Amistad_masco">Amistoso con otras mascotas</p>
-                    <div class="rating-bar"><div class="rating" style="width: 47%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="47"></div></div>
                     <p id="Cariño_familia">Cariñoso con la familia</p>
-                    <div class="rating-bar"><div class="rating" style="width: 30%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="30"></div></div>
                     <p id="Jugueton">Juguetón</p>
-                    <div class="rating-bar"><div class="rating" style="width: 20%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="20"></div></div>
                 </div>
                 <div class="history">
                     <h2 id="title-historia">Historia</h2>
@@ -352,13 +352,13 @@
                 <p id="raza_atenea">Raza unica | Joven | Hembra | blanco y Gris</p>
                 <div class="ratings">
                     <p id="Amistad_niños">Amistoso con los niños</p>
-                    <div class="rating-bar"><div class="rating" style="width: 68%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="68"></div></div>
                     <p id="Amistad_masco">Amistoso con otras mascotas</p>
-                    <div class="rating-bar"><div class="rating" style="width: 1%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="9"></div></div>
                     <p id="Cariño_familia">Cariñoso con la familia</p>
-                    <div class="rating-bar"><div class="rating" style="width: 78%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="89"></div></div>
                     <p id="Jugueton">Juguetón</p>
-                    <div class="rating-bar"><div class="rating" style="width: 40%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="40"></div></div>
                 </div>
                 <div class="history">
                     <h2 id="title-historia">Historia</h2>
@@ -379,13 +379,13 @@
                 <p id="raza_hans">Raza unica | Adulto | Macho | Golden</p>
                 <div class="ratings">
                     <p id="Amistad_niños">Amistoso con los niños</p>
-                    <div class="rating-bar"><div class="rating" style="width: 80%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="80"></div></div>
                     <p id="Amistad_masco">Amistoso con otras mascotas</p>
-                    <div class="rating-bar"><div class="rating" style="width: 10%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="19"></div></div>
                     <p id="Cariño_familia">Cariñoso con la familia</p>
-                    <div class="rating-bar"><div class="rating" style="width: 60%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="60"></div></div>
                     <p id="Jugueton">Juguetón</p>
-                    <div class="rating-bar"><div class="rating" style="width: 60%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="60""></div></div>
                 </div>
                 <div class="history">
                     <h2 id="title-historia">Historia</h2>
@@ -406,13 +406,13 @@
                 <p id="raza_copito">Chihuahua | Joven | Macho | blanco</p>
                 <div class="ratings">
                     <p id="Amistad_niños">Amistoso con los niños</p>
-                    <div class="rating-bar"><div class="rating" style="width: 90%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="90"></div></div>
                     <p id="Amistad_masco">Amistoso con otras mascotas</p>
-                    <div class="rating-bar"><div class="rating" style="width: 86%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="86"></div></div>
                     <p id="Cariño_familia">Cariñoso con la familia</p>
-                    <div class="rating-bar"><div class="rating" style="width: 90%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="90"></div></div>
                     <p id="Jugueton">Juguetón</p>
-                    <div class="rating-bar"><div class="rating" style="width: 100%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="100"></div></div>
                 </div>
                 <div class="history">
                     <h2 id="title-historia">Historia</h2>
@@ -433,13 +433,13 @@
                 <p id="raza_mikis">Raza unica | Cachorro | Hembra | Cafe</p>
                 <div class="ratings">
                     <p id="Amistad_niños">Amistoso con los niños</p>
-                    <div class="rating-bar"><div class="rating" style="width: 20%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="20"></div></div>
                     <p id="Amistad_masco">Amistoso con otras mascotas</p>
-                    <div class="rating-bar"><div class="rating" style="width: 46%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="48"></div></div>
                     <p id="Cariño_familia">Cariñoso con la familia</p>
-                    <div class="rating-bar"><div class="rating" style="width: 29%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="29"></div></div>
                     <p id="Jugueton">Juguetón</p>
-                    <div class="rating-bar"><div class="rating" style="width: 89%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="89"></div></div>
                 </div>
                 <div class="history">
                     <h2 id="title-historia">Historia</h2>
@@ -460,13 +460,13 @@
                 <p id="raza_milly">Raza unica | Adulto | Hembra | blanco y Gris</p>
                 <div class="ratings">
                     <p id="Amistad_niños">Amistoso con los niños</p>
-                    <div class="rating-bar"><div class="rating" style="width: 30%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="30"></div></div>
                     <p id="Amistad_masco">Amistoso con otras mascotas</p>
-                    <div class="rating-bar"><div class="rating" style="width: 58%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="58"></div></div>
                     <p id="Cariño_familia">Cariñoso con la familia</p>
-                    <div class="rating-bar"><div class="rating" style="width: 70%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="70"></div></div>
                     <p id="Jugueton">Juguetón</p>
-                    <div class="rating-bar"><div class="rating" style="width: 55%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="55"></div></div>
                 </div>
                 <div class="history">
                     <h2 id="title-historia">Historia</h2>
@@ -487,13 +487,13 @@
                 <p id="raza_michi">Raza unica | Joven | Hembra | blanco y Gris</p>
                 <div class="ratings">
                     <p id="Amistad_niños">Amistoso con los niños</p>
-                    <div class="rating-bar"><div class="rating" style="width: 40%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="40"></div></div>
                     <p id="Amistad_masco">Amistoso con otras mascotas</p>
-                    <div class="rating-bar"><div class="rating" style="width: 77%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="77"></div></div>
                     <p id="Cariño_familia">Cariñoso con la familia</p>
-                    <div class="rating-bar"><div class="rating" style="width: 60%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="66"></div></div>
                     <p id="Jugueton">Juguetón</p>
-                    <div class="rating-bar"><div class="rating" style="width: 78%;"></div></div>
+                    <div class="rating-bar"><div class="rating" data-value="76"></div></div>
                 </div>
                 <div class="history">
                     <h2 id="title-historia">Historia</h2>
