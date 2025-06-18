@@ -96,11 +96,11 @@ button:hover {
 
 /* Error en el selector corregido */
 .navbar ul li a {
-    font-size: 18px; /* Tamaño del texto del menú */
-    color: #000000; /* Color del texto */
-    font-weight: bold; /* Texto en negrita */
-    padding: 10px; /* Espaciado interno */
-    transition: all 0.3s ease; /* Efecto suave en el hover */
+    font-size: 1.125rem; /* ≈ 18px */
+    color: #000000;
+    font-weight: bold;
+    padding: 10px;
+    transition: all 0.3s ease;
 }
 
 /* Cambio de color al pasar el mouse */
