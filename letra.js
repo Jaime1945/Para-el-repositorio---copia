@@ -1,11 +1,13 @@
-let tamañoActual = 16; // tamaño base en px
 
-function cambiarTamañoLetra(cambio) {
-  tamañoActual += cambio;
+  let tamañoLetra = 16;
 
-  // Limita el tamaño mínimo y máximo
-  if (tamañoActual < 12) tamañoActual = 12;
-  if (tamañoActual > 30) tamañoActual = 30;
+  function cambiarTamañoLetra(valor) {
+    tamañoLetra += valor;
 
-  document.getElementById("contenido").style.fontSize = tamañoActual + "px";
-}
+    // Limitar para que no quede demasiado pequeño o grande
+    if (tamañoLetra < 10) tamañoLetra = 10;
+    if (tamañoLetra > 30) tamañoLetra = 30;
+
+    document.body.style.fontSize = tamañoLetra + "px";
+      }
+
