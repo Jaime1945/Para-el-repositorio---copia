@@ -623,6 +623,7 @@ footer {
     background-color:  #b0d3e7; /* Azul claro */
     height: 100%; /* Ocupa toda la altura de la barra */
 }
+
 /* Estilo para el botón "Volver arriba" */
 #toTop {
   position: fixed;              /* El botón se mantiene fijo en la pantalla al hacer scroll */

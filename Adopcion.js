@@ -63,25 +63,6 @@ function cerrarModales() {
 }
 //
 
-function animarBarras(modalId) {
-  const modal = document.getElementById(modalId);
-  const ratings = modal.querySelectorAll('.rating');
-
-  ratings.forEach(bar => {
-    const valor = bar.getAttribute('width');
-    bar.style.width = '0%'; // Reinicia por si ya se abrió antes
-    setTimeout(() => {
-      bar.style.width = valor;
-    }, 100); // Pequeña pausa para que la transición funcione
-  });
-}
-
-// Al abrir el modal:
-document.getElementById('open-michi-modal').addEventListener('show', () => {
-  animarBarras('modal-michi');
-});
-
-
 //Funcion para cerrar las pantallas modales
 function cerrarModales() {
     document.querySelectorAll('.modal').forEach(modal => modal.style.display = 'none');
