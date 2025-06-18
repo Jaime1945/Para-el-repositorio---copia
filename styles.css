@@ -69,6 +69,73 @@ header video {
     z-index: 1000;/* Prioriza la visibilidad del menú */
     list-style: none; /* Quita los estilos de lista */
 }
+/* Estilos generales del submenú */
+.menu2 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Botones del submenú */
+.menu2 button {
+  background-color: #FFBC9A; /* Color pastel bonito */
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Íconos dentro del botón */
+.menu2 button i {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+/* Hover y efecto al hacer clic */
+.menu2 button:hover {
+  background-color: #e6a17e;
+  transform: translateY(-2px);
+}
+
+/* Estilo específico del botón de inicio de sesión */
+.InicioSesionButton a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Quita subrayado al pasar el mouse */
+.InicioSesionButton a:hover {
+  text-decoration: none;
+}
+.menu2 ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+/* Este empuja el segundo <li> al extremo derecho */
+.menu2 li:last-child {
+  margin-left: auto;
+}
+.menu2 .spacer {
+  flex-grow: 3;
+}
 /*Segundo header*/
 
 /*Botton traductor*/
@@ -82,26 +149,6 @@ button {
     border-radius: 5px;
     margin: 5px;
 }
-
-button:hover {
-    background-color:  #f8b28e;
-}
-/*Fin dl botton traductor*/
-/*Boton para iniciar sesion*/
-.InicioSesionButton {
-    background-color:  #eca240;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 15px;
-    margin: 5px;
-}
-.InicioSesionButton:hover {
-    background-color:  #e04747;
-}
-/**/
 
 /* Navegación */
 .navbar ul {
@@ -131,7 +178,7 @@ button:hover {
 }
 
 .header-content p { /* Información del header */
-    font-size: 25px; /* Tamaño del texto */
+    font-size: 20px; /* Tamaño del texto */
     color: #ffffff; /* Color del texto */
     margin-bottom: 30px; /* Espaciado inferior */
     max-width: 800px; /* Ancho máximo del texto */
