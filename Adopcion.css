@@ -595,34 +595,35 @@ footer {
 
 /* Contenedor de las barras de calificación */
 .rating-bar {
-  background-color: #eee;
+  background-color: #ddd;
+  height: 10px;
   border-radius: 10px;
   overflow: hidden;
-  height: 20px;
   margin-bottom: 10px;
 }
-
 .rating {
   height: 100%;
-  width: 0; /* Comienza en 0 */
+  width: 0%;
   background-color: #3498db;
   border-radius: 10px;
-  transition: width 1.5s ease-in-out;
+  transition: width 1.2s ease-in-out;
 }
 
+    .ratings .rating-bar {
+      background-color: #ddd;
+      height: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
 
-.ratings .rating-bar {
-    background-color: #ddd; /* Fondo gris claro */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    height: 10px; /* Altura de la barra */
-    margin-bottom: 5px; /* Espaciado inferior entre barras */
-}
-
-/* Relleno de la barra de calificación */
-.ratings .rating {
-    background-color:  #b0d3e7; /* Azul claro */
-    height: 100%; /* Ocupa toda la altura de la barra */
-}
+    .ratings .rating {
+      height: 100%;
+      width: 0%;
+      background-color: #b0d3e7;
+      border-radius: 10px;
+      transition: width 1.2s ease-in-out;
+    }
 
 /* Estilo para el botón "Volver arriba" */
 #toTop {
