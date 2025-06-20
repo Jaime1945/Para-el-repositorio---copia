@@ -1,13 +1,14 @@
 
-  let tamañoLetra = 16;
+  const TAMANO_MIN = 12;
+const TAMANO_MAX = 28;
+let tamañoActual = 22;
 
-  function cambiarTamañoLetra(valor) {
-    tamañoLetra += valor;
+function ajustarContenido(cambio) {
+  const area = document.getElementById("contenido-dinamico");
+  const nuevoTamaño = tamañoActual + cambio;
 
-    // Limitar para que no quede demasiado pequeño o grande
-    if (tamañoLetra < 10) tamañoLetra = 10;
-    if (tamañoLetra > 30) tamañoLetra = 30;
-
-    document.body.style.fontSize = tamañoLetra + "px";
-      }
-
+  if (nuevoTamaño >= TAMANO_MIN && nuevoTamaño <= TAMANO_MAX) {
+    tamañoActual = nuevoTamaño;
+    area.style.fontSize = tamañoActual + "px";
+  }
+}
