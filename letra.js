@@ -1,5 +1,5 @@
 
-  const TAMANO_MIN = 12;
+const TAMANO_MIN = 12;
 const TAMANO_MAX = 28;
 let tamañoActual = 22;
 
