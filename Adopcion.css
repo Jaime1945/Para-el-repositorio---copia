@@ -624,6 +624,29 @@ footer {
       border-radius: 10px;
       transition: width 1.2s ease-in-out;
     }
+    @media (max-width: 600px) {
+  .modal-content {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .pet-info,
+  .modal-info {
+    width: 100%;
+  }
+
+  .profile-img {
+    max-width: 180px;
+  }
+
+  .close-button {
+    top: 5px;
+    right: 5px;
+    font-size: 18px;
+  }
+}
+
 
 /* Estilo para el botón "Volver arriba" */
 #toTop {

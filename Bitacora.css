@@ -350,55 +350,6 @@ footer {
     font-size: 18px; /*tamaño del texto*/
 }
 
-/* Estilos de cada tarjeta */
-.tarjeta {
-    width: 290px;  /* Ancho de la tarjeta */
-    height: 510px; /* Altura de la tarjeta */
-    background: white; /* Fondo blanco */
-    border-radius: 20px; /* Bordes redondeados */
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    overflow: hidden; /* Oculta el contenido que sobresalga */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Efecto de transición */
-    text-align: center; /* Alineación centrada del texto*/
-}
-
-/*titulo de adoptados por arriba de las tarjetas*/
-.adoptados {
-    width: 80%;
-    margin: 20px auto; /* Centra el contenedor */
-}
-/* Efecto hover en la tarjeta */
-.tarjeta:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer hover */
-}
-
-/* Imagen dentro de la tarjeta */
-.tarjeta img {
-    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
-    height: 60%; /* La imagen ocupa el 60% de la altura de la tarjeta */
-    object-fit: cover; /* Ajusta la imagen sin deformarla */
-}
-
-/* Contenido dentro de la tarjeta */
-.tarjeta .contenido {
-    padding: 15px; /* Espaciado interno */
-}
-
-/* Título dentro de la tarjeta */
-.tarjeta h3 {
-    margin: 0; /* Elimina márgenes extra */
-    font-size: 18px; /* Tamaño del título */
-    color: #AE84B6; /* Color del texto */
-}
-
-/* Texto descriptivo dentro de la tarjeta */
-.tarjeta p {
-    margin: 10px 0 0; /* Espaciado superior */
-    font-size: 14px; /* Tamaño del texto */
-    color: #000000; /* Color negro */
-}
-
 /*tabla de informacion*/
 table {
     width: 100%;
@@ -420,6 +371,25 @@ th {
 td {
     background-color: #f9f9f9;
 }
+@media (max-width: 600px) {
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+  }
+
+  table {
+    min-width: 500px; /* Asegura que las columnas conserven su forma */
+  }
+
+  th, td {
+    font-size: 14px; /* Un poco más pequeño para caber mejor */
+    padding: 8px;
+  }
+}
+
+
+
 #toTop {
   position: fixed;              /* El botón se mantiene fijo en la pantalla al hacer scroll */
   bottom: 35px;                 /* Separado 35px desde la parte inferior de la pantalla */
