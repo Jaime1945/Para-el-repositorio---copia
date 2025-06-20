@@ -86,6 +86,15 @@
         <li>
           <button id="translateButton" onclick="toggleLanguage()"><i class="fa fa-language" aria-hidden="true"></i></button>
         </li>
+        <div class="botonera">
+           <button onclick="ajustarContenido(-2)">A–</button>
+         </div>
+         <div class="botonera">
+           <button onclick="ajustarContenido(2)">A+</button>
+         </div>
+         <li>
+            <button id="InicioSesion" class="InicioSesionButton"><a href="Inicio-sesion.html">Iniciar Sesion</a></button>
+        </li>
     </nav>
     
 <!--Botones para traducir Español/Ingles-->
@@ -107,6 +116,7 @@
 
 <!--Inicion de la informacion-->
     <!-- Contenido/Informacion principal -->
+<main id="contenido-dinamico">
     <!-- Beneficios de adoptar -->
     <div class="container">
         <h1 id="title1">Beneficios de Adoptar🐾</h1>
@@ -136,13 +146,15 @@
         <p id="final3">Ellos sienten, expresan afecto y, de maneras distintas, entienden el mundo a través de sus experiencias. Es nuestra responsabilidad respetar su derecho a vivir dignamente, brindarles protección y tratarlos con bondad.</p>
         <p id="final4"><strong>Ahora que ya tienes esta información puedes ir al apartado de "Servicios" en la sección de "Adoptar" para poder ver las opciones de adopción.</strong></p>
     </div>
+</main>
        <button id="toTop" title="Ir arriba">
   <i class="fi fi-sr-arrow-up"></i>
 </button>
     <!-- Enlace a tu archivo JavaScript -->
     <script src="como-puedo-adoptar.js"></script>
     <script src="Buscador.js"></script>
-      <script src="boton.js"></script>
+    <script src="boton.js"></script>
+    <script src="letra.js"></script>
     <!--Fin del enlace con java-->
     
        <footer> <!--Derechos de "autor???"-->

@@ -273,13 +273,6 @@ function tryDecode(str) {
       },
   };
 
-  //Object.keys(translations[lang]).forEach(id => {
-    //  const element = document.getElementById(id);
-      //if (element) {
-        //  element.innerText = translations[lang][id];
-      //}
-  //});
-//}
 
  let newLang = currentLang === "es" ? "en" : "es";
     document.documentElement.lang = newLang;

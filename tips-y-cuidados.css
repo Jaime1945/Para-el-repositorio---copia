@@ -367,14 +367,16 @@ footer {
 /* Contenedor de las pestañas */
 #tabs {
     list-style: none; /* Elimina los estilos de lista predeterminados */
-    padding: 5; /* Elimina el padding predeterminado */
+    padding: 5px; /* Elimina el padding predeterminado */
     display: flex; /* Usa flexbox para alinear las pestañas en una fila */
     justify-content: flex-start; /* Alinea las pestañas al inicio de la fila */
-    background-color: #f1f1f1; /* Color de fondo de la barra de pestañas */
+    background-color: #bb6cb0; /* Color de fondo de la barra de pestañas */
     margin: 0; /* Elimina el margen exterior */
-    width: 80%;
+    width: 82.4%;
     margin: 20px auto; /* Centra el contenedor */
     font-size: 18px; /*tamaño del texto*/
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 0;
   }
   
   /* Elementos de la lista dentro de las pestañas */
@@ -403,13 +405,14 @@ footer {
   /* ====== Estilos para el contenedor de contenido ====== */
   
   #container {
-    border: 1px solid #d1d1d1; /* Borde gris alrededor del contenedor */
-    border-top: none; /* Elimina el borde superior para integrarse con las pestañas */
-    padding:20px; /* Espaciado interno para el contenido */
-    background-color: #fff; /* Fondo blanco para el contenido */
+    border: 1px solid #bb6cb0;
+    border-top: none;
+    padding: 20px;
+    background-color: #fff;
     width: 80%;
-    margin: 20px auto; /* Centra el contenedor */
-    font-size: 18px; /*tamaño del texto*/
+    margin: 0 auto;
+    font-size: 18px;
+    margin-top: 0;
   }
   
   /* ====== Estilos para el contenido de cada pestaña ====== */
@@ -423,7 +426,31 @@ footer {
   .content:target {
     display: block;
   }
-  /* Estilo para el botón "Volver arriba" */
+
+@media screen and (max-width: 600px) {
+  #tabs {
+    flex-direction: column; /* apila las pestañas en vertical */
+    width: 95%; /* más ancho en móviles */
+    font-size: 16px;
+    border-radius: 5px 5px 5px 5px;
+  }
+
+  #tabs li a {
+    margin: 5px 0; /* espacio entre las pestañas verticales */
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  #container {
+    width: 95%;
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+
+
+/* Estilo para el botón "Volver arriba" */
 #toTop {
   position: fixed;              /* El botón se mantiene fijo en la pantalla al hacer scroll */
   bottom: 35px;                 /* Separado 35px desde la parte inferior de la pantalla */
@@ -443,4 +470,14 @@ footer {
 /* Estilo al pasar el cursor por encima del botón */
 #toTop:hover {
   background-color: #f8b28e;    /* Color de fondo un poco más oscuro al hacer hover */
+}
+
+/*Funcion de hacer mas grande/chico el texto*/
+#contenido-dinamico {
+  font-size: 20px;
+  transition: font-size 0.3s ease;
+}
+
+#contenido-dinamico * {
+  font-size: inherit;
 }

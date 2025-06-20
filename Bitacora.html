@@ -82,11 +82,21 @@
         <li>
           <button id="translateButton" onclick="toggleLanguage()"><i class="fa fa-language" aria-hidden="true"></i></button>
         </li>
+        <div class="botonera">
+           <button onclick="ajustarContenido(-2)">A–</button>
+         </div>
+         <div class="botonera">
+           <button onclick="ajustarContenido(2)">A+</button>
+         </div>
+         <li>
+            <button id="InicioSesion" class="InicioSesionButton"><a href="Inicio-sesion.html">Iniciar Sesion</a></button>
+        </li>
     </nav>
 
 <!--Fin de la info del encabezado!-->
 
 <!--Inicion de la informacion-->
+<main id="contenido-dinamico">
        <div class="container">    
        <table id="tabla">
         <thead>
@@ -235,13 +245,15 @@
         </tbody>
     </table>
 </div>
+</main>
 <button id="toTop" title="Ir arriba">
   <i class="fi fi-sr-arrow-up"></i>
 </button>
     <!-- Contenido/Informacion principal -->
     <!-- Enlace a tu archivo JavaScript -->
     <script src="Bitacora.js"></script>
-     <script src="boton.js"></script>
+    <script src="boton.js"></script>
+    <script src="letra.js"></script>
     <!--Fin del enlace con java-->
 </br></br></br></br></br>
     <footer> <!--Derechos de "autor???"-->

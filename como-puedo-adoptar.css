@@ -402,3 +402,13 @@ footer {
 #toTop:hover {
   background-color: #f8b28e;    /* Color de fondo un poco más oscuro al hacer hover */
 }
+
+/*Funcion de hacer mas grande/chico el texto*/
+#contenido-dinamico {
+  font-size: 20px;
+  transition: font-size 0.3s ease;
+}
+
+#contenido-dinamico * {
+  font-size: inherit;
+}

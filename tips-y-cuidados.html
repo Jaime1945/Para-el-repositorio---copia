@@ -89,6 +89,15 @@
         <li>
           <button id="translateButton" onclick="toggleLanguage()"><i class="fa fa-language" aria-hidden="true"></i></button>
         </li>
+        <div class="botonera">
+           <button onclick="ajustarContenido(-2)">A–</button>
+         </div>
+         <div class="botonera">
+           <button onclick="ajustarContenido(2)">A+</button>
+         </div>
+         <li>
+            <button id="InicioSesion" class="InicioSesionButton"><a href="Inicio-sesion.html">Iniciar Sesion</a></button>
+        </li>
     </nav>
 
     <!--<button onclick="translatePage('es')">Español</button>
@@ -108,6 +117,7 @@
 </header>
 <!--Fin de la info del encabezado-->
 <!-- Contenido/Informacion principal -->
+<main id="contenido-dinamico">
 <div class="container">
     <h1 id="comienzo">Recomendaciones para tu mascota</h1>
     <p id="texto_comienzo">
@@ -127,7 +137,7 @@
     <li><a href="#tab3" id="tab3_title">Higiene y Limpieza</a></li>
     <li><a href="#tab4" id="tab4_title">Espacio Seguro y Cuidado del Entorno</a></li>
     <li><a href="#tab5" id="tab5_title">Esterilización o Castración</a></li>
-    <li><a href="#tab6" id="tab6_title">Cariño y Tiempo de Calidad</a></li>
+    <li><a href="#tab6" id="tab6_title">Cariño y Tiempo</a></li>
 </ul>
 
 <!-- Contenido extendido -->
@@ -177,6 +187,7 @@
         Por eso, cuidar el bienestar emocional de tu mascota no es solo un acto de bondad, ¡es también una experiencia que te enriquecerá a ti como persona!
     </p>
 </div>
+</main>
 </br></br></br>
 <button id="toTop" title="Ir arriba">
   <i class="fi fi-sr-arrow-up"></i>
@@ -184,6 +195,7 @@
     <!-- Enlace a tu archivo JavaScript -->
     <script src="tips-y-cuidados.js"></script>
     <script src="boton.js"></script>
+    <script src="letra.js"></script>
     <!--Fin del enlace con java-->
 </body>
 </html>
