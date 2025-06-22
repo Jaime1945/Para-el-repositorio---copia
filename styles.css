@@ -484,10 +484,22 @@ footer {
     color: #000000; /* Color negro */
 }
 /* Media queries para adaptabilidad */
-@media (max-width: 600px) {
+@media screen and (max-width: 768px) {
+  .contenedor {
+    flex-direction: column;       /* Apila las tarjetas verticalmente */
+    gap: 40px;                    /* Reduce el espacio entre tarjetas */
+    padding: 20px 10px;           /* Espaciado interno */
+    height: auto;                 /* Permite crecer con el contenido */
+    align-items: center;          /* Centra las tarjetas en columna */
+  }
+
   .tarjeta {
-    max-width: 90%; /* Más ancho en pantallas pequeñas */
-    border-radius: 15px;
+    width: 90%;                   /* Que ocupe casi todo el ancho disponible */
+    height: auto;                 /* Altura flexible según el contenido */
+  }
+
+  .tarjeta img {
+    height: 200px;                /* Imagen menos alta en móvil */
   }
 
   .tarjeta h3 {
@@ -495,7 +507,12 @@ footer {
   }
 
   .tarjeta p {
-    font-size: 12px;
+    font-size: 13px;
+  }
+
+  .adoptados {
+    width: 95%;
+    text-align: center;
   }
 }
 

@@ -32,31 +32,31 @@
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
-         <!-- Lista de enlaces del menú -->
-   <ul class="menu-links">
+                <!-- Lista de enlaces del menú -->
+     <ul class="menu-links">
     <li>
-        <a href="index.html" class="active">
+        <a href="index.html" class="active" id="menuInicio">
             <i class="fas fa-home"></i> Inicio
         </a>
     </li>
     <li class="dropdown">
-                <a href="#"><i class="fas fa-question-circle"></i>Guía y ayuda <i class="fas fa-angle-down"></i></a>
+                <a href="#" id="menuGuia"><i class="fas fa-question-circle"></i>Guía y ayuda <i class="fas fa-angle-down"></i></a>
                 <!--Submenus en un menu principal-->
                 <ul class="submenu">
-                    <li><a href="como-puedo-adoptar.html">¿como puedo adoptar? </a></li>
-                    <li><a href="tips-y-cuidados.html">Tips y Cuidados</a></li>
+                    <li><a href="como-puedo-adoptar.html" id="menuComoadopt">¿como puedo adoptar? </a></li>
+                    <li><a href="tips-y-cuidados.html" id="menuTips">Tips y Cuidados</a></li>
                     
                 </ul>
                 <!-- holis hice un cambio !!!-->
             </li>
             <li class="dropdown">
-                <a href="#"><i class="fas fa-dog"></i>Servicios <i class="fas fa-angle-down"></i></a>
+                <a href="#" id="menuServicios"><i class="fas fa-dog"></i>Servicios <i class="fas fa-angle-down"></i></a>
                 <ul class="submenu">
-                    <li><a href="Adopcion.html">Adopcion</a></li>
-                    <li><a href="#">Donaciones</a></li>
+                    <li><a href="Adopcion.html" id="menuAdopcion">Adopcion</a></li>
+                    <li><a href="Donaciones.html" id="menuDonaciones">Donaciones</a></li>
                 </ul>
             </li>
-            <li><a href="noticias.html"><i class="fas fa-newspaper"></i></i>Noticias</a></li>
+            <li><a href="noticias.html" id="menuNoticias"><i class="fas fa-newspaper"></i></i>Noticias</a></li>
 
         
             
@@ -66,11 +66,7 @@
                     <li><a href="Bitacora.html" id="menuBitacora">Bitacora </a></li>
                     <li><a href="comunidad.html" id="menuComunidad">Comunidad</a></li>
                 </ul>
-                <li>
-                    <button id="translateButton" onclick="toggleLanguage()"><i class="fa fa-language" aria-hidden="true"></i></button>
-                </li>
         </ul>
- 
  
         <!-- Barra de búsqueda en la esquina superior derecha -->
         <div class="search-bar">
@@ -80,11 +76,10 @@
             <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
         </div>
     </nav>
-
     <!--Sub menu 2-->
     <nav class="menu2">
         <li>
-          <button id="translateButton" onclick="toggleLanguage()"><i class="fa fa-language" aria-hidden="true"></i></button>
+          <button id="translateButton" onclick="toggleLanguage()"><i class="fi fi-sr-language" aria-hidden="true"></i></button>
         </li>
         <div class="botonera">
            <button onclick="ajustarContenido(-2)">A–</button>
@@ -93,7 +88,7 @@
            <button onclick="ajustarContenido(2)">A+</button>
          </div>
          <li>
-            <button id="InicioSesion" class="InicioSesionButton"><a href="Inicio-sesion.html">Iniciar Sesion</a></button>
+            <button id="InicioSesion" class="InicioSesionButton"><a href="Inicio-sesion.html" id="menuInicioSesion">Iniciar Sesion</a></button>
         </li>
     </nav>
     
@@ -136,6 +131,11 @@
         <p id="adoptar5"><strong>Preparativos para la llegada:</strong> Cómo adecuar tu hogar para una nueva mascota.</p>
         <p id="adoptar6"><strong>Responsabilidades:</strong> Alimentos, ejercicio, vacunas y esterilización.</p>
         <p id="adoptar7"><strong>Adiestramiento básico:</strong> Consejos para una convivencia armónica.</p>
+    </div>
+
+    <div class="container">
+        <h1 id="title4">¿Cómo adoptar a una mascota de forma responsable?</h1>
+        <p id="contentExtra">Adoptar a una mascota es un acto de responsabilidad y amor que implica mucho más que simplemente llevar un animal a casa. Significa abrirle espacio en tu vida, en tu rutina y en tu corazón, con la conciencia de que estará contigo durante muchos años. Antes de adoptar, es importante reflexionar si estás preparado para asumir ese compromiso: tener el tiempo, la paciencia y los recursos para cuidar de un ser vivo que dependerá totalmente de ti. En México, existen numerosas asociaciones y refugios que se dedican a rescatar perros y gatos en situación de abandono o maltrato. Muchos de estos animales llegan al refugio con historias difíciles, por lo que encontrarles un hogar representa una segunda oportunidad para ellos. El proceso de adopción suele incluir llenar un formulario, realizar una entrevista y, en algunos casos, permitir una visita a tu domicilio para comprobar que el entorno es adecuado. También se firma un compromiso en el que te haces responsable de su bienestar. Al adoptar, no solo estás cambiando la vida de un animal, también estás transformando la tuya. Las mascotas ofrecen compañía, cariño incondicional y un vínculo único. Sin embargo, también requieren atención médica, ejercicio, alimentación adecuada y socialización. Preparar tu casa, informarte sobre sus necesidades específicas y brindarle un entorno seguro son pasos esenciales para que la adaptación sea exitosa. La adopción no debe ser impulsiva ni temporal: debe ser una decisión consciente, tomada con el corazón y la razón. Porque cuando eliges adoptar, eliges ser parte de la solución, brindar esperanza y construir un vínculo para toda la vida.</p>
     </div>
 
     <!-- Reflexión final -->

@@ -36,31 +36,31 @@
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
-        <!-- Lista de enlaces del menú -->
-      <ul class="menu-links">
+                <!-- Lista de enlaces del menú -->
+     <ul class="menu-links">
     <li>
-        <a href="index.html" class="active">
+        <a href="index.html" class="active" id="menuInicio">
             <i class="fas fa-home"></i> Inicio
         </a>
     </li>
     <li class="dropdown">
-                <a href="#"><i class="fas fa-question-circle"></i>Guía y ayuda <i class="fas fa-angle-down"></i></a>
+                <a href="#" id="menuGuia"><i class="fas fa-question-circle"></i>Guía y ayuda <i class="fas fa-angle-down"></i></a>
                 <!--Submenus en un menu principal-->
                 <ul class="submenu">
-                    <li><a href="como-puedo-adoptar.html">¿como puedo adoptar? </a></li>
-                    <li><a href="tips-y-cuidados.html">Tips y Cuidados</a></li>
+                    <li><a href="como-puedo-adoptar.html" id="menuComoadopt">¿como puedo adoptar? </a></li>
+                    <li><a href="tips-y-cuidados.html" id="menuTips">Tips y Cuidados</a></li>
                     
                 </ul>
                 <!-- holis hice un cambio !!!-->
             </li>
             <li class="dropdown">
-                <a href="#"><i class="fas fa-dog"></i>Servicios <i class="fas fa-angle-down"></i></a>
+                <a href="#" id="menuServicios"><i class="fas fa-dog"></i>Servicios <i class="fas fa-angle-down"></i></a>
                 <ul class="submenu">
-                    <li><a href="Adopcion.html">Adopcion</a></li>
-                    <li><a href="#">Donaciones</a></li>
+                    <li><a href="Adopcion.html" id="menuAdopcion">Adopcion</a></li>
+                    <li><a href="Donaciones.html" id="menuDonaciones">Donaciones</a></li>
                 </ul>
             </li>
-            <li><a href="noticias.html"><i class="fas fa-newspaper"></i></i>Noticias</a></li>
+            <li><a href="noticias.html" id="menuNoticias"><i class="fas fa-newspaper"></i></i>Noticias</a></li>
 
         
             
@@ -70,7 +70,8 @@
                     <li><a href="Bitacora.html" id="menuBitacora">Bitacora </a></li>
                     <li><a href="comunidad.html" id="menuComunidad">Comunidad</a></li>
                 </ul>
-                <li>
+        </ul>
+ 
         <!-- Barra de búsqueda en la esquina superior derecha -->
         <div class="search-bar">
             <!-- Campo de texto donde los usuarios pueden escribir términos para buscar -->
@@ -79,17 +80,26 @@
             <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
         </div>
     </nav>
-    <div class="card">
-        <img src="" alt="">
-
-    </div>
-
-        </div>
-    </div>
+    <!--Sub menu 2-->
+    <nav class="menu2">
+        <li>
+          <button id="translateButton" onclick="toggleLanguage()"><i class="fi fi-sr-language" aria-hidden="true"></i></button>
+        </li>
+        <div class="botonera">
+           <button onclick="ajustarContenido(-2)">A–</button>
+         </div>
+         <div class="botonera">
+           <button onclick="ajustarContenido(2)">A+</button>
+         </div>
+         <li>
+            <button id="InicioSesion" class="InicioSesionButton"><a href="Inicio-sesion.html" id="menuInicioSesion">Iniciar Sesion</a></button>
+        </li>
+    </nav>
     
 </head>
 <body>
 
+    <main id="contenido-dinamico">
 <div class="mensaje-bienvenida">
     proximos eventos!
 </div>
@@ -119,19 +129,22 @@
         </div>
     </div>
 </div>
-
+    </main>
 <!-- Enlace a tu archivo JavaScript -->
     <script src="Noticias.js"></script>
+    <script src="boton.js"></script>
+    <script src="Buscador.js"></script>
     <!--Fin del enlace con java-->
 
 <!-- Footer-->
 <footer> <!--Derechos de "autor???"-->
         <p><marquee></marquee> </p>
         <div class="redes-sociales">
-      <a href="https://www.facebook.com/profile.php?id=61577340838350" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://facebook.com/tuperfil" target="_blank"><i class="fab fa-facebook-f"></i></a>
       <a href="https://www.instagram.com/casa_patitasfelices/?next=%2F" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://x.com/Casa_PatitasFec" target="_blank"><i class="fab fa-twitter"></i></a>
        </div>
+  </div>
     </footer>
 </body>
 </html>

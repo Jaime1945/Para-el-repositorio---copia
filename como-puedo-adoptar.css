@@ -70,21 +70,53 @@ header video {
     padding: 20px; /* Espaciado interno */
 }
 
-/*Botton traductor*/
+/*Botones en general*/
 button {
-    background-color: #FFBC9A;
+    background-color: #e5bdf5;
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
     margin: 5px;
+    list-style: none;
+}
+button:hover {
+    background-color:  #c8a7ee;
+    text-decoration: none;
+}
+/* Estilo específico del botón de inicio de sesión */
+.InicioSesionButton a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 
-button:hover {
-    background-color: #ffc16f;
+/* Quita subrayado al pasar el mouse */
+.InicioSesionButton a:hover {
+  text-decoration: none;
 }
+.menu2 ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+/* Este empuja el segundo <li> al extremo derecho */
+.menu2 li:last-child {
+  margin-left: auto;
+}
+.menu2 .spacer {
+  flex-grow: 3;
+}
+/**/
 
 /* Navegación */
 .navbar ul {
@@ -328,7 +360,7 @@ h1 {
 
     .submenu {
         position: static; /* Elimina la posición absoluta */
-        background-color: #1b1b1b; /* Color de fondo del submenú */
+        background-color: #ec88dc; /* Color de fondo del submenú */
         box-shadow: none; /* Sin sombra */
     }
 
@@ -341,16 +373,6 @@ h1 {
         margin: 10px 0; /* Margen arriba y abajo */
         justify-content: center; /* Centra la barra de búsqueda */
     }
-
-.menu-links a i:first-of-type  {
-    display: inline-flex;
-    align-items: center;
-    margin-right: 8px; /*espacio entre ícono y texto */
-    text-decoration: none;
-    font-size: 16px;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-}
 }
 
 footer {

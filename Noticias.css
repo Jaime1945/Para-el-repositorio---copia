@@ -60,6 +60,138 @@ h1 {
     margin-top: 0;
 }
 
+/*segundo header*/
+.menu2 {
+    /*background-image: url(https://th.bing.com/th/id/R.a8d1e00763015ca4435e13e54142f0d2?rik=Sk98rRIYxJYgUg&riu=http%3a%2f%2fst.depositphotos.com%2f1007566%2f2705%2fv%2f950%2fdepositphotos_27059235-stock-illustration-dog-footprint.jpg&ehk=%2bpXcVXTIflkV4Mn5tW4hfbkxkqnLobq0ciJE%2fHkqfrg%3d&risl=&pid=ImgRaw&r=0);*/
+    background-color: #df8bf7;/* Color del fondo del menú */
+    display: flex;/*Configuracion del fondo flexible*/
+    align-items: center;/*Alinea los elemntos verticalmente*/
+    padding: 10px 20px;/*Espaciado interno*/
+    flex-wrap: wrap;/* Permite que los elementos se ajusten */
+    box-sizing: border-box;
+    position: sticky;/* Fija el menú al scroll */
+    top: 0;/* Posición en la parte superior */
+    z-index: 1000;/* Prioriza la visibilidad del menú */
+    list-style: none; /* Quita los estilos de lista */
+}
+/* Estilos generales del submenú */
+.menu2 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Botones del submenú */
+.menu2 button {
+  background-color: #FFBC9A; /* Color pastel bonito */
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Íconos dentro del botón */
+.menu2 button i {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+/* Hover y efecto al hacer clic */
+.menu2 button:hover {
+  background-color: #e6a17e;
+  transform: translateY(-2px);
+}
+
+/* Estilo específico del botón de inicio de sesión */
+.InicioSesionButton a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Quita subrayado al pasar el mouse */
+.InicioSesionButton a:hover {
+  text-decoration: none;
+}
+.menu2 ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+/* Este empuja el segundo <li> al extremo derecho */
+.menu2 li:last-child {
+  margin-left: auto;
+}
+.menu2 .spacer {
+  flex-grow: 3;
+}
+/*Segundo header*/
+
+/*Botones en general*/
+button {
+    background-color: #e5bdf5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    list-style: none;
+}
+button:hover {
+    background-color:  #c8a7ee;
+    text-decoration: none;
+}
+/* Estilo específico del botón de inicio de sesión */
+.InicioSesionButton a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Quita subrayado al pasar el mouse */
+.InicioSesionButton a:hover {
+  text-decoration: none;
+}
+.menu2 ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+/* Este empuja el segundo <li> al extremo derecho */
+.menu2 li:last-child {
+  margin-left: auto;
+}
+.menu2 .spacer {
+  flex-grow: 3;
+}
+/**/
+
+
 /* Menú de navegación */
 .menu {
     /*background-image: url(https://th.bing.com/th/id/R.a8d1e00763015ca4435e13e54142f0d2?rik=Sk98rRIYxJYgUg&riu=http%3a%2f%2fst.depositphotos.com%2f1007566%2f2705%2fv%2f950%2fdepositphotos_27059235-stock-illustration-dog-footprint.jpg&ehk=%2bpXcVXTIflkV4Mn5tW4hfbkxkqnLobq0ciJE%2fHkqfrg%3d&risl=&pid=ImgRaw&r=0);*/
@@ -71,7 +203,7 @@ h1 {
     box-sizing: border-box;
     position: sticky;/* Fija el menú al scroll */
     top: 0;/* Posición en la parte superior */
-    z-index: 1000;/* Prioriza la visibilidad del menú */
+    z-index: 2000;/* Prioriza la visibilidad del menú */
 }
 
 .menu .logo img {
@@ -191,6 +323,58 @@ h1 {
     background-color: #bdf1f5; /* Fondo de resaltado */
 }
 
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-wrap: wrap; /* Permite que los elementos se ajusten a nuevas líneas */
+    }
+
+    .menu .logo {
+        flex: 1 1 100%; /* Ocupa el ancho completo */
+        text-align: center; /* Centra el logo */
+        margin-bottom: 10px; /* Espaciado inferior */
+    }
+
+    .menu .menu-toggle {
+        display: block; /* Muestra el botón de menú */
+    }
+
+    .menu .menu-links {
+        display: none; /* Oculta los enlaces del menú */
+        flex-direction: column; /* Organiza los enlaces en columna */
+        width: 100%; /* Ocupa el ancho completo */
+    }
+
+    .menu.active .menu-links {
+        display: flex; /* Muestra el menú cuando está activo */
+    }
+
+    .menu .menu-links li {
+        width: 100%; /* Cada elemento del menú ocupa el ancho completo */
+    }
+
+    .menu .menu-links a {
+        padding: 10px; /* Espaciado interno */
+        text-align: center; /* Centra el texto */
+    }
+
+    .submenu {
+        position: static; /* Elimina la posición absoluta */
+        background-color: #c770b8; /* Color de fondo del submenú */
+        box-shadow: none; /* Sin sombra */
+    }
+
+    .submenu a {
+        padding-left: 30px; /* Agrega espacio a la izquierda */
+    }
+
+    .menu .search-bar {
+        flex: 1 1 100%; /* Ocupa todo el ancho disponible */
+        margin: 10px 0; /* Margen arriba y abajo */
+        justify-content: center; /* Centra la barra de búsqueda */
+    }
+}
+
 /* Estilo para tarjetas dentro de la lista de cards que tienen clase "link" */
 .card-list .card-item .card.link {
     width: 400px;           /* Ancho fijo */
@@ -207,11 +391,13 @@ h1 {
 
 /* Estilos para el pie de página */
 footer {
-    background-color: #f4ebf8; /* Color de fondo */
-    color: #000000;            /* Color del texto */
-    text-align: center;        /* Centrado horizontal del texto */
-    padding: 10px 0;           /* Espaciado arriba y abajo */
-    width: 100%;               /* Ocupa todo el ancho disponible */
+    background-color: #f4ebf8; /* Color de fondo del pie de página */
+    color: #000000; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 10px 0; /* Espaciado interno */
+    position: relative; /* Fija el footer en la parte inferior */
+    bottom: 0; /* Lo mantiene pegado abajo */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
 }
 .redes-sociales {
   position: absolute;
@@ -365,4 +551,37 @@ footer {
         width: 90%;     /* Ancho casi completo del móvil */
         height: auto;   /* Altura automática para contenido variable */
     }
+}
+
+/* Estilo para el botón "Volver arriba" */
+#toTop {
+  position: fixed;              /* El botón se mantiene fijo en la pantalla al hacer scroll */
+  bottom: 35px;                 /* Separado 35px desde la parte inferior de la pantalla */
+  right: 30px;                  /* Separado 30px desde el borde derecho */
+  background-color: #FFBC9A;    /* Color de fondo naranja claro */
+  border: none;                 /* Sin borde */
+  border-radius: 50%;           /* Forma circular */
+  padding: 14px;                /* Espaciado interno para agrandar el área del botón */
+  cursor: pointer;              /* Muestra la mano al pasar el cursor */
+  font-size: 22px;              /* Tamaño del ícono o texto dentro del botón */
+  color: black;                 /* Color del contenido (ícono o texto) */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para dar efecto flotante */
+  z-index: 1000;                /* Asegura que esté encima de otros elementos */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color al hacer hover */
+}
+
+/* Estilo al pasar el cursor por encima del botón */
+#toTop:hover {
+  background-color: #f8b28e;    /* Color de fondo un poco más oscuro al hacer hover */
+}
+
+
+/*Funcion de hacer mas grande/chico el texto*/
+#contenido-dinamico {
+  font-size: 20px;
+  transition: font-size 0.3s ease;
+}
+
+#contenido-dinamico * {
+  font-size: inherit;
 }
