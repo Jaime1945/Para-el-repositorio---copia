@@ -71,7 +71,7 @@ header video {
 
 /*Boton de habilitacion del bot*/
 button { 
-    background-color: #f7b27b; 
+    background-color: #eccff3; /* Cambio de color al pasar el mouse */ 
     color: white; 
     border: none; 
     padding: 10px 20px; 
@@ -83,7 +83,7 @@ button {
     z-index: 10; /* Asegura que los botones estén sobre la imagen */
 }
 button:hover {
-    background-color: #ffc16f;
+    background-color:#c8a7ee;;
 }
 
 /*Botones en general*/
@@ -115,8 +115,85 @@ button:hover {
   margin-left: auto;
 }
 .menu2 .spacer {
-  flex-grow: 3;
+  flex-grow: 3;}
+  /*menu 2*/
+.menu2 {
+    /*background-image: url(https://th.bing.com/th/id/R.a8d1e00763015ca4435e13e54142f0d2?rik=Sk98rRIYxJYgUg&riu=http%3a%2f%2fst.depositphotos.com%2f1007566%2f2705%2fv%2f950%2fdepositphotos_27059235-stock-illustration-dog-footprint.jpg&ehk=%2bpXcVXTIflkV4Mn5tW4hfbkxkqnLobq0ciJE%2fHkqfrg%3d&risl=&pid=ImgRaw&r=0);*/
+    background-color: #aa91b1;/* Color del fondo del menú */
+    display: flex;/*Configuracion del fondo flexible*/
+    align-items: center;/*Alinea los elemntos verticalmente*/
+    padding: 10px 20px;/*Espaciado interno*/
+    flex-wrap: wrap;/* Permite que los elementos se ajusten */
+    box-sizing: border-box;
+    position: sticky;/* Fija el menú al scroll */
+    top: 0;/* Posición en la parte superior */
+    z-index: 1000;/* Prioriza la visibilidad del menú */
+    list-style: none; /* Quita los estilos de lista */
 }
+
+/* Submenús */
+.submenu {
+    display: none;  /* Oculta los submenús por defecto */
+    position: absolute;/* Submenús aparecen fuera del flujo */
+    background-color: #D4C5E2;/*Fondo de los submenus*/
+    top: 100%;/* Aparece debajo del menú principal */
+    left: 0;/*Alineado a la izquierda*/
+    min-width: 180px;/* Ancho mínimo */
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(184, 157,157);/* Sombra sutil */
+    z-index: 1000; /* Prioriza visibilidad de submenús */
+}
+
+.submenu li {
+    margin: 0; 
+    width: 100%; /* Ancho completo de los elementos */
+}
+
+.submenu a {
+    padding: 10px 20px; /* Espaciado interno */
+    color: #fff; /* Texto blanco */
+    font-weight: normal; /* Peso normal del texto */
+}
+
+.submenu a:hover { /* Cambia el color del menu al pasar el ratón */
+    background-color:  #D3A9DE;
+    color: #fff;
+}
+
+/* Barra de búsqueda */
+.menu .search-bar {
+    display: flex; /* Usa flexbox para alinear elementos */
+    align-items: center; /* Alinea elementos verticalmente */
+    margin-left: auto; /* Mueve la barra de búsqueda a la derecha */
+}
+
+.menu .search-bar input {
+    padding: 8px 10px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 20px 0 0 20px; /* Bordes redondeados en los lados izquierdos */
+    outline: none; /* Elimina el borde azul al hacer clic */
+    width: 150px; /* Ancho inicial */
+    transition: width 0.4s ease-in-out; /* Efecto de expansión */
+}
+
+.menu .search-bar input:focus {
+    width: 250px; /* Expande el campo de búsqueda al enfocarlo */
+}
+
+.menu .search-bar button {
+    padding: 8px 10px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    background-color: #D3A9DE; /* Color de fondo */
+    color: white; /* Color del texto */
+    border-radius: 0 20px 20px 0; /* Bordes redondeados en los lados derechos */
+    cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
+    outline: none; /* Elimina el borde azul al hacer clic */
+}
+
+.menu .search-bar button:hover {
+    background-color: #D29FDC; /* Cambio de color al pasar el mouse */
+}
+
 /**/
 /**/
 
