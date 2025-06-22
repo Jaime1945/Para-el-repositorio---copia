@@ -222,7 +222,7 @@ h1 {
 .submenu {
     display: none;  /* Oculta los submenús por defecto */
     position: absolute;/* Submenús aparecen fuera del flujo */
-    background-color: #eed7f1;/*Fondo de los submenus*/
+    background-color: #D4C5E2;/*Fondo de los submenus*/
     top: 100%;/* Aparece debajo del menú principal */
     left: 0;/*Alineado a la izquierda*/
     min-width: 180px;/* Ancho mínimo */
