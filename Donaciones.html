@@ -68,11 +68,10 @@
  
         <!-- Barra de búsqueda en la esquina superior derecha -->
         <div class="search-bar">
-            <!-- Campo de texto donde los usuarios pueden escribir términos para buscar -->
-            <input type="text" id="searchInput" placeholder="Buscar...">
-            <!-- Botón que inicia la búsqueda, incluye un ícono de lupa para mayor claridad -->
-            <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
-        </div>
+          <input type="text" id="site-search" placeholder="Buscar...">
+          <button onclick="handleSearch()"><i class="fas fa-search"></i></button>
+          <ul id="suggestions" class="suggestions-list"></ul>
+         </div>
     </nav>
     <!--Sub menu 2-->
     <nav class="menu2">
