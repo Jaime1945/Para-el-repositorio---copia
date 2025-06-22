@@ -375,6 +375,31 @@ button:hover {
     }
 }
 
+.suggestions-list {
+  position: absolute;
+  top: 100%; /* aparece justo debajo del input */
+  left: 0;
+  background-color: white;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 0 0 10px 10px;
+  margin-top: 0;
+  padding-left: 0;
+  list-style: none;
+  z-index: 1000;
+}
+
+.suggestions-list li {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.suggestions-list li:hover {
+  background-color: #f3e6fc;
+}
+
 /* Estilo para tarjetas dentro de la lista de cards que tienen clase "link" */
 .card-list .card-item .card.link {
     width: 400px;           /* Ancho fijo */
