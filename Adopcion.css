@@ -378,7 +378,7 @@ h1 {
 
     .submenu {
         position: static; /* Elimina la posición absoluta */
-        background-color: #1b1b1b; /* Color de fondo del submenú */
+        background-color: #ec88dc; /* Color de fondo del submenú */
         box-shadow: none; /* Sin sombra */
     }
 
@@ -394,8 +394,8 @@ h1 {
 }
 
 footer {
-    background-color: #f4ebf800; /* Color de fondo del  pie de página */
-    color: #AE84B6; /* Color del texto */
+    background-color: #f4ebf8; /* Color de fondo del pie de página */
+    color: #000000; /* Color del texto */
     text-align: center; /* Centra el texto */
     padding: 10px 0; /* Espaciado interno */
     position: relative; /* Fija el footer en la parte inferior */

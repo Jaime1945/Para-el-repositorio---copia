@@ -323,7 +323,7 @@ h1 {
 
     .submenu {
         position: static; /* Elimina la posición absoluta */
-        background-color: #1b1b1b; /* Color de fondo del submenú */
+        background-color: #ec88dc; /* Color de fondo del submenú */
         box-shadow: none; /* Sin sombra */
     }
 

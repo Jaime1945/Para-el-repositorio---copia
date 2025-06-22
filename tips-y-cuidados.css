@@ -362,7 +362,7 @@ h1 {
 
     .submenu {
         position: static; /* Elimina la posición absoluta */
-        background-color: #1b1b1b; /* Color de fondo del submenú */
+        background-color: #ec88dc; /* Color de fondo del submenú */
         box-shadow: none; /* Sin sombra */
     }
 
@@ -375,11 +375,6 @@ h1 {
         margin: 10px 0; /* Margen arriba y abajo */
         justify-content: center; /* Centra la barra de búsqueda */
     }
-footer {
-    background-color: #fff2f200; /* Color de fondo del pie de página */
-    color: #18011d; /* Color del texto */
-}
-
 }
 
 

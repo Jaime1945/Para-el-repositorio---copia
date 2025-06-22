@@ -323,6 +323,58 @@ button:hover {
     background-color: #bdf1f5; /* Fondo de resaltado */
 }
 
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-wrap: wrap; /* Permite que los elementos se ajusten a nuevas líneas */
+    }
+
+    .menu .logo {
+        flex: 1 1 100%; /* Ocupa el ancho completo */
+        text-align: center; /* Centra el logo */
+        margin-bottom: 10px; /* Espaciado inferior */
+    }
+
+    .menu .menu-toggle {
+        display: block; /* Muestra el botón de menú */
+    }
+
+    .menu .menu-links {
+        display: none; /* Oculta los enlaces del menú */
+        flex-direction: column; /* Organiza los enlaces en columna */
+        width: 100%; /* Ocupa el ancho completo */
+    }
+
+    .menu.active .menu-links {
+        display: flex; /* Muestra el menú cuando está activo */
+    }
+
+    .menu .menu-links li {
+        width: 100%; /* Cada elemento del menú ocupa el ancho completo */
+    }
+
+    .menu .menu-links a {
+        padding: 10px; /* Espaciado interno */
+        text-align: center; /* Centra el texto */
+    }
+
+    .submenu {
+        position: static; /* Elimina la posición absoluta */
+        background-color: #c770b8; /* Color de fondo del submenú */
+        box-shadow: none; /* Sin sombra */
+    }
+
+    .submenu a {
+        padding-left: 30px; /* Agrega espacio a la izquierda */
+    }
+
+    .menu .search-bar {
+        flex: 1 1 100%; /* Ocupa todo el ancho disponible */
+        margin: 10px 0; /* Margen arriba y abajo */
+        justify-content: center; /* Centra la barra de búsqueda */
+    }
+}
+
 /* Estilo para tarjetas dentro de la lista de cards que tienen clase "link" */
 .card-list .card-item .card.link {
     width: 400px;           /* Ancho fijo */
