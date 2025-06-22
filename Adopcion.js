@@ -132,7 +132,7 @@ function toggleLanguage() {
             pet9_name:"Copito",
             pet9_info:"Chihuahua | Young | Male | White",
             pet10_name:"Mikis",
-            pet10_info:"Raza unica | Hembra | Cafe",
+            pet10_info:"Unique breed | Female | Brown",
             pet11_name:"Milly",
             pet11_info:"Unique breed | Female | Brown", 
             pet12_name:"Michi",
