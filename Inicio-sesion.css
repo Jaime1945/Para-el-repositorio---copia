@@ -1,128 +1,168 @@
-*{
-margin: 0;
- padding: 0; 
- box-sizing: border-box; 
- font-family: "Roboto", sans-serif;
+/* Establece márgenes y padding en 0, y usa box-sizing para que el padding y el borde no aumenten el tamaño total */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
+
+/* Centra el contenido del body tanto vertical como horizontalmente, y le da un fondo con gradiente */
 body {
-display: flex;
-align-items: center;
-justify-content: center;
-min-height: 100vh; width: 100%;
-padding: 0 10px;
-background: Linear-gradient(135deg, #b9c5e5 0%,#256e6e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 10px;
+  background: linear-gradient(135deg, #b9c5e5 0%, #256e6e 100%);
 }
-body::before {  
-content:"";
-position: absolute;
-width: 100%; 
-height: 100%;
-background: url(Imagenes/perro-en-el-pasto_6000x4000_xtrafondos.com.jpg)#d6fff5;
-background-position:center;
-background-size:cover; 
-z-index:-1;
+
+/* Capa de fondo antes del contenido del body con una imagen de fondo */
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(Imagenes/perro-en-el-pasto_6000x4000_xtrafondos.com.jpg) #d6fff5;
+  background-position: center;
+  background-size: cover;
+  z-index: -1; /* Coloca la imagen detrás del contenido */
 }
+
+/* Contenedor principal del formulario */
 .wrapper {
-width:400px;
-border-radius: 15px;
- padding: 40px;
-text-align: center;
-background: rgba(255, 255, 255, 0.1);
-border: 1px solid gba (255,255, 255, 0.2);
-backdrop-filter: blur (20px);
--webkit-backdrop-filter: blur (20px);
-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-transition: all 0.3s ease;
+  width: 400px;
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Borde translúcido */
+  backdrop-filter: blur(20px); /* Efecto de desenfoque */
+  -webkit-backdrop-filter: blur(20px); /* Soporte para Safari */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37); /* Sombra alrededor del contenedor */
+  transition: all 0.3s ease;
 }
+
+/* Efecto hover para aumentar la sombra */
 .wrapper:hover {
-box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
 }
+
+/* Estilo del formulario para apilar los elementos verticalmente */
 form {
- display: flex;
+  display: flex;
   flex-direction: column;
 }
-h2 { 
-font-size: 2.2rem; 
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-margin-bottom: 20px;
- color: #ffff;
+
+/* Título principal del formulario */
+h2 {
+  font-size: 2.2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 20px;
+  color: #ffff;
   letter-spacing: 1px;
 }
+
+/* Contenedor de cada campo de entrada */
 .input-field {
-position: relative;
-border-bottom: 2px solid rgba(255, 255, 255, 0.61); 
-margin: 20px 0;
+  position: relative;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.61);
+  margin: 20px 0;
 }
+
+/* Estilo de la etiqueta (label) que aparece sobre el input */
 .input-field label {
-position: absolute; 
-top: 50%;
- left: 0;
-  transform:translateY(-50%);
-color:#ffffff;
-font-size: 16px; 
-pointer-events: none;
- transition:0.3s ease;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s ease;
 }
+
+/* Estilo del campo de entrada */
 .input-field input {
-width: 100%;
- height: 40px;
+  width: 100%;
+  height: 40px;
   background: transparent;
-   border: none; 
-   outline: none;
-    font-size: 16px;
-     color:#ffffff;
-padding: 0 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 0 10px;
 }
-.input-field input:focus~Label, 
-.input-field input:valid~label {
- font-size: 0.9rem;
- top: 10px;
- transform: translateY(-150%); 
- color: #ffdde1;
+
+/* Cuando el input tiene foco o ya tiene texto, mueve la etiqueta hacia arriba */
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+  font-size: 0.9rem;
+  top: 10px;
+  transform: translateY(-150%);
+  color: #ffdde1;
 }
-.forget { 
-display: flex;
-align-items: center; 
-justify-content: space-between;
-margin: 25px 0 35px 0;
-color:#ffffff;
+
+/* Contenedor para recordar usuario y recuperar contraseña */
+.forget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0 35px 0;
+  color: #ffffff;
 }
-#remember{
- accent-color: #ffdde1;
+
+/* Estilo del checkbox para que coincida con la paleta */
+#remember {
+  accent-color: #ffdde1;
 }
+
+/* Alinea el checkbox y el texto */
 .forget label {
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 }
-.forget label p { 
-margin-left: 8px;
+
+/* Margen izquierdo entre checkbox y el texto */
+.forget label p {
+  margin-left: 8px;
 }
-.wrapper a { 
- color: #ffdde1;
- text-decoration: none;
+
+/* Estilo para los enlaces dentro del wrapper */
+.wrapper a {
+  color: #ffdde1;
+  text-decoration: none;
 }
+
+/* Subrayado al pasar el mouse por los enlaces */
 .wrapper a:hover {
-text-decoration:underline;
+  text-decoration: underline;
 }
+
+/* Estilo del botón de enviar */
 button {
-background-color: #271930;
- color: #ffffff;
-font-weight: 600;
-border: none;
-padding: 15px 20px;
- cursor: pointer;
-border-radius: 25px;
- font-size: 16px;
-border: 2px solid transparent;
- transition: all 0.3s ease;
+  background-color: #271930;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
 }
-button:hover{
-    color: #000;
-    background: rgba(255,255,255,0.2);
-    border-color: #ffffff;
+
+/* Efecto hover para el botón */
+button:hover {
+  color: #000;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff;
 }
+
+/* Texto de "¿No tienes cuenta?" debajo del formulario */
 .register {
-    text-align: center;
-    margin-top: 30px;
-    color: #ffffff;
+  text-align: center;
+  margin-top: 30px;
+  color: #ffffff;
 }
