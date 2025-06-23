@@ -894,7 +894,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // ---------------------------------------------------------------
         setTimeout(function() {
           console.log('Redirigiendo a página de agradecimiento...');
-          window.location.href = 'gracias.html';
+          window.location.href = 'Adopcion.html';
         }, 3000); // Esperar 3 segundos antes de redirigir
         
       })
