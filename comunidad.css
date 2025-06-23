@@ -86,7 +86,7 @@ header video {
 
 /* Botones del submenú */
 .menu2 button {
-  background-color: #FFBC9A; /* Color pastel bonito */
+  background-color: #eccff3; /* Color pastel bonito */
   border: none;
   border-radius: 10px;
   padding: 10px 14px;
@@ -108,7 +108,7 @@ header video {
 
 /* Hover y efecto al hacer clic */
 .menu2 button:hover {
-  background-color: #e6a17e;
+  background-color: #D29FDC;
   transform: translateY(-2px);
 }
 
@@ -145,7 +145,7 @@ header video {
 
 /*Botones en general*/
 button {
-    background-color: #e5bdf5;
+    background-color: #eccff3; /* Cambio de color al pasar el mouse */ 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -160,6 +160,7 @@ button:hover {
     background-color:  #c8a7ee;
     text-decoration: none;
 }
+
 /* Estilo específico del botón de inicio de sesión */
 .InicioSesionButton a {
   text-decoration: none;

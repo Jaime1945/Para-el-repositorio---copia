@@ -35,7 +35,7 @@ header {
 
 /*Botton en general*/
 button {
-    background-color: #FFBC9A;
+    background-color: #eccff3; /* Cambio de color al pasar el mouse */ 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -203,6 +203,8 @@ h1 {
     display: block; /* Muestra el submenú al pasar el mouse o al enfocarlo */
 }
 
+
+
 /*menu 2*/
 .menu2 {
     /*background-image: url(https://th.bing.com/th/id/R.a8d1e00763015ca4435e13e54142f0d2?rik=Sk98rRIYxJYgUg&riu=http%3a%2f%2fst.depositphotos.com%2f1007566%2f2705%2fv%2f950%2fdepositphotos_27059235-stock-illustration-dog-footprint.jpg&ehk=%2bpXcVXTIflkV4Mn5tW4hfbkxkqnLobq0ciJE%2fHkqfrg%3d&risl=&pid=ImgRaw&r=0);*/
@@ -243,7 +245,7 @@ h1 {
 }
 
 .submenu a:hover { /* Cambia el color del menu al pasar el ratón */
-    background-color:  #e1b2ec;
+    background-color:  #D3A9DE;
     color: #fff;
 }
 
@@ -270,7 +272,7 @@ h1 {
 .menu .search-bar button {
     padding: 8px 10px; /* Espaciado interno */
     border: none; /* Sin borde */
-    background-color: #c9f1f7; /* Color de fondo */
+    background-color: #D3A9DE; /* Color de fondo */
     color: white; /* Color del texto */
     border-radius: 0 20px 20px 0; /* Bordes redondeados en los lados derechos */
     cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
@@ -278,9 +280,8 @@ h1 {
 }
 
 .menu .search-bar button:hover {
-    background-color: #94e0eb; /* Cambio de color al pasar el mouse */
+    background-color: #D29FDC; /* Cambio de color al pasar el mouse */
 }
-
 /* Resaltado */
 .highlight {
     background-color: #bdf1f5; /* Fondo de resaltado */
@@ -453,7 +454,7 @@ td {
   position: fixed;              /* El botón se mantiene fijo en la pantalla al hacer scroll */
   bottom: 35px;                 /* Separado 35px desde la parte inferior de la pantalla */
   right: 30px;                  /* Separado 30px desde el borde derecho */
-  background-color: #FFBC9A;    /* Color de fondo naranja claro */
+  background-color: #D4C5E2; /* Color de fondo naranja claro */
   border: none;                 /* Sin borde */
   border-radius: 50%;           /* Forma circular */
   padding: 14px;                /* Espaciado interno para agrandar el área del botón */
