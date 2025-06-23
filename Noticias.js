@@ -50,40 +50,60 @@ const newsData = [
     }
   }
   
-  // Carga inicial de noticias al entrar en la página
-  loadMoreNews();
-  
+//Traductor ingles/español
+function toggleLanguage() {
+    let button = document.getElementById("translateButton");
+    let currentLang = document.documentElement.lang || "es";
+//function translatePage(lang) {
+    const translations = {
+        en: {
+            //menus
+            menuInicio: "Home",
+            menuGuia: "Guide and Help",
+            menuComoadopt: "How can I adopt?",
+            menuTips: "Tips and care",
+            menuServicios: "Services",
+            menuAdopcion: "Adoption",
+            menuDonaciones: "Donations",
+            menuNoticias: "News",
+            menuExtras: "Extras",
+            menuBitacora: "Logbook",
+            menuComunidad: "community",
+            menuInicioSesion: "Log In",
+            mensaje_bienvenida: "upcoming events!",
+        },
+        es: {
+            //menus
+            menuInicio: "Inicio",
+            menuGuia: "Guia y ayuda",
+            menuComoadopt: "¿Como puedo adoptar?",
+            menuTips: "Tips y cuidados",
+            menuServicios: "Servicios",
+            menuAdopcion: "Adopcion",
+            menuDonaciones: "Donaciones",
+            menuNoticias: "Noticias",
+            menuExtras: "Extras",
+            menuBitacora: "Bitacora",
+            menuComunidad: "Comunidad",
+            menuInicioSesion: "Iniciar Sesion",
+            mensaje_bienvenida: "proximos eventos!",
+        }
+    };
 
-  //Adaptador de pantalla
-function ajustarContenido() {
-  let anchoPantalla = window.innerWidth;
+    //Object.keys(translations[lang]).forEach(id => {
+      //  document.getElementById(id).innerText = translations[lang][id];
+    //});
+    let newLang = currentLang === "es" ? "en" : "es";
+    document.documentElement.lang = newLang;
+    
+    // Actualizar el texto del botón sin afectar otros elementos
+    button.textContent = translations[newLang].buttonText;
 
-  if (anchoPantalla <= 1024) { // Para tablets y móviles
-      document.body.style.fontSize = anchoPantalla <= 600 ? "12px" : "14px";
-
-      document.querySelectorAll("img, video").forEach(el => {
-          el.style.width = "100%";
-          el.style.height = "auto";
-      });
-
-      document.querySelectorAll("button").forEach(btn => {
-          btn.style.padding = anchoPantalla <= 600 ? "6px 12px" : "8px 15px";
-          btn.style.fontSize = anchoPantalla <= 600 ? "12px" : "14px";
-      });
-
-      document.querySelectorAll("p, h1, h2, h3").forEach(texto => {
-          texto.style.maxWidth = "90%";
-          texto.style.margin = "auto";
-          texto.style.textAlign = "center";
-      });
-  } else {
-      document.body.style.fontSize = "16px"; // Mantener tamaño estándar en pantallas grandes
-  }
+    // Recorrer todos los elementos con "data-key" y actualizar el texto
+    document.querySelectorAll("[id]").forEach(element => {
+        let key = element.getAttribute("id");
+        if (translations[newLang][key]) {
+            element.textContent = translations[newLang][key];
+        }
+    });
 }
-
-// Ejecutar en carga y cuando cambie tamaño
-window.onload = ajustarContenido;
-window.onresize = ajustarContenido;
-
-
-//Fin de lo del adptador de pantalla

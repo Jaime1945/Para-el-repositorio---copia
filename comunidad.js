@@ -15,6 +15,12 @@ const comentariosIniciales = [
     imagen: null,
     likes: 0,
     respuestas: []
+  },
+  {
+    texto: "I would like to adopt but I don't have the right space :(",
+    imagen: null,
+    likes: 3,
+    respuestas: []
   }
 ];
 
@@ -137,4 +143,68 @@ function renderRespuesta(texto, contenedor, likes = 0) {
   div.appendChild(btnLike);
 
   contenedor.appendChild(div);
+}
+
+
+//Traductor de la pagina
+function toggleLanguage() {
+    let button = document.getElementById("translateButton");
+    let currentLang = document.documentElement.lang || "es";
+//function translatePage(lang) {
+    const translations = {
+        en: {
+          //contenido
+          title: "Happy Paw House Community",
+          content: "Share your stories, images, and respond to other animal lovers. This is a space designed to connect hearts that beat for the same cause: love and respect for our furry companions. Whether you have adopted, rescued, lost, found, or just want to share a funny anecdote, here you have a place where your voice is heard and valued. Post your favorite photos, respond to other experiences, and join this supportive network where every story adds hope.",
+          boton_publicar: "to publish",
+
+          //menus
+            menuInicio: "Home",
+            menuGuia: "Guide and Help",
+            menuComoadopt: "How can I adopt?",
+            menuTips: "Tips and care",
+            menuServicios: "Services",
+            menuAdopcion: "Adoption",
+            menuDonaciones: "Donations",
+            menuNoticias: "News",
+            menuExtras: "Extras",
+            menuBitacora: "Logbook",
+            menuComunidad: "community",
+            menuInicioSesion: "Log In",
+        },
+        es: {
+          //contenido
+          title: "Comunidad Casa patitas felices",
+          content: "Comparte tus historias, imágenes y responde a otros amantes de los animales. Este es un espacio pensado para conectar corazones que laten por la misma causa: el amor y respeto por nuestros compañeros peludos. Ya sea que hayas adoptado, rescatado, perdido, encontrado, o simplemente quieras contar una anécdota graciosa, aquí tienes un lugar donde tu voz es escuchada y valorada. Publica tus fotos favoritas, responde a otras experiencias y únete a esta red solidaria donde cada historia suma esperanza.",
+          boton_publicar: "Publicar",
+
+          //menus
+            menuInicio: "Inicio",
+            menuGuia: "Guia y ayuda",
+            menuComoadopt: "¿Como puedo adoptar?",
+            menuTips: "Tips y cuidados",
+            menuServicios: "Servicios",
+            menuAdopcion: "Adopcion",
+            menuDonaciones: "Donaciones",
+            menuNoticias: "Noticias",
+            menuExtras: "Extras",
+            menuBitacora: "Bitacora",
+            menuComunidad: "Comunidad",
+            menuInicioSesion: "Iniciar Sesion",
+        }
+    };
+  
+ let newLang = currentLang === "es" ? "en" : "es";
+    document.documentElement.lang = newLang;
+    
+    // Actualizar el texto del botón sin afectar otros elementos
+    button.textContent = translations[newLang].buttonText;
+
+    // Recorrer todos los elementos con "data-key" y actualizar el texto
+    document.querySelectorAll("[id]").forEach(element => {
+        let key = element.getAttribute("id");
+        if (translations[newLang][key]) {
+            element.textContent = translations[newLang][key];
+        }
+    });
 }

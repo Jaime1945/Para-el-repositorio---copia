@@ -135,7 +135,21 @@ const traduccionesFormularios = {
       actividades: "¿En qué te gustaría ayudar?",
       placeholder: "Pasear perritos, limpieza, difusión en redes...",
       boton: "Enviar",
-      alerta: "¡Gracias por querer formar parte del equipo! 🤝"
+      alerta: "¡Gracias por querer formar parte del equipo! 🤝",
+
+      //menus
+            menuInicio: "Inicio",
+            menuGuia: "Guia y ayuda",
+            menuComoadopt: "¿Como puedo adoptar?",
+            menuTips: "Tips y cuidados",
+            menuServicios: "Servicios",
+            menuAdopcion: "Adopcion",
+            menuDonaciones: "Donaciones",
+            menuNoticias: "Noticias",
+            menuExtras: "Extras",
+            menuBitacora: "Bitacora",
+            menuComunidad: "Comunidad",
+            menuInicioSesion: "Iniciar Sesion",
     }
   },
   en: {
@@ -172,7 +186,21 @@ const traduccionesFormularios = {
       actividades: "How would you like to help?",
       placeholder: "Walk dogs, cleaning, social media outreach...",
       boton: "Submit",
-      alerta: "Thanks for joining the team! 🤝"
+      alerta: "Thanks for joining the team! 🤝",
+
+      //menus
+            menuInicio: "Home",
+            menuGuia: "Guide and Help",
+            menuComoadopt: "How can I adopt?",
+            menuTips: "Tips and care",
+            menuServicios: "Services",
+            menuAdopcion: "Adoption",
+            menuDonaciones: "Donations",
+            menuNoticias: "News",
+            menuExtras: "Extras",
+            menuBitacora: "Logbook",
+            menuComunidad: "community",
+            menuInicioSesion: "Log In",
     }
   }
 };
