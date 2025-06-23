@@ -1,72 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const menu = document.querySelector('.menu');
-    const menuToggle = menu.querySelector('.menu-toggle');
-    const searchInput = document.getElementById('searchInput');
-    const searchButton = document.getElementById('searchButton');
-    const content = document.body; // Cambiado para buscar en todo el cuerpo del documento
-
-    // Mostrar/ocultar menú en dispositivos móviles
-    menuToggle.addEventListener('click', function () {
-        menu.classList.toggle('active');
-    });
-
-    // Función para resaltar texto dentro del contenido
-    function highlightText(text) {
-        // Eliminar resaltados previos
-        const highlightedElements = content.querySelectorAll('.highlight');
-        highlightedElements.forEach(function (element) {
-            const parent = element.parentNode;
-            parent.replaceChild(document.createTextNode(element.textContent), element);
-            parent.normalize();
-        });
-
-        if (text === '') {
-            return;
-        }
-
-        const regex = new RegExp(`(${text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-
-        const walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null, false);
-        const textNodes = [];
-
-        while (walker.nextNode()) {
-            textNodes.push(walker.currentNode);
-        }
-
-        textNodes.forEach(function (node) {
-            if (regex.test(node.nodeValue)) {
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = node.nodeValue.replace(regex, '<span class="highlight">$1</span>');
-                const fragment = document.createDocumentFragment();
-                Array.from(tempDiv.childNodes).forEach(function (child) {
-                    fragment.appendChild(child);
-                });
-                node.parentNode.replaceChild(fragment, node);
-            }
-        });
-    }
-
-    // Manejar la búsqueda
-    function handleSearch() {
-        const searchTerm = searchInput.value.trim();
-        highlightText(searchTerm);
-
-        // Desplazarse al primer resultado
-        const firstMatch = content.querySelector('.highlight');
-        if (firstMatch) {
-            firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-    }
-
-    // Eventos del buscador
-    searchButton.addEventListener('click', handleSearch);
-    searchInput.addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-            handleSearch();
-        }
-    });
-});
-
 //Bot
 const params = new URL(window.location.href).searchParams;
 const configParams = params.get("config");
@@ -211,17 +142,21 @@ function tryDecode(str) {
           text15: "La interacción diaria fortalece la relación entre dueño y mascota.",
           text16: "Dedica tiempo para juegos y ejercicio, esenciales para su bienestar.",
           menuInicio: "Inicio",
-          menuGuia: "Guía y ayuda",
-          menuAdoptar: "¿Cómo puedo adoptar?",
-          menuCuidados: "Tips y Cuidados",
-          menuServicios: "Servicios",
-          menuAdopcion: "Adopción",
-          menuDonaciones: "Donaciones",
-          menuNoticias: "Noticias",
-          menuContactos: "Contactos",
-          searchInput: "Buscar...",
-          Ingles: "Traducir a Inglés",
-          Español:"Traducir a Español",
+          //menus
+            menuInicio: "Inicio",
+            menuGuia: "Guia y ayuda",
+            menuComoadopt: "¿Como puedo adoptar?",
+            menuTips: "Tips y cuidados",
+            menuServicios: "Servicios",
+            menuAdopcion: "Adopcion",
+            menuDonaciones: "Donaciones",
+            menuNoticias: "Noticias",
+            menuExtras: "Extras",
+            menuBitacora: "Bitacora",
+            menuComunidad: "Comunidad",
+            menuInicioSesion: "Iniciar Sesion",
+
+          boton_bot: "Habilitar bot",
       },
       en: {
          intro: "Recommended Tips and Care",
@@ -258,18 +193,20 @@ function tryDecode(str) {
           title6: "Love and Quality Time",
           text15: "Daily interaction strengthens emotional bonds between owner and pet.",
           text16: "Engage in fun activities and exercise to ensure overall well-being.",
-          menuInicio: "Home",
-          menuGuia: "Guide and Help",
-          menuAdoptar: "How can I adopt?",
-          menuCuidados: "Tips and Care",
-          menuServicios: "Services",
-          menuAdopcion: "Adoption",
-          menuDonaciones: "Donations",
-          menuNoticias: "News",
-          menuContactos: "Contacts",
-          searchInput: "Search...",
-          Ingles: "Translate to English",
-          Español:"Translate to Spanish",
+          //menus
+            menuInicio: "Home",
+            menuGuia: "Guide and Help",
+            menuComoadopt: "How can I adopt?",
+            menuTips: "Tips and care",
+            menuServicios: "Services",
+            menuAdopcion: "Adoption",
+            menuDonaciones: "Donations",
+            menuNoticias: "News",
+            menuExtras: "Extras",
+            menuBitacora: "Logbook",
+            menuComunidad: "community",
+            menuInicioSesion: "Log In",
+          boton_bot: "Enable bot",
       },
   };
 

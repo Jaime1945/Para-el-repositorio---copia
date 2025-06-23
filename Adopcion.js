@@ -202,18 +202,22 @@ function toggleLanguage() {
             desc1: "uh.",
             desc2: "Copito is a kitten full of energy and curiosity. With his restless paws and ever-wagging tail, he is ready to explore the world by your side. He loves to play, run, and discover new things, but also enjoys hugs and naps after a fun-filled day.",
             desc3: "Luna is a puppy full of energy and love. With those bright eyes full of curiosity, she is ready to find her forever home. She loves to run, play with balls, and snuggle up after a day of adventures.",
+            //menus
             menuInicio: "Home",
             menuGuia: "Guide and Help",
-            menuAdoptar: "How can I adopt?",
-            menuCuidados: "Tips and Care",
+            menuComoadopt: "How can I adopt?",
+            menuTips: "Tips and care",
             menuServicios: "Services",
             menuAdopcion: "Adoption",
             menuDonaciones: "Donations",
             menuNoticias: "News",
-            menuContactos: "Contacts",
-            searchInput: "Search...",
+            menuExtras: "Extras",
+            menuBitacora: "Logbook",
+            menuComunidad: "community",
+            menuInicioSesion: "Log In",
             titulo_mascoadoptadas:"Adopted pets!!!",
-            Adop_button:"ADOPT"
+            Adop_button:"ADOPT",
+            Historia: "History"
 
         },
         es: {
@@ -325,18 +329,22 @@ function toggleLanguage() {
             desc1: "Muñeco es un perrito noble y amoroso que solo quiere dar y recibir cariño. Es tranquilo, le encanta dormir acurrucado y siempre está listo para una buena sesión de caricias. Se lleva bien con otros perritos y con niños, haciendo de él el compañero ideal para cualquier familia.",
             desc2: "Copito es un gatito lleno de energía y curiosidad. Con sus patitas inquietas y su colita siempre moviéndose, está listo para explorar el mundo a tu lado. Le encanta jugar, correr y descubrir cosas nuevas, pero también disfruta de los abrazos y las siestas después de un día lleno de diversión.",
             desc3: "Luna es una cachorrita llena de energía y amor. Con esos ojitos brillantes llenos de curiosidad, está lista para encontrar su hogar definitivo. Le encanta correr, jugar con pelotas y acurrucarse después de un día de aventuras.",
+            //menus
             menuInicio: "Inicio",
-            menuGuia: "Guía y ayuda",
-            menuAdoptar: "¿Cómo puedo adoptar?",
-            menuCuidados: "Tips y Cuidados",
+            menuGuia: "Guia y ayuda",
+            menuComoadopt: "¿Como puedo adoptar?",
+            menuTips: "Tips y cuidados",
             menuServicios: "Servicios",
-            menuAdopcion: "Adopción",
+            menuAdopcion: "Adopcion",
             menuDonaciones: "Donaciones",
             menuNoticias: "Noticias",
-            menuContactos: "Contactos",
-            searchInput: "Buscar...",
+            menuExtras: "Extras",
+            menuBitacora: "Bitacora",
+            menuComunidad: "Comunidad",
+            menuInicioSesion: "Iniciar Sesion",
             titulo_mascoadoptadas:"Mascotas adoptadas!!!",
-            Adop_button:"ADOPTAR",
+            Adop_button: "ADOPTAR",
+            Historia: "Historia",
         }
     };
     

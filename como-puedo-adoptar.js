@@ -5,6 +5,20 @@ function toggleLanguage() {
 //function translatePage(lang) {
     const translations = {
         en: {
+            //menus
+            menuInicio: "Home",
+            menuGuia: "Guide and Help",
+            menuComoadopt: "How can I adopt?",
+            menuTips: "Tips and care",
+            menuServicios: "Services",
+            menuAdopcion: "Adoption",
+            menuDonaciones: "Donations",
+            menuNoticias: "News",
+            menuExtras: "Extras",
+            menuBitacora: "Logbook",
+            menuComunidad: "community",
+            menuInicioSesion: "Log In",
+
             title: "¿How can I adopt?",
             content: "Adopting an animal is a wonderful decision! Adopting instead of buying has many benefits, both for the animal and for you, since you give a second chance to beings who need a home. Here is some general information on how to adopt a furry friend!",
             title1: "Benefits of Adopting🐾",
@@ -30,6 +44,20 @@ function toggleLanguage() {
         },
         es: {
             title: "¿como puedo adoptar?",
+            //menus
+            menuInicio: "Inicio",
+            menuGuia: "Guia y ayuda",
+            menuComoadopt: "¿Como puedo adoptar?",
+            menuTips: "Tips y cuidados",
+            menuServicios: "Servicios",
+            menuAdopcion: "Adopcion",
+            menuDonaciones: "Donaciones",
+            menuNoticias: "Noticias",
+            menuExtras: "Extras",
+            menuBitacora: "Bitacora",
+            menuComunidad: "Comunidad",
+            menuInicioSesion: "Iniciar Sesion",
+
             content: "Adoptar un animal es una decisión maravillosa! Adoptar en lugar de comprar tiene muchos beneficios, tanto para el animal como para ti, ya que les das una segunda oportunidad a seres que necesitan un hogar. A continuacion te dejo información general sobre cómo adoptar un peludito!",
             title1: "Beneficios de Adoptar🐾",
             beneficio1: "Salvas una vida: Al adoptar, le das un hogar a un animal que lo necesita.",
