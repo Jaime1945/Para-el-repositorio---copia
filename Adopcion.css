@@ -649,94 +649,99 @@ footer {
 
 /* Repetido: estilo de imagen del perfil */
 .profile-img {
-    width: 100%;
-    max-width: 250px;
-    border-radius: 10px;
+    width: 100%;               /* La imagen ocupará el 100% del ancho disponible de su contenedor */
+    max-width: 250px;          /* No excederá los 250px de ancho */
+    border-radius: 10px;       /* Bordes redondeados de 10px */
 }
 
 /* Contenedor de las barras de calificación */
 .rating-bar {
-  background-color: #ddd;
+  background-color: #ddd;      /* Color de fondo gris claro para la barra */
+  height: 10px;                /* Altura de la barra */
+  border-radius: 10px;         /* Bordes redondeados */
+  overflow: hidden;            /* Oculta cualquier contenido que se desborde */
+  margin-bottom: 10px;         /* Espacio inferior entre barras */
+}
+
+/* Barra que representa el valor de la calificación */
+.rating {
+  height: 100%;                /* Coincide con la altura de su contenedor */
+  width: 0%;                   /* Comienza vacía, se llenará dinámicamente */
+  background-color: #3498db;   /* Color azul para representar el progreso */
+  border-radius: 10px;         /* Bordes redondeados */
+  transition: width 1.2s ease-in-out; /* Animación suave al cambiar el ancho */
+}
+
+/* Repetido: barras dentro de un contenedor con clase .ratings */
+.ratings .rating-bar {
+  background-color: #ddd;      /* Mismo fondo gris claro */
   height: 10px;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 10px;
 }
-.rating {
+
+.ratings .rating {
   height: 100%;
   width: 0%;
-  background-color: #3498db;
+  background-color: #b0d3e7;   /* Azul más claro que el anterior */
   border-radius: 10px;
   transition: width 1.2s ease-in-out;
 }
 
-    .ratings .rating-bar {
-      background-color: #ddd;
-      height: 10px;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-bottom: 10px;
-    }
-
-    .ratings .rating {
-      height: 100%;
-      width: 0%;
-      background-color: #b0d3e7;
-      border-radius: 10px;
-      transition: width 1.2s ease-in-out;
-    }
-    @media (max-width: 600px) {
+/* Media query para pantallas pequeñas (menos de 600px) */
+@media (max-width: 600px) {
   .modal-content {
-    flex-direction: column;
-    padding: 15px;
-    gap: 15px;
+    flex-direction: column;    /* Cambia el diseño a columnas */
+    padding: 15px;             /* Reduce el padding */
+    gap: 15px;                 /* Espacio entre elementos */
   }
 
   .pet-info,
   .modal-info {
-    width: 100%;
+    width: 100%;               /* Ocuparán todo el ancho disponible */
   }
 
   .profile-img {
-    max-width: 180px;
+    max-width: 180px;          /* Imagen más pequeña en móviles */
   }
 
   .close-button {
-    top: 5px;
+    top: 5px;                  /* Reposiciona el botón de cerrar */
     right: 5px;
-    font-size: 18px;
+    font-size: 18px;           /* Tamaño más pequeño para el ícono de cerrar */
   }
 }
 
-
 /* Estilo para el botón "Volver arriba" */
 #toTop {
-  position: fixed;              /* El botón se mantiene fijo en la pantalla al hacer scroll */
-  bottom: 35px;                 /* Separado 35px desde la parte inferior de la pantalla */
-  right: 30px;                  /* Separado 30px desde el borde derecho */
-  background-color: #FFBC9A;    /* Color de fondo naranja claro */
-  border: none;                 /* Sin borde */
+  position: fixed;              /* Se mantiene fijo en la pantalla al hacer scroll */
+  bottom: 35px;                 /* Separación desde abajo */
+  right: 30px;                  /* Separación desde la derecha */
+  background-color: #FFBC9A;    /* Color de fondo (naranja claro) */
+  border: none;                 /* Sin borde visible */
   border-radius: 50%;           /* Forma circular */
-  padding: 14px;                /* Espaciado interno para agrandar el área del botón */
-  cursor: pointer;              /* Muestra la mano al pasar el cursor */
-  font-size: 22px;              /* Tamaño del ícono o texto dentro del botón */
-  color: black;                 /* Color del contenido (ícono o texto) */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para dar efecto flotante */
-  z-index: 1000;                /* Asegura que esté encima de otros elementos */
-  transition: background-color 0.3s ease; /* Transición suave para el cambio de color al hacer hover */
+  padding: 14px;                /* Espaciado interno */
+  cursor: pointer;              /* Cursor de mano al pasar por encima */
+  font-size: 22px;              /* Tamaño del ícono o texto del botón */
+  color: black;                 /* Color del ícono o texto */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para efecto de elevación */
+  z-index: 1000;                /* Muy por encima de otros elementos */
+  transition: background-color 0.3s ease; /* Suaviza el cambio de color al hacer hover */
 }
 
-/* Estilo al pasar el cursor por encima del botón */
+/* Efecto hover para el botón de volver arriba */
 #toTop:hover {
-  background-color: #f8b28e;    /* Color de fondo un poco más oscuro al hacer hover */
+  background-color: #f8b28e;    /* Cambia a un tono más oscuro al pasar el mouse */
 }
 
-/*Funcion de hacer mas grande/chico el texto*/
+/* Estilo del contenedor dinámico que cambia de tamaño */
 #contenido-dinamico {
-  font-size: 20px;
-  transition: font-size 0.3s ease;
+  font-size: 20px;              /* Tamaño base de letra */
+  transition: font-size 0.3s ease; /* Transición suave al cambiar tamaño */
 }
 
+/* Todos los elementos dentro heredan el tamaño de letra */
 #contenido-dinamico * {
-  font-size: inherit;
+  font-size: inherit;           /* Hereda el tamaño definido en el contenedor */
 }
